@@ -1,0 +1,29 @@
+body {
+  background: url('../imgs/') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.bloco1 {
+  background-color: red;
+}
+
+.bloco2 {
+  background-color: pink;
+}
+
+.bloco3 {
+  background-color: green;
+}
+
+.bloco4 {
+  background-color: yellow;
+}
+
+.bloco5 {
+  background-color: brown;
+}
+
+@media screen and (max-width: 768px) {}

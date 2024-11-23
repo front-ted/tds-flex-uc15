@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Otimização de front-end – compressão e minificação de CSS e JavaScript, compreensão de imagens</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="bloco1">
+          <div class="container">
+            <h2>Otimização de <i>front-end</i> – compressão e minificação de CSS e JavaScript, compreensão de imagens
+            </h2>
+            <p>A otimização de <i>front-end</i> envolve um conjunto de práticas e técnicas destinadas a melhorar o
+              desempenho de
+              uma aplicação <i>web</i> do lado do cliente. Isso inclui minimizar o tempo de carregamento da página,
+              melhorar a
+              responsividade e garantir uma experiência de usuário mais suave e eficiente. Esse tipo de otimização é
+              fundamental para o desenvolvimento de qualquer interface, principalmente quando se está pensando em
+              dispositivos móveis, nos quais, muitas vezes, a conexão com a internet não é alta. Isso afeta diretamente
+              a
+              percepção do usuário sobre a velocidade e a qualidade de um <i>site</i> ou aplicativo.</p>
+            <p>A seguir, você aprenderá técnicas e ferramentas eficazes para otimizar a interface de seus <i>sites</i>
+              ou sistemas
+              <i>web</i>.
+            </p>
+            <h3>Compressão e minificação de CSS e JavaScript</h3>
+            <img src="imgs/img1.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/img1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/img1.png" class="center-block img-responsive"></a>
+            <p>Quando você cria seus arquivos CSS (<i>cascading style sheets</i> ou folhas de estilo em cascata) e
+              JavaScript ou
+              até mesmo conteúdos HTML (<i>hypertext markup language</i> ou linguagem de marcação de hipertexto) de suas
+              interfaces, é normal colocar comentários no código, espaços ou quebras de linhas, até mesmo para que seu
+              código fique mais legível e organizado. Porém, cada espaço ou caractere a mais inserido em seus códigos
+              contribui para o “peso” desses arquivos.</p>
+            <p>É evidente que um espaço em branco ou uma quebra de linha não influencia tanto no carregamento desses
+              arquivos. Porém, ao somar todos os espaços, comentários e caracteres a mais, você perceberá que sim, isso
+              acaba fazendo a diferença na hora de carregar sua interface inteira. Por exemplo, pense em qualquer
+              arquivo
+              de CSS, em que é comum adicionar uma quebra de linha a cada estilo inserido. Se você contar que cada
+              quebra
+              de linha é um caractere, no final do arquivo dará um número bem grande, e saiba que o último ponto e
+              vírgula
+              (;) de cada chamada CSS é desnecessário. Então, retirando tudo isso, seu arquivo CSS pode ter uma grande
+              perda de peso.</p>
+            <p>Sendo assim, minimizar qualquer arquivo, basicamente, consiste em retirar tudo o que é desnecessário ao
+              resultado final da sua interface. Isso inclui os comentários de código, que são informações para quem está
+              programando, e não para o navegador ou usuário final.</p>
+            <p class="caixa-destaque icone dica">Mas para fazer essa minificação existem ferramentas que agilizam muito
+              o processo, como o <b>HTML Minifer</b>, que, como o próprio nome já diz, consiste em realizar essa
+              otimização em
+              arquivos de puro HTML.</p>
+            <p>Basicamente, você copia e cola todo o seu HTML dentro da ferramenta, clica em <b>Minificar</b> e ela cria
+              uma
+              cópia otimizada do seu arquivo.</p>
+            <p>Veja um exemplo de utilização do HTML Minifer:</p>
+            <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_01.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Otimizando o carregamento do HTML
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Mostra o site da ferramenta HTML Minifer, no qual, ao colar o código HTML, ela
+              gera uma versão otimizada do seu conteúdo, sem espaços em branco, quebras de linha e comentários.</p>
+            <p>Observe, nessa figura, que o tamanho do arquivo foi reduzido em 24% – uma redução bem considerável. Agora
+              basta copiar o código gerado e salvar em um novo arquivo HTML. Você deve ter percebido que o HTML Minifer,
+              assim como outras ferramentas de otimização de carregamento de HTML, gera uma nova versão do seu conteúdo,
+              sem espaços em branco, quebras de linha e comentários.</p>
+            <p class="caixa-destaque icone importante">Isso torna “<b>IMPOSSÍVEL</b>” a manutenção do código, por isso é
+              <b>imprescindível</b> sempre ter duas versões dos seus arquivos: uma é a versão original, na qual você
+              pode realizar as atualizações e modificações, sempre que necessário, de forma fácil; a outra é a versão
+              que será seu conteúdo minificado, e sempre que você atualizar seu conteúdo original, deve refazer o
+              processo de minificação.
+            </p>
+            <p>No entanto, essa minificação de HTML nem sempre é possível, principalmente quando seu HTML é gerado
+              dinamicamente por meio de uma linguagem <i>back-end</i>, como o PHP (<i>hypertext preprocessor</i> ou
+              pré-processador de
+              hipertexto), ou por meio de algum <i>framework</i>, como Angular ou React.</p>
+            <p>Já para minimizar seus arquivos CSS e JavaScript, o processo também é simples. Se você realizar uma
+              pesquisa, perceberá que existem diversas ferramentas com esse fim e que o passo a passo será praticamente
+              igual ao de minificar o HTML.</p>
+            <p>Há outro processo, que deve ser utilizado em conjunto com os mostrados até o momento, que visa à
+              otimização
+              de seus arquivos, reduzindo ainda mais o tempo de carregamento do seu <i>site</i> ou sistema <i>web</i>.
+              Ele se chama
+              compactação de arquivos e ocorre ao lado do servidor. O tipo de compactação mais popular e já disponível
+              na
+              maioria das empresas de hospedagens <i>web</i> é a compactação GZIP.</p>
+            <p class="caixa-destaque icone importante">A compactação de arquivos GZIP é uma técnica usada para reduzir o
+              tamanho dos arquivos transferidos entre o servidor e o cliente (navegador) na <i>web</i>. Quando um
+              arquivo é
+              compactado usando GZIP, ele é codificado em um formato menor, o que reduz a quantidade de dados que
+              precisa ser transmitida pela rede, resultando em tempos de carregamento mais rápidos e menor uso de
+              largura de banda.</p>
+            <p>Para habilitar a compactação GZIP, você precisa configurar seu servidor <i>web</i> (como Apache, Nginx ou
+              outros)
+              para compactar os tipos de conteúdo adequados.</p>
+            <p>No Apache, você pode habilitar a compactação GZIP utilizando o módulo <b>mod_deflate</b>. Adicione a
+              seguinte
+              configuração ao arquivo <b>.htaccess</b> ou ao arquivo de configuração do servidor:</p>
+            <pre>
+                <code class="language-java">
+                  &lt;IfModule mod_deflate.c&gt;
+
+                    # Ativar a compressão para HTML, CSS, JavaScript, Text, XML, e Fontes 
+                   
+                   AddOutputFilterByType DEFLATE text/html 
+                   
+                   AddOutputFilterByType DEFLATE text/css 
+                   
+                   AddOutputFilterByType DEFLATE application/javascript 
+                   
+                   AddOutputFilterByType DEFLATE application/xml 
+                   
+                   AddOutputFilterByType DEFLATE text/plain 
+                   
+                   AddOutputFilterByType DEFLATE application/font-woff2 
+                   
+                   AddOutputFilterByType DEFLATE application/font-woff 
+                </code>
+              </pre>
+            <p>No entanto, a maioria das hospedagens já vem com um painel de usuário, e lá você pode ativar a
+              compactação
+              GZIP apenas clicando em um botão da interface da sua hospedagem. O ideal é você verificar se a empresa de
+              hospedagem contratada já tem esse recurso e como você pode ativá-lo.</p>
+            <p>Assim como os recursos mostrados anteriormente, a compactação GZIP é uma técnica essencial para a
+              otimização
+              de desempenho <i>web</i>, ajudando a proporcionar uma experiência de usuário mais rápida e eficiente.</p>
+            <img src="imgs/img2.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/img2.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/img2.png" class="center-block img-responsive"></a>
+            <h3>Compressão de imagens</h3>
+            <p>A compressão de imagens é o processo de reduzir o tamanho de um arquivo de imagem, preservando ao máximo
+              a
+              qualidade visual. Essa técnica é essencial para melhorar a eficiência do armazenamento e da transmissão de
+              imagens na <i>web</i> e em outros sistemas.</p>
+            <p>A comprimir uma imagem, ela reduz o tamanho do arquivo descartando alguns dados da imagem original, o que
+              resulta em uma perda de qualidade visual que, muitas vezes, é imperceptível ao olho humano. A vantagem é
+              uma
+              redução muito maior no tamanho do arquivo em comparação com a imagem original.</p>
+            <p>Geralmente, na <i>web</i>, são usados três tipos de arquivos de imagem. São eles:</p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        JPG (JPEG)
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p>O formato JPG ou JPEG é ideal para fotografias e imagens com muitas cores e detalhes. Contudo,
+                        vale
+                        ressaltar que esse formato não aceita transparência.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        PNG
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <p>O formato PNG é melhor para gráficos com áreas de cor sólida e transparência. No entanto, em
+                        termos de
+                        <i>web</i>, é muito comum ver fotografias no formato PNG também.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        WebP
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <p>O formato de imagem WebP é o mais recente. Ele oferece uma boa compressão e, assim como o PNG,
+                        suporta
+                        transparência, sendo adequado para muitos casos. No entanto, o formato WebP não é aceito em
+                        navegadores
+                        mais antigos como o Internet Explorer.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4>JPG (JPEG)</h4>
+              <p>O formato JPG ou JPEG é ideal para fotografias e imagens com muitas cores e detalhes. Contudo, vale
+                ressaltar que esse formato não aceita transparência.</p>
+              <h4>PNG</h4>
+              <p>O formato PNG é melhor para gráficos com áreas de cor sólida e transparência. No entanto, em termos de
+                <i>web</i>, é muito comum ver fotografias no formato PNG também.
+              </p>
+              <h4>WebP</h4>
+              <p>O formato de imagem WebP é o mais recente. Ele oferece uma boa compressão e, assim como o PNG, suporta
+                transparência, sendo adequado para muitos casos. No entanto, o formato WebP não é aceito em navegadores
+                mais antigos como o Internet Explorer.</p>
+            </div>
+            <p>No <i>site</i> da Can I Use, é possível ver a situação atual da compatibilidade do formato de imagem
+              WebP.</p>
+            <img src="imgs/figura_03.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_03.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_03.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Compatibilidade WebP
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Mostra o site da Can I Use, com o gráfico de compatibilidade dos principais
+              navegadores com o formato de imagem WebP. O gráfico mostra que versões antigas do Chrome, Edge, Safari,
+              Firefox e Opera não aceitam esse tipo de imagem.</p>
+            <p>Existem muitas ferramentas e métodos para comprimir uma imagem. Como exemplo, será utilizada a ferramenta
+              TinyPng, que, apesar do nome, compacta imagens nos três formatos – PNG, JPG e WebP.</p>
+            <p class="caixa-destaque icone dica">O TinyPng é uma ferramenta <i>on-line</i> que utiliza técnicas
+              avançadas de compressão para reduzir o tamanho dos arquivos de imagem sem perder qualidade visual
+              perceptível. Isso quer dizer que o “peso” das imagens é reduzido e não se nota nenhuma significativa perda
+              de qualidade das imagens.</p>
+            <p>O processo para utilizar o TinyPng é bem simples: você entra no <i>site</i> dele e faz <i>upload</i> das
+              suas imagens.
+              Ele vai compactá-las e disponibilizá-las para <i>download</i>. Veja um exemplo:</p>
+            <img src="imgs/figura_04.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_04.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              TinyPng
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Mostra uma compactação da foto de um hambúrguer no site TinyPng.</p>
+            <p>No exemplo dessa figura, é possível ver que a imagem foi reduzida em 26% do seu tamanho original.</p>
+            <p>Agora, veja a comparação da foto original com a foto compactada pelo TinyPng:</p>
+            <img src="imgs/figura_05.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_05.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_05.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Comparação de imagens
+              <br>
+              Fonte: Adaptado de Pexels (c2024)
+            </p>
+            <p class="acessivel no-print">Duas imagens de um hambúrguer, comparando a original com a compactada. A
+              diferença entre as duas é imperceptível.</p>
+            <p>Compare bem as duas imagens da figura e perceba que praticamente não há diferença entre elas, porém a
+              compactada representa um tamanho 26% menor que a original. Em alguns casos, o TinyPng consegue reduzir até
+              70% do peso original da imagem.</p>
+            <p class="caixa-destaque">Assim como as demais técnicas de otimização demonstradas, a compressão de imagens
+              é uma técnica essencial para a otimização de <i>performance</i> na <i>web</i> e para garantir uma
+              experiência de usuário eficiente e agradável.</p>
+            <div class="row">
+              <div class="col-lg-3">
+                <img src="imgs/logo_pagespeed.png" class="img-responsive center-block no-print" aria-hidden="true">
+              </div>
+              <div class="col-lg-9">
+                <p>Existem algumas ferramentas que auxiliam o processo de entender os pontos em que seu <i>site</i> pode
+                  melhorar. Uma das mais populares se chama PageSpeed Insights, uma ferramenta do Google que relata a
+                  experiência do usuário de uma página em dispositivos móveis e <i>desktop</i> e fornece sugestões sobre
+                  como
+                  essa página pode ser melhorada.</p>
+              </div>
+            </div>
+            <p>Dentro dessas sugestões, estão pontos que podem ser melhorados em termos de carregamento do <i>site</i>.
+            </p>
+            <p>Utilizar o PageSpeed Insights é bem simples: basta acessar o <i>site</i> da ferramenta e inserir a URL
+              (<i>uniform
+                resource locator</i> ou localizador uniforme de recursos) do <i>site</i> a ser analisado. Assim, dentro
+              de alguns
+              segundos será mostrada uma lista de pontos que podem ser melhorados.</p>
+            <p>A análise realizada mostra os dados separados entre acessos em dispositivos móveis e computadores.</p>
+            <img src="imgs/figura_06.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_06.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_06.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              PageSpeed
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra um exemplo de análise da ferramenta PageSpeed.</p>
+            <p>A figura mostra que o <i>site</i> de exemplo utilizado teve uma pontuação 43 de 100 em termos de
+              <i>performance</i>. Logo
+              abaixo, a própria ferramenta mostra todos os pontos em que o <i>site</i> pode melhorar. Perceba, também,
+              que o
+              PageSpeed não analisa só a <i>performance</i> do <i>site</i>; ele analisa fatores como acessibilidade,
+              práticas
+              recomendadas e SEO (<i>search engine optimization</i> ou otimização para motores de busca).
+            </p>
+            <p>Isso faz com que essa ferramenta ajude não só a encontrar pontos a melhorar no carregamento do seu
+              <i>site</i>, mas
+              também a seguir boas práticas de codificação e SEO.
+            </p>
+          </div>
+        </div>
+        <div class="bloco2">
+          <div class="container">
+            <h3>Encerramento</h3>
+            <p>A otimização de <i>front-end</i> é um aspecto vital no desenvolvimento <i>web</i> moderno, impactando
+              diretamente a
+              <i>performance</i>, a experiência do usuário e a eficiência operacional de uma aplicação.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

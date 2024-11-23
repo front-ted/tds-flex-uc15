@@ -1,0 +1,14 @@
+.bloco1 {
+  background: url('../imgs/BG.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.bloco2,
+.bloco2 h3 {
+  background-color: #2875C6;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {}

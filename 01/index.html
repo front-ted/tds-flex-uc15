@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Metodologias de desenvolvimento mobile: mobile first, progressive enhancement</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="bloco1">
+          <div class="container">
+            <h2>Metodologias de desenvolvimento <i>mobile</i>: <i>mobile first</i>, <i>progressive enhancement</i></h2>
+            <p>Neste material, você entenderá como funcionam os conceitos de <i>mobile first</i> e <i>progressive
+                enhancement</i>, que
+              são conceitos complementares. O primeiro trata de uma metodologia aplicada à parte visual, ou seja,
+              <i>design</i>
+              do <i>site</i> ou sistema, e o segundo trata da otimização e melhor adaptação em termos de
+              <i>performance</i> e
+              funcionalidades. No entanto, para entender como se chegou a esses métodos, é preciso primeiro entender
+              como
+              são os acessos à internet atualmente.
+            </p>
+            <img src="imgs/img1.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          </div>
+        </div>
+
+        <div class="top"></div>
+        <div class="parallax1" data-parallax="scroll"></div>
+        <div class="bottom"></div>
+
+        <div class="bloco2">
+          <div class="container">
+            <h3>Como as pessoas acessam a internet?</h3>
+            <p>Atualmente, é extremamente comum acessar a internet via dispositivos móveis, como <i>tablets</i> ou
+              celulares. No
+              entanto, até o ano 2010, isso não existia. Qualquer <i>site</i> ou <i>software</i> criado para a
+              <i>web</i>
+              era desenvolvido
+              pensando exclusivamente em resoluções (tamanhos) de telas predeterminadas. Veja na figura o <i>layout</i>
+              do
+              <i>site</i>
+              do portal UOL em 1999:
+            </p>
+            <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_01.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem"><i>Site</i> do UOL em 1999
+              <br>
+              Fonte: UOL Notícias (2013)
+            </p>
+            <p class="acessivel no-print">Layout de um site de 1999. O layout é nas cores azul, amarela e verde.
+              Totalmente estático, muito similar a uma página de classificados de um jornal impresso.</p>
+            <p>Repare que, na figura apresentada, o <i>site</i> era totalmente abarrotado de conteúdo. Nessa época, não
+              se
+              tinha
+              muita referência de interfaces para a <i>web</i>. Então, claramente o <i>layout</i> é similar às páginas
+              de
+              classificados
+              de qualquer jornal impresso da época. Também não havia preocupação com a usabilidade ou experiência do
+              usuário final, e todo o <i>layout</i> era desenvolvido levando em consideração que seria aberto em uma
+              tela
+              de
+              computador. Portanto, não há espaço entre os <i>links</i>, não há preocupação com os pontos de toque da
+              tela
+              e não
+              há nenhum tipo de responsividade ou adaptabilidade para dispositivos com telas menores.</p>
+            <div class="row">
+              <div class="col-lg-3">
+                <img src="imgs/img2.png" class="img-responsive center-block no-print" aria-hidden="true">
+              </div>
+              <div class="col-lg-9">
+                <p>Para acessar qualquer <i>site</i> era preciso fazê-lo via computador de mesa ou computadores
+                  portáteis,
+                  conhecidos como <i>notebooks</i>. Nessa época, a interface era totalmente desenvolvida entendendo que
+                  o
+                  usuário
+                  final, ou seja, quem acessa, estaria acessando determinado <i>site</i> em uma tela de resolução
+                  padrão,
+                  que
+                  variava entre 960 e 1.020 <i>pixels</i>.</p>
+              </div>
+            </div>
+            <p>No entanto, a partir de 2010, começaram a se popularizar os celulares com maior capacidade de
+              processamento
+              de dados e com acesso à internet, os quais ficaram conhecidos como <i>smartphones</i>. Foi nessa época
+              também que começaram a se popularizar os <i>tablets</i>.</p>
+            <p>O que ocorreu, então, é que aquela interface de <i>site</i> com base em uma resolução padrão não cumpria
+              mais seu objetivo, pois não era amigável e muitas vezes não era funcional quando acessada em dispositivos
+              com telas pequenas.</p>
+            <p>Veja, na figura, um exemplo ilustrativo de como ficaria o <i>site</i> do UOL de 1999 se aberto em um
+              <i>smartphone</i> atual.
+            </p>
+            <img src="imgs/figura_02.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_02.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_02.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem"><i>Site</i> do UOL de 1999 aberto em um <i>smartphone</i>
+              <br>
+              Fonte: Adaptado de UOL Notícias (2013)
+            </p>
+            <p class="acessivel no-print">Layout de um site de 1999. O layout é nas cores azul, amarela e verde.
+              Totalmente estático, muito similar a uma página de classificados de um jornal impresso.</p>
+            <p>Repare que o <i>site</i> não se adaptaria ao tamanho da tela, ficando com uma interface muito poluída
+              visualmente e de difícil acesso em razão do pouco espaço entre os <i>links</i>.</p>
+            <p>Como o acesso à internet e os acessos via celular foram aumentando constantemente, houve a necessidade de
+              adotar técnicas que criassem uma interface amigável para o usuário final, independentemente do tamanho da
+              tela pela qual ele estava acessando. Logo, tornou-se impraticável tentar adotar padrões de tamanho de
+              telas,
+              pois, a cada ano, fabricantes de celulares lançavam novos modelos com resoluções de tela diferentes.</p>
+            <img src="imgs/figura_03-2.jpg" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_03-2.jpg" target="_blank" class="no-print visible-sm visible-xs"
+              aria-hidden="true"><img src="imgs/figura_03-2.jpg" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">Tamanhos dos dispositivos móveis
+              <br>
+              Fonte: Adaptado de <i>Blog</i> do iPhone (2018)
+            </p>
+            <p class="acessivel no-print">A ilustração mostra três smartphones lado a lado, com tamanhos e resolução de
+              telas diferentes. Sendo a primeira de 5,8 polegadas, a segunda de 6,1 e a terceira de 6,5 polegadas.</p>
+            <p>Em pesquisa realizada pelo IBGE, registrou-se que, em 2022, quase 88% dos brasileiros de 10 anos ou mais
+              usaram a internet, ou seja, mais de 161 milhões de pessoas. “O equipamento mais utilizado para navegar na
+              rede é, de longe, o celular. Enquanto isso, o índice de pessoas que acessa a internet pelo computador
+              recuou
+              de 63% para 35,5% em seis anos” (Acesso [...], 2023). </p>
+            <img src="imgs/graf_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/graf_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/graf_01.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Acesso à internet por equipamento utilizado
+              <br>
+              Fonte: IBGE (2023)
+            </p>
+            <p class="acessivel no-print">Gráfico de barras horizontal comparando os acessos à internet via celular,
+              televisão, tablet e computador, relativos aos anos de 2016, 2019 e 2022. No gráfico, percebe-se que os
+              acessos via dispositivos móveis aumentaram muito, enquanto os via computador caíram.</p>
+            <p>Em resposta a essa mudança de como as pessoas acessam a internet e à necessidade de criar <i>sites</i>
+              capazes de
+              se adaptar a diferentes dispositivos e tamanhos de tela, surgiu o conceito de responsivo ou <i>design
+                responsive</i>.</p>
+            <p class="caixa-destaque icone anotar">
+              O conceito de <i>design</i> responsivo foi popularizado por Ethan Marcotte em seu artigo <i>Responsive Web
+                Design</i>,
+              publicado em maio de 2010 na revista A List Apart. Antes do <i>design</i> responsivo, os desenvolvedores
+              enfrentavam o desafio de criar versões separadas de um <i>site</i> para atender a diferentes dispositivos,
+              como
+              computadores <i>desktop</i>, <i>laptops</i>, <i>tablets</i> e <i>smartphones</i>. Essas versões separadas,
+              muitas vezes, levavam a
+              experiências de usuário fragmentadas e exigiam mais esforço e manutenção.
+            </p>
+            <p>Basicamente, tornar uma interface <b>responsivo</b> consiste em fazer com que a interface de um
+              <i>site</i>
+              se adapte a
+              qualquer resolução de tela. Um <i>site</i> responsivo é capaz de oferecer uma experiência de usuário mais
+              consistente e amigável, independentemente do dispositivo utilizado para acessá-lo. O <i>design</i>
+              responsivo
+              permite que os desenvolvedores criem uma única base de código que se ajusta automaticamente a uma
+              variedade
+              de dispositivos, economizando tempo e recursos.
+            </p>
+            <p>Desde então, o <i>design</i> responsivo tornou-se uma prática padrão no desenvolvimento <i>web</i>, e os
+              navegadores
+              modernos oferecem suporte robusto para as técnicas envolvidas. A abordagem responsiva é crucial em um
+              ambiente em que a diversidade de dispositivos é enorme e os usuários acessam a <i>web</i> por meio de uma
+              variedade
+              de plataformas e tamanhos de tela.</p>
+            <p>Uma das metodologias de desenvolvimento de interfaces responsivas mais adotadas atualmente chama-se
+              <i>mobile
+                first</i>.
+            </p>
+          </div>
+        </div>
+
+        <div class="top"></div>
+        <div class="parallax2" data-parallax="scroll"></div>
+        <div class="bottom"></div>
+
+        <div class="bloco3">
+          <div class="container">
+            <h3>O que é <i>mobile first</i>?</h3>
+            <p class="no-print">Clique ou toque para assistir ao vídeo.</p>
+            <div class="ratio ratio-16x9 no-print">
+              <iframe src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="top"></div>
+        <div class="parallax3" data-parallax="scroll"></div>
+        <div class="bottom"></div>
+
+        <div class="bloco4">
+          <div class="container">
+            <h3>Conhecendo o conceito de <i>progressive enhancement</i></h3>
+            <p>Nos últimos anos, a tecnologia vem evoluindo muito, principalmente quando o tema é internet, pois, com o
+              passar do tempo, surgiram muitos navegadores novos, dispositivos novos e formas distintas de acesso.</p>
+            <p>É um desafio cada vez maior criar sistemas e interfaces para a <i>web</i> que cumpram seu papel principal
+              e
+              todas
+              as suas funcionalidades, independentemente de como e por onde o acesso é realizado. Quem já utilizava a
+              internet em meados de 2010 deve lembrar que muitos <i>sites</i> exibiam o seguinte aviso: “Este
+              <i>site</i>
+              é mais bem
+              visualizado com o navegador ‘tal’”. Hoje em dia, criar um <i>site</i> ou sistema <i>web</i> adaptado
+              apenas
+              para um
+              navegador ou tipo de acesso específico é algo impraticável para a maioria dos usuários. Uma forma de lidar
+              com esse desafio é o conceito de <i>progressive enhancement</i>.
+            </p>
+            <p class="caixa-destaque icone importante">
+              De forma literal, é possível traduzir o termo <i>progressive enhancement</i> para aprimoramento
+              progressivo.
+              Basicamente, é uma abordagem de <i>design</i> e desenvolvimento <i>web</i> que visa garantir uma
+              experiência
+              básica
+              funcional para todos os usuários, independentemente das capacidades dos dispositivos ou navegadores que
+              estão utilizando.
+            </p>
+            <p>A ideia é começar com uma base sólida de funcionalidade e estilo, que seja acessível a todos, e depois
+              adicionar gradualmente camadas extras de recursos para dispositivos ou navegadores mais avançados.</p>
+            <p>Os principais conceitos do <i>progressive enhancement</i> são:</p>
+            <p class="no-print" aria-hidden="true">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <button type="button" class="btn-painel1 btn1-painel1" data-toggle="modal"
+                data-target="#modal1-painel1"></button>
+              <button type="button" class="btn-painel1 btn2-painel1" data-toggle="modal"
+                data-target="#modal2-painel1"></button>
+              <button type="button" class="btn-painel1 btn3-painel1" data-toggle="modal"
+                data-target="#modal3-painel1"></button>
+              <button type="button" class="btn-painel1 btn4-painel1" data-toggle="modal"
+                data-target="#modal4-painel1"></button>
+              <button type="button" class="btn-painel1 btn5-painel1" data-toggle="modal"
+                data-target="#modal5-painel1"></button>
+            </div>
+            <div class="modal fade no-print" id="modal1-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Camadas de funcionalidade</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p><i>Progressive enhancement</i> envolve a criação de camadas de funcionalidade, começando com uma
+                      base
+                      funcional mínima que funciona em todos os dispositivos. Então, camadas adicionais de recursos são
+                      adicionadas, mas a funcionalidade básica sempre permanece acessível.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal2-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">HTML, CSS e JavaScript progressivos</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>A base do <i>progressive enhancement</i> é geralmente construída com HTML (<i>hypertext markup
+                        language</i> ou
+                      linguagem de marcação de hipertexto) semântico para estrutura, CSS (<i>cascading style sheets</i>
+                      ou
+                      folhas
+                      de estilo em cascata) para estilo básico e JavaScript para funcionalidade essencial. À medida que
+                      as
+                      camadas são adicionadas, podem ser utilizados recursos mais avançados dessas tecnologias.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal3-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Aprimoramento baseado em capacidades</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>A adição de camadas de funcionalidade é baseada nas capacidades do dispositivo ou navegador.
+                      Dispositivos mais capazes podem receber recursos adicionais, enquanto dispositivos mais simples
+                      ainda mantêm uma experiência funcional.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal4-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Acessibilidade</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>O <i>progressive enhancement</i> está alinhado com os princípios de acessibilidade, pois garante
+                      que a
+                      versão básica do <i>site</i> seja acessível a todos. Isso inclui usuários com deficiências,
+                      navegadores de
+                      texto ou dispositivos com capacidades limitadas.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal5-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Desempenho aprimorado</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Como a abordagem começa com uma versão mais leve e funcional, o <i>progressive enhancement</i>
+                      muitas
+                      vezes resulta em um desempenho mais eficiente, especialmente em redes mais lentas ou dispositivos
+                      menos poderosos.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4>Camadas de funcionalidade</h4>
+              <p><i>Progressive enhancement</i> envolve a criação de camadas de funcionalidade, começando com uma
+                base
+                funcional mínima que funciona em todos os dispositivos. Então, camadas adicionais de recursos são
+                adicionadas, mas a funcionalidade básica sempre permanece acessível.</p>
+              <h4>HTML, CSS e JavaScript progressivos</h4>
+              <p>A base do <i>progressive enhancement</i> é geralmente construída com HTML (<i>hypertext markup
+                  language</i> ou
+                linguagem de marcação de hipertexto) semântico para estrutura, CSS (<i>cascading style sheets</i> ou
+                folhas
+                de estilo em cascata) para estilo básico e JavaScript para funcionalidade essencial. À medida que as
+                camadas são adicionadas, podem ser utilizados recursos mais avançados dessas tecnologias.</p>
+              <h4>Aprimoramento baseado em capacidades</h4>
+              <p>A adição de camadas de funcionalidade é baseada nas capacidades do dispositivo ou navegador.
+                Dispositivos mais capazes podem receber recursos adicionais, enquanto dispositivos mais simples
+                ainda mantêm uma experiência funcional.</p>
+              <h4>Acessibilidade</h4>
+              <p>O <i>progressive enhancement</i> está alinhado com os princípios de acessibilidade, pois garante que a
+                versão básica do <i>site</i> seja acessível a todos. Isso inclui usuários com deficiências, navegadores
+                de
+                texto ou dispositivos com capacidades limitadas.</p>
+              <h4>Desempenho aprimorado</h4>
+              <p>Como a abordagem começa com uma versão mais leve e funcional, o <i>progressive enhancement</i>
+                muitas
+                vezes resulta em um desempenho mais eficiente, especialmente em redes mais lentas ou dispositivos
+                menos poderosos.</p>
+            </div>
+            <p>Veja um exemplo prático utilizando CSS:</p>
+            <pre>
+            <code class="language-java">
+              body {
+
+                background: rgba(73,155,234,1);
+      
+                background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+      
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',
+                GradientType=1 );
+      
+                }
+            </code>
+          </pre>
+            <p>Observe que, nesse exemplo de código, o estilo <i>background</i> funciona na maioria dos navegadores,
+              mas,
+              seguindo a
+              hierarquia do CSS, quando houver conflito de estilos, será utilizado o que estiver na linha mais abaixo do
+              código. Ou seja, se o usuário abrir o <i>site</i> em um navegador com suporte a gradiente, valerá o estilo
+              mais
+              abaixo. No entanto, caso o usuário acesse o <i>site</i> em um dispositivo em que a função linear-gradiente
+              não
+              funcione, será utilizado o estilo-padrão acima.</p>
+            <p>Em suma, o aprimoramento progressivo significa criar um <i>design</i> que proporciona uma experiência
+              mais
+              simples,
+              mas ainda utilizável, para usuários de navegadores mais antigos e dispositivos com recursos limitados, ao
+              mesmo tempo que é um <i>design</i> que progride a experiência do usuário até um nível mais atraente e
+              completo em
+              navegadores mais recentes e dispositivos com recursos mais avançados.</p>
+          </div>
+        </div>
+
+        <div class="bloco5">
+          <div class="container">
+            <h2>Encerramento</h2>
+            <p>Neste conhecimento, você percebeu que as metodologias de desenvolvimento <i>mobile first</i> e
+              <i>progressive
+                enhancement</i> são abordagens essenciais para garantir uma experiência positiva do usuário em
+              dispositivos
+              móveis.
+            </p>
+            <p> Adotar essas metodologias não é apenas uma prática recomendada, mas muitas vezes uma necessidade em um
+              cenário digital diversificado. Elas garantem que os desenvolvedores estejam preparados para atender a uma
+              ampla gama de usuários, dispositivos e condições, resultando em uma experiência mais consistente e
+              acessível
+              para todos.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

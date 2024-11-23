@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Hypertext markup language (HTML) – viewport. Responsividade: conceitos, técnicas e aplicabilidade</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="bloco1">
+          <div class="container">
+            <h2><i>Hypertext markup language</i> (HTML) – <b>viewport</b>. Responsividade: conceitos, técnicas e
+              aplicabilidade</h2>
+            <p>Quando se trata do conceito de <i>sites responsives</i>, a grande modificação será nos arquivos CSS
+              (<i>cascading
+                style sheets</i>) do seu <i>site</i> ou sistema. Mesmo em <i>sites responsives</i>, o HTML de uma página
+              continua com seu
+              objetivo original, que é “marcar”, indicar, o que é o quê em cada interface.</p>
+            <p>Porém, há uma pequena atualização <b>obrigatória</b> que se deve fazer em seu HTML para que um
+              <i>site</i> apareça
+              corretamente em qualquer tamanho de tela. Então, neste material, será abordada a <i>meta tag</i>
+              <b>viewport</b>, que é
+              essencial para que um <i>site</i> se ajuste corretamente em diferentes tipos e tamanhos de tela.
+            </p>
+            <p>A responsividade é um conceito central no desenvolvimento <i>web</i>, garantindo que uma interface se
+              adapte a
+              diferentes tamanhos de tela e dispositivos. Embora o HTML mantenha sua função primordial de estruturar e
+              organizar os elementos da página, é no CSS que ocorrem as maiores adaptações visuais para tornar o
+              <i>site</i>
+              verdadeiramente responsivo. Neste material, serão explorados o conceito de responsividade, suas principais
+              aplicações e as técnicas essenciais, como o uso da <i>meta tag</i> <b>viewport</b>, que é fundamental para
+              garantir uma
+              exibição otimizada e adaptável em qualquer dispositivo.
+            </p>
+          </div>
+        </div>
+        <div class="bloco2">
+          <div class="container">
+            <h3>Conceito de <i>responsive</i> (responsividade)</h3>
+            <p class="caixa-destaque icone importante">O conceito de <i>responsive</i> é tornar algo adaptável,
+              acessível ou
+              apropriado para todos. Quando esse conceito é direcionado para a programação na <i>web</i>, mais
+              especificamente
+              em desenvolvimento de interfaces, refere-se a tornar a interface de um sistema ou <i>site</i> adaptável
+              <b>a
+                qualquer resolução (tamanho) de tela</b>.
+            </p>
+            <p>É importante frisar esse conceito, pois <i>responsive</i> não tem relação com criar uma interface
+              amigável
+              para
+              dispositivos móveis, e sim tornar a interface funcional a qualquer tipo de tela. A cada ano, fabricantes
+              de
+              celulares lançam novos modelos com resoluções de tela diferentes. Porém, todos os anos também surgem
+              computadores e televisões (<i>smart TV</i>) com telas distintas.</p>
+            <p>Só é possível chamar sua interface de <i>responsive</i> se ela se ajusta a todas essas resoluções. Alguns
+              chamam
+              esse conceito de <i>design responsive</i>.</p>
+            <p>Para adotar o conceito de <i>responsive</i>, é preciso primeiro pensar no <i>design</i> da sua interface
+              e
+              em como ele
+              será visualmente adaptada a diferentes tamanhos de tela.</p>
+            <p>Um conceito muito utilizado atualmente é o <i>mobile first</i>, que basicamente busca desenvolver uma
+              interface
+              pensando primeiro nos dispositivos móveis. Ou seja, o <i>design</i> e o desenvolvimento das
+              funcionalidades são
+              pensados para dispositivos com telas menores e depois adaptados para os computadores ou dispositivos de
+              telas maiores, como televisores <i>smart</i>.</p>
+            <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_01.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem"><i>Design responsive</i>
+              <br>
+              Fonte: Freepik (c2010-2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a ilustração de vários dispositivos, como computador, celular
+              e tablet. Dentro de cada dispositivo está o leiaute, as marcações dos blocos de conteúdo se adaptando na
+              tela de cada dispositivo.</p>
+          </div>
+        </div>
+        <div class="bloco3">
+          <div class="container">
+            <h3>Técnicas</h3>
+            <p>Basicamente, para se ter uma interface <i>responsive</i>, são utilizadas técnicas avançadas da linguagem
+              de estilo
+              chamada CSS, por exemplo, utilizando como unidade de medida as porcentagens (%) em vez de <i>pixels</i>
+              (px),
+              utilizando as funções de <i>media query</i> para criar adaptações específicas em determinadas resoluções,
+              entre
+              outras.</p>
+            <p>Então, para garantir que uma imagem se ajuste ao tamanho da tela, é preciso especificar o tamanho dela
+              utilizando como unidade de medida o percentual (%), porém é preciso respeitar o tamanho original da imagem
+              para que ela não perca qualidade. Qualquer imagem perde qualidade ao ser redimensionada, no entanto essa
+              queda na qualidade só é percebida ao aumentar a imagem, pois, ao reduzi-la, geralmente a mudança da imagem
+              é
+              quase imperceptível.</p>
+            <p>Suponha que você deseja colocar uma imagem em uma página HTML cuja largura original corresponde a 1.800
+              px. Em uma tela grande, a imagem será exibida inteira, já em telas com largura menor que 1.800 px, a
+              imagem será cortada.</p>
+            <img src="imgs/figura_02.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_02.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_02.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Imagem de tamanho fixo
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A ilustração mostra, lado a lado, um celular e um notebook. A imagem no
+              notebook aparece inteira, já na tela do dispositivo móvel aparece cortada.</p>
+            <p>Observe, na figura, que ao visualizar uma imagem na tela de um dispositivo móvel, ela fica “cortada”
+              porque a largura da tela é menor que a largura total da imagem. Agora, veja na próxima figura que o
+              inverso também pode ocorrer: ao abrir a imagem em uma tela maior que, neste exemplo, 1.800 px, a imagem
+              não cobrirá a largura total da tela.</p>
+            <img src="imgs/figura_03.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_03.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_03.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Imagem de tamanho fixo em tela grande
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A ilustração mostra, lado a lado, um monitor e um notebook. A imagem no
+              notebook aparece inteira, já na tela maior ela não cobre a largura total da tela.</p>
+            <p>Uma técnica bem comum para resolver isso é manipular a largura da imagem usando CSS. Veja um exemplo:</p>
+            <pre>
+              <code class="language-java">
+                .imagem{ width:100%} 
+              </code>
+            </pre>
+            <p>Isso fará com que a imagem mantenha a largura total em relação ao elemento pai dela. Veja na figura como
+              ficaria:</p>
+            <img src="imgs/figura_04.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_04.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Imagem de tamanho proporcional
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A ilustração mostra, lado a lado, um celular e um monitor. A imagem no monitor
+              aparece inteira, já na tela do dispositivo móvel ela se ajusta conforme a largura da tela.</p>
+            <p>Repare, nessa figura, que a imagem aumentou para cobrir totalmente a largura da tela do monitor, porém,
+              ao abrir em um dispositivo móvel, a imagem reduziu sua largura para se ajustar à tela menor.</p>
+            <p>Também é possível citar como principais características de um <i>design</i> responsivo:</p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        <span><i>Layout</i> flexível</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p>Utiliza <i>layouts</i> flexíveis que se ajustam dinamicamente ao tamanho da tela do
+                        dispositivo.
+                        Elementos como
+                        grades e blocos de conteúdo são dimensionados proporcionalmente.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span><i>Media queries</i></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <p>Utiliza <i>media queries</i> em CSS para aplicar estilos específicos com base nas
+                        características da
+                        tela, como
+                        largura, altura, resolução, orientação e outros. Isso permite que o <i>design</i> responda a
+                        diferentes
+                        condições
+                        de exibição.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Imagens flexíveis
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <p>Implementa técnicas, como o atributo <b>max-width</b> em CSS, para garantir que as imagens não
+                        ultrapassem os
+                        limites do contêiner e se ajustem às diferentes telas.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFour">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Tipografia adaptável
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                      <p>Utiliza unidades de medida relativas, como porcentagens ou “em”, para garantir que o texto se
+                        ajuste de
+                        acordo com o tamanho da tela e a preferência do usuário.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFive">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Navegação intuitiva
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                    <div class="panel-body">
+                      <p>Adapta a navegação para torná-la acessível em telas menores, como menus de navegação
+                        responsivos ou
+                        reorganização de elementos de navegação.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSix">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <span><i>Performance</i> otimizada</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                    <div class="panel-body">
+                      <p>Prioriza o desempenho, carregando apenas os recursos necessários para a exibição em
+                        dispositivos
+                        específicos. Isso pode incluir o carregamento de versões menores de imagens ou o carregamento
+                        assíncrono
+                        de <i>scripts</i>.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSeven">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Testes em múltiplos dispositivos
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingSeven">
+                    <div class="panel-body">
+                      <p>Realiza testes em diversos dispositivos e navegadores para garantir uma experiência consistente
+                        e de
+                        qualidade para todos os usuários.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4><i>Layout</i> flexível</h4>
+              <p>Utiliza <i>layouts</i> flexíveis que se ajustam dinamicamente ao tamanho da tela do dispositivo.
+                Elementos como
+                grades e blocos de conteúdo são dimensionados proporcionalmente.</p>
+              <h4><i>Media queries</i></h4>
+              <p>Utiliza <i>media queries</i> em CSS para aplicar estilos específicos com base nas características da
+                tela, como
+                largura, altura, resolução, orientação e outros. Isso permite que o <i>design</i> responda a diferentes
+                condições
+                de exibição.</p>
+              <h4>Imagens flexíveis</h4>
+              <p>Implementa técnicas, como o atributo <b>max-width</b> em CSS, para garantir que as imagens não
+                ultrapassem os
+                limites do contêiner e se ajustem às diferentes telas.</p>
+              <h4>Tipografia adaptável</h4>
+              <p>Utiliza unidades de medida relativas, como porcentagens ou “em”, para garantir que o texto se ajuste de
+                acordo com o tamanho da tela e a preferência do usuário.</p>
+              <h4>Navegação intuitiva</h4>
+              <p>Adapta a navegação para torná-la acessível em telas menores, como menus de navegação responsivos ou
+                reorganização de elementos de navegação.</p>
+              <h4><i>Performance</i> otimizada</h4>
+              <p>Prioriza o desempenho, carregando apenas os recursos necessários para a exibição em dispositivos
+                específicos. Isso pode incluir o carregamento de versões menores de imagens ou o carregamento assíncrono
+                de <i>scripts</i>.</p>
+              <h4>Testes em múltiplos dispositivos</h4>
+              <p>Realiza testes em diversos dispositivos e navegadores para garantir uma experiência consistente e de
+                qualidade para todos os usuários.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bloco4">
+          <div class="container">
+            <h3>HTML <i>responsive</i> – implementando a <i>tag</i> <b>&lt;meta viewport&gt;</b></h3>
+            <p>Para implementar uma interface <i>responsive</i>, além de pensar no <i>design</i> adaptável, é preciso
+              utilizar técnicas
+              avançadas de CSS. Porém, há um pequeno detalhe em seu HTML que, se não implementado, fará com que sua
+              interface tenha comportamentos inesperados e não proporcionará uma correta experiência para o usuário.</p>
+            <p>Qualquer <i>site responsive</i> precisa utilizar a <i>tag meta</i> com o <i>name</i> de <b>viewport</b>.
+              A
+              <i>tag</i>
+              <b>&lt;meta viewport&gt;</b> é uma <i>meta tag</i> em HTML que controla a maneira como a página é exibida
+              em
+              dispositivos
+              móveis. Ela desempenha um papel crucial no <i>design</i> responsivo, ajudando a otimizar a apresentação e
+              o
+              <i>layout</i>
+              de uma página <i>web</i> em telas de diferentes tamanhos, como <i>smartphones</i> e <i>tablets</i>.
+            </p>
+            <p>A <i>tag</i> <b>&lt;meta viewport&gt;</b> geralmente é usada dentro da seção <b>&lt;head&gt;</b> do HTML
+              e
+              pode conter vários atributos para configurar as propriedades de visualização. Um dos
+              atributos mais comuns é o <b>width</b>, que define a largura inicial da área de exibição. Aqui está um
+              exemplo
+              típico:</p>
+            <pre>
+                <code class="language-java">
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt; 
+                </code>
+              </pre>
+            <ul>
+              <li><b>width=device-width</b>: define a largura da área de visualização para ser igual à largura da tela
+                do
+                dispositivo.</li>
+              <li><b>initial-scale=1.0</b>: define o nível de escala inicial para 1.0, garantindo que a página seja
+                exibida sem
+                <i>zoom</i> inicial.
+              </li>
+            </ul>
+            <p>Além destes, existem outros atributos que podem ser usados na <i>tag</i>
+              <b>&lt;meta viewport&gt;</b> para ajustar o comportamento de visualização, como <b>minimum-scale</b>,
+              <b>maximum-scale</b>,
+              <b>user-scalable</b>, entre outros.
+            </p>
+            <p>Veja um exemplo com outros atributos:</p>
+            <pre>
+              <code class="language-java">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes" /&gt; 
+              </code>
+            </pre>
+            <ul>
+              <li><b>minimum-scale</b> e <b>maximum-scale</b>: definem os limites mínimo e máximo da escala que o
+                usuário pode aplicar.</li>
+              <li><b>user-scalable</b>: define se o usuário pode ou não aplicar <i>zoom</i> na página.</li>
+            </ul>
+            <p>Esses ajustes ajudam a controlar como a página é exibida em dispositivos móveis, proporcionando uma
+              experiência de usuário mais consistente e adaptável. O uso apropriado da <i>tag</i> <b>&lt;meta
+                viewport&gt;</b>
+              é essencial para garantir que o <i>design</i> responsivo seja eficaz e que a página seja visualizada
+              corretamente
+              em uma variedade de dispositivos.</p>
+            <p>Mesmo que sejam utilizadas técnicas de CSS para tornar-se uma página <i>responsive</i>, se a página não
+              tiver a
+              <i>tag</i> <b>meta viewport</b>, a visualização em dispositivos móveis não será otimizada. Veja um exemplo
+              na
+              figura:
+            </p>
+            <img src="imgs/figura_05.png" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/figura_05.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_05.png" class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              <b>Meta viewport</b>
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra duas páginas lado a lado, da visão de um celular, com um
+              painel de acesso com os campos de e-mail e senha. Na página que contém a tag viewport, os campos são
+              ajustados ao tamanho da tela, a outra não.</p>
+            <p>Contudo, não há muitas opções ou variedades de utilização da <i>tag</i> <b>meta viewport</b>. Na maioria
+              dos casos, apenas
+              sua utilização básica, conforme o primeiro exemplo, já é suficiente para que sua página HTML esteja apta a
+              aceitar os comandos <i>responsives</i> que implementará, porém a utilização dessa <i>tag</i> é
+              <b>obrigatória</b> para o
+              desenvolvimento de qualquer interface <i>web</i>.
+            </p>
+          </div>
+        </div>
+        <div class="bloco5">
+          <div class="container">
+            <h3>Aplicabilidade</h3>
+            <p>A aplicabilidade de interfaces responsivas é um conceito crucial no desenvolvimento <i>web</i> e no
+              <i>design</i> de
+              interfaces, tendo um impacto significativo na forma como se cria e se interage com <i>sites</i> e
+              aplicações <i>web</i>
+              em uma variedade de dispositivos. Aqui estão alguns tópicos importantes sobre a aplicabilidade das
+              interfaces responsivas:
+            </p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print hidden-sm" aria-hidden="true">
+              <button type="button" class="btn-painel1 btn1-painel1" data-toggle="modal"
+                data-target="#modal1-painel1"></button>
+              <button type="button" class="btn-painel1 btn2-painel1" data-toggle="modal"
+                data-target="#modal2-painel1"></button>
+              <button type="button" class="btn-painel1 btn3-painel1" data-toggle="modal"
+                data-target="#modal3-painel1"></button>
+              <button type="button" class="btn-painel1 btn4-painel1" data-toggle="modal"
+                data-target="#modal4-painel1"></button>
+            </div>
+            <div class="modal fade no-print" id="modal1-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><b>Acessibilidade em diversos dispositivos</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Com uma vasta gama de dispositivos com acesso à internet disponíveis no mercado, incluindo
+                      <i>smartphones</i>, <i>tablets</i>, <i>laptops</i> e <i>desktops</i> com diferentes tamanhos de
+                      tela e resoluções, as
+                      interfaces responsivas garantem que o conteúdo seja acessível e legível em todos esses
+                      dispositivos, proporcionando uma experiência de usuário coesa.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal2-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><b>Melhoria da experiência do usuário</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>As interfaces responsivas adaptam-se automaticamente ao tamanho da tela do dispositivo utilizado,
+                      melhorando significativamente a experiência do usuário. Textos, imagens e outros elementos do
+                      <i>site</i>
+                      são escalados e reorganizados para garantir que o conteúdo seja fácil de ler e navegar,
+                      independentemente do dispositivo.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal3-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><b>Suporte à conectividade variável</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Interfaces responsivas são frequentemente projetadas considerando também a otimização do
+                      desempenho, como a redução do tempo de carregamento das páginas. Isso é particularmente importante
+                      para usuários em conexões lentas ou instáveis, garantindo que o <i>site</i> seja acessível mesmo
+                      em
+                      condições de rede não ideais.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal4-painel1" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><b>Custo-benefício</b></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Do ponto de vista do desenvolvimento, adotar uma abordagem responsiva desde o início pode ser
+                      mais econômico do que criar múltiplas versões de um <i>site</i>. Além disso, oferecer uma boa
+                      experiência
+                      de usuário em todos os dispositivos pode aumentar a conversão e retenção de usuários, impactando
+                      positivamente o retorno sobre o investimento.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-mobile no-print visible-sm" aria-hidden="true">
+              <div class="info-bloco1">
+                <h4><b>Acessibilidade em diversos dispositivos</b></h4>
+                <p>Com uma vasta gama de dispositivos com acesso à internet disponíveis no mercado, incluindo
+                  <i>smartphones</i>, <i>tablets</i>, <i>laptops</i> e <i>desktops</i> com diferentes tamanhos de tela e
+                  resoluções, as
+                  interfaces responsivas garantem que o conteúdo seja acessível e legível em todos esses
+                  dispositivos, proporcionando uma experiência de usuário coesa.
+                </p>
+              </div>
+              <div class="info-bloco2">
+                <h4><b>Melhoria da experiência do usuário</b></h4>
+                <p>As interfaces responsivas adaptam-se automaticamente ao tamanho da tela do dispositivo utilizado,
+                  melhorando significativamente a experiência do usuário. Textos, imagens e outros elementos do
+                  <i>site</i>
+                  são escalados e reorganizados para garantir que o conteúdo seja fácil de ler e navegar,
+                  independentemente do dispositivo.
+                </p>
+              </div>
+              <div class="info-bloco1">
+                <h4><b>Suporte à conectividade variável</b></h4>
+                <p>Interfaces responsivas são frequentemente projetadas considerando também a otimização do
+                  desempenho, como a redução do tempo de carregamento das páginas. Isso é particularmente importante
+                  para usuários em conexões lentas ou instáveis, garantindo que o <i>site</i> seja acessível mesmo em
+                  condições de rede não ideais.</p>
+              </div>
+              <div class="info-bloco2">
+                <h4><b>Custo-benefício</b></h4>
+                <p>Do ponto de vista do desenvolvimento, adotar uma abordagem responsiva desde o início pode ser
+                  mais econômico do que criar múltiplas versões de um <i>site</i>. Além disso, oferecer uma boa
+                  experiência
+                  de usuário em todos os dispositivos pode aumentar a conversão e retenção de usuários, impactando
+                  positivamente o retorno sobre o investimento.</p>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4><b>Acessibilidade em diversos dispositivos</b></h4>
+              <p>Com uma vasta gama de dispositivos com acesso à internet disponíveis no mercado, incluindo
+                <i>smartphones</i>, <i>tablets</i>, <i>laptops</i> e <i>desktops</i> com diferentes tamanhos de tela e
+                resoluções, as
+                interfaces responsivas garantem que o conteúdo seja acessível e legível em todos esses
+                dispositivos, proporcionando uma experiência de usuário coesa.
+              </p>
+              <h4><b>Melhoria da experiência do usuário</b></h4>
+              <p>As interfaces responsivas adaptam-se automaticamente ao tamanho da tela do dispositivo utilizado,
+                melhorando significativamente a experiência do usuário. Textos, imagens e outros elementos do
+                <i>site</i>
+                são escalados e reorganizados para garantir que o conteúdo seja fácil de ler e navegar,
+                independentemente do dispositivo.
+              </p>
+              <h4><b>Suporte à conectividade variável</b></h4>
+              <p>Interfaces responsivas são frequentemente projetadas considerando também a otimização do
+                desempenho, como a redução do tempo de carregamento das páginas. Isso é particularmente importante
+                para usuários em conexões lentas ou instáveis, garantindo que o <i>site</i> seja acessível mesmo em
+                condições de rede não ideais.</p>
+              <h4><b>Custo-benefício</b></h4>
+              <p>Do ponto de vista do desenvolvimento, adotar uma abordagem responsiva desde o início pode ser
+                mais econômico do que criar múltiplas versões de um <i>site</i>. Além disso, oferecer uma boa
+                experiência
+                de usuário em todos os dispositivos pode aumentar a conversão e retenção de usuários, impactando
+                positivamente o retorno sobre o investimento.</p>
+            </div>
+            <p>Atualmente, pode-se dizer que implementar uma interface <i>responsive</i> é <b>indispensável</b> e até
+              mesmo
+              obrigatório para qualquer <i>site</i> ou sistema <i>web</i> que visa propiciar uma navegação funcional,
+              amigável e
+              intuitiva para seus usuários.</p>
+          </div>
+        </div>
+        <div class="bloco6">
+          <div class="container">
+            <h2>Encerramento</h2>
+            <p>Neste material, você viu que o conceito de responsividade é essencial para garantir que uma interface
+              <i>web</i>
+              se ajuste de forma eficaz a diferentes dispositivos e tamanhos de tela. Por meio das modificações no CSS e
+              da correta utilização da <i>meta tag</i> <b>viewport</b> no HTML, é possível construir interfaces
+              adaptáveis e
+              funcionais, mantendo a estrutura original do conteúdo e proporcionando uma melhor experiência ao usuário.
+              Dominar essas técnicas é fundamental para o desenvolvimento de <i>sites</i> e sistemas modernos, alinhados
+              às
+              demandas de acessibilidade e praticidade no ambiente digital.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

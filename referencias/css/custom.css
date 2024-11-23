@@ -1,0 +1,7 @@
+body{
+	background: url('../imgs/') no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	word-break: break-word;
+}
+

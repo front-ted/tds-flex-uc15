@@ -1,0 +1,9 @@
+body {
+  background: url('../imgs/') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {}

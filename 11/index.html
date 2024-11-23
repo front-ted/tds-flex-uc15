@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Testes em aplicações web: teste de script, compatibilidade com navegadores, adequações para responsividade,
+    ferramentas automatizadas de teste front-end</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="bloco1">
+          <div class="container">
+            <h2>Testes em aplicações <i>web</i>: teste de <i>script</i>, compatibilidade com navegadores, adequações
+              para responsividade, ferramentas automatizadas de teste <i>front-end</i></h2>
+            <p>Realizar testes em aplicações <i>web</i> é crucial para garantir que o <i>site</i> funcione corretamente
+              em diferentes
+              ambientes e para todos os usuários. Alguns dos principais testes envolvem realizar testes de
+              <i>scripts</i>,
+              verificar a compatibilidade da sua interface entre os diversos navegadores e verificar e realizar
+              adequações de responsividade em diferentes dispositivos. No entanto, também existem ferramentas que
+              automatizam alguns desses testes no <i>front-end</i> da sua interface.
+            </p>
+            <h3>Teste de <i>script</i></h3>
+            <p>Quando se fala em testes de <i>script</i>, eles geralmente envolvem a verificação de <i>scripts</i>
+              JavaScript em uma
+              aplicação <i>web</i> para garantir que eles funcionem corretamente. Isso pode incluir testes de unitários,
+              de
+              integração e <i>end-to-end</i> (E2E).</p>
+            <p>Os testes de <i>script</i> são fundamentais para garantir a qualidade do <i>software</i> e a
+              funcionalidade correta das
+              aplicações <i>web</i>.</p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <div class="painel painel1">
+                <button type="button" class="btn-painel1 btn1-painel1" data-toggle="modal"
+                  data-target="#modal1-painel1"></button>
+              </div>
+              <div class="painel painel1">
+                <button type="button" class="btn-painel1 btn2-painel1" data-toggle="modal"
+                  data-target="#modal2-painel1"></button>
+              </div>
+              <div class="painel painel1">
+                <button type="button" class="btn-painel1 btn3-painel1" data-toggle="modal"
+                  data-target="#modal3-painel1"></button>
+              </div>
+            </div>
+            <div class="modal modal-100 fade no-print" id="modal1-painel1" aria-hidden="false">
+              <div class="modal-dialog">
+                <div class="modal-content no-print">
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="modal-header" style="padding-top: 30px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <h4>Testes unitários</h4>
+                      <p>Verificam a menor parte testável do <i>software</i>, conhecida como “unidade”. Em geral, isso
+                        significa testar funções ou métodos individuais em isolamento para garantir que funcionem
+                        conforme
+                        o esperado.</p>
+                      <p>O objetivo desse teste é assegurar que cada parte do código funcione corretamente de forma
+                        independente.</p>
+                      <p class="caixa-destaque">Os testes unitários são executados isoladamente, sem dependências
+                        externas como bancos de dados ou serviços externos e são geralmente rápidos de executar. Também
+                        são usados para alcançar alta cobertura de código, detectando erros em partes específicas do
+                        código.</p>
+                      <p>Uma das principais ferramentas para testes unitários em qualquer ambiente se chama Jasmine.</p>
+                      <h4>Jasmine</h4>
+                      <p>O Jasmine é um <i>framework</i> de testes unitários popular para JavaScript. Ele é baseado na
+                        metodologia
+                        de desenvolvimento guiado por comportamento (BDD – <i>behavior driven development</i>). Ele
+                        permite que
+                        você escreva testes claros e concisos que descrevem o comportamento esperado do seu código. O
+                        Jasmine foi desenvolvido em JavaScript puro, o que o torna independente de qualquer outro
+                        <i>framework</i>. Isso significa que você pode usá-lo com qualquer biblioteca ou projeto
+                        JavaScript.
+                      </p>
+                      <p>Para começar a usar o Jasmine, você precisará instalá-lo em seu projeto. Apesar de conseguir
+                        executar seus testes direto no navegador, o <i>site</i> da ferramenta indica que é aconselhável
+                        rodar em
+                        um servidor JavaScript, pois alguns navegadores limitam as informações de erros fornecidas a
+                        <i>scripts</i> executados com base em URLs (<i>uniform resource locator</i>).
+                      </p>
+                      <p>Então, tendo um servidor JavaScript configurado, você pode instalar o Jasmine com o seguinte
+                        comando NPM (<i>node package manager</i>):</p>
+                      <pre>
+                          <code class="language-java">
+                            npm install jasmine   
+                          </code>
+                        </pre>
+                      <p>Depois de instalar o Jasmine, você pode começar a escrever seus testes. Um teste unitário
+                        típico do Jasmine consiste em três partes:</p>
+                      <ul>
+                        <li><b>Descrição:</b> a descrição descreve o que o teste está testando.</li>
+                        <li><b>Configuração:</b> a configuração define o cenário para o teste.</li>
+                        <li><b>Expectativas:</b> as expectativas definem o que você espera que o código faça.</li>
+                      </ul>
+                      <p>Veja um exemplo de teste direto no código:</p>
+                      <pre>
+                      <code class="language-java">
+                        describe("Uma função que soma dois números", function() { 
+
+                          it("deve retornar a soma de dois números", function() { 
+                      
+                            expect(soma(1, 2)).toBe(3); 
+                      
+                          }); 
+                      
+                        }); 
+                      </code>
+                    </pre>
+                      <p>Esse teste testa uma função chamada <b>soma</b>, que deve retornar a soma de dois números. O
+                        teste
+                        configura a função para ser chamada com os números 1 e 2 e, em seguida, verifica se a função
+                        retorna o resultado esperado de 3.</p>
+                      <p>O Jasmine é uma ferramenta poderosa e fácil de usar que pode ajudá-lo a escrever testes
+                        unitários
+                        de alta qualidade para seu código JavaScript. Ao usar o Jasmine, você pode melhorar a qualidade
+                        do
+                        seu código, aumentar sua confiança no código e facilitar a refatoração.</p>
+                      <p>Realizar testes unitários é crucial para o desenvolvimento <i>web</i> de qualidade, pois
+                        oferece diversos
+                        benefícios, como identificar e corrigir <i>bugs</i> no código precocemente e facilitar a
+                        refatoração,
+                        pois os testes unitários servem de rede de segurança que permite refatorar o código sem medo de
+                        introduzir novos <i>bugs</i>. Isso torna o código mais flexível e fácil de manter no longo
+                        prazo.</p>
+                      <div class="modal-footer">
+                        <button type="button" class="botao borda-primaria-03" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-100 fade no-print" id="modal2-painel1" aria-hidden="false">
+              <div class="modal-dialog">
+                <div class="modal-content no-print">
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="modal-header" style="padding-top: 30px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <h4>Testes de integração</h4>
+                      <p>Enquanto os testes unitários focam unidades isoladas, os testes de integração verificam o
+                        funcionamento conjunto de diferentes módulos ou componentes do sistema. O objetivo é garantir
+                        que as unidades se integrem corretamente e que a comunicação entre elas esteja funcionando como
+                        esperado. Essa camada de testes garante que as interfaces entre os componentes estejam bem
+                        definidas e que o sistema funcione como um todo coeso.</p>
+                      <p class="caixa-destaque">Com os testes de integração, é possível detectar falhas de integração,
+                        identificando problemas na comunicação entre os componentes e evitando falhas inesperadas no
+                        sistema completo.</p>
+                      <p>Esses testes também garantem que as interfaces entre os componentes estejam bem definidas e
+                        consistentes, promovendo, assim, a integração harmoniosa dos componentes, evitando
+                        comportamentos inesperados. Isso faz aumentar a confiança no funcionamento do sistema como um
+                        todo.</p>
+                      <p>Veja um exemplo no código:</p>
+                      <pre>
+                        <code class="language-java">
+                          <script> 
+
+                            // Arquivo service.js 
+
+                            function calcularMedia(notas) {
+
+                              if (!Array.isArray(notas) || notas.length === 0) {
+
+                                throw new Error('Parâmetro inválido: notas deve ser um array não vazio');
+
+                              }
+
+                              const soma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+
+                              return soma / notas.length;
+
+                            }
+
+                            // Arquivo controller.js 
+
+                            const notas = [10, 8, 9, 7];
+
+                            const media = calcularMedia(notas);
+
+                            console.log('Média das notas:', media);
+
+                          </script> 
+                        </code>
+                      </pre>
+                      <p>Nesse exemplo, o teste de integração verificaria se a função <b>calcularMedia</b> do arquivo
+                        <b>service.js</b> está sendo chamada corretamente pelo <i>controller</i> no arquivo
+                        <b>controller.js</b> e se o valor
+                        da média está sendo calculado e impresso corretamente.
+                      </p>
+                      <div class="modal-footer">
+                        <button type="button" class="botao borda-primaria-03" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-100 fade no-print" id="modal3-painel1" aria-hidden="false">
+              <div class="modal-dialog">
+                <div class="modal-content no-print">
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="modal-header" style="padding-top: 30px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <h4>Testes E2E</h4>
+                      <p>Os testes E2E (<i>end-to-end</i>) simulam o fluxo completo de uso de uma aplicação, desde a
+                        interação
+                        inicial do usuário até o resultado final. O objetivo é garantir que o sistema funcione conforme
+                        o esperado do ponto de vista do usuário, validando sua experiência completa.</p>
+                      <p class="caixa-destaque">Os testes E2E testam o fluxo completo da aplicação, do início ao fim, e
+                        têm o foco na experiência do usuário, pois validam se a aplicação atende às expectativas dele.
+                      </p>
+                      <p>Esses testes são mais complexos, então exigem mais tempo e esforço para serem escritos e
+                        executados. Por isso, podem ser lentos de executar, especialmente para aplicações complexas.</p>
+                      <p>No entanto, seu uso traz muitos benefícios, como:</p>
+                      <ul>
+                        <li><b>Detecção de falhas de usabilidade:</b> identificam problemas que afetam a experiência do
+                          usuário,
+                          como interfaces confusas ou <i>bugs</i> que impedem a conclusão de tarefas.</li>
+                        <li><b>Validação do fluxo de trabalho:</b> garantem que o fluxo de trabalho da aplicação esteja
+                          funcionando
+                          como esperado do início ao fim.</li>
+                        <li><b>Maior confiança do usuário:</b> aumentam a confiança do usuário na qualidade e
+                          confiabilidade da
+                          aplicação.</li>
+                        <li><b>Melhor experiência do usuário:</b> contribuem para uma experiência do usuário mais
+                          positiva e
+                          satisfatória.</li>
+                      </ul>
+                      <p>Atualmente, existem muitas ferramentas que auxiliam os testes E2E, e uma das mais populares se
+                        chama <b>Selenium</b>, cuja base é a automação de navegação <i>web</i>, permitindo testar
+                        aplicações <i>web</i> de
+                        forma abrangente e em diversos navegadores. O Selenium oferece suporte a diversas linguagens de
+                        programação, como Java, Python, C# e JavaScript, proporcionando flexibilidade para os
+                        desenvolvedores.</p>
+                      <p>Porém, também há ferramentas populares mais específicas, como o <b>Cypress</b>, que se destaca
+                        como uma
+                        ferramenta de teste E2E moderna e com foco na experiência do desenvolvedor. Sua arquitetura
+                        inovadora baseada em JavaScript oferece uma experiência de desenvolvimento rápida e intuitiva. O
+                        Cypress é ideal para equipes que desejam testes E2E fáceis de escrever e depurar.</p>
+                      <p>Você aprenderá mais sobre essas ferramentas no conhecimento sobre <b>ferramentas automatizadas
+                          de
+                          testes</b> <i>front-end</i>.</p>
+                      <div class="modal-footer">
+                        <button type="button" class="botao borda-primaria-03" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4>Testes unitários</h4>
+              <p>Verificam a menor parte testável do <i>software</i>, conhecida como “unidade”. Em geral, isso
+                significa testar funções ou métodos individuais em isolamento para garantir que funcionem
+                conforme
+                o esperado.</p>
+              <p>O objetivo desse teste é assegurar que cada parte do código funcione corretamente de forma
+                independente.</p>
+              <p class="caixa-destaque">Os testes unitários são executados isoladamente, sem dependências
+                externas como bancos de dados ou serviços externos e são geralmente rápidos de executar. Também
+                são usados para alcançar alta cobertura de código, detectando erros em partes específicas do
+                código.</p>
+              <p>Uma das principais ferramentas para testes unitários em qualquer ambiente se chama Jasmine.</p>
+              <h4>Jasmine</h4>
+              <p>O Jasmine é um <i>framework</i> de testes unitários popular para JavaScript. Ele é baseado na
+                metodologia
+                de desenvolvimento guiado por comportamento (BDD – <i>behavior driven development</i>). Ele
+                permite que
+                você escreva testes claros e concisos que descrevem o comportamento esperado do seu código. O
+                Jasmine foi desenvolvido em JavaScript puro, o que o torna independente de qualquer outro
+                <i>framework</i>. Isso significa que você pode usá-lo com qualquer biblioteca ou projeto
+                JavaScript.
+              </p>
+              <p>Para começar a usar o Jasmine, você precisará instalá-lo em seu projeto. Apesar de conseguir
+                executar seus testes direto no navegador, o <i>site</i> da ferramenta indica que é aconselhável
+                rodar em
+                um servidor JavaScript, pois alguns navegadores limitam as informações de erros fornecidas a
+                <i>scripts</i> executados com base em URLs (<i>uniform resource locator</i>).
+              </p>
+              <p>Então, tendo um servidor JavaScript configurado, você pode instalar o Jasmine com o seguinte
+                comando NPM (<i>node package manager</i>):</p>
+              <pre>
+                  <code class="language-java">
+                    npm install jasmine   
+                  </code>
+                </pre>
+              <p>Depois de instalar o Jasmine, você pode começar a escrever seus testes. Um teste unitário
+                típico do Jasmine consiste em três partes:</p>
+              <ul>
+                <li><b>Descrição:</b> a descrição descreve o que o teste está testando.</li>
+                <li><b>Configuração:</b> a configuração define o cenário para o teste.</li>
+                <li><b>Expectativas:</b> as expectativas definem o que você espera que o código faça.</li>
+              </ul>
+              <p>Veja um exemplo de teste direto no código:</p>
+              <pre>
+              <code class="language-java">
+                describe("Uma função que soma dois números", function() { 
+
+                  it("deve retornar a soma de dois números", function() { 
+              
+                    expect(soma(1, 2)).toBe(3); 
+              
+                  }); 
+              
+                }); 
+              </code>
+            </pre>
+              <p>Esse teste testa uma função chamada <b>soma</b>, que deve retornar a soma de dois números. O
+                teste
+                configura a função para ser chamada com os números 1 e 2 e, em seguida, verifica se a função
+                retorna o resultado esperado de 3.</p>
+              <p>O Jasmine é uma ferramenta poderosa e fácil de usar que pode ajudá-lo a escrever testes
+                unitários
+                de alta qualidade para seu código JavaScript. Ao usar o Jasmine, você pode melhorar a qualidade
+                do
+                seu código, aumentar sua confiança no código e facilitar a refatoração.</p>
+              <p>Realizar testes unitários é crucial para o desenvolvimento <i>web</i> de qualidade, pois
+                oferece diversos
+                benefícios, como identificar e corrigir <i>bugs</i> no código precocemente e facilitar a
+                refatoração,
+                pois os testes unitários servem de rede de segurança que permite refatorar o código sem medo de
+                introduzir novos <i>bugs</i>. Isso torna o código mais flexível e fácil de manter no longo
+                prazo.</p>
+              <h4>Testes de integração</h4>
+              <p>Enquanto os testes unitários focam unidades isoladas, os testes de integração verificam o
+                funcionamento conjunto de diferentes módulos ou componentes do sistema. O objetivo é garantir
+                que as unidades se integrem corretamente e que a comunicação entre elas esteja funcionando como
+                esperado. Essa camada de testes garante que as interfaces entre os componentes estejam bem
+                definidas e que o sistema funcione como um todo coeso.</p>
+              <p class="caixa-destaque">Com os testes de integração, é possível detectar falhas de integração,
+                identificando problemas na comunicação entre os componentes e evitando falhas inesperadas no
+                sistema completo.</p>
+              <p>Esses testes também garantem que as interfaces entre os componentes estejam bem definidas e
+                consistentes, promovendo, assim, a integração harmoniosa dos componentes, evitando
+                comportamentos inesperados. Isso faz aumentar a confiança no funcionamento do sistema como um
+                todo.</p>
+              <p>Veja um exemplo no código:</p>
+              <pre>
+                  <code class="language-java">
+                    <script> 
+
+                      // Arquivo service.js 
+
+                      function calcularMedia(notas) {
+
+                        if (!Array.isArray(notas) || notas.length === 0) {
+
+                          throw new Error('Parâmetro inválido: notas deve ser um array não vazio');
+
+                        }
+
+                        const soma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+
+                        return soma / notas.length;
+
+                      }
+
+                      // Arquivo controller.js 
+
+                      const notas = [10, 8, 9, 7];
+
+                      const media = calcularMedia(notas);
+
+                      console.log('Média das notas:', media);
+
+                    </script> 
+                  </code>
+                </pre>
+              <p>Nesse exemplo, o teste de integração verificaria se a função <b>calcularMedia</b> do arquivo
+                <b>service.js</b> está sendo chamada corretamente pelo <i>controller</i> no arquivo
+                <b>controller.js</b> e se o valor
+                da média está sendo calculado e impresso corretamente.
+              </p>
+              <h4>Testes E2E</h4>
+              <p>Os testes E2E (<i>end-to-end</i>) simulam o fluxo completo de uso de uma aplicação, desde a
+                interação
+                inicial do usuário até o resultado final. O objetivo é garantir que o sistema funcione conforme
+                o esperado do ponto de vista do usuário, validando sua experiência completa.</p>
+              <p class="caixa-destaque">Os testes E2E testam o fluxo completo da aplicação, do início ao fim, e
+                têm o foco na experiência do usuário, pois validam se a aplicação atende às expectativas dele.
+              </p>
+              <p>Esses testes são mais complexos, então exigem mais tempo e esforço para serem escritos e
+                executados. Por isso, podem ser lentos de executar, especialmente para aplicações complexas.</p>
+              <p>No entanto, seu uso traz muitos benefícios, como:</p>
+              <ul>
+                <li><b>Detecção de falhas de usabilidade:</b> identificam problemas que afetam a experiência do
+                  usuário,
+                  como interfaces confusas ou <i>bugs</i> que impedem a conclusão de tarefas.</li>
+                <li><b>Validação do fluxo de trabalho:</b> garantem que o fluxo de trabalho da aplicação esteja
+                  funcionando
+                  como esperado do início ao fim.</li>
+                <li><b>Maior confiança do usuário:</b> aumentam a confiança do usuário na qualidade e
+                  confiabilidade da
+                  aplicação.</li>
+                <li><b>Melhor experiência do usuário:</b> contribuem para uma experiência do usuário mais
+                  positiva e
+                  satisfatória.</li>
+              </ul>
+              <p>Atualmente, existem muitas ferramentas que auxiliam os testes E2E, e uma das mais populares se
+                chama <b>Selenium</b>, cuja base é a automação de navegação <i>web</i>, permitindo testar
+                aplicações <i>web</i> de
+                forma abrangente e em diversos navegadores. O Selenium oferece suporte a diversas linguagens de
+                programação, como Java, Python, C# e JavaScript, proporcionando flexibilidade para os
+                desenvolvedores.</p>
+              <p>Porém, também há ferramentas populares mais específicas, como o <b>Cypress</b>, que se destaca
+                como uma
+                ferramenta de teste E2E moderna e com foco na experiência do desenvolvedor. Sua arquitetura
+                inovadora baseada em JavaScript oferece uma experiência de desenvolvimento rápida e intuitiva. O
+                Cypress é ideal para equipes que desejam testes E2E fáceis de escrever e depurar.</p>
+              <p>Você aprenderá mais sobre essas ferramentas no conhecimento sobre <b>ferramentas automatizadas
+                  de
+                  testes</b> <i>front-end</i>.</p>
+            </div>
+            <p>Por fim, os testes unitários, de integração e E2E são ferramentas complementares que, juntas, fornecem
+              uma
+              cobertura abrangente da qualidade do <i>software</i>. Cada tipo de teste tem os próprios objetivos e
+              benefícios, e
+              a escolha da ferramenta adequada depende das necessidades específicas do projeto.</p>
+            <p>Geralmente, é recomendado começar com testes unitários, pois eles são a base para garantir que as
+              unidades
+              básicas do código estejam funcionando corretamente. Então adicione testes de integração, pois eles validam
+              a
+              comunicação entre os componentes e garantem que o sistema funcione como um todo coeso.</p>
+            <p>Recomenda-se, ainda, finalizar com testes E2E, pois eles garantem que a experiência do usuário seja
+              satisfatória e que a aplicação atenda às suas expectativas.</p>
+            <p>Ao investir em testes abrangentes, você pode garantir que seu <i>software</i> seja de alta qualidade,
+              confiável e
+              atenda às necessidades dos usuários.</p>
+          </div>
+        </div>
+        <div class="bloco2">
+          <div class="container">
+            <h3>Compatibilidade com navegadores</h3>
+            <p>No mundo dinâmico da <i>web</i>, onde diversos navegadores e dispositivos coexistem, garantir que seu
+              <i>site</i> ou
+              aplicativo funcione corretamente em todos eles é crucial para oferecer uma experiência consistente e
+              positiva a seus usuários. É nesse contexto que entram os testes de compatibilidade com navegadores, também
+              conhecidos como <i>cross-browser testing</i>.
+            </p>
+            <p>Basicamente esses testes consistem em verificar como o seu <i>site</i> ou aplicativo se comporta em
+              diferentes
+              navegadores e dispositivos, identificando possíveis problemas de renderização, funcionalidade e
+              usabilidade.
+              O objetivo é garantir que, independentemente do navegador ou dispositivo utilizado, a experiência do
+              usuário
+              seja a mesma e atenda às suas expectativas.</p>
+            <p>Garantir que seu <i>site</i> ou sistema funcione em todos os dispositivos e navegadores atuais traz
+              muitos
+              benefícios a sua aplicação, como:</p>
+            <div class="no-print" aria-hidden="true">
+              <button type="button" class="btn-painel2 btn1-painel2" data-toggle="modal"
+                data-target="#modal1-painel2"></button>
+              <button type="button" class="btn-painel2 btn2-painel2" data-toggle="modal"
+                data-target="#modal2-painel2"></button>
+              <button type="button" class="btn-painel2 btn3-painel2" data-toggle="modal"
+                data-target="#modal3-painel2"></button>
+            </div>
+            <div class="modal fade no-print" id="modal1-painel2" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Melhorar a experiência do usuário</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Um <i>site</i> ou aplicativo que funciona corretamente em todos os navegadores oferece uma
+                      experiência mais
+                      agradável e satisfatória para os usuários, aumentando a fidelidade e o engajamento.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal2-painel2" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Evitar problemas de usabilidade</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Os testes de compatibilidade podem identificar problemas como interfaces desorganizadas, menus
+                      inacessíveis ou recursos que não funcionam em determinados navegadores, evitando que os usuários
+                      fiquem
+                      frustrados e abandonem o <i>site</i>.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade no-print" id="modal3-painel2" tabindex="-1" role="dialog"
+              aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Diminuir a taxa de rejeição</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Um <i>site</i> compatível com diversos navegadores reduz a probabilidade de que os usuários se
+                      deparem com
+                      erros
+                      ou problemas de visualização, diminuindo a taxa de rejeição e aumentando o tempo que eles passam
+                      no
+                      <i>site</i>,
+                      impactando diretamente o SEO (<i>search engine optimization</i>).
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4>Melhorar a experiência do usuário</h4>
+              <p>Um <i>site</i> ou aplicativo que funciona corretamente em todos os navegadores oferece uma experiência
+                mais
+                agradável e satisfatória para os usuários, aumentando a fidelidade e o engajamento.</p>
+              <h4>Evitar problemas de usabilidade</h4>
+              <p>Os testes de compatibilidade podem identificar problemas como interfaces desorganizadas, menus
+                inacessíveis ou recursos que não funcionam em determinados navegadores, evitando que os usuários fiquem
+                frustrados e abandonem o <i>site</i>.</p>
+              <h4>Diminuir a taxa de rejeição</h4>
+              <p>Um <i>site</i> compatível com diversos navegadores reduz a probabilidade de que os usuários se deparem
+                com
+                erros
+                ou problemas de visualização, diminuindo a taxa de rejeição e aumentando o tempo que eles passam no
+                <i>site</i>,
+                impactando diretamente o SEO (<i>search engine optimization</i>).
+              </p>
+            </div>
+            <p>O processo mais simples que se deve fazer é realizar testes manuais, o que envolve abrir o <i>site</i> ou
+              sistema
+              em diferentes navegadores e dispositivos para verificar se tudo funciona corretamente. Essa abordagem pode
+              ser demorada e trabalhosa, mas permite uma análise mais profunda da experiência do usuário.</p>
+            <p>No entanto, existem ferramentas <i>on-line</i>, como BrowserStack, Sauce Labs, CrossBrowserTesting e
+              Browserling,
+              que auxiliam nesse processo, permitindo que você visualize seu <i>site</i> em diferentes navegadores sem
+              precisar
+              instalá-los.</p>
+            <p>No momento que você está desenvolvendo sua interface, é importante verificar se o estilo CSS, a
+              <i>tag</i> HTML ou
+              a função JavaScript que você está utilizando tem compatibilidade com os navegadores e dispositivos que o
+              seu
+              usuário final utilizará.
+            </p>
+            <p class="caixa-destaque icone dica">Uma ferramenta que auxilia muito nisso é o Can I Use. Ele mostra para
+              você se o estilo ou a <i>tag</i> utilizada é compatível com determinados navegadores e dispositivos.</p>
+            <p>Por exemplo, veja na figura a compatibilidade da propriedade Flexbox do CSS3:</p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Compatibilidade Flexbox
+              <br>
+              Fonte: Adaptado de Can I Use (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site da Can I Use, com o gráfico de compatibilidade dos
+              principais navegadores com o estilo Flexbox. O gráfico mostra que versões antigas do Opera, Internet
+              Explorer e Firefox não são compatíveis com esse estilo.</p>
+            <p>Os testes de compatibilidade com navegadores são uma etapa crucial no desenvolvimento de qualquer
+              <i>site</i> ou
+              sistema <i>web</i>. Ao investir tempo e esforço nesses testes, você garante que seu <i>site</i> funcione
+              corretamente em
+              diferentes navegadores e dispositivos, oferecendo uma experiência consistente e positiva para todos os
+              seus usuários.
+            </p>
+          </div>
+        </div>
+        <div class="bloco3">
+          <div class="container">
+            <h3>Adequações para responsividade</h3>
+            <p>Atualmente existem diversas práticas e técnicas usadas para garantir que uma interface para
+              desenvolvimento <i>web</i> seja eficaz em diferentes dispositivos e tamanhos de tela. Todas elas são
+              abordadas no
+              conhecimento sobre CSS. Relembre algumas técnicas:</p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        <span><i>Layout</i> flexível ou <i>fluid</i></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <p>Utilizar unidades de medida flexíveis como porcentagens em vez de unidades fixas
+                        (<i>pixels</i>) para
+                        larguras
+                        de
+                        contêineres e elementos, permitindo que eles se ajustem dinamicamente ao tamanho da tela.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span><i>Media queries</i></span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <p>Utilizar <i>media queries</i> em CSS para aplicar estilos diferentes com base nas
+                        características da
+                        tela,
+                        como
+                        largura, altura e orientação. Isso permite ajustar o <i>layout</i> e o design conforme
+                        necessário para
+                        diferentes
+                        dispositivos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span><i>Grids</i> e <i>frameworks</i> responsivos</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <p>Utilizar sistemas de <i>grid</i> responsivos, como o Bootstrap, que facilitam a criação de
+                        <i>layouts</i> adaptáveis,
+                        ajustando automaticamente a disposição dos elementos com base no tamanho da tela.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFour">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Fontes e tipografia responsivas
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                      <p>Utilizar unidades de medida relativas como “em”, “rem” e “%” para o tamanho da fonte,
+                        garantindo que o
+                        texto seja legível em diferentes dispositivos sem precisar de <i>zoom</i>.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFive">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Desempenho e velocidade
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                    <div class="panel-body">
+                      <p>Considerar o desempenho e a velocidade de carregamento, otimizando imagens e recursos para
+                        diferentes
+                        dispositivos, garantindo uma experiência de usuário rápida e eficiente.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSix">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Acessibilidade
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                    <div class="panel-body">
+                      <p>Certificar-se de que o <i>design</i> responsivo não comprometa a acessibilidade, garantindo que
+                        usuários com
+                        necessidades especiais possam navegar e interagir com o <i>site</i> sem dificuldades adicionais.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSeven">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Testes em dispositivos múltiplos
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingSeven">
+                    <div class="panel-body">
+                      <p>Testar regularmente o <i>design</i> em uma variedade de dispositivos e tamanhos de tela para
+                        garantir
+                        que a
+                        experiência do usuário seja consistente e eficaz em todas as plataformas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4><i>Layout</i> flexível ou <i>fluid</i></h4>
+              <p>Utilizar unidades de medida flexíveis como porcentagens em vez de unidades fixas (<i>pixels</i>) para
+                larguras
+                de
+                contêineres e elementos, permitindo que eles se ajustem dinamicamente ao tamanho da tela.</p>
+              <h4><i>Media queries</i></h4>
+              <p>Utilizar <i>media queries</i> em CSS para aplicar estilos diferentes com base nas características da
+                tela,
+                como
+                largura, altura e orientação. Isso permite ajustar o <i>layout</i> e o design conforme necessário para
+                diferentes
+                dispositivos.</p>
+              <h4><i>Grids</i> e <i>frameworks</i> responsivos</h4>
+              <p>Utilizar sistemas de <i>grid</i> responsivos, como o Bootstrap, que facilitam a criação de
+                <i>layouts</i> adaptáveis,
+                ajustando automaticamente a disposição dos elementos com base no tamanho da tela.
+              </p>
+              <h4>Fontes e tipografia responsivas</h4>
+              <p>Utilizar unidades de medida relativas como “em”, “rem” e “%” para o tamanho da fonte, garantindo que o
+                texto seja legível em diferentes dispositivos sem precisar de <i>zoom</i>.</p>
+              <h4>Desempenho e velocidade</h4>
+              <p>Considerar o desempenho e a velocidade de carregamento, otimizando imagens e recursos para diferentes
+                dispositivos, garantindo uma experiência de usuário rápida e eficiente.</p>
+              <h4>Acessibilidade</h4>
+              <p>Certificar-se de que o <i>design</i> responsivo não comprometa a acessibilidade, garantindo que
+                usuários com
+                necessidades especiais possam navegar e interagir com o <i>site</i> sem dificuldades adicionais.</p>
+              <h4>Testes em dispositivos múltiplos</h4>
+
+              <p>Testar regularmente o <i>design</i> em uma variedade de dispositivos e tamanhos de tela para garantir
+                que a
+                experiência do usuário seja consistente e eficaz em todas as plataformas.</p>
+            </div>
+            <p>Essas são apenas algumas das adequações importantes para criar um <i>design</i> responsivo eficaz que
+              ofereça uma
+              experiência consistente e agradável em uma ampla gama de dispositivos e tamanhos de tela.</p>
+            <p>Contudo, tratando-se de responsividade, nada será mais eficaz do que testar manualmente sua interface em
+              diferentes tipos de telas, e existem algumas ferramentas que auxiliam nisso.</p>
+            <p>A forma mais simples e eficaz de testar o <i>responsive</i> do seu <i>site</i> ou sistema é usar os
+              recursos do navegador
+              Google Chrome, que, por padrão, se for aberto em computadores, traz ferramentas que auxiliam nesse
+              processo.
+              Em qualquer interface, clique com o botão direito do <i>mouse</i> e selecione a opção <b>Inspecionar</b>.
+            </p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Inspecionar Google Chrome
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site do Senac com a janela aberta após clicar com o botão
+              direito do mouse. Dentre as opções dessa janela tem a opção Inspecionar.</p>
+            <p>Abrirá uma barra lateral, que dividirá sua tela com o código <i>front-end</i> do <i>site</i>. Para testar
+              os diferentes
+              tamanhos de tela, basta puxar essa lateral e seu <i>site</i> deverá se ajustar conforme o tamanho.</p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Teste de <i>responsive</i> com Chrome
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site do Senac em três telas diferentes. Cada tela representa
+              um tamanho, apenas aumentando a largura da barra de inspecionar.</p>
+            <p>Observe na figura que, conforme a tela vai diminuindo, o <i>site</i> se ajusta como se tivesse sido
+              aberto em um
+              dispositivo com aquele tamanho de tela. Além disso, enquanto você o redimensiona, no campo superior
+              direito
+              da tela, é mostrado o tamanho em <i>pixels</i> daquela tela. Sendo assim, é possível ver <i>pixel</i> a
+              <i>pixel</i> como a sua
+              interface se comporta em qualquer resolução.
+            </p>
+            <p class="caixa-destaque icone anotar">Essa é a maneira mais eficaz e certeira de saber se seu <i>site</i>
+              se
+              ajusta
+              a qualquer tamanho de tela. Caso identifique alguma inconformidade ou quebra no <i>layout</i> em algum
+              tamanho
+              específico de tela, basta aplicar os ajustes <i>responsive</i> necessários, usando por exemplo o recurso
+              de <i>media
+                query</i>.</p>
+            <p>Porém, ainda nessa mesma ferramenta do Google Chrome, é possível simular o tamanho das principais marcas
+              e
+              modelos de dispositivos móveis da atualidade. Para isso, basta clicar no ícone que representa um
+              computador
+              com um celular à frente, localizado na barra superior esquerda da tela de inspecionar.</p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Simulador de dispositivos móveis do Chrome
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site do Senac ajustado conforme a resolução do iPhone SE. Na
+              parte superior da tela, há um campo de seleção para escolher em qual dispositivo deseja ver sua interface.
+            </p>
+            <p>Observe na figura que, com essa ferramenta, é possível selecionar para simular a visualização da sua
+              interface em uma variedade de dispositivos móveis. Ao lado é possível ver a resolução em <i>pixels</i>
+              padrão
+              daquele dispositivo. Assim, você tem uma noção mais exata de como sua interface ficará naquele dispositivo
+              em específico.</p>
+            <p>No conhecimento sobre SEO, você aprendeu sobre as ferramentas do <i>search console</i>, que ajudam a
+              entender se
+              seu <i>site</i> precisa de adequações para <i>responsive</i>.</p>
+            <p>Há também outras ferramentas com o mesmo objetivo, como o Responsive Design Checker e o Responsinator,
+              nas quais basta colocar a URL do seu <i>site</i> e eles mostram diversas opções de dispositivos para
+              realizar os
+              testes.</p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Responsive Design Checker
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site do Responsive Design Checker, onde há um campo para
+              digitar o site a ser verificado.</p>
+            <p>Tanto no Responsive Design Checker quanto no Responsinator é muito fácil de realizar os testes. Basta
+              acessar o <i>site</i> deles e haverá um campo para inserir a URL do seu <i>site</i>. Ambas são ferramentas
+              gratuitas e
+              <i>on-line</i>.
+            </p>
+            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                class="center-block img-responsive"></a>
+            <p class="legenda-imagem">
+              Responsinator
+              <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o site do Senac em um teste na ferramenta do Responsinator,
+              que mede diversas resoluções na orientação de retrato e paisagem.</p>
+            <p>Essas ferramentas oferecem diversas funcionalidades que ajudam a garantir que seu <i>site</i> seja
+              acessível e
+              funcional em todos os tipos de dispositivos e tamanhos de tela. Testar seu <i>site</i> em diferentes
+              plataformas
+              e dispositivos é essencial para proporcionar uma ótima experiência ao usuário.</p>
+          </div>
+        </div>
+        <div class="bloco4">
+          <div class="container">
+            <h3>Ferramentas automatizadas de teste <i>front-end</i></h3>
+            <p>Ferramentas automatizadas de teste <i>front-end</i> são muito úteis para garantir a qualidade e a
+              funcionalidade
+              das suas interfaces <i>web</i>. Elas ajudam a identificar <i>bugs</i>, problemas de desempenho e
+              inconsistências antes que
+              o código seja lançado para produção. Algumas das ferramentas mais populares e eficazes atualmente são o
+              Selenium e Cypress.</p>
+            <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
+            <div class="no-print" aria-hidden="true">
+              <div class="painel painel3">
+                <button type="button" class="btn-painel3 btn1-painel3" data-toggle="modal"
+                  data-target="#modal1-painel3"></button>
+              </div>
+              <div class="painel painel3">
+                <button type="button" class="btn-painel3 btn2-painel3" data-toggle="modal"
+                  data-target="#modal2-painel3"></button>
+              </div>
+            </div>
+            <div class="modal modal-100 fade no-print" id="modal1-painel3" aria-hidden="false" style="display: none;">
+              <div class="modal-dialog">
+                <div class="modal-content no-print">
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="modal-header" style="padding-top: 30px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <h4>Selenium</h4>
+                      <p>O Selenium é uma ferramenta de automação de testes muito popular e poderosa utilizada para
+                        testar
+                        aplicações <i>web</i>. O Selenium permite aos desenvolvedores e testadores escreverem
+                        <i>scripts</i> em
+                        várias
+                        linguagens de programação (como JavaScript, Python, C# etc.) para automatizar a interação com o
+                        navegador <i>web</i>. Com ele, é possível simular interações do usuário, como cliques,
+                        preenchimento de
+                        formulários, navegação entre páginas e validação de resultados, tudo de forma automatizada. Essa
+                        capacidade faz do Selenium uma ferramenta essencial para garantir a qualidade e o desempenho de
+                        aplicações <i>web</i> por meio de testes automatizados.
+                      </p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        <i>Site</i> do Selenium
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o site oficial da ferramenta Selenium.</p>
+                      <p>Começar a utilizar o Selenium é muito simples. Veja um exemplo com base na linguagem
+                        JavaScript. Então,
+                        no
+                        <i>site</i> oficial, clique em <b>Downloads</b> e clique em <b>JavaScript</b>. Lá haverá as
+                        instruções
+                        para a instalação. O
+                        processo é bem prático, mas você precisa ter o Node.js instalado em seu computador.
+                      </p>
+                      <p class="caixa-destaque icone importante">O <b>Node</b> é uma plataforma de <i>software</i> de
+                        código
+                        aberto para a
+                        execução de código JavaScript no lado do servidor, projetado para construir aplicações de rede
+                        escaláveis e de alto desempenho, particularmente servidores <i>web</i>. O Node expandiu o
+                        alcance do
+                        JavaScript, permitindo seu uso no lado do servidor, o que significa que os desenvolvedores podem
+                        escrever tanto o código do lado do cliente quanto do servidor em uma única linguagem.</p>
+                      <p>Com o Node previamente instalado, crie um diretório para o seu projeto e abra-o no VS Code.
+                        Então,
+                        digite no terminal o seguinte comando para instalar o Selenium:</p>
+                      <p class="marca-texto">npm install selenium-webdriver</p>
+                      <p>Então, ele criará todas as dependências e os arquivos necessários ao funcionamento do Selenium.
+                      </p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Instalação do Selenium
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o terminal do VS Code, com o código de instalação do
+                        Selenium executado.</p>
+                      <p>No exemplo dessa figura, foi criado o diretório Selenium e realizada a instalação nele.</p>
+                      <p>Agora, no mesmo diretório, será criado um arquivo de JavaScript para executar as tarefas
+                        automatizadas.
+                        Neste exemplo, foi criado o arquivo <b>teste.js</b>. Já no início do arquivo, é preciso importar
+                        os
+                        módulos
+                        necessários, no caso, o <i>webdriver</i> do Selenium e o <i>webdriver</i> do navegador em que
+                        você
+                        deseja executar o
+                        teste.</p>
+                      <p>Veja um exemplo levando em consideração o navegador Chrome:</p>
+                      <pre>
+                          <code class="language-java">
+                            const { Builder, By, Key, until } = require('selenium-webdriver'); 
+        
+                            const chrome = require('selenium-webdriver/chrome'); 
+                          </code>
+                        </pre>
+                      <p>No mesmo arquivo, logo após a importação dos módulos, cria-se uma função para executar as
+                        ações:</p>
+                      <pre>
+                          <code class="language-java">
+                            async function exampleTest() { 
+        
+                              // Inicializar o WebDriver 
+                          
+                              let driver = await new Builder() 
+                          
+                                  .forBrowser('chrome') 
+                          
+                                  .build(); 
+                          
+                              try { 
+                          
+                                  // Abrir uma página 
+                          
+                                  await driver.get('https://www.google.com'); 
+                          
+                                  // Encontrar o campo de busca pelo nome q 
+                          
+                                  let element = await driver.findElement(By.name('q')); 
+                          
+                                  // Digitar texto no elemento 
+                          
+                                  await element.sendKeys('Hello, Selenium!', Key.RETURN); 
+                          
+                                  // Esperar até que a página carregue completamente 
+                          
+                                  await driver.wait(until.titleIs('Example Domain'), 1000); 
+                          
+                           
+                          
+                                  // Verificar o título da página 
+                          
+                                  let title = await driver.getTitle(); 
+                          
+                                  console.log('Page title is:', title); 
+                          
+                              } finally { 
+                          
+                                  // Fechar o navegador no final do teste 
+                          
+                                  await driver.quit(); 
+                          
+                              } 
+                          
+                          } 
+                          </code>
+                        </pre>
+                      <p>Nesse código, primeiro foi indicado que as ações seriam executadas no navegador Chrome. Depois,
+                        pede-se
+                        a
+                        ele que abra o <i>site</i> do Google. Ao acessar esse <i>site</i>, ele procura um campo com nome
+                        “q”, ou
+                        seja, uma <i>tag</i>
+                        <b>input</b> com o atributo <b>name</b> igual ao valor <b>q</b> (no <i>site</i> do Google, o
+                        campo da
+                        busca se chama
+                        “q”). Com o
+                        método <b>sendkeys</b>, pede-se a ele que digite, no campo encontrado, a frase “Hello,
+                        Selenium”.
+                      </p>
+                      <p>Após o teste concluído, ele fecha a janela do navegador automaticamente com a função
+                        <b>driver.quit()</b>.
+                      </p>
+                      <p>Porém, para executar esse comando, é preciso usar um comando do Node. Basta escrever a palavra
+                        “node”
+                        seguida do caminho do arquivo a ser executado:</p>
+                      <pre>
+                          <code class="language-java">
+                            node teste.js   
+                          </code>
+                        </pre>
+                      <p>Assim que o comando rodar, ele executará todas as ações descritas no código, abrir o navegador,
+                        acessar
+                        o
+                        <i>site</i> do Google, escrever o termo “Hello, Selenium” no campo de busca e, por último,
+                        fechar o
+                        navegador.
+                      </p>
+                      <p>Perceba que, com o método <b>findElement</b>, é possível encontrar elementos em sua interface,
+                        atribuindo-os a
+                        variáveis, e executar ações neles. É claro que, neste caso, você precisa entender a estrutura do
+                        <i>site</i> a
+                        ser testado.
+                      </p>
+                      <p>Por exemplo, suponha que você tem um <i>site</i> com cadastro, no qual é preciso preencher um
+                        campo de
+                        <i>e-mail</i> e
+                        senha e, então, clicar no botão de enviar. O primeiro passo é identificar esses elementos. Veja:
+                      </p>
+                      <pre>
+                          <code class="language-java">
+                            let nome = await driver.findElement(By.name('mauticform[nome]')); 
+        
+                            let email = await driver.findElement(By.name('mauticform[email]')); 
+        
+                            let enviar = await driver.findElement(By.className('mauticform-button')); 
+                          </code>
+                        </pre>
+                      <p>Observe que são obtidos os campos via <b>name</b>; já o botão busca-se via classe. O próximo
+                        passo é
+                        declarar
+                        as ações a serem executadas nesses campos.</p>
+                      <pre>
+                          <code class="language-java">
+                            await nome.sendKeys('Teste de Oliveira', Key.RETURN); 
+        
+                            await email.sendKeys('teste@email.com', Key.RETURN); 
+        
+                            await enviar.click(); 
+                          </code>
+                        </pre>
+                      <p>Nesse exemplo, escreva o termo “Teste de Oliveira” no campo <b>nome</b>. Também será escrito o
+                        <i>e-mail</i>
+                        “teste@email.com” no campo <b>email</b>. Por fim, será executado o evento de clique no elemento
+                        <b>enviar</b>.
+                      </p>
+                      <p>Para testar essas ações, execute em um <i>site</i> de exemplo que contenha os elementos
+                        mencionados.
+                        Veja o
+                        código completo:</p>
+                      <pre>
+                          <code class="language-java">
+                            const { Builder, By, Key, until } = require('selenium-webdriver'); 
+        
+                            const chrome = require('selenium-webdriver/chrome'); 
+        
+                            async function exampleTest() {     
+        
+                           let driver = await new Builder() 
+        
+                .forBrowser('chrome')       
+        
+                .build(); 
+        
+            try { 
+        
+                // Abrir uma página 
+        
+                await driver.get('https://profroberto.com.br/cadastro-aula'); 
+        
+        //Aguarda 2 segundos para a página carregar 
+        
+               await driver.manage().setTimeouts({implicit: 2000}); 
+        
+                // Encontrar os elementos na página 
+        
+                let nome = await driver.findElement(By.name('mauticform[nome]')); 
+        
+                let email = await driver.findElement(By.name('mauticform[email]')); 
+        
+                let enviar = await driver.findElement(By.className('mauticform-button')); 
+        
+                // Executar eventos 
+        
+                await nome.sendKeys('teste de Oliveira', Key.RETURN); 
+        
+                await email.sendKeys('teste@email.com', Key.RETURN); 
+        
+                await enviar.click();         
+        
+            } finally { 
+        
+                // Fechar o navegador no final do teste 
+        
+                await driver.quit(); 
+        
+            } 
+        
+        } 
+        
+              // Chamar a função 
+        
+              exampleTest(); 
+                          </code>
+                        </pre>
+                      <p>Veja, na figura, o teste sendo executado:</p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Teste em execução – preenchimento de formulário
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o navegador Chrome sendo executado pelo Selenium,
+                        onde foram
+                        executadas as ações de entrar no site, preencher os campos nome e e-mail e clicar no botão de
+                        enviar.
+                      </p>
+                      <p>É primordial consultar periodicamente a documentação do Selenium, em seu <i>site</i> oficial,
+                        em busca
+                        de
+                        atualizações dele. Seguindo a lógica mostrada, você conseguirá realizar qualquer tipo de teste
+                        em sua
+                        interface <i>web</i>.</p>
+                      <div class="modal-footer">
+                        <button type="button" class="botao borda-primaria-03" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modal-100 fade no-print" id="modal2-painel3" aria-hidden="false" style="display: none;">
+              <div class="modal-dialog">
+                <div class="modal-content no-print">
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="modal-header" style="padding-top: 30px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      </div>
+                      <h4>Cypress</h4>
+                      <p>O <b>Cypress</b> tem uma API (<i>application programming interface</i>) simples e fluente,
+                        projetada
+                        especificamente
+                        para testar aplicações <i>web</i> modernas. Ele utiliza seletores diretamente no DOM (modelo de
+                        objeto
+                        de
+                        documento) e oferece comandos encadeados que são fáceis de ler e escrever. Ele executa testes de
+                        forma
+                        mais rápida e previsível devido ao seu controle mais direto sobre o ambiente. Além disso, pode
+                        simular
+                        interações do usuário de maneira mais eficiente, pois opera diretamente no mesmo contexto que a
+                        aplicação.</p>
+                      <p>Começar a trabalhar com o Cypress não é muito diferente do Selenium. Você precisa basicamente
+                        das
+                        mesmas
+                        ferramentas, o Node.js e um editor como o VS Code.</p>
+                      <p>Crie, então, um diretório para o seu ambiente de testes e abra-o no VS Code. Em seguida, é
+                        preciso
+                        instalar o Cypress via terminal:</p>
+                      <pre>
+                          <code class="language-java">
+                            npm install cypress --save-dev 
+                          </code>
+                        </pre>
+                      <p>Esse comando baixará e instalará todos os arquivos necessários ao funcionamento do Cypress.
+                        Após isso,
+                        execute o seguinte comando:</p>
+                      <p>Abrirá, então, a interface do Cypress, e nela você pode configurar diversos pontos que podem
+                        auxiliar
+                        na execução dos seus testes.</p>
+                      <p>Primeiro, adicione um projeto indicando a pasta na qual ele deverá executar os <i>scripts</i>
+                        de
+                        testes:</p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Painel do Cypress
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o painel inicial do Cypress, com um campo para
+                        selecionar
+                        uma pasta.</p>
+                      <p>Selecione uma pasta para sua aplicação. Ela deve estar dentro do diretório raiz do Cypress. É
+                        comum
+                        usar uma pasta chamada “integration”. Depois selecione a opção <b>E2E</b> e o navegador que vai
+                        executar
+                        os
+                        testes.</p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Painel do Cypress – seleção do navegador
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o painel do Cypress, com opções de navegadores para
+                        executar, como o Chrome, Firefox e Edge.</p>
+                      <p>Selecione o navegador e clique no botão <b>Start E2E</b>.</p>
+                      <p>Começará, então, a execução via Cypress no navegador selecionado. Na tela seguinte, escolha a
+                        opção
+                        <b>Create new spec</b>.
+                      </p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Painel do Cypress – novo teste
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o painel do Cypress com a opção de criar um novo
+                        arquivo
+                        para testes.</p>
+                      <p>Na tela seguinte, o Cypress indicará um caminho com um arquivo. Clique em <b>Criar</b> e,
+                        depois,
+                        selecione a opção <b>Run test</b>.</p>
+                      <p>Ele cria, então, um exemplo bem simples, abrindo um <i>site</i> de teste. Veja a figura:</p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Teste-padrão do Cypress
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o painel do Cypress executando um teste padrão de
+                        abrir uma
+                        página.</p>
+                      <p>Observe, na figura, que logo ao lado de <b>TEST BODY</b> está escrito <b>Open in IDE</b>. Ao
+                        clicar
+                        ali, você abrirá o arquivo de teste no VS Code.</p>
+                      <p>Então, você perceberá que ele executou o seguinte código:</p>
+                      <pre>
+                        <code class="language-java">
+                          describe('template spec', () => { 
+        
+                            it('passes', () => { 
+                          
+                              cy.visit('https://example.cypress.io') 
+                          
+                            }) 
+                          
+                          }) 
+                        </code>
+                      </pre>
+                      <p>Para executar seus testes personalizados, basta atualizar o código desse arquivo.</p>
+                      <p>No Cypress, os testes são escritos usando uma sintaxe baseada em BDD (<i>behavior driven
+                          development</i>). Ele
+                        executa os testes diretamente no navegador que controla, o que facilita a depuração e a
+                        interação com a
+                        aplicação.</p>
+                      <p>Crie um teste idêntico ao do tópico anterior. Abra o Google, faça uma pesquisa e verifique o
+                        título da
+                        página:</p>
+                      <pre>
+                          <code class="language-java">
+                            describe('Teste de Busca no Google', () => { 
+        
+                              it('Visitar o site do Google e Buscar algo', () => { 
+                            
+                                // Visitar o site do Google 
+                            
+                                cy.visit('https://www.google.com'); 
+                            
+                             
+                            
+                                // Encontrar o campo de busca e digitar a consulta 
+                            
+                                cy.get('textarea[name="q"]').type('Cypress.io{enter}'); 
+                            
+                             
+                            
+                                // Verificar o título da página após a busca 
+                            
+                                cy.title().should('include', 'Cypress.io'); 
+                            
+                              }); 
+                            
+                            }); 
+                          </code>
+                        </pre>
+                      <p>Perceba que a sintaxe é bem intuitiva, <b>cy.visit</b> indica a URL a ser acessada,
+                        <b>cy.get</b> busca
+                        o elemento e
+                        <b>type</b> efetua a busca.
+                      </p>
+                      <p>Ao salvar o arquivo e olhar novamente o navegador sendo executado pelo Cypress, você o verá
+                        executar as
+                        ações mencionadas:</p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Teste com Cypress
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o painel do Cypress executando o teste de abrir a
+                        página do
+                        Google e digitar uma pesquisa.</p>
+                      <p>Agora, realize um teste com mais campos, conforme feito no tópico do Selenium.</p>
+                      <pre>
+          <code class="language-java">
+                  describe('Teste Formulário', () => { 
+        
+                    it('Visitar o site e preencher o cadastro', () => { 
+                  
+                      cy.visit('https://profroberto.com.br/cadastro-aula'); 
+                  
+                  
+                  
+                      // Encontrar os campos e digitar as informações 
+                  
+                      cy.get('input[name="mauticform[nome]"]').type('Teste de Oliveira'); 
+                  
+                      cy.get('input[name="mauticform[email]"]').type('teste@email.com'); 
+                  
+                      cy.get('.mauticform-button').click();     
+                  
+                    }); 
+                  
+                  }); 
+          </code>
+        </pre>
+                      <p>Observe que, com a sintaxe utilizada pelo Cypress, o código fica bem enxuto. Nesse exemplo, foi
+                        escrito
+                        o termo “Teste de Oliveira” no campo <b>nome</b> e o <i>e-mail</i> “teste@email.com” no campo
+                        <b>email</b>. Por fim, execute
+                        o evento de clique no elemento com a classe <b>mauticform-button</b>.
+                      </p>
+                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                          src="imgs/" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">
+                        Teste de preenchimento de formulário com Cypress
+                        <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A figura mostra o teste sendo executado pelo Cypress, onde foram
+                        executadas
+                        as ações de entrar no site, preencher os campos nome e e-mail e clicar no botão.</p>
+                      <div class="modal-footer">
+                        <button type="button" class="botao borda-primaria-03" data-dismiss="modal">Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="acessivel print">
+              <h4>Selenium</h4>
+              <p>O Selenium é uma ferramenta de automação de testes muito popular e poderosa utilizada para testar
+                aplicações <i>web</i>. O Selenium permite aos desenvolvedores e testadores escreverem <i>scripts</i> em
+                várias
+                linguagens de programação (como JavaScript, Python, C# etc.) para automatizar a interação com o
+                navegador <i>web</i>. Com ele, é possível simular interações do usuário, como cliques, preenchimento de
+                formulários, navegação entre páginas e validação de resultados, tudo de forma automatizada. Essa
+                capacidade faz do Selenium uma ferramenta essencial para garantir a qualidade e o desempenho de
+                aplicações <i>web</i> por meio de testes automatizados.</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                <i>Site</i> do Selenium
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o site oficial da ferramenta Selenium.</p>
+              <p>Começar a utilizar o Selenium é muito simples. Veja um exemplo com base na linguagem JavaScript. Então,
+                no
+                <i>site</i> oficial, clique em <b>Downloads</b> e clique em <b>JavaScript</b>. Lá haverá as instruções
+                para a instalação. O
+                processo é bem prático, mas você precisa ter o Node.js instalado em seu computador.
+              </p>
+              <p class="caixa-destaque icone importante">O <b>Node</b> é uma plataforma de <i>software</i> de código
+                aberto para a
+                execução de código JavaScript no lado do servidor, projetado para construir aplicações de rede
+                escaláveis e de alto desempenho, particularmente servidores <i>web</i>. O Node expandiu o alcance do
+                JavaScript, permitindo seu uso no lado do servidor, o que significa que os desenvolvedores podem
+                escrever tanto o código do lado do cliente quanto do servidor em uma única linguagem.</p>
+              <p>Com o Node previamente instalado, crie um diretório para o seu projeto e abra-o no VS Code. Então,
+                digite no terminal o seguinte comando para instalar o Selenium:</p>
+              <p class="marca-texto">npm install selenium-webdriver</p>
+              <p>Então, ele criará todas as dependências e os arquivos necessários ao funcionamento do Selenium.</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Instalação do Selenium
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o terminal do VS Code, com o código de instalação do
+                Selenium executado.</p>
+              <p>No exemplo dessa figura, foi criado o diretório Selenium e realizada a instalação nele.</p>
+              <p>Agora, no mesmo diretório, será criado um arquivo de JavaScript para executar as tarefas automatizadas.
+                Neste exemplo, foi criado o arquivo <b>teste.js</b>. Já no início do arquivo, é preciso importar os
+                módulos
+                necessários, no caso, o <i>webdriver</i> do Selenium e o <i>webdriver</i> do navegador em que você
+                deseja executar o
+                teste.</p>
+              <p>Veja um exemplo levando em consideração o navegador Chrome:</p>
+              <pre>
+                  <code class="language-java">
+                    const { Builder, By, Key, until } = require('selenium-webdriver'); 
+
+                    const chrome = require('selenium-webdriver/chrome'); 
+                  </code>
+                </pre>
+              <p>No mesmo arquivo, logo após a importação dos módulos, cria-se uma função para executar as ações:</p>
+              <pre>
+                  <code class="language-java">
+                    async function exampleTest() { 
+
+                      // Inicializar o WebDriver 
+                  
+                      let driver = await new Builder() 
+                  
+                          .forBrowser('chrome') 
+                  
+                          .build(); 
+                  
+                      try { 
+                  
+                          // Abrir uma página 
+                  
+                          await driver.get('https://www.google.com'); 
+                  
+                          // Encontrar o campo de busca pelo nome q 
+                  
+                          let element = await driver.findElement(By.name('q')); 
+                  
+                          // Digitar texto no elemento 
+                  
+                          await element.sendKeys('Hello, Selenium!', Key.RETURN); 
+                  
+                          // Esperar até que a página carregue completamente 
+                  
+                          await driver.wait(until.titleIs('Example Domain'), 1000); 
+                  
+                   
+                  
+                          // Verificar o título da página 
+                  
+                          let title = await driver.getTitle(); 
+                  
+                          console.log('Page title is:', title); 
+                  
+                      } finally { 
+                  
+                          // Fechar o navegador no final do teste 
+                  
+                          await driver.quit(); 
+                  
+                      } 
+                  
+                  } 
+                  </code>
+                </pre>
+              <p>Nesse código, primeiro foi indicado que as ações seriam executadas no navegador Chrome. Depois, pede-se
+                a
+                ele que abra o <i>site</i> do Google. Ao acessar esse <i>site</i>, ele procura um campo com nome “q”, ou
+                seja, uma <i>tag</i>
+                <b>input</b> com o atributo <b>name</b> igual ao valor <b>q</b> (no <i>site</i> do Google, o campo da
+                busca se chama
+                “q”). Com o
+                método <b>sendkeys</b>, pede-se a ele que digite, no campo encontrado, a frase “Hello, Selenium”.
+              </p>
+              <p>Após o teste concluído, ele fecha a janela do navegador automaticamente com a função
+                <b>driver.quit()</b>.
+              </p>
+              <p>Porém, para executar esse comando, é preciso usar um comando do Node. Basta escrever a palavra “node”
+                seguida do caminho do arquivo a ser executado:</p>
+              <pre>
+                  <code class="language-java">
+                    node teste.js   
+                  </code>
+                </pre>
+              <p>Assim que o comando rodar, ele executará todas as ações descritas no código, abrir o navegador, acessar
+                o
+                <i>site</i> do Google, escrever o termo “Hello, Selenium” no campo de busca e, por último, fechar o
+                navegador.
+              </p>
+              <p>Perceba que, com o método <b>findElement</b>, é possível encontrar elementos em sua interface,
+                atribuindo-os a
+                variáveis, e executar ações neles. É claro que, neste caso, você precisa entender a estrutura do
+                <i>site</i> a
+                ser testado.
+              </p>
+              <p>Por exemplo, suponha que você tem um <i>site</i> com cadastro, no qual é preciso preencher um campo de
+                <i>e-mail</i> e
+                senha e, então, clicar no botão de enviar. O primeiro passo é identificar esses elementos. Veja:
+              </p>
+              <pre>
+                  <code class="language-java">
+                    let nome = await driver.findElement(By.name('mauticform[nome]')); 
+
+                    let email = await driver.findElement(By.name('mauticform[email]')); 
+
+                    let enviar = await driver.findElement(By.className('mauticform-button')); 
+                  </code>
+                </pre>
+              <p>Observe que são obtidos os campos via <b>name</b>; já o botão busca-se via classe. O próximo passo é
+                declarar
+                as ações a serem executadas nesses campos.</p>
+              <pre>
+                  <code class="language-java">
+                    await nome.sendKeys('Teste de Oliveira', Key.RETURN); 
+
+                    await email.sendKeys('teste@email.com', Key.RETURN); 
+
+                    await enviar.click(); 
+                  </code>
+                </pre>
+              <p>Nesse exemplo, escreva o termo “Teste de Oliveira” no campo <b>nome</b>. Também será escrito o
+                <i>e-mail</i>
+                “teste@email.com” no campo <b>email</b>. Por fim, será executado o evento de clique no elemento
+                <b>enviar</b>.
+              </p>
+              <p>Para testar essas ações, execute em um <i>site</i> de exemplo que contenha os elementos mencionados.
+                Veja o
+                código completo:</p>
+              <pre>
+                  <code class="language-java">
+                    const { Builder, By, Key, until } = require('selenium-webdriver'); 
+
+                    const chrome = require('selenium-webdriver/chrome'); 
+
+                    async function exampleTest() {     
+
+                   let driver = await new Builder() 
+
+        .forBrowser('chrome')       
+
+        .build(); 
+
+    try { 
+
+        // Abrir uma página 
+
+        await driver.get('https://profroberto.com.br/cadastro-aula'); 
+
+//Aguarda 2 segundos para a página carregar 
+
+       await driver.manage().setTimeouts({implicit: 2000}); 
+
+        // Encontrar os elementos na página 
+
+        let nome = await driver.findElement(By.name('mauticform[nome]')); 
+
+        let email = await driver.findElement(By.name('mauticform[email]')); 
+
+        let enviar = await driver.findElement(By.className('mauticform-button')); 
+
+        // Executar eventos 
+
+        await nome.sendKeys('teste de Oliveira', Key.RETURN); 
+
+        await email.sendKeys('teste@email.com', Key.RETURN); 
+
+        await enviar.click();         
+
+    } finally { 
+
+        // Fechar o navegador no final do teste 
+
+        await driver.quit(); 
+
+    } 
+
+} 
+
+      // Chamar a função 
+
+      exampleTest(); 
+                  </code>
+                </pre>
+              <p>Veja, na figura, o teste sendo executado:</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Teste em execução – preenchimento de formulário
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o navegador Chrome sendo executado pelo Selenium, onde foram
+                executadas as ações de entrar no site, preencher os campos nome e e-mail e clicar no botão de enviar.
+              </p>
+              <p>É primordial consultar periodicamente a documentação do Selenium, em seu <i>site</i> oficial, em busca
+                de
+                atualizações dele. Seguindo a lógica mostrada, você conseguirá realizar qualquer tipo de teste em sua
+                interface <i>web</i>.</p>
+              <h4>Cypress</h4>
+              <p>O <b>Cypress</b> tem uma API (<i>application programming interface</i>) simples e fluente, projetada
+                especificamente
+                para testar aplicações <i>web</i> modernas. Ele utiliza seletores diretamente no DOM (modelo de objeto
+                de
+                documento) e oferece comandos encadeados que são fáceis de ler e escrever. Ele executa testes de forma
+                mais rápida e previsível devido ao seu controle mais direto sobre o ambiente. Além disso, pode simular
+                interações do usuário de maneira mais eficiente, pois opera diretamente no mesmo contexto que a
+                aplicação.</p>
+              <p>Começar a trabalhar com o Cypress não é muito diferente do Selenium. Você precisa basicamente das
+                mesmas
+                ferramentas, o Node.js e um editor como o VS Code.</p>
+              <p>Crie, então, um diretório para o seu ambiente de testes e abra-o no VS Code. Em seguida, é preciso
+                instalar o Cypress via terminal:</p>
+              <pre>
+                  <code class="language-java">
+                    npm install cypress --save-dev 
+                  </code>
+                </pre>
+              <p>Esse comando baixará e instalará todos os arquivos necessários ao funcionamento do Cypress. Após isso,
+                execute o seguinte comando:</p>
+              <p>Abrirá, então, a interface do Cypress, e nela você pode configurar diversos pontos que podem auxiliar
+                na execução dos seus testes.</p>
+              <p>Primeiro, adicione um projeto indicando a pasta na qual ele deverá executar os <i>scripts</i> de
+                testes:</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Painel do Cypress
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o painel inicial do Cypress, com um campo para selecionar
+                uma pasta.</p>
+              <p>Selecione uma pasta para sua aplicação. Ela deve estar dentro do diretório raiz do Cypress. É comum
+                usar uma pasta chamada “integration”. Depois selecione a opção <b>E2E</b> e o navegador que vai executar
+                os
+                testes.</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Painel do Cypress – seleção do navegador
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o painel do Cypress, com opções de navegadores para
+                executar, como o Chrome, Firefox e Edge.</p>
+              <p>Selecione o navegador e clique no botão <b>Start E2E</b>.</p>
+              <p>Começará, então, a execução via Cypress no navegador selecionado. Na tela seguinte, escolha a opção
+                <b>Create new spec</b>.
+              </p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Painel do Cypress – novo teste
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o painel do Cypress com a opção de criar um novo arquivo
+                para testes.</p>
+              <p>Na tela seguinte, o Cypress indicará um caminho com um arquivo. Clique em <b>Criar</b> e, depois,
+                selecione a opção <b>Run test</b>.</p>
+              <p>Ele cria, então, um exemplo bem simples, abrindo um <i>site</i> de teste. Veja a figura:</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Teste-padrão do Cypress
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o painel do Cypress executando um teste padrão de abrir uma
+                página.</p>
+              <p>Observe, na figura, que logo ao lado de <b>TEST BODY</b> está escrito <b>Open in IDE</b>. Ao clicar
+                ali, você abrirá o arquivo de teste no VS Code.</p>
+              <p>Então, você perceberá que ele executou o seguinte código:</p>
+              <pre>
+                <code class="language-java">
+                  describe('template spec', () => { 
+
+                    it('passes', () => { 
+                  
+                      cy.visit('https://example.cypress.io') 
+                  
+                    }) 
+                  
+                  }) 
+                </code>
+              </pre>
+              <p>Para executar seus testes personalizados, basta atualizar o código desse arquivo.</p>
+              <p>No Cypress, os testes são escritos usando uma sintaxe baseada em BDD (<i>behavior driven
+                  development</i>). Ele
+                executa os testes diretamente no navegador que controla, o que facilita a depuração e a interação com a
+                aplicação.</p>
+              <p>Crie um teste idêntico ao do tópico anterior. Abra o Google, faça uma pesquisa e verifique o título da
+                página:</p>
+              <pre>
+                  <code class="language-java">
+                    describe('Teste de Busca no Google', () => { 
+
+                      it('Visitar o site do Google e Buscar algo', () => { 
+                    
+                        // Visitar o site do Google 
+                    
+                        cy.visit('https://www.google.com'); 
+                    
+                     
+                    
+                        // Encontrar o campo de busca e digitar a consulta 
+                    
+                        cy.get('textarea[name="q"]').type('Cypress.io{enter}'); 
+                    
+                     
+                    
+                        // Verificar o título da página após a busca 
+                    
+                        cy.title().should('include', 'Cypress.io'); 
+                    
+                      }); 
+                    
+                    }); 
+                  </code>
+                </pre>
+              <p>Perceba que a sintaxe é bem intuitiva, <b>cy.visit</b> indica a URL a ser acessada, <b>cy.get</b> busca
+                o elemento e
+                <b>type</b> efetua a busca.
+              </p>
+              <p>Ao salvar o arquivo e olhar novamente o navegador sendo executado pelo Cypress, você o verá executar as
+                ações mencionadas:</p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Teste com Cypress
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o painel do Cypress executando o teste de abrir a página do
+                Google e digitar uma pesquisa.</p>
+              <p>Agora, realize um teste com mais campos, conforme feito no tópico do Selenium.</p>
+              <pre>
+  <code class="language-java">
+          describe('Teste Formulário', () => { 
+
+            it('Visitar o site e preencher o cadastro', () => { 
+          
+              cy.visit('https://profroberto.com.br/cadastro-aula'); 
+          
+          
+          
+              // Encontrar os campos e digitar as informações 
+          
+              cy.get('input[name="mauticform[nome]"]').type('Teste de Oliveira'); 
+          
+              cy.get('input[name="mauticform[email]"]').type('teste@email.com'); 
+          
+              cy.get('.mauticform-button').click();     
+          
+            }); 
+          
+          }); 
+  </code>
+</pre>
+              <p>Observe que, com a sintaxe utilizada pelo Cypress, o código fica bem enxuto. Nesse exemplo, foi escrito
+                o termo “Teste de Oliveira” no campo <b>nome</b> e o <i>e-mail</i> “teste@email.com” no campo
+                <b>email</b>. Por fim, execute
+                o evento de clique no elemento com a classe <b>mauticform-button</b>.
+              </p>
+              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+                  class="center-block img-responsive"></a>
+              <p class="legenda-imagem">
+                Teste de preenchimento de formulário com Cypress
+                <br>
+                Fonte: Senac EAD (2024)
+              </p>
+              <p class="acessivel no-print">A figura mostra o teste sendo executado pelo Cypress, onde foram executadas
+                as ações de entrar no site, preencher os campos nome e e-mail e clicar no botão.</p>
+            </div>
+            <p>Perceba que, enquanto o Selenium é uma escolha mais ampla e flexível para automação de testes em
+              diferentes
+              navegadores e cenários, o Cypress é altamente especializado e oferece uma experiência de desenvolvimento
+              mais direta e otimizada para testes de aplicações <i>web</i> modernas, especialmente aquelas que utilizam
+              <i>frameworks</i> como React, Angular, Vue etc.
+            </p>
+            <p>Além disso, a interface gráfica que o Cypress disponibiliza traz uma experiência agradável aos usuários,
+              tanto desenvolvedores quanto profissionais de testes.</p>
+          </div>
+        </div>
+        <div class="bloco5">
+          <div class="container">
+            <h2>Encerramento</h2>
+            <p>As ferramentas automatizadas de teste <i>front-end</i> oferecem uma ampla gama de funcionalidades para
+              garantir
+              que suas aplicações <i>web</i> sejam robustas, funcionais e livres de <i>bugs</i>. A escolha da ferramenta
+              adequada
+              depende das necessidades específicas do seu projeto, como a complexidade da aplicação, o ambiente de
+              desenvolvimento e as preferências da equipe. Utilizar uma combinação dessas ferramentas pode proporcionar
+              uma cobertura de teste mais abrangente e eficiente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>

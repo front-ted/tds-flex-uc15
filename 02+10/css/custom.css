@@ -1,0 +1,61 @@
+body {
+  background: url('../imgs/') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.bloco1 {
+  background-color: red;
+}
+
+.bloco2 {
+  background-color: pink;
+}
+
+.bloco3 {
+  background-color: green;
+}
+
+.bloco4 {
+  background-color: yellow;
+}
+
+.bloco5 {
+  background-color: brown;
+}
+
+.bloco6 {
+  background-color: lightblue;
+}
+
+.info-bloco1 {
+  background-color: #2875C6;
+  color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 80%;
+  margin-top: 20;
+  margin-bottom: 20;
+}
+
+.info-bloco2 {
+  background-color: #004B90;
+  color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info-bloco1 h4 {
+  color: #fff;
+}
+
+.info-bloco2 h4 {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {}

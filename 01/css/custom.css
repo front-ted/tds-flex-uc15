@@ -1,0 +1,92 @@
+body {
+  background: url('../imgs/') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Começo da estilização da espera de vídeos e objetos */
+.ratio {
+  background-color: #2875C6;
+}
+
+.ratio::after {
+  content: "ESPERA";
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/* Fim da estilização da espera de vídeos e objetos */
+.hljs {
+  background: #161616 !important;
+}
+
+.bloco2,
+.bloco4 {
+  background: url('../imgs/BG2.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bloco1 {
+  background: url('../imgs/BG1.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bloco3 {
+  background-color: grey;
+}
+
+.bloco5,
+.bloco5 h2 {
+  background-color: #2875C6;
+  color: #fff;
+}
+
+.bloco1,
+.bloco2,
+.bloco3,
+.bloco4,
+.bloco5 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.top {
+  background: url('../imgs/parallax_div_topo.jpg') no-repeat;
+  width: 100%;
+  height: 41px;
+}
+
+.bottom {
+  background: url('../imgs/parallax_div_bottom.jpg') no-repeat;
+  width: 100%;
+  height: 41px;
+}
+
+.parallax1 {
+  background: url('../imgs/Parallax1.jpg') no-repeat;
+  height: 450px;
+  width: 100% !important;
+  z-index: unset !important;
+}
+
+.parallax2 {
+  background: url('../imgs/Parallax2.jpg') no-repeat;
+  height: 450px;
+  width: 100% !important;
+  z-index: unset !important;
+}
+
+.parallax3 {
+  background: url('../imgs/Parallax3.jpg') no-repeat;
+  height: 450px;
+  width: 100% !important;
+  z-index: unset !important;
+}
+
+@media screen and (max-width: 768px) {}
