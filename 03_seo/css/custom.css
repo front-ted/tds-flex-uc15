@@ -1,33 +1,38 @@
-body{
+body {
   background: url('../../01/imgs/bg_geral-1.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #fff;
   overflow-x: hidden;
 }
-.container{
+
+.container {
   background-color: #fff;
 }
+
 /* .code1 .hljs-meta{
   background-color:darkolivegreen!important;
 } */
 
 /*  */
-.destaque_code{
+.destaque_code {
   background-color: #000;
   padding: 6px 25px;
   margin-top: -20px;
   margin-bottom: -25px;
   display: block;
 }
+
 /* .destaque_code span{
   background-color: aquamarine !important;} */
-  .hljs-dstq{
-    background-color: aquamarine !important;}
+.hljs-dstq {
+  background-color: aquamarine !important;
+}
 
-.lista2 li{
+.lista2 li {
   list-style: none;
 }
+
 .lista2 li::before {
   content: '';
   display: inline-block;
@@ -44,7 +49,7 @@ body{
 
 /* carrosel */
 
-.item{
+.item {
   background: url("../imgs/slide.svg") no-repeat;
   max-width: 800px;
   height: 463px;
@@ -52,16 +57,19 @@ body{
   background-size: 95%;
   margin-left: 7%;
 }
-.carousel-control.left{
-background: url("../imgs/seta_esq.png") no-repeat;
-position: absolute;
-top: 40%;
+
+.carousel-control.left {
+  background: url("../imgs/seta_esq.png") no-repeat;
+  position: absolute;
+  top: 40%;
 }
-.carousel-control.right{
+
+.carousel-control.right {
   background: url("../imgs/seta_dir.png") no-repeat;
   position: absolute;
   top: 40%;
 }
+
 .carousel-caption {
   bottom: 1px;
   right: 10px;
@@ -70,40 +78,62 @@ top: 40%;
   padding-right: 60px;
   color: black;
 }
+
 h1 i,
 h2 i,
 h3 i,
 h4 i {
   font-weight: bold;
 }
+
 h3 {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
 h4 {
   margin: 0px;
   margin-top: 40px;
 }
-h2, h3, h4, h5{color: #4170b4;}
+
+h2,
+h3,
+h4,
+h5 {
+  color: #4170b4;
+}
+
 pre {
   padding: 0;
   background: transparent;
   border: none;
   margin: 0;
 }
-header{margin-top: 100px;}
-.mt-20{margin-top: 20px;}
-.mt-40{margin-top: 40px;}
-.mt-60{margin-top: 60px;}
 
-.parallax{
+header {
+  margin-top: 100px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.parallax {
   min-height: 400px;
   background: transparent;
   width: 100%;
   margin: 50px auto;
 }
 
-.info1{
+.info1 {
   background: #6491D8;
   border-radius: 20px;
   margin: auto;
@@ -113,47 +143,59 @@ header{margin-top: 100px;}
   width: 80%;
   position: relative;
 }
-.info1 img{
+
+.info1 img {
   position: absolute;
   margin: auto;
-  left:0;
+  left: 0;
   right: 0;
   top: -160px;
 }
-.info1 ul{
+
+.info1 ul {
   margin: 0;
   padding: 0;
 }
-.info1 li{color: #fff;}
-.info2{
+
+.info1 li {
+  color: #fff;
+}
+
+.info2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   margin: 50px auto;
 }
-.info2 img{margin-bottom: 40px;}
-ul.checklist li{
+
+.info2 img {
+  margin-bottom: 40px;
+}
+
+ul.checklist li {
   background: url('../imgs/checklist.png') no-repeat left top;
   background-size: 25px;
   min-height: 25px;
   padding-left: 35px;
   list-style: none;
 }
-.icone-concluindo{
+
+.icone-concluindo {
   background-image: url('../imgs/ico_finalizando.png');
   background-size: 176px 86px;
   padding-left: 220px;
 }
 
-.codigo-destaque{
+.codigo-destaque {
   background: #000;
   color: #a39e9b;
   display: block;
   overflow-x: auto;
   padding: 1em;
 }
-.code-destaque{
+
+.code-destaque {
   background-color: #071772 !important;
 }
 
@@ -164,6 +206,7 @@ ul.checklist li{
   padding: 0;
   margin-top: 80px;
 }
+
 .eng-item-menu hr {
   width: 75%;
   position: relative;
@@ -193,6 +236,7 @@ ul.checklist li{
   position: relative;
   margin-bottom: 0 !important;
 }
+
 .item1:hover,
 .item2:hover,
 .item3:hover,
@@ -223,10 +267,12 @@ ul.checklist li{
   display: inline-block;
   text-align: left;
 }
+
 .fundo-item:focus {
   color: #fff;
   text-decoration: none;
 }
+
 .fundo-item:hover {
   color: #fff;
   text-decoration: none;
@@ -282,6 +328,7 @@ ul.checklist li{
   display: block;
   position: relative;
 }
+
 label.menu-toggle {
   position: fixed;
   z-index: 1100;
@@ -296,7 +343,8 @@ label.menu-toggle {
   text-indent: -9999px;
   background: #fff url("../objetos/menu-alt.png") 50% 50%/25px 25px no-repeat;
 }
-.menu ul li > label {
+
+.menu ul li>label {
   background: url("../objetos/icon-arrow-right.png") 95% 50%/16px 16px no-repeat;
 }
 
@@ -322,6 +370,7 @@ label.menu-toggle {
   height: 100%;
   margin-right: 10px;
 }
+
 label.menu-toggle {
   position: fixed;
   z-index: 1100;
@@ -337,35 +386,241 @@ label.menu-toggle {
   background: #004b8a url("../imgs/menu-alt.png") 50% 50%/25px 25px no-repeat;
 
 }
+
 .imgBorder {
   border: #004b8a 3px solid;
   border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   padding: 5px;
 }
+
 /*---------- FIM MENU ----------*/
 
-@media screen and (max-width: 780px){
-  .parallax{display: none;}
+.botao-1 {
+  background: url('../imgs/bt_cont.png');
+  width: 192px;
+  height: 159px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
 }
-@media screen and (max-width: 480px){
-  .caixa-destaque code{
+
+.botao-1:hover {
+  background: url('../imgs/bt_cont_hv.png');
+  border: none !important;
+}
+
+.botao-2 {
+  background: url('../imgs/bt_reputacao_1.png');
+  width: 192px;
+  height: 159px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-2:hover {
+  background: url('../imgs/bt_reputacao_hv.png');
+  border: none !important;
+}
+
+.botao-3 {
+  background: url('../imgs/bt_tecn.png');
+  width: 192px;
+  height: 159px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-3:hover {
+  background: url('../imgs/bt_tecn_hv.png');
+  border: none !important;
+}
+
+.painel-sites {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #2875C6;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 2pt solid #004B90;
+  border-radius: 8px;
+  outline: 0;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.modal-content p {
+  color: #fff;
+}
+
+.modal-content h4 {
+  color: #fff;
+}
+
+.modal-content li {
+  color: #fff;
+}
+
+.modal-header .close:focus,
+.close:hover {
+  color: #fff;
+}
+
+.modal-header {
+  padding: 15px;
+  border-bottom: unset;
+}
+
+.marcador-curso li {
+  margin-bottom: 0.8em;
+  list-style-image: url('../imgs/marcador.png');
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: unset;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Roboto-mono';
+}
+
+.exemplo-1.icone-x {
+  padding-left: 100px;
+  background-position: 10px center;
+  background-size: 80px;
+}
+
+.exemplo-2.icone-x {
+  padding-left: 100px;
+  background-position: 10px center;
+  background-size: 80px;
+}
+
+.icone-x.negativo {
+  background-image: url('../imgs/destaque_errado.png');
+}
+
+.icone-x.positivo {
+  background-image: url('../imgs/destaque_certo.png');
+}
+
+.icone-x {
+  background-repeat: no-repeat;
+}
+
+.exemplo-1 {
+  background-color: #7f0015;
+}
+
+.exemplo-1 {
+  padding: 1px 60px 0px 0px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 1.9em;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+.exemplo-1 h4 {
+  color: #fff;
+}
+
+.exemplo-2 {
+  background-color: #015605;
+}
+
+.exemplo-2 {
+  padding: 1px 60px 0px 0px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 0.9em;
+  margin-bottom: 1.9em;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+.exemplo-2 h4 {
+  color: #fff;
+}
+
+
+.comment {
+  color: #008000 !important;
+}
+
+.tag {
+  color: #0000FF !important;
+  font-weight: bold;
+}
+
+.attribute {
+  color: #FF4500 !important;
+}
+
+.value {
+  color: #800080 !important;
+}
+
+@media screen and (max-width: 820px) {
+  .painel-sites {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+
+
+@media screen and (max-width: 780px) {
+  .parallax {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .caixa-destaque code {
     word-break: break-word;
   }
-  .icons8{
+
+  .icons8 {
     margin-left: unset;
   }
+
+  .exemplo-1,
+  .exemplo-2 {
+    padding: 1px 60px 0px 0px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0.9em;
+    margin-bottom: 1.9em;
+    border-radius: 8px;
+    font-size: 1.2em;
+  }
+
+
+
 }
 
 
-@media screen and (max-width: 980px){
+@media screen and (max-width: 980px) {
   .icone-concluindo {
     background-position: top 10px center;
     padding-top: 120px;
     padding-left: 5px;
-  }}
-
-  @media screen and (max-width: 1000px){
-    .parallax {display: none;}
-   
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .parallax {
+    display: none;
+  }
+
+}
