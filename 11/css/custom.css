@@ -26,4 +26,27 @@ body {
   background-color: brown;
 }
 
+pre {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+header {
+  margin-top: 100px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 768px) {}

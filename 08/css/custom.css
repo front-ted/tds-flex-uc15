@@ -2,8 +2,73 @@ body {
   background: url('../imgs/') no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #fff;
+  background-color: rgb(240, 233, 233);
   overflow-x: hidden;
+}
+
+/*----------- CARDS -----------*/
+.img-cards {
+  width: 276px;
+  height: 332px;
+  cursor: pointer;
+}
+
+.flip-card {
+  height: 332px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/*----------- /CARDS -----------*/
+/* .hljs-dstq {
+  background-color: aquamarine !important;
+}
+pre {
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+} */
+header {
+  margin-top: 100px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
 }
 
 @media screen and (max-width: 768px) {}
