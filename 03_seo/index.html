@@ -537,7 +537,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading48">
                   <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse48"
+                    <a role="button" data-toggle="collapse" data-parent="#accordion9" href="#collapse48"
                       aria-expanded="true" aria-controls="collapse48">
                       Address
                     </a>
@@ -720,9 +720,426 @@
             </code>
           </pre>
           <p> Agora, veja um exemplo de resultado na busca: </p>
+          <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/figura_01.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Visualizando as <i>tags</i> <b>title</b> e <b>meta description</b> na busca <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A imagem mostra a simulação de uma pesquisa no buscador Google. Contém uma seta
+            apontando onde aparece o texto da tag title. Outra seta aponta onde vem a descrição breve dos sites
+            listados, com a utilização da tag meta description. </p>
+          <p>
+            Já a <b>meta description</b> é a utilização da <i>tag</i> <b>meta</b>, que serve para passar informações
+            adicionais e importantes
+            ao documento HTML, com o atributo <b>name</b> de valor <b>description</b>.
+          </p>
+          <p>
+            Conforme visto na figura, é por meio dela que se controla o texto que aparecerá na listagem do buscador.
+            Veja
+            um exemplo de utilização:
+          </p>
+          <pre>
+          <code>
+&lt;head> 
+    &lt;title>O que é tratamento de canal? - Colgate&lt;/title> 
+    &lt;meta name="description" content="Aqui vai a descrição breve do meu site. Este texto é mostrado no buscador quando meu site é listado."> 
+&lt;/head> 
+        </code>
+        </pre>
+          <p>
+            Um fator importante sobre a utilização dessas duas <i>tags</i> é a limitação de texto delas. Para mantê-las
+            otimizadas e de acordo com sua estratégia de SEO, devem ser respeitados os seguintes limites:
+          </p>
+          <ul>
+            <li><b>Title</b>: deve conter no máximo 70 caracteres ou 512 pixels.</li>
+            <li>
+              <b>Description</b>: deve ter uma média de 160 caracteres. Em alguns casos, o Google aumenta essa descrição
+              para até
+              230 caracteres. Porém, manter 160 caracteres ainda é mais seguro e garante que seu texto aparecerá por
+              completo.
+            </li>
+          </ul>
+          <p>
+            Há inúmeras ferramentas que simulam como ficariam seus textos dentro dessas <i>tags</i> aplicados à listagem
+            do
+            buscador. Recomenda-se a utilização do <i>site</i> SEOmofo, que é uma ferramenta gratuita que simula as
+            páginas de
+            resultados do mecanismo de pesquisa do Google. Nela, você utiliza um formulário para inserir o título, a
+            meta
+            descrição e a URL de sua página da <i>web</i>. Essa ferramenta gerará uma lista virtual de resultados de
+            pesquisa com
+            base em suas informações.
+          </p>
+          <p class="caixa-destaque icone importante">
+            Por fim, é importante reforçar que é <b>obrigatória</b> a utilização das <i>tags</i> <b>title</b> e <b>meta
+              description</b> para
+            qualquer estratégia de otimização nos mecanismos de busca.
+          </p>
+          <h4>Como funcionam as imagens na busca</h4>
+          <p>
+            Para que um buscador encontre seu <i>site</i>, ele tem robôs programados para ficar constantemente
+            procurando e
+            indexando novas URLs. Basicamente, ele encontra um <i>site</i> e, dentro deste, encontra <i>links</i>,
+            apontando para outras
+            URLs, sejam elas internas, sejam externas. O robô entra nesses <i>links</i> e vai indexando e repetindo o
+            processo
+            infinitamente.
+          </p>
+          <p>
+            Esses “robôs”, ao encontrarem o seu <i>site</i>, não o veem como um humano veria; eles basicamente leem o
+            seu código.
+            Quando chegam a uma imagem, não interpretam o que ela representa, mas apenas leem o caminho na <i>tag</i>
+            <b>img</b> e
+            descobrem o nome dela.
+          </p>
+          <p>
+            Então, para otimizar as imagens pensando em SEO, você deve ter percebido que o nome da imagem tem
+            relevância.
+            Por isso, em vez de a imagem ter o nome “<b>foto-01.png</b>”, é mais prudente ter um nome que a represente.
+            Por
+            exemplo, a foto de uma árvore com laranjas poderia se chamar “<b>laranjeira.png</b>”.
+          </p>
+          <p>
+            Porém, a correta utilização do atributo <b>alt</b>, na <i>tag</i> <b>img</b> do HTML, é ainda mais
+            importante que o nome da imagem.
+            Isso porque o buscador, ao ler seu código, quando encontrar a imagem, lerá o que está escrito no atributo<b>
+              alt</b>
+            dela. Um exemplo de preenchimento desse atributo, para a laranjeira, seria “Árvore laranjeira, com folhas
+            verdes e repleta de laranjas maduras”.
+          </p>
+          <p class="caixa-destaque icone anotar">
+            Por outro lado, o atributo <b>alt</b> também é fundamental quando o assunto é acessibilidade, pois existem
+            leitores
+            de tela utilizados principalmente por pessoas que têm alguma dificuldade na visão. Esses leitores de tela
+            não identificam o que é a imagem nem o que ela representa, então leem o que estiver escrito no atributo
+            <b>alt</b>.
+          </p>
+          <p>
+            De acordo com os padrões W3C, o atributo <b>alt</b> é obrigatório em toda <i>tag</i> <b>img</b>. Porém,
+            agora você percebeu que,
+            além de obrigatório, ele é essencial para a acessibilidade e para a sua estratégia de SEO.
+          </p>
+          <pre>
+            <code>
+&lt;img src="imagens/laranjeira.jpg" alt="Árvore laranjeira, com folhas verdes e repleta de laranjas maduras."> 
+            </code>
+          </pre>
+          <p>
+            Em vídeo disponível no YouTube (How Search [...], 2012), Matt Cutts, na época chefe da equipe de <i>spam</i>
+            da <i>web</i>
+            do Google, declara que o Googlebot (robô de busca do Google) não vê as imagens diretamente, então ele se
+            concentra nas informações fornecidas no atributo <b>alt</b>.
+          </p>
+          <p>
+            Em suma, nunca se esqueça do atributo <b>alt</b> nas imagens, pois é assim que o Google entende o que
+            significa sua
+            imagem e o utiliza também para indexá-la na busca de imagens.
+          </p>
+          <h4>Mapa do <i>site</i> (<i>sitemap</i>)</h4>
+          <div class="row mt-5">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+              <img src="imgs/destaque_sitemap.png" class="center-block img-responsive imagem-destaque">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+              <p>
+                Outro fator determinado em SEO é a criação e disponibilização do mapa do <i>site</i> ou sistema. Um mapa
+                do <i>site</i>,
+                também conhecido como <i>sitemap</i>, é uma representação visual ou textual da estrutura de um
+                <i>site</i>. Ele lista
+                todas as páginas e os conteúdos do <i>site</i> de forma hierárquica, proporcionando uma visão geral
+                clara da
+                organização do conteúdo. Existem dois tipos principais de mapas do <i>site</i>: para usuários e para
+                ferramentas
+                de busca.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5 painel-azul">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="destaque-usuarios-buscadores usuarios">
+                <div class="icone-x center-block">
+                  <img src="imgs/icon_usuarios.png" alt="Ícone Usuários" />
+                </div>
+                <h3>Usuários</h3>
+                <p>
+                  O mapa do <i>site</i> criado para usuários é projetado para ajudar os visitantes humanos a navegar
+                  pelo <i>site</i>
+                  de maneira fácil e eficiente. Ele geralmente é apresentado como uma página da <i>web</i> que lista
+                  <i>links</i> para
+                  todas as principais seções e páginas do site. Isso pode ser particularmente útil em sites com uma
+                  grande quantidade de conteúdo, tornando a navegação mais intuitiva para os usuários.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="destaque-usuarios-buscadores buscadores">
+                <div class="icone-x center-block">
+                  <img src="imgs/icon_buscadores.png" alt="Ícone Buscadores" />
+                </div>
+                <h3>Buscadores</h3>
+                <p>
+                  Já o mapa do <i>site</i> para buscadores é uma versão especial destinada a ser lida pelos algoritmos
+                  das
+                  ferramentas de busca. Ele fornece informações estruturadas sobre a organização do <i>site</i> e a
+                  relação
+                  entre diferentes páginas. Esse tipo de mapa ajuda os motores de busca a indexar eficientemente todas
+                  as páginas do <i>site</i>, garantindo que o conteúdo seja rastreado e exibido nos resultados de
+                  pesquisa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            O formato mais comum para um mapa do <i>site</i> para motores de busca é o arquivo XML (<i>extensible markup
+              language</i>),
+            conhecido como <i>sitemap</i> XML. Esse arquivo contém uma lista de URLs do <i>site</i>, juntamente com
+            metadados
+            adicionais, como a última data de modificação e a frequência de atualização. É possível enviar esse mapa do
+            <i>site</i> para o Google por meio de uma ferramenta chamada Google Search Console, que será abordada mais
+            adiante
+            neste curso.
+          </p>
+          <p>Veja um exemplo de <i>sitemap</i> XML:</p>
+          <pre>
+            <code>
+&lt;?xml version="1.0" encoding="UTF-8"?> 
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+    &lt;url> 
+          &lt;loc>https://exemplo.com.br/pagina1&lt;/loc> 
+          &lt;lastmod>2024-04-04T23:53:25+00:00&lt;/lastmod> 
+          &lt;changefreq>monthly&lt;/changefreq> 
+          &lt;priority>0.8&lt;/priority> 
+    &lt;/url> 
+    &lt;url> 
+          &lt;loc>https://exemplo.com.br/pagina2&lt;/loc> 
+          &lt;lastmod>2024-04-04T23:53:25+00:00&lt;/lastmod> 
+          &lt;changefreq>monthly&lt;/changefreq> 
+          &lt;priority>0.9&lt;/priority> 
+    &lt;/url> 
+&lt;/urlset> 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, <b>&lt;loc></b> representa a URL da página, <b>&lt;lastmod></b> indica a última modificação,
+            <b>&lt;changefreq></b>
+            especifica a frequência de alterações e <b>&lt;priority></b> indica a prioridade relativa da página.
+          </p>
+          <p>
+            Você pode criar todo o XML do mapa do seu <i>site</i> de forma manual, porém atualmente existem ferramentas
+            que ajudam nesse processo. Basta uma breve pesquisa por “gerador de <i>sitemap</i>” para encontrar
+            ferramentas gratuitas que geram esse mapa do <i>site</i> para você. No entanto, seu <i>site</i> precisa
+            estar
+            publicado na <i>web</i>, então basta informar a URL e a ferramenta gerará esse arquivo XML para você,
+            disponibilizando-o para <i>download</i>.
+          </p>
+          <p>
+            Porém, todas as vezes que você acrescentar, modificar ou remover URLs do seu <i>site</i>, é preciso repetir
+            esse processo.
+          </p>
+          <p>
+            Os mapas do <i>site</i> desempenham um papel importante tanto para a experiência do usuário quanto para o
+            SEO, ajudando a garantir uma navegação eficiente e a indexação adequada nos motores de busca.
+          </p>
+          <h4>URLs e/ou conteúdos duplicados</h4>
+          <p>
+            Para qualquer buscador, o conteúdo do seu <i>site</i> precisa ser exclusivo. Por exemplo, para o Google,
+            você sempre
+            perde “pontos” em SEO se forem encontrados dois ou mais <i>sites</i>, ou mais de uma URL, com o conteúdo
+            idêntico.
+            Dentro disso, há dois problemas a solucionar: URLs duplicadas e conteúdos duplicados.
+          </p>
+          <p>
+            As URLs duplicadas referem-se a múltiplas URLs que apontam para conteúdo idêntico ou muito semelhante em um
+            <i>site</i>. Isso pode ocorrer por várias razões e é problemático para o SEO e até mesmo para a experiência
+            do
+            usuário.
+          </p>
+          <p>Veja alguns cenários comuns de URLs duplicadas:</p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1"
+                      aria-expanded="true" aria-controls="collapse1">
+                      Parâmetros de URL
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    Se um site usa parâmetros de URL para filtrar ou classificar o conteúdo, diferentes combinações
+                    desses parâmetros podem levar a URLs que exibem o mesmo conteúdo. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com/produtos?categoria=eletronicos</b></li>
+                      <li><b>https://www.exemplo.com/produtos?categoria=eletronicos&ordem=preco</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      Versões de URL com e sem “www”
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    Se o <i>site</i> permite o acesso com ou sem “www” no início da URL, as duas versões podem ser
+                    acessadas,
+                    levando a URLs duplicadas. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com</b></li>
+                      <li><b>https://exemplo.com</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      URLs com e sem barra no final
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    URLs que diferem apenas pela presença ou ausência de uma barra no final podem ser consideradas
+                    duplicadas. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com/pagina</b></li>
+                      <li><b>https://www.exemplo.com/pagina/</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headin4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                      Conteúdo similar em múltiplas páginas
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    Se várias páginas do <i>site</i> contêm conteúdo substancialmente idêntico, isso pode resultar em
+                    conteúdos
+                    duplicados. Isso pode acontecer, por exemplo, em páginas de categorias ou <i>tags</i> que exibem o
+                    mesmo
+                    conjunto de artigos.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                      HTTP e HTTPS
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    Se o <i>site</i> for acessível por meio de HTTP (<i>hypertext transfer protocol</i>) e HTTPS
+                    (<i>hypertext transfer
+                      protocol secure</i>), as versões não seguras e seguras podem ser consideradas URLs duplicadas. Por
+                    exemplo:
+                    <ul>
+                      <li><b>http://www.exemplo.com</b></li>
+                      <li><b>https://www.exemplo.com</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Parâmetros de URL</h4>
+            <p>
+              Se um site usa parâmetros de URL para filtrar ou classificar o conteúdo, diferentes combinações
+              desses parâmetros podem levar a URLs que exibem o mesmo conteúdo. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com/produtos?categoria=eletronicos</b></li>
+              <li><b>https://www.exemplo.com/produtos?categoria=eletronicos&ordem=preco</b></li>
+            </ul>
+            <h4>Versões de URL com e sem “www” </h4>
+            <p>
+              Se o <i>site</i> permite o acesso com ou sem “www” no início da URL, as duas versões podem ser
+              acessadas,
+              levando a URLs duplicadas. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com</b></li>
+              <li><b>https://exemplo.com</b></li>
+            </ul>
+            <h4>URLs com e sem barra no final </h4>
+            <p>
+              URLs que diferem apenas pela presença ou ausência de uma barra no final podem ser consideradas
+              duplicadas. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com/pagina</b></li>
+              <li><b>https://www.exemplo.com/pagina/</b></li>
+            </ul>
+            <h4>Conteúdo similar em múltiplas páginas</h4>
+            <p>
+              Se várias páginas do <i>site</i> contêm conteúdo substancialmente idêntico, isso pode resultar em
+              conteúdos
+              duplicados. Isso pode acontecer, por exemplo, em páginas de categorias ou <i>tags</i> que exibem o
+              mesmo
+              conjunto de artigos.
+            </p>
+            <h4>HTTP e HTTPS </h4>
+            Se o <i>site</i> for acessível por meio de HTTP (<i>hypertext transfer protocol</i>) e HTTPS
+            (<i>hypertext transfer
+              protocol secure</i>), as versões não seguras e seguras podem ser consideradas URLs duplicadas. Por
+            exemplo:
+            <ul>
+              <li><b>http://www.exemplo.com</b></li>
+              <li><b>https://www.exemplo.com</b></li>
+            </ul>
+          </div>
+          <p>
+            A presença de URLs ou conteúdos duplicados tem implicações negativas para o SEO, pois os motores de busca
+            podem ter dificuldade em decidir qual versão da URL exibir nos resultados de pesquisa. Além disso, isso
+            resulta em uma dispersão desnecessária de autoridade de página entre diferentes versões da mesma página.
+          </p>
+          <p>
+            Porém, há formas de resolver esses problemas e aumentar a “força” do seu SEO. Para resolver a questão de
+            conteúdos duplicados, ou seja, quando há páginas com o mesmo conteúdo ou conteúdo muito similar, usa-se mais
+            uma vez uma <i>tag</i> do HTML5. Neste caso, usa-se a <i>tag</i> <b>link</b> com o atributo <b>rel
+              canonical</b>. Veja um exemplo de
+            aplicação:
+          </p>
+          <pre>
+            <code>
+              
+            </code>
+          </pre>
 
 
-          <!-- imagem pg 12 -->
+
+
+
+
+
+
+
+
+
+
 
 
 
