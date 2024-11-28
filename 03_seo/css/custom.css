@@ -608,6 +608,78 @@ samp {
   font-size: 14px;
 }
 
+mark {
+  background-color: rgb(0, 200, 255); 
+  color: #000;
+  padding: 2px; 
+  border-radius: 3px; 
+}
+
+.botao-4 {
+  background: url('../imgs/bt_legibilidade.png');
+  width: 197px;
+  height: 170px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-4:hover {
+  background: url('../imgs/bt_legibilidade_hv.png');
+  border: none !important;
+}
+
+.botao-5 {
+  background: url('../imgs/bt_palavras_chaves.png');
+  width: 197px;
+  height: 170px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-5:hover {
+  background: url('../imgs/bt_palavras_chaves_hv.png');
+  border: none !important;
+}
+
+.botao-6 {
+  background: url('../imgs/bt_compartilhamento.png');
+  width: 197px;
+  height: 170px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-6:hover {
+  background: url('../imgs/bt_compartilhamento_hv.png');
+  border: none !important;
+}
+
+.botao-7 {
+  background: url('../imgs/bt_aparencia.png');
+  width: 197px;
+  height: 170px;
+  border: none !important;
+  filter: drop-shadow(3px 3px 2px rgba(112, 112, 112, 0.75));
+}
+
+.botao-7:hover {
+  background: url('../imgs/bt_aparencia_hv.png');
+  border: none !important;
+}
+
+.painel-amigaveis{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -631,6 +703,11 @@ samp {
     margin-left: unset;
     margin-right: unset;
   }
+
+  .painel-amigaveis {
+     margin-left: unset; 
+     margin-right: unset;
+}
 
 }
 
@@ -672,6 +749,9 @@ samp {
     margin-bottom: 3%;
   }
 
+  body{
+    word-break: break-all;
+  }
 
 
 

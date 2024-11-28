@@ -1120,14 +1120,198 @@
             Porém, há formas de resolver esses problemas e aumentar a “força” do seu SEO. Para resolver a questão de
             conteúdos duplicados, ou seja, quando há páginas com o mesmo conteúdo ou conteúdo muito similar, usa-se mais
             uma vez uma <i>tag</i> do HTML5. Neste caso, usa-se a <i>tag</i> <b>link</b> com o atributo <b>rel
-              canonical</b>. Veja um exemplo de
-            aplicação:
+              canonical</b>. Veja um exemplo de aplicação:
           </p>
           <pre>
             <code>
-              
+&lt;link rel="canonical" href="camisetas.html"> 
             </code>
           </pre>
+          <p>
+            Como exemplo prático de conteúdo duplicado, é possível citar um site <i>e-commerce</i> que vende, por
+            exemplo,
+            camisetas. Para cada cor de camiseta há uma URL diferente. Neste caso, o conteúdo das páginas será
+            praticamente o mesmo, pois, afinal, o produto é o mesmo, só o que muda é a cor. Então, para que o buscador
+            não
+            compreenda cada página como conteúdo duplicado, usa-se o <i>link canonical</i>.
+          </p>
+          <p>
+            Na prática, todas as páginas devem avisar, por meio do <i>link canonical</i>, a qual conteúdo daquela página
+            pertencem. Por exemplo: suponha que existam as páginas <b>camiseta-azul.html</b>,
+            <b>camiseta-vermelha.html</b>,
+            <b>camiseta-verde.html</b> e <b>camiseta-preta.html</b>. Deve-se escolher uma dessas páginas como principal,
+            e todas devem
+            conter o <i>link canonical</i>, dentro da <i>tag</i> <b>head</b>, para a página escolhida.
+          </p>
+          <p>
+            Suponha que você decidiu que a página principal será a da camiseta preta. Então, todas as demais páginas da
+            mesma camiseta devem conter o <i>link canonical</i> para a camiseta preta. Exemplo:
+          </p>
+          <pre>
+            <code>
+&lt;head> 
+    &lt;title>Camiseta Azul&lt;/title>  
+    &lt;link rel="canonical" href="camiseta-preta.html"> 
+&lt;/head> 
+            </code>
+          </pre>
+          <p>
+            Quanto às URLs duplicadas, a principal solução é redirecionar a página com o valor 301, isso indica ao
+            buscador que essa URL mudou permanentemente para a qual ele aponta.
+          </p>
+          <p>
+            Existem diversas formas de criar esse redirecionamento, no entanto o mais utilizado em servidores <i>web</i>
+            Linux é
+            via arquivo <b>.htaccess</b>. Esse arquivo é responsável por enviar algumas regras de configuração que
+            impactarão a
+            visualização do seu <i>site</i>.
+          </p>
+          <p>
+            Caso não exista um arquivo com esse nome na pasta onde fica localizado o seu <i>site</i>, basta criá-lo com
+            qualquer
+            editor de código ou até mesmo com o bloco de notas do Windows e nomeá-lo como <b>.htaccess</b>, após inserir
+            dentro
+            dele o seguinte código:
+          </p>
+          <pre>
+            <code>
+Options +FollowSymLinks 
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^seusite.com.br [NC] 
+RewriteRule ^(.*)$ http://www.seusite.com.br/$1 [L,R=301] 
+            </code>
+          </pre>
+          <p>
+            Obviamente, você precisa atualizar a URL para a do <i>site</i> que está construindo. O código acima faz com
+            que
+            sempre que alguém entrar no <i>site</i> sem digitar o “www”, o servidor direcione-o para a página com o
+            “www”.
+          </p>
+          <p>
+            <mark>SSL (<i>secure sockets layer</i>) como fator de ranqueamento:</mark> no dia 6 de agosto de 2014, o
+            Google oficialmente
+            anunciou que priorizaria, na indexação, os <i>sites</i> que tivessem a criptografia SSL, ou seja, que
+            pudessem ser
+            acessados de forma segura por meio do HTTPS.
+          </p>
+          <p> Agora, veja um exemplo de resultado na busca: </p>
+          <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig3.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            SSL como fator de ranqueamento<br>
+            Fonte: Freepik (c2010-2024)
+          </p>
+          <p class="acessivel no-print">
+            Desenho de um cadeado e um escudo verde, simbolizando segurança. Ao lado está o desenho de uma barra de
+            navegador escrito “https”, simbolizando que um site que é acessado via https é seguro.
+          </p>
+          <p>
+            Contudo, conforme descrito anteriormente, qualquer <i>site</i> que permita o acesso tanto com HTTP quanto
+            com HTTPS,
+            para o Google, também é conteúdo duplicado!
+          </p>
+          <p>
+            Para resolver isso, recorre-se novamente ao redirecionamento usando o arquivo <b>.htaccess</b>. O exemplo de
+            código a
+            seguir faz com que toda vez que alguém acesse o <i>site</i> utilizando o HTTP, seja redirecionado para a
+            mesma URL,
+            mas agora com o HTTPS.
+          </p>
+          <pre>
+            <code>
+RewriteEngine On 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+RewriteCond %{HTTPS} off 
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
+            </code>
+          </pre>
+          <p>Esse código deve ser inserido dentro do arquivo <b>.htaccess</b> do seu <i>site</i>.</p>
+          <p>
+            As práticas de redirecionamento e de <i>links canonical</i> são essenciais para o SEO, pois ajudam a
+            consolidar a
+            autoridade do seu <i>site</i> e melhorar a indexação nas ferramentas de busca.
+          </p>
+          <h4>URLs amigáveis</h4>
+          <p>
+            URLs amigáveis, também conhecidas como URLs legíveis por humanos, são URLs estruturadas de uma maneira
+            compreensível e significativa para os usuários. Em contraste, URLs não amigáveis podem ser longas, cheias de
+            caracteres especiais, ou conter códigos dinâmicos que não fazem sentido para quem os lê.
+          </p>
+          <!-- PEGAR IMG DE EXEMPLO - tifa fez -->
+          <div class="caixa-destaque icone exemplo">
+            <p> Veja estes exemplos comparativos:</p>
+            <ul>
+              <li>
+                URL não amigável: <br>
+                https://www.exemplo.com/pagina?id=123&categoria=produtos&ref=567
+              </li>
+              <li>
+                URL amigável: <br>
+                https://www.exemplo.com/produtos/pagina-567
+              </li>
+            </ul>
+          </div>
+         <p>
+            Implementar URLs amigáveis no seu site é extremamente importante para as estratégias de SEO, em razão de
+            fatores como:
+         </p>
+          <p class="no-print"> Clique ou toque para visualizar o conteúdo.</p>
+          <div class="no-print painel-amigaveis" aria-hidden="true">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-4 center-block" data-toggle="modal" data-target="#modal-4"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-5 center-block" data-toggle="modal" data-target="#modal-5"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-6 center-block" data-toggle="modal" data-target="#modal-6"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-7 center-block" data-toggle="modal" data-target="#modal-7"></button>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Conteúdo</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Os buscadores valorizam conteúdo relevante, útil e atualizado. Publicar conteúdo de qualidade
+                      regularmente melhora a classificação do <i>site</i> nos resultados de pesquisa.
+                    </p>
+                    <p>
+                      A escolha de palavras-chave relevantes para o conteúdo da página é crucial. Essas palavras-chave
+                      devem ser incorporadas naturalmente a conteúdo, títulos, <i>meta tags</i> e URLs (<i>uniform
+                        resource locator</i>
+                      ou localizador uniforme de recursos).
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
 
 
 
