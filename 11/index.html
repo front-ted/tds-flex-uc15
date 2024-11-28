@@ -100,15 +100,11 @@
               aplicações <i>web</i>.</p>
             <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
             <div class="no-print" aria-hidden="true">
-              <div class="painel painel1">
+              <div class="no-print painel1">
                 <button type="button" class="btn-painel1 btn1-painel1" data-toggle="modal"
                   data-target="#modal1-painel1"></button>
-              </div>
-              <div class="painel painel1">
                 <button type="button" class="btn-painel1 btn2-painel1" data-toggle="modal"
                   data-target="#modal2-painel1"></button>
-              </div>
-              <div class="painel painel1">
                 <button type="button" class="btn-painel1 btn3-painel1" data-toggle="modal"
                   data-target="#modal3-painel1"></button>
               </div>
@@ -225,7 +221,7 @@
                       <p>Veja um exemplo no código:</p>
                       <pre>
                         <code>
-                          <script> 
+                          &lt;script&gt; 
 
                             // Arquivo service.js 
 
@@ -237,7 +233,7 @@
 
                               }
 
-                              const soma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+                              const soma = notas.reduce((acumulador, nota) =&gt; acumulador + nota, 0);
 
                               return soma / notas.length;
 
@@ -251,7 +247,7 @@
 
                             console.log('Média das notas:', media);
 
-                          </script> 
+                          &lt;/script&gt; 
                         </code>
                       </pre>
                       <p>Nesse exemplo, o teste de integração verificaria se a função <b>calcularMedia</b> do arquivo
@@ -411,7 +407,7 @@
               <p>Veja um exemplo no código:</p>
               <pre>
                   <code>
-                    <script> 
+                    &lt;script&gt; 
 
                       // Arquivo service.js 
 
@@ -423,7 +419,7 @@
 
                         }
 
-                        const soma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+                        const soma = notas.reduce((acumulador, nota) =&gt; acumulador + nota, 0);
 
                         return soma / notas.length;
 
@@ -437,7 +433,7 @@
 
                       console.log('Média das notas:', media);
 
-                    </script> 
+                    &lt;/script&gt; 
                   </code>
                 </pre>
               <p>Nesse exemplo, o teste de integração verificaria se a função <b>calcularMedia</b> do arquivo
@@ -502,6 +498,7 @@
               atenda às necessidades dos usuários.</p>
           </div>
         </div>
+        <div class="top1"></div>
         <div class="bloco2">
           <div class="container">
             <h3>Compatibilidade com navegadores</h3>
@@ -521,7 +518,7 @@
             <p>Garantir que seu <i>site</i> ou sistema funcione em todos os dispositivos e navegadores atuais traz
               muitos
               benefícios a sua aplicação, como:</p>
-            <div class="no-print" aria-hidden="true">
+            <div class="no-print painel2" aria-hidden="true">
               <button type="button" class="btn-painel2 btn1-painel2" data-toggle="modal"
                 data-target="#modal1-painel2"></button>
               <button type="button" class="btn-painel2 btn2-painel2" data-toggle="modal"
@@ -631,10 +628,10 @@
             <p class="caixa-destaque icone dica">Uma ferramenta que auxilia muito nisso é o Can I Use. Ele mostra para
               você se o estilo ou a <i>tag</i> utilizada é compatível com determinados navegadores e dispositivos.</p>
             <p>Por exemplo, veja na figura a compatibilidade da propriedade Flexbox do CSS3:</p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_01.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Compatibilidade Flexbox
               <br>
@@ -652,6 +649,7 @@
             </p>
           </div>
         </div>
+        <div class="bottom1"></div>
         <div class="bloco3">
           <div class="container">
             <h3>Adequações para responsividade</h3>
@@ -840,10 +838,10 @@
               processo.
               Em qualquer interface, clique com o botão direito do <i>mouse</i> e selecione a opção <b>Inspecionar</b>.
             </p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_02.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_02.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_02.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Inspecionar Google Chrome
               <br>
@@ -854,10 +852,10 @@
             <p>Abrirá uma barra lateral, que dividirá sua tela com o código <i>front-end</i> do <i>site</i>. Para testar
               os diferentes
               tamanhos de tela, basta puxar essa lateral e seu <i>site</i> deverá se ajustar conforme o tamanho.</p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_03.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_03.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_03.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Teste de <i>responsive</i> com Chrome
               <br>
@@ -886,10 +884,10 @@
               modelos de dispositivos móveis da atualidade. Para isso, basta clicar no ícone que representa um
               computador
               com um celular à frente, localizado na barra superior esquerda da tela de inspecionar.</p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_04.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_04.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_04.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Simulador de dispositivos móveis do Chrome
               <br>
@@ -910,10 +908,10 @@
               nas quais basta colocar a URL do seu <i>site</i> e eles mostram diversas opções de dispositivos para
               realizar os
               testes.</p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_05.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_05.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_05.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Responsive Design Checker
               <br>
@@ -926,10 +924,10 @@
               gratuitas e
               <i>on-line</i>.
             </p>
-            <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+            <img src="imgs/figura_06.png" class="center-block img-responsive hidden-sm hidden-xs print">
             <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-            <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                class="center-block img-responsive"></a>
+            <a href="imgs/figura_06.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                src="imgs/figura_06.png" class="center-block img-responsive"></a>
             <p class="legenda-imagem">
               Responsinator
               <br>
@@ -944,6 +942,7 @@
               e dispositivos é essencial para proporcionar uma ótima experiência ao usuário.</p>
           </div>
         </div>
+        <div class="top2"></div>
         <div class="bloco4">
           <div class="container">
             <h3>Ferramentas automatizadas de teste <i>front-end</i></h3>
@@ -955,11 +954,9 @@
               Selenium e Cypress.</p>
             <p class="no-print">Clique ou toque para visualizar o conteúdo.</p>
             <div class="no-print" aria-hidden="true">
-              <div class="painel painel3">
+              <div class="no-print painel3">
                 <button type="button" class="btn-painel3 btn1-painel3" data-toggle="modal"
                   data-target="#modal1-painel3"></button>
-              </div>
-              <div class="painel painel3">
                 <button type="button" class="btn-painel3 btn2-painel3" data-toggle="modal"
                   data-target="#modal2-painel3"></button>
               </div>
@@ -985,10 +982,10 @@
                         capacidade faz do Selenium uma ferramenta essencial para garantir a qualidade e o desempenho de
                         aplicações <i>web</i> por meio de testes automatizados.
                       </p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_07.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_07.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_07.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         <i>Site</i> do Selenium
                         <br>
@@ -1017,7 +1014,7 @@
                       <p class="marca-texto">npm install selenium-webdriver</p>
                       <p>Então, ele criará todas as dependências e os arquivos necessários ao funcionamento do Selenium.
                       </p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/f" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
                       <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
                           src="imgs/" class="center-block img-responsive"></a>
@@ -1226,10 +1223,10 @@
                           </code>
                         </pre>
                       <p>Veja, na figura, o teste sendo executado:</p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_09.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_09.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_09.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Teste em execução – preenchimento de formulário
                         <br>
@@ -1296,10 +1293,10 @@
                       <p>Primeiro, adicione um projeto indicando a pasta na qual ele deverá executar os <i>scripts</i>
                         de
                         testes:</p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_10.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_10.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_10.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Painel do Cypress
                         <br>
@@ -1314,10 +1311,10 @@
                         executar
                         os
                         testes.</p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_11.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_11.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_11.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Painel do Cypress – seleção do navegador
                         <br>
@@ -1330,10 +1327,10 @@
                         opção
                         <b>Create new spec</b>.
                       </p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_12.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_12.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_12.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Painel do Cypress – novo teste
                         <br>
@@ -1346,10 +1343,10 @@
                         depois,
                         selecione a opção <b>Run test</b>.</p>
                       <p>Ele cria, então, um exemplo bem simples, abrindo um <i>site</i> de teste. Veja a figura:</p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_13.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_13.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_13.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Teste-padrão do Cypress
                         <br>
@@ -1419,10 +1416,10 @@
                       <p>Ao salvar o arquivo e olhar novamente o navegador sendo executado pelo Cypress, você o verá
                         executar as
                         ações mencionadas:</p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_14.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_14.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_14.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Teste com Cypress
                         <br>
@@ -1461,10 +1458,10 @@
                         <b>email</b>. Por fim, execute
                         o evento de clique no elemento com a classe <b>mauticform-button</b>.
                       </p>
-                      <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <img src="imgs/figura_15.png" class="center-block img-responsive hidden-sm hidden-xs print">
                       <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-                      <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
-                          src="imgs/" class="center-block img-responsive"></a>
+                      <a href="imgs/figura_15.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/figura_15.png" class="center-block img-responsive"></a>
                       <p class="legenda-imagem">
                         Teste de preenchimento de formulário com Cypress
                         <br>
@@ -1491,10 +1488,10 @@
                 formulários, navegação entre páginas e validação de resultados, tudo de forma automatizada. Essa
                 capacidade faz do Selenium uma ferramenta essencial para garantir a qualidade e o desempenho de
                 aplicações <i>web</i> por meio de testes automatizados.</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_07.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_07.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_07.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 <i>Site</i> do Selenium
                 <br>
@@ -1712,10 +1709,10 @@
                   </code>
                 </pre>
               <p>Veja, na figura, o teste sendo executado:</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_09.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_09.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_09.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Teste em execução – preenchimento de formulário
                 <br>
@@ -1753,10 +1750,10 @@
                 na execução dos seus testes.</p>
               <p>Primeiro, adicione um projeto indicando a pasta na qual ele deverá executar os <i>scripts</i> de
                 testes:</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_10.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_10.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_10.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Painel do Cypress
                 <br>
@@ -1768,10 +1765,10 @@
                 usar uma pasta chamada “integration”. Depois selecione a opção <b>E2E</b> e o navegador que vai executar
                 os
                 testes.</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_11.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_11.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_11.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Painel do Cypress – seleção do navegador
                 <br>
@@ -1783,10 +1780,10 @@
               <p>Começará, então, a execução via Cypress no navegador selecionado. Na tela seguinte, escolha a opção
                 <b>Create new spec</b>.
               </p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_12.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_12.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_12.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Painel do Cypress – novo teste
                 <br>
@@ -1797,10 +1794,10 @@
               <p>Na tela seguinte, o Cypress indicará um caminho com um arquivo. Clique em <b>Criar</b> e, depois,
                 selecione a opção <b>Run test</b>.</p>
               <p>Ele cria, então, um exemplo bem simples, abrindo um <i>site</i> de teste. Veja a figura:</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_13.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_13.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_13.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Teste-padrão do Cypress
                 <br>
@@ -1864,10 +1861,10 @@
               </p>
               <p>Ao salvar o arquivo e olhar novamente o navegador sendo executado pelo Cypress, você o verá executar as
                 ações mencionadas:</p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_14.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_14.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_14.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Teste com Cypress
                 <br>
@@ -1904,10 +1901,10 @@
                 <b>email</b>. Por fim, execute
                 o evento de clique no elemento com a classe <b>mauticform-button</b>.
               </p>
-              <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+              <img src="imgs/figura_15.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
-              <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
-                  class="center-block img-responsive"></a>
+              <a href="imgs/figura_15.png" target="_blank" class="no-print visible-sm visible-xs"
+                aria-hidden="true"><img src="imgs/figura_15.png" class="center-block img-responsive"></a>
               <p class="legenda-imagem">
                 Teste de preenchimento de formulário com Cypress
                 <br>
@@ -1926,6 +1923,7 @@
               tanto desenvolvedores quanto profissionais de testes.</p>
           </div>
         </div>
+        <div class="bottom2"></div>
         <div class="bloco5">
           <div class="container">
             <h2>Encerramento</h2>

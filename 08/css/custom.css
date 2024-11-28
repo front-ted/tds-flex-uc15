@@ -6,6 +6,17 @@ body {
   overflow-x: hidden;
 }
 
+.hljs {
+  background: #161616 !important;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Roboto-mono';
+}
+
 /*----------- CARDS -----------*/
 .img-cards {
   width: 276px;
