@@ -6,28 +6,26 @@ body {
   overflow-x: hidden;
 }
 
-.bloco1 {
-  background-color: red;
+.hljs {
+  background: #161616 !important;
 }
 
-.bloco2 {
-  background-color: pink;
+.info-mobile {
+  background-color: #DAE8F7;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
 }
 
-.bloco3 {
-  background-color: green;
+.info-bloco1,
+.info-bloco2 {
+  margin: auto;
 }
 
-.bloco4 {
-  background-color: yellow;
-}
-
-.bloco5 {
-  background-color: brown;
-}
-
-.bloco6 {
-  background-color: lightblue;
+.info-bloco1,
+.info-bloco2 img {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .info-bloco1 {
@@ -58,6 +56,43 @@ body {
   color: #fff;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Roboto-mono';
+}
+
+.bloco1 {
+  background:
+    url('../imgs/BG1.png') no-repeat center,
+    linear-gradient(to bottom, #B2CCED, #DAE8F7);
+}
+
+.bloco2 {
+  background: url('../imgs/BG2.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bloco3 {
+  background: #DAE8F7;
+}
+
+.bloco4 {
+  background: url('../imgs/BG2.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bloco5 {
+  background: #DAE8F7;
+}
+
+.bloco6 {
+  background: #2875C6;
+}
+
 pre {
   padding: 0;
   background: transparent;
@@ -81,4 +116,66 @@ header {
   margin-top: 60px;
 }
 
+.top {
+  background: url('../imgs/div_top.png') no-repeat;
+  width: 100%;
+  height: 71px;
+}
+
+.bottom {
+  background: url('../imgs/div_bottom.png') no-repeat;
+  width: 100%;
+  height: 71px;
+}
+
+/* INICIO PAINEL 1 */
+.painel1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-painel1 {
+  border: none;
+  width: 487px;
+  height: 178px;
+  background-color: transparent;
+  margin: 20px;
+}
+
+.btn1-painel1 {
+  background: url('../imgs/bt1.png') no-repeat;
+}
+
+.btn2-painel1 {
+  background: url('../imgs/bt2.png') no-repeat;
+}
+
+.btn3-painel1 {
+  background: url('../imgs/bt3.png') no-repeat;
+}
+
+.btn4-painel1 {
+  background: url('../imgs/bt4.png') no-repeat;
+}
+
+.btn1-painel1:hover {
+  background: url('../imgs/bt1_hv.png') no-repeat;
+}
+
+.btn2-painel1:hover {
+  background: url('../imgs/bt2_hv.png') no-repeat;
+}
+
+.btn3-painel1:hover {
+  background: url('../imgs/bt3_hv.png') no-repeat;
+}
+
+.btn4-painel1:hover {
+  background: url('../imgs/bt4_hv.png') no-repeat;
+}
+
+/* FIM PAINEL 1 */
 @media screen and (max-width: 768px) {}

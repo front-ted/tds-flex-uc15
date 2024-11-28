@@ -5,6 +5,17 @@
   overflow-x: hidden;
 }
 
+.hljs {
+  background: #161616 !important;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Roboto-mono';
+}
+
 .bloco2,
 .bloco2 h3 {
   background-color: #2875C6;

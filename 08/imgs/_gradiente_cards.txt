@@ -1,0 +1,5 @@
+COLOR GRADIENT
+
+background-size: 100% 100%;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+background-image: radial-gradient(40% 45% at 13% 97%, #00427CDE 0%, #073AFF00 100%),radial-gradient(36% 27% at 16% 52%, #66a4f3 6%, #073AFF00 100%),radial-gradient(37% 50% at 14% 5%, #1E6DBDFF 3%, #073AFF00 100%),radial-gradient(31% 41% at 93% 56%, #155DA5FF 0%, #073AFF00 100%),radial-gradient(34% 39% at 91% 13%, #66a4f3 0%, #073AFF00 99%),radial-gradient(39% 51% at 41% 88%, #66a4f3 0%, #073AFF00 100%),radial-gradient(23% 42% at 57% -5%, #66a4f3 0%, #073AFF00 100%),radial-gradient(35% 56% at 95% 93%, #66a4f3 9%, #073AFF00 100%),linear-gradient(125deg, #4EB5FFFF 1%, #004b90 100%);
