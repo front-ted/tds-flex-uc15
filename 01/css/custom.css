@@ -67,33 +67,44 @@ samp {
   background: url('../imgs/parallax_div_topo.jpg') no-repeat;
   width: 100%;
   height: 41px;
+  background-size: cover;
 }
 
 .bottom {
   background: url('../imgs/parallax_div_bottom.jpg') no-repeat;
   width: 100%;
   height: 41px;
+  background-size: cover;
 }
 
 .parallax1 {
-  background: url('../imgs/Parallax1.jpg') no-repeat;
+  background: url('../imgs/Parallax1.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 .parallax2 {
-  background: url('../imgs/Parallax2.jpg') no-repeat;
+  background: url('../imgs/Parallax2.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 .parallax3 {
-  background: url('../imgs/Parallax3.jpg') no-repeat;
+  background: url('../imgs/Parallax3.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 pre {
