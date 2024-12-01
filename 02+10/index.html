@@ -500,8 +500,8 @@
             </div>
             <div class="modal fade no-print" id="modal1-painel1" tabindex="-1" role="dialog"
               aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
+              <div class="modal-dialog no-print" role="document">
+                <div class="modal-content no-print">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -523,8 +523,8 @@
             </div>
             <div class="modal fade no-print" id="modal2-painel1" tabindex="-1" role="dialog"
               aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
+              <div class="modal-dialog no-print" role="document">
+                <div class="modal-content no-print">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -546,8 +546,8 @@
             </div>
             <div class="modal fade no-print" id="modal3-painel1" tabindex="-1" role="dialog"
               aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
+              <div class="modal-dialog no-print" role="document">
+                <div class="modal-content no-print">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -568,8 +568,8 @@
             </div>
             <div class="modal fade no-print" id="modal4-painel1" tabindex="-1" role="dialog"
               aria-labelledby="myModalLabel" aria-live="polite" aria-atomic="true" aria-hidden="false">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
+              <div class="modal-dialog no-print" role="document">
+                <div class="modal-content no-print">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
@@ -761,6 +761,19 @@
       }
     </style>
   </noscript>
+  <script>
+    $(document).ready(function () {
+      $('#accordion').on('shown.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').addClass('open');
+        target.prev('.panel-heading').find('.panel-title a').addClass('open');
+      }).on('hidden.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').removeClass('open');
+        target.prev('.panel-heading').find('.panel-title a').removeClass('open');
+      });
+    });
+  </script>
   <script>
 
     document.addEventListener('DOMContentLoaded', (event) => {

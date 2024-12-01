@@ -1,6 +1,41 @@
-&lt;/div&gt; 
+Conhecimento 1*
+Acessibilidade: OK
+Impressão: OK
+Texto: OK
+Layout: OK
+Mobile: OK
 
+Conhecimento 2+10*
+Acessibilidade: OK
+Impressão: OK
+Texto: OK
+Layout: OK
+Mobile: OK
 
-Conhecimento 11 faltou a figura 8
+Conhecimento 7*
+Acessibilidade: OK 
+Impressão: OK
+Texto: OK
+Layout: OK
+Mobile: OK
 
+Conhecimento 8:
+Acessibilidade: OK 
+Impressão: OK
+Texto: OK, faltou só o infográfico
+Layout:
+Mobile:
 
+Conhecimento 11:
+Acessibilidade: OK 
+Impressão: OK
+Texto: OK
+Layout:
+Mobile:
+
+Conhecimento Referência*
+Acessibilidade: OK 
+Impressão: OK
+Texto: OK
+Layout: OK
+Mobile: OK

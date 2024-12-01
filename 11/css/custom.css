@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+.marca-texto {
+  background-color: yellow;
+}
+
 .hljs {
   background: #161616 !important;
 }
@@ -253,6 +257,10 @@ li {
 .caixa-destaque {
   color: #fff;
   background-color: #256CB5;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  margin-bottom: 50px !important;
+  margin-top: 50px !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -292,6 +300,13 @@ li {
     margin-top: 10px;
     margin-bottom: 10px;
     position: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .caixa-destaque {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
   }
 }
 
