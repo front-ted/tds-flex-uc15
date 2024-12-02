@@ -474,6 +474,19 @@
     </style>
   </noscript>
   <script>
+    $(document).ready(function () {
+      $('#accordion').on('shown.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').addClass('open');
+        target.prev('.panel-heading').find('.panel-title a').addClass('open');
+      }).on('hidden.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').removeClass('open');
+        target.prev('.panel-heading').find('.panel-title a').removeClass('open');
+      });
+    });
+  </script>
+  <script>
 
     document.addEventListener('DOMContentLoaded', (event) => {
       document.querySelectorAll('pre code').forEach((el) => {

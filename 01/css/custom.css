@@ -19,6 +19,15 @@ body {
   width: 100%;
 }
 
+.caixa-destaque {
+  color: #fff;
+  background-color: #256CB5;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  margin-bottom: 50px !important;
+  margin-top: 50px !important;
+}
+
 /* Fim da estilização da espera de vídeos e objetos */
 .hljs {
   background: #161616 !important;
@@ -45,7 +54,7 @@ samp {
 }
 
 .bloco3 {
-  background-color: grey;
+  background-color: #fff;
 }
 
 .bloco5,
@@ -67,33 +76,49 @@ samp {
   background: url('../imgs/parallax_div_topo.jpg') no-repeat;
   width: 100%;
   height: 41px;
+  background-size: cover;
 }
 
 .bottom {
   background: url('../imgs/parallax_div_bottom.jpg') no-repeat;
   width: 100%;
   height: 41px;
+  background-size: cover;
 }
 
 .parallax1 {
-  background: url('../imgs/Parallax1.jpg') no-repeat;
+  background: url('../imgs/Parallax1.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 .parallax2 {
-  background: url('../imgs/Parallax2.jpg') no-repeat;
+  background: url('../imgs/Parallax2.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
 }
 
 .parallax3 {
-  background: url('../imgs/Parallax3.jpg') no-repeat;
+  background: url('../imgs/Parallax3.jpg') no-repeat center center;
+  background-size: cover;
   height: 450px;
-  width: 100% !important;
-  z-index: unset !important;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+}
+
+li {
+  list-style-image: url(../imgs/marcador.png);
+  margin-bottom: 0.5em;
 }
 
 pre {
@@ -122,51 +147,62 @@ header {
 /* INICIO PAINEL 1 */
 .painel1 {
   display: flex;
-  background: url(../imgs/painel_fundo.png) no-repeat;
+  background: url(../imgs/painel_fundo.png) no-repeat center center;
+  background-size: contain;
   width: 100%;
-  height: 553px;
-  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  height: 553px;
   flex-wrap: wrap;
+  margin-bottom: 250px;
+  margin-top: -30px;
 }
 
 .btn-painel1 {
   border: none;
-
   background-color: transparent;
-  margin: 20px;
+  position: relative;
 }
 
 .btn1-painel1 {
   background: url('../imgs/painel_bt1.png') no-repeat;
   width: 385px;
   height: 324px;
+  top: 500px;
+  right: 180px;
 }
 
 .btn2-painel1 {
   background: url('../imgs/painel_bt2.png') no-repeat;
   width: 377px;
   height: 398px;
+  top: 665px;
+  right: 450px;
 }
 
 .btn3-painel1 {
   background: url('../imgs/painel_bt3.png') no-repeat;
   width: 338px;
   height: 359px;
+  top: 325px;
+  right: -175px;
 }
 
 .btn4-painel1 {
   background: url('../imgs/painel_bt4.png') no-repeat;
   width: 377px;
   height: 398px;
+  top: 275px;
+  right: -80px;
 }
 
 .btn5-painel1 {
   background: url('../imgs/painel_bt5.png') no-repeat;
   width: 385px;
   height: 324px;
+  right: -350px;
+  top: -250px;
 }
 
 .btn1-painel1:hover {
@@ -191,3 +227,10 @@ header {
 
 /* FIM PAINEL 1 */
 @media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 500px) {
+  .caixa-destaque {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+}
