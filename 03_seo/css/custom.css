@@ -551,7 +551,6 @@ samp {
   color: #fff;
 }
 
-
 .comment {
   color: #008000 !important;
 }
@@ -604,15 +603,15 @@ samp {
   margin-right: 10%;
 }
 
-.panel-default>.panel-heading+.panel-collapse>.panel-body li{
+.panel-default>.panel-heading+.panel-collapse>.panel-body li {
   font-size: 14px;
 }
 
 mark {
-  background-color: rgb(0, 200, 255); 
+  background-color: rgb(0, 200, 255);
   color: #000;
-  padding: 2px; 
-  border-radius: 3px; 
+  padding: 2px;
+  border-radius: 3px;
 }
 
 .botao-4 {
@@ -667,19 +666,69 @@ mark {
   border: none !important;
 }
 
-.painel-amigaveis{
+.painel-amigaveis {
   margin-left: 5%;
   margin-right: 5%;
 }
 
+.imagem-google {
+  margin-top: 13%
+}
+
+.nav-tabs {
+  margin-left: unset !important;
+}
 
 
+/* infografico */
 
+.texto-esquerda-1 {
+  margin-top: -14%;
+  position: absolute;
+  padding-left: 15%;
+  padding-right: 0%;
+  margin-left: 23%;
+  margin-right: -10%;
+}
 
+.texto-direita-1 {
+  margin-top: -18%;
+  position: absolute;
+  padding-left: 0%;
+  padding-right: 51%;
+  margin-left: -26%;
+}
 
+.bloco1 {
+  margin-left: 0%;
+  margin-right: 0%;
+}
 
+.infografico-1 .bloco1 {
+  padding-left: unset;
+  padding-right: unset;
+}
 
+.img-esquerda-1 {
+  margin-left: 19%;
+  margin-right: 8%;
+}
 
+.linha-vertical {
+  width: 2px;
+  /* Largura da linha */
+  height: 850px;
+  /* Altura da linha */
+  background-color: #007bff;
+  /* Cor da linha */
+  margin: 0 0;
+  margin-left: 33.5%
+}
+
+.img-direita-1 {
+  margin-left: -30%;
+  margin-right: 8%;
+}
 
 
 
@@ -705,9 +754,9 @@ mark {
   }
 
   .painel-amigaveis {
-     margin-left: unset; 
-     margin-right: unset;
-}
+    margin-left: unset;
+    margin-right: unset;
+  }
 
 }
 
@@ -749,7 +798,7 @@ mark {
     margin-bottom: 3%;
   }
 
-  body{
+  body {
     word-break: break-all;
   }
 
