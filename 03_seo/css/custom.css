@@ -588,7 +588,7 @@ samp {
   background-color: #004B90;
 }
 
-.icone-x {
+.icone-y {
   width: 51px;
   height: 51px;
   margin-bottom: 10px;
@@ -691,6 +691,15 @@ mark {
   margin-right: -10%;
 }
 
+.texto-esquerda-2 {
+  margin-top: -19%;
+  position: absolute;
+  padding-left: 15%;
+  padding-right: 0%;
+  margin-left: 23%;
+  margin-right: -10%;
+}
+
 .texto-direita-1 {
   margin-top: -18%;
   position: absolute;
@@ -714,15 +723,28 @@ mark {
   margin-right: 8%;
 }
 
-.linha-vertical {
+.linha-vertical-1 {
   width: 2px;
-  /* Largura da linha */
-  height: 850px;
-  /* Altura da linha */
-  background-color: #007bff;
-  /* Cor da linha */
+  height: 430px;
+  background-color: #e1e3e5;
   margin: 0 0;
   margin-left: 33.5%
+}
+
+.linha-vertical-2 {
+  width: 2px;
+  height: 430px;
+  background-color: #e1e3e5;
+  margin: 0 0;
+  margin-left: 33.8%
+}
+
+.linha-vertical-3 {
+  width: 2px;
+  height: 490px;
+  background-color: #e1e3e5;
+  margin: 0 0;
+  margin-left: 33.8%
 }
 
 .img-direita-1 {
@@ -730,11 +752,41 @@ mark {
   margin-right: 8%;
 }
 
+.mt-info {
+  margin-top: 5%;
+}
 
+.lado-esquerdo {
+  margin-top: -13%;
+}
 
+.lado-direito {
+  margin-top: 5%;
+}
 
+.lado-esquerdo-3 {
+  margin-top: -14.8%
+}
 
+.lado-direito-3 {
+  margin-top: 5%;
+}
 
+.lado-esquerdo-4 {
+  margin-top: -24%;
+}
+
+.bt-transcricao{
+  border: unset !important;
+}
+
+.botao-tr{
+  margin-top: -50px;
+}
+
+.audio-1{
+  margin-top: 5%;
+}
 
 
 
@@ -758,16 +810,39 @@ mark {
     margin-right: unset;
   }
 
-}
-
-
-
-
-@media screen and (max-width: 780px) {
-  .parallax {
-    display: none;
+  .lado-direito {
+    margin-top: 13%;
   }
+
+  .lado-esquerdo-3 {
+    margin-top: -10.8%;
+  }
+
+  .lado-direito-3 {
+    margin-top: 11%;
+  }
+
+  .lado-esquerdo-4 {
+    margin-top: -32%;
+  }
+
+  .linha-vertical-3 {
+    width: 2px;
+    height: 600px;
+    background-color: #e1e3e5;
+    margin: 0 0;
+    margin-left: 33.8%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
 }
+
+
+
+@media screen and (max-width: 780px) {}
 
 @media screen and (max-width: 480px) {
   .caixa-destaque code {
@@ -798,10 +873,47 @@ mark {
     margin-bottom: 3%;
   }
 
-  body {
+  .caixa-sites {
     word-break: break-all;
   }
 
+  .texto-1 {
+    position: absolute;
+    margin-top: -14%;
+    padding-left: 20%;
+    padding-right: 5%;
+  }
+
+  .imagem-2 {
+    margin-top: 28%;
+  }
+
+  .texto-2 {
+    position: absolute;
+    margin-top: -14%;
+    padding-left: 1%;
+    padding-right: 27%;
+  }
+
+  .imagem-3 {
+    margin-top: 74%;
+  }
+
+  .imagem-4 {
+    margin-top: 54%;
+  }
+
+  .imagem-5 {
+    margin-top: 42%;
+  }
+
+  .imagem-6 {
+    margin-top: 50%;
+  }
+
+  .imagem-7 {
+    margin-top: 34%;
+  }
 
 
 
@@ -809,17 +921,35 @@ mark {
 }
 
 
-@media screen and (max-width: 980px) {
-  .icone-concluindo {
-    background-position: top 10px center;
-    padding-top: 120px;
-    padding-left: 5px;
+@media screen and (max-width: 375px) {
+  .imagem-2 {
+    margin-top: 33%;
   }
-}
 
-@media screen and (max-width: 1000px) {
-  .parallax {
-    display: none;
+  .imagem-3 {
+    margin-top: 94%;
   }
+
+  .imagem-4 {
+    margin-top: 72%;
+  }
+
+  .imagem-5 {
+    margin-top: 54%;
+  }
+
+  .imagem-6 {
+    margin-top: 61%;
+  }
+
+
+  .imagem-7 {
+    margin-top: 51%;
+  }
+
+
+
+
+
 
 }

@@ -156,11 +156,39 @@
           <p class="no-print">Clique ou toque no botão de <i>play</i> para ouvir o áudio ou no botão de transcrição para
             ler o conteúdo.
           </p>
+          <div class="row">
+            <audio controls="">
+              <source src="podcast/podcast.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+            <button class="bt-transcricao" aria-hidden="true" tabindex="-1" type="button" data-toggle="modal"
+              data-target="#transcricao1"><img src="../template/images/transcricao.png" style="width: 45px;"
+                class="botao-tr">
+            </button>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="transcricao1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Transcrição</h4>
+                  </div>
+                  <div class="modal-body">
 
-          <!-- ESPERA PARA AUDIO -->
 
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <h3 id="t3">Aparecendo nas primeiras posições de um buscador</h3>
-
           <p>
             Já é perceptível que, para que qualquer site ou sistema desenvolvido para a internet fique nas primeiras
             posições de um buscador, é preciso utilizar uma estratégia de SEO. Então SEO consiste apenas em otimização
@@ -366,7 +394,7 @@
             práticas de SEO estão sempre evoluindo, e é importante estar atualizado com as tendências e diretrizes dos
             buscadores para manter uma presença <i>on-line</i> sólida e bem classificada.
           </p>
-          <h3>Otimizando qualquer <i>site</i> para as ferramentas de busca </h3>
+          <h3 id="t4">Otimizando qualquer <i>site</i> para as ferramentas de busca </h3>
           <p>
             Neste tópico, você aprenderá diversas técnicas para tornar seu <i>site</i> otimizado e com estrutura
             amigável para as
@@ -859,7 +887,7 @@
           <div class="row mt-5 painel-azul">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="destaque-usuarios-buscadores usuarios">
-                <div class="icone-x center-block">
+                <div class="icone-y center-block">
                   <img src="imgs/icon_usuarios.png" alt="Ícone Usuários" />
                 </div>
                 <h3>Usuários</h3>
@@ -875,7 +903,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="destaque-usuarios-buscadores buscadores">
-                <div class="icone-x center-block">
+                <div class="icone-y center-block">
                   <img src="imgs/icon_buscadores.png" alt="Ícone Buscadores" />
                 </div>
                 <h3>Buscadores</h3>
@@ -1239,19 +1267,20 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
             compreensível e significativa para os usuários. Em contraste, URLs não amigáveis podem ser longas, cheias de
             caracteres especiais, ou conter códigos dinâmicos que não fazem sentido para quem os lê.
           </p>
-          <!-- PEGAR IMG DE EXEMPLO - tifa fez -->
-          <div class="caixa-destaque icone exemplo">
-            <p> Veja estes exemplos comparativos:</p>
-            <ul>
-              <li>
-                URL não amigável: <br>
-                https://www.exemplo.com/pagina?id=123&categoria=produtos&ref=567
-              </li>
-              <li>
-                URL amigável: <br>
-                https://www.exemplo.com/produtos/pagina-567
-              </li>
-            </ul>
+          <div class="caixa-sites">
+            <div class="caixa-destaque icone exemplo">
+              <p> Veja estes exemplos comparativos:</p>
+              <ul>
+                <li>
+                  URL não amigável: <br>
+                  https://www.exemplo.com/pagina?id=123&categoria=produtos&ref=567
+                </li>
+                <li>
+                  URL amigável: <br>
+                  https://www.exemplo.com/produtos/pagina-567
+                </li>
+              </ul>
+            </div>
           </div>
           <p>
             Implementar URLs amigáveis no seu site é extremamente importante para as estratégias de SEO, em razão de
@@ -1521,7 +1550,7 @@ Disallow: /bin/
             sobre atualizações e/ou novos recursos implementados nos dados estruturados, além de fornecer recomendações
             gerais sobre a busca aprimorada no Google.
           </p>
-          <h3>Ferramentas de monitoramento</h3>
+          <h3 id="t5">Ferramentas de monitoramento</h3>
           <p>
             Conforme visto até agora, você deve ter percebido que o sucesso de uma estratégia de SEO está longe de
             envolver apenas otimização de códigos. No entanto, há muitos detalhes técnicos envolvidos que vão além da
@@ -1593,7 +1622,7 @@ Disallow: /bin/
             pesquisas
             dos principais buscadores da internet.
           </p>
-          <h3> Acessibilidade na <i>web</i></h3>
+          <h3 id="t6"> Acessibilidade na <i>web</i></h3>
           <p>
             Acessibilidade na <i>web</i> refere-se ao <i>design</i> e desenvolvimento de páginas <i>web</i> que podem
             ser utilizadas por
@@ -1710,20 +1739,21 @@ Disallow: /bin/
             facilitando a
             navegação tanto para usuários de leitores de tela quanto para a navegação por teclado.
           </p>
-          <div class="infografico-1">
+          <div class="infografico-1 hidden-xs no-print" aria-hidden="true">
             <div class="row bloco1">
-              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right centralizar-direita">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right">
                 <img src="imgs/infog1.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
-                <p class="texto-esquerda-1">Sempre forneça texto alternativo (alt) descritivo para imagens, de modo
+                <p class="texto-esquerda-1">
+                  Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo
                   que
                   o
                   conteúdo da imagem
                   possa ser entendido por usuários que não podem vê-la.</p>
               </div>
               <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
-                <div class="linha-vertical hidden-xs"></div>
+                <div class="linha-vertical-1 hidden-xs"></div>
               </div>
-              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left mt-info">
                 <img src="imgs/infog2.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
                 <div class="texto-direita-1">
                   <p>
@@ -1731,77 +1761,211 @@ Disallow: /bin/
                     garantir a legibilidade. Utilize ferramentas para verificar o contraste de cores e garantir que
                     ele
                     esteja dentro dos padrões de acessibilidade.
-                  </p>
-                  <p>
+                    <br>
                     Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
                     facilitar a leitura.
                   </p>
                 </div>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <div class="row bloco2">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo">
+                <img src="imgs/infog3.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+                    controles.
+                    Isso ajuda os usuários de leitores de tela a entender o propósito de cada campo. <br>
+                    Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.</p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                <div class="linha-vertical-2 hidden-xs"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito">
+                <img src="imgs/infog4.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
+                <div class="texto-direita-1">
+                  <p>
+                    Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem
+                    ser
+                    acessados e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que
+                    não podem usar <i>mouse</i>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row bloco3">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo-3">
+                <img src="imgs/infog5.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+                    entender o conteúdo.
+                    <br>
+                    Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que
+                    está acontecendo na tela.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                <div class="linha-vertical-3 hidden-xs"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito-3">
+                <img src="imgs/infog6.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
+                <div class="texto-direita-1">
+                  <p>
+                    Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas.
+                    Evite esse
+                    tipo de conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row bloco4">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo-4">
+                <img src="imgs/infog7.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Certifique-se de que seu <i>site</i> é compatível com tecnologias assistivas, como leitores de tela,
+                    ampliadores de tela e teclados alternativos.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito-3">
+              </div>
+            </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="infografico-2 visible-xs no-print" aria-hidden="true">
+            <img src="imgs/infog1.png" alt="Ícone Texto Alternativo" class="img-responsive">
+            <p class="texto-1">Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo que o
+              conteúdo da imagem
+              possa ser entendido por usuários que não podem vê-la.
+            </p>
+            <img src="imgs/infog2.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-2">
+            <p class="texto-2">
+              Certifique-se de que o contraste entre o texto e o fundo seja suficiente para garantir a legibilidade.
+              Utilize ferramentas para verificar o contraste de cores e garantir que ele esteja dentro dos padrões de
+              acessibilidade.<br>
+              Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
+              facilitar
+              a leitura.
+            </p>
+            <img src="imgs/infog3.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-3">
+            <p class="texto-1">
+              Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+              controles.
+              Isso ajuda os usuários de leitores de tela a entender o propósito de cada campo. <br>
+              Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.
+            </p>
+            <img src="imgs/infog4.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-4">
+            <p class="texto-2">
+              Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem ser
+              acessados
+              e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que não podem usar
+              <i>mouse</i>.
+            </p>
+            <img src="imgs/infog5.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-5">
+            <p class="texto-1">
+              Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+              entender o conteúdo.
+              <br>
+              Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que está
+              acontecendo na tela.
+            </p>
+            <img src="imgs/infog6.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-6">
+            <p class="texto-2">
+              Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas. Evite
+              esse tipo de
+              conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+            </p>
+            <img src="imgs/infog7.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-7">
+            <p class="texto-1">
+              Certifique-se de que seu site é compatível com tecnologias assistivas, como leitores de tela, ampliadores
+              de
+              tela e teclados alternativos.
+            </p>
+          </div>
+          <div class="acessivel print">
+            <h4> Texto alternativo para imagens</h4>
+            <p>
+              Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo que o conteúdo da imagem
+              possa ser
+              entendido por usuários que não podem vê-la.
+            </p>
+            <h4>Legibilidade do texto</h4>
+            <p>
+              Certifique-se de que o contraste entre o texto e o fundo seja suficiente para garantir a legibilidade.
+              Utilize ferramentas para verificar o contraste de cores e garantir que ele esteja dentro dos padrões de
+              acessibilidade.
+              <br>
+              Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
+              facilitar
+              a leitura.
+            </p>
+            <h4> Formulários acessíveis</h4>
+            <p>
+              Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+              controles. Isso
+              ajuda os usuários de leitores de tela a entender o propósito de cada campo.
+              <br>
+              Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.
+            </p>
+            <h4>Navegação por teclado</h4>
+            <p>
+              Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem ser
+              acessados e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que não
+              podem usar <i>mouse</i>.
+            </p>
+            <h4>Conteúdo multimídia</h4>
+            <p>
+              Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+              entender o conteúdo.
+              <br>
+              Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que está
+              acontecendo na tela.
+            </p>
+            <h4>Cuidado com <i>flashing</i> ou conteúdo que pisca</h4>
+            <p>
+              Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas. Evite
+              esse tipo
+              de conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+            </p>
+            <h4>Tecnologias assistivas</h4>
+            <p>
+              Certifique-se de que seu <i>site</i> é compatível com tecnologias assistivas, como leitores de tela,
+              ampliadores
+              de tela e teclados alternativos.
+            </p>
+          </div>
+          <p>
+            Acessibilidade é uma prática essencial no desenvolvimento <i>web</i> moderno. Garantir que suas páginas HTML
+            sejam
+            acessíveis significa que você está abrindo as portas para um público maior, proporcionando uma melhor
+            experiência de usuário e cumprindo responsabilidades legais. Com uma abordagem cuidadosa e o uso de boas
+            práticas, você pode criar conteúdo <i>web</i> inclusivo, que serve a todos os usuários, independentemente de
+            suas
+            capacidades.
+          </p>
+          <p>
+            Aprender sobre acessibilidade não é apenas entender técnicas específicas, mas também adotar uma mentalidade
+            inclusiva, considerando sempre como cada decisão de <i>design</i> e desenvolvimento pode afetar todos os
+            usuários.
+          </p>
         </div>
-
       </div>
+
 
     </section>
     <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
-    <footer class="text-center no-print">
+    <!-- <footer class="text-center no-print">
 
-      <ul class="pagination">
+    <ul class="pagination">
 
-      </ul>
+    </ul> 
 
-    </footer>
+    </footer>-->
 
   </div>
 
