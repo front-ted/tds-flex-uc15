@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>SEO: adequação e otimização para sites de buscas. Acessibilidade </title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <!-- Menu -->
+        <div class="bg-fundo"></div>
+        <input type="checkbox" id="menu" name="menu" class="menu-checkbox no-print">
+        <label class="menu-toggle no-print" for="menu"><span>Toggle</span></label>
+        <div class="menu no-print" aria-hidden="true">
+          <div id="style-2" class="scroll-bar">
+            <div class="force-overflow">
+              <ul class="eng-item-menu">
+                <li class="item1">
+                  <a href="#t1" class="fundo-item">Introdução</a>
+                  <hr>
+                </li>
+                <li class="item2">
+                  <a href="#t2" class="fundo-item"> Entendendo o SEO</a>
+                  <hr>
+                </li>
+                <li class="item3">
+                  <a href="#t3" class="fundo-item"> Aparecendo nas primeiras posições de um buscador </a>
+                  <hr>
+                </li>
+                <li class="item4">
+                  <a href="#t4" class="fundo-item">Otimizando qualquer <i>site</i> para as ferramentas de busca </a>
+                  <hr>
+                </li>
+                <li class="item5">
+                  <a href="#t5" class="fundo-item">Ferramentas de monitoramento </a>
+                  <hr>
+                </li>
+                <li class="item6">
+                  <a href="#t6" class="fundo-item"> Acessibilidade na <i>web</i></a>
+                  <hr>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h2>SEO: adequação e otimização para sites de buscas. Acessibilidade</h2>
+          <h2 id="t1">Introdução</h2>
+          <p>
+            Quando se fala em programação para a internet, é fundamental que seu site seja desenvolvido conforme os
+            padrões do W3C (World Wide Web Consortium). Os padrões W3C descrevem as melhores práticas de desenvolvimento
+            <i>web</i>, que variam desde linguagens de programação recomendadas, como HTML (<i>hypertext markup
+              language</i> ou
+            linguagem de marcação de hipertexto) e CSS (<i>cascading style sheets</i> ou folhas de estilo em cascata),
+            até
+            princípios geralmente aceitos de arquitetura e serviços da <i>web</i>. As tecnologias listadas como padrões
+            são, no
+            que diz respeito ao W3C, as soluções mais adequadas atualmente disponíveis para uso em massa, incluindo a
+            acessibilidade.
+          </p>
+          <p>
+            Atualmente, contudo, não basta que o <i>site</i> seja apenas desenvolvido corretamente seguindo os padrões
+            W3C; é
+            preciso que seu código também esteja otimizado para os buscadores da <i>web</i>, pois é assim que um
+            <i>site</i>, seja ele
+            corporativo, seja um <i>blog</i> ou até mesmo um portal de notícias, é encontrado pela maioria dos usuários.
+            Hoje em
+            dia, existem inúmeras ferramentas de busca, como Yahoo e Bing, porém a principal utilizada no Brasil é o
+            Google.
+          </p>
+          <p>
+            Neste conhecimento, você aprenderá as principais técnicas e ferramentas de SEO disponíveis, para que seu
+            <i>site</i>
+            esteja otimizado e adequado para ser listado nos principais buscadores da <i>web</i>.
+          </p>
+          <h3 id="t2">Entendendo o SEO</h3>
+          <p>
+            No Brasil, o SEO é popularmente conhecido como uma <b>estratégia de otimização para buscadores</b>, no
+            entanto é uma
+            sigla que vem do inglês, <i>search engine optimization</i>. Basicamente, consiste em um conjunto de técnicas
+            e
+            estratégias de otimização aplicadas em um <i>site</i> para que ele apareça na listagem orgânica das
+            ferramentas de
+            busca.
+          </p>
+          <p class="no-print">Clique ou toque no botão de <i>play</i> para ouvir o áudio ou no botão de transcrição para
+            ler o conteúdo.
+          </p>
+          <div class="row">
+            <audio controls="">
+              <source src="podcast/podcast.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+            <button class="bt-transcricao" aria-hidden="true" tabindex="-1" type="button" data-toggle="modal"
+              data-target="#transcricao1"><img src="../template/images/transcricao.png" style="width: 45px;"
+                class="botao-tr">
+            </button>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="transcricao1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Transcrição</h4>
+                  </div>
+                  <div class="modal-body">
+
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 id="t3">Aparecendo nas primeiras posições de um buscador</h3>
+          <p>
+            Já é perceptível que, para que qualquer site ou sistema desenvolvido para a internet fique nas primeiras
+            posições de um buscador, é preciso utilizar uma estratégia de SEO. Então SEO consiste apenas em otimização
+            de
+            códigos?
+          </p>
+          <p>
+            A resposta é não! Basicamente, para que um site apareça de forma orgânica nas primeiras posições de um
+            buscador, depende de três fatores: conteúdo, reputação e tecnologia.
+          </p>
+          <p class="no-print"> Clique ou toque para visualizar o conteúdo.</p>
+          <div class="no-print painel-sites" aria-hidden="true">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <button type="button" class="botao-1 center-block" data-toggle="modal" data-target="#modal-1"></button>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <button type="button" class="botao-2 center-block" data-toggle="modal" data-target="#modal-2"></button>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <button type="button" class="botao-3 center-block" data-toggle="modal" data-target="#modal-3"></button>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Conteúdo</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Os buscadores valorizam conteúdo relevante, útil e atualizado. Publicar conteúdo de qualidade
+                      regularmente melhora a classificação do <i>site</i> nos resultados de pesquisa.
+                    </p>
+                    <p>
+                      A escolha de palavras-chave relevantes para o conteúdo da página é crucial. Essas palavras-chave
+                      devem ser incorporadas naturalmente a conteúdo, títulos, <i>meta tags</i> e URLs (<i>uniform
+                        resource locator</i>
+                      ou localizador uniforme de recursos).
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Reputação </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O fator <b>reputação</b> tem a ver com a quantidade e a qualidade dos <i>links</i> que apontam
+                      para a sua
+                      página. Então a construção de <i>links</i> de qualidade, tanto internos quanto externos, é uma
+                      parte
+                      fundamental do SEO. <i>Links</i> de outros <i>sites</i> confiáveis podem aumentar a autoridade
+                      da sua página aos
+                      olhos das ferramentas de busca.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Tecnologia </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Já a parte de <b>tecnologia</b> envolve diversos fatores, como:
+                    </p>
+                    <ul class="marcador-curso">
+                      <li>
+                        <i>Meta tags</i>: o uso adequado de <i>meta tags</i>, como <b>title</b> e <b>meta
+                          description</b>, pode influenciar a
+                        decisão dos usuários de clicar nos resultados da pesquisa. Elas também têm impacto nos
+                        algoritmos de classificação dos buscadores.
+                      </li>
+                      <li>
+                        <i>Mobile friendliness</i>: com a crescente preferência por dispositivos móveis,
+                        <i>sites</i> otimizados
+                        para telas menores têm uma vantagem no <i>ranking</i> dos buscadores. O <b><i>design</i>
+                          responsivo</b> é um fator
+                        relevante.
+                      </li>
+                      <li>
+                        Velocidade do <i>site</i>: páginas mais rápidas tendem a ter melhor classificação. O tempo
+                        de
+                        carregamento do <i>site</i> é um fator importante para a experiência do usuário e influencia
+                        o SEO.
+                      </li>
+                      <li>
+                        Estrutura do <i>site</i>: a organização e a estrutura do <i>site</i>, incluindo a hierarquia
+                        de páginas e
+                        URLs amigáveis, podem afetar positivamente a indexação pelos buscadores.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Conteúdo</h4>
+            <p>
+              Os buscadores valorizam conteúdo relevante, útil e atualizado. Publicar conteúdo de qualidade regularmente
+              melhora a classificação do <i>site</i> nos resultados de pesquisa.
+
+            </p>
+            <p>
+              A escolha de palavras-chave relevantes para o conteúdo da página é crucial. Essas palavras-chave devem ser
+              incorporadas naturalmente a conteúdo, títulos, <i>meta tags</i> e URLs (<i>uniform resource locator</i> ou
+              localizador
+              uniforme de recursos).
+            </p>
+            <h4>Reputação</h4>
+            <p>
+              O fator <b>reputação</b> tem a ver com a quantidade e a qualidade dos <i>links</i> que apontam
+              para a sua
+              página. Então a construção de <i>links</i> de qualidade, tanto internos quanto externos, é uma
+              parte
+              fundamental do SEO. <i>Links</i> de outros <i>sites</i> confiáveis podem aumentar a autoridade
+              da sua página aos
+              olhos das ferramentas de busca.
+            </p>
+            <h4>Tecnologia</h4>
+            <p>Já a parte de<b> tecnologia</b> envolve diversos fatores, como:</p>
+            <ul class="marcador-curso">
+              <li>
+                <i>Meta tags</i>: o uso adequado de <i>meta tags</i>, como <b>title</b> e <b>meta
+                  description</b>, pode influenciar a
+                decisão dos usuários de clicar nos resultados da pesquisa. Elas também têm impacto nos
+                algoritmos de classificação dos buscadores.
+              </li>
+              <li>
+                <i>Mobile friendliness</i>: com a crescente preferência por dispositivos móveis,
+                <i>sites</i> otimizados
+                para telas menores têm uma vantagem no <i>ranking</i> dos buscadores. O <b><i>design</i>
+                  responsivo</b> é um fator
+                relevante.
+              </li>
+              <li>
+                Velocidade do <i>site</i>: páginas mais rápidas tendem a ter melhor classificação. O tempo
+                de
+                carregamento do <i>site</i> é um fator importante para a experiência do usuário e influencia
+                o SEO.
+              </li>
+              <li>
+                Estrutura do <i>site</i>: a organização e a estrutura do <i>site</i>, incluindo a hierarquia
+                de páginas e
+                URLs amigáveis, podem afetar positivamente a indexação pelos buscadores.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Neste curso, será abordada de forma mais específica a parte de tecnologia, que é onde a otimização ocorre em
+            maior parte no código e na estrutura do <i>site</i>.
+          </p>
+          <p class="caixa-destaque icone importante">
+            É na etapa de tecnologia que está a responsabilidade do desenvolvedor, ou seja, cabe a ele programar o
+            <i>site</i>
+            ou o sistema contendo códigos otimizados e estrutura amigável às ferramentas de busca.
+          </p>
+          <p>
+            A parte de conteúdo e reputação está mais relacionada aos setores de <i>marketing</i> e assessoria de
+            imprensa, pois
+            cabe a eles o estudo para entender quais são os assuntos e temas de maior interesse para o público-alvo,
+            além
+            de desenvolver ações para que esses temas se tornem notícia na grande mídia e para que outros <i>sites</i>
+            apontem
+            <i>links</i> para o conteúdo.
+          </p>
+          <p>
+            É importante frisar que o Google e demais ferramentas de busca, periodicamente, atualizam seus algoritmos.
+            Estar ciente dessas atualizações e ajustar as estratégias de SEO é importante para manter a eficácia. As
+            práticas de SEO estão sempre evoluindo, e é importante estar atualizado com as tendências e diretrizes dos
+            buscadores para manter uma presença <i>on-line</i> sólida e bem classificada.
+          </p>
+          <h3 id="t4">Otimizando qualquer <i>site</i> para as ferramentas de busca </h3>
+          <p>
+            Neste tópico, você aprenderá diversas técnicas para tornar seu <i>site</i> otimizado e com estrutura
+            amigável para as
+            ferramentas de busca. Lembre-se de que seu código, indispensavelmente, deve seguir os padrões de
+            desenvolvimento determinados pelo W3C.
+          </p>
+          <p>
+            As otimizações abordadas aqui complementam, ou seja, estendem a programação <i>web</i> para além da correta
+            codificação, pois o desenvolvimento, agora, também é pensando no usuário final e na encontrabilidade do
+            <i>site</i>,
+            principalmente em <i>sites</i> com foco comercial.
+          </p>
+          <h4>Correta estrutura HTML</h4>
+          <p>
+            Um dos principais fatores de otimização é a correta estrutura das <i>tags</i> HTML. Esse tema é bastante
+            abordado nos
+            tópicos de desenvolvimento de interface para a <i>web</i> (<i>front-end</i>). E quando você aprendeu HTML5,
+            intrinsecamente
+            esse conteúdo já estava lá.
+          </p>
+          <p>
+            Porém, é um tema que o desenvolvedor que não pensa em SEO esquece facilmente, pois cai no comodismo e nas
+            facilidades das ferramentas utilizadas no dia a dia. Quanto tempo faz que você não entra no <i>site</i> da
+            W3School
+            para consultar a lista de <i>tags</i> disponíveis e atuais do HTML? Pois é, muito provavelmente você já
+            colocou algum
+            conteúdo em uma <i>tag</i> errada, pelo simples fato de não saber que existia uma <i>tag</i> específica para
+            aquele
+            conteúdo.
+          </p>
+          <p class="caixa-destaque icone importante">
+            Utilizar corretamente a estrutura de <i>tags</i> HTML é, basicamente, usar a <i>tag</i> mais apropriada para
+            cada tipo de
+            conteúdo. Por exemplo, para representar títulos em uma página, estão disponíveis as <i>tags</i> de <b>h1</b>
+            até <b>h6</b>, que
+            simbolizam títulos e subtítulos, ou seja, níveis de títulos diferentes.
+          </p>
+          <p>
+            Pense em um livro grande, separado por capítulos e subcapítulos. A <i>tag</i> <b>h1</b> só pode ser
+            utilizada como
+            título principal, e raramente se vê um livro no qual existam dois títulos na mesma página. Geralmente quando
+            um capítulo acaba, mesmo que haja espaço na página, o texto com o novo título começa em uma nova página.
+          </p>
+          <p>
+            Objetivando isso para o HTML, a <i>tag</i><b> h1</b> só deve ser usada uma vez por página ou seção. Veja um
+            exemplo de
+            correta utilização da <i>tag</i> <b>h1</b>:
+          </p>
+          <pre>
+            <code>
+&lt;!-- Tag H1 utilizada como título da página --> 
+&lt;h1/&gt;Conheça nossos móveis planejados&lt;/h1>
+            </code>
+          </pre>
+          <p>Agora, veja um exemplo da <i>tag</i> <b>h1</b> sendo utilizada como título de uma seção do <i>site</i>:
+          </p>
+          <pre>
+  <code>
+    &lt;section> 
+        &lt;header> 
+              &lt;h1>Cozinhas Planejadas&lt;/h1> 
+        &lt;/header> 
+    &lt;/section> 
+  </code>
+</pre>
+          <p>
+            Cada <i>tag</i> tem a própria aplicação. Para otimizar seu código para SEO, você deve seguir firmemente o
+            objetivo de
+            cada <i>tag</i> e nunca utilizar<i> tags</i> sem valor semântico para colocar textos ou conteúdo. Um exemplo
+            disso é
+            utilização <i>tag</i> <b>div</b>. É comum um site ter dezenas de <i>tags</i> <b>div</b>, porém essa<i>
+              tag</i> não tem valor semântico e nunca
+            deve ser utilizada para representar um texto. Para aplicar blocos de texto, deve-se usar a <i>tag</i>
+            <b>p</b>.
+          </p>
+          <p>Veja, agora, um exemplo correto e um incorreto de se utilizar a <i>tag</i> <b>div</b> junto ao conteúdo
+            textual:</p>
+          <div class="exemplo-1 icone-x negativo">
+            <h4>Jeito incorreto de colocar conteúdo:</h4>
+            <pre>
+                <code class="hljs language-html">
+&lt;<span class="hljs-selector-tag">div</span>> <span class="ignore-style">Conheça</span> nossos móveis planejados &lt;/<span class="hljs-selector-tag">div</span>>
+                </code>
+              </pre>
+          </div>
+
+          <div class="exemplo-2 icone-x positivo">
+            <h4>Jeito correto de colocar conteúdo: </h4>
+            <pre>
+                <code class="hljs language-html">
+&lt;<span class="hljs-selector-tag">div</span>> &lt;p><span class="ignore-style">Conheça</span> nossos móveis planejados&lt;/p> &lt;/<span class="hljs-selector-tag">div</span>>
+                </code>
+              </pre>
+          </div>
+          <p>
+            No primeiro exemplo, perceba que o texto está direto na <i>tag</i> <b>div</b>. É errado porque, quando o
+            buscador rastreia o
+            seu código, o que está na <i>tag</i> <b>div</b> é ignorado, pois não se entende o que aquele conteúdo
+            deveria representar.
+            Já no segundo exemplo, perceba que, após a <i>tag</i> <b>div</b>, há uma <i>tag</i> <b>p</b> em volta do
+            conteúdo, informando para o
+            buscador que aquele texto é um parágrafo.
+          </p>
+          <p>
+            Então, neste momento, é essencial você entrar no <i>site</i> da W3Schools e encontrar a lista oficial de
+            <i>tags</i>
+            disponíveis no HTML. Em cada <i>tag</i> há a explicação oficial de para que serve cada uma.
+          </p>
+          <p>
+            Outro erro muito comum de se cometer no dia a dia é confundir <i>tag</i> com estilo. Depois do HTML5 e do
+            CSS3, esses
+            papéis foram totalmente separados, ou seja, HTML cuida somente da semântica – explicar o que é o que em
+            termos
+            de conteúdo – e CSS cuida exclusivamente do estilo – formatação e design da página.
+          </p>
+          <p>
+            É comum desenvolvedores cometerem esse erro, por exemplo, com a <i>tag</i> strong. A utilização dessa
+            <i>tag</i> não é para
+            deixar os textos em negrito (bold); ela serve para dar ênfase em algum trecho do texto. Ela também não deve
+            ser utilizada como <i>tag</i> principal. O ideal é sempre estar dentro de uma <i>tag</i> <b>p</b>.
+          </p>
+          <div class="caixa-destaque icone para refletir">
+            <p>Então você pode pensar:</p>
+            <p>“Mas sempre que uso a <i>tag</i> <b>strong</b> o texto fica em negrito. Como assim? Ela serve para isso?”
+            </p>
+            Pois é, isso ocorre porque toda <i>tag</i> tem um estilo-padrão, predeterminado pelos navegadores. Mas para
+            deixar
+            qualquer trecho em negrito, utiliza-se o estilo <b>font-weight</b> do CSS. É possível aplicá-lo em qualquer
+            <i>tag</i> e
+            até mesmo tirar o <i><b>bold</b></i> da <i>tag</i> <b>strong</b> com esse estilo.
+          </div>
+          <p>
+            Falando um pouco, agora, sobre a utilização de <i>links</i>, quando se utiliza texto dentro dos
+            <i>links</i>, o buscador já
+            tem uma ideia sobre o que trata o assunto. Isso quer dizer que um <i>link</i> no título de uma notícia tende
+            a ser
+            mais efetivo que um genérico “saiba mais”. Veja um exemplo:
+          </p>
+          <pre>
+            <code>
+<span class="comment">&lt;!-- Aqui o buscador não sabe qual o tema / assunto da próxima URL --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attribute">href</span>="/sua-url-destino"<span class="tag">&gt;</span>
+                  Saiba mais
+<span class="tag">&lt;/a&gt;</span>
+            </code>
+          </pre>
+
+          <p>
+            Já escrevendo como no próximo exemplo, seu código fica mais otimizado em termos de SEO, pois informa o
+            assunto
+            no texto do <i>link</i>:
+          </p>
+          <pre>
+            <code>
+&lt;a href=“/sua-url-destino”> 
+  Veja nossas cozinhas planejadas 
+&lt;/a> 
+            </code>
+          </pre>
+          <p>
+            Para finalizar este tópico, veja a lista de algumas tags que são pouco utilizadas e reforçam a otimização
+            para
+            os buscadores.
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion9" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading48">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion9" href="#collapse48"
+                      aria-expanded="true" aria-controls="collapse48">
+                      Address
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse48" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading48">
+                  <div class="panel-body">
+                    Deve ser utilizada para mostrar informações de contato como <i>e-mail</i>, endereço físico, número
+                    de telefone, mídias sociais etc.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading49">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                      Cite
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse49" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading49">
+                  <div class="panel-body">
+                    Define o título de um trabalho criativo (por exemplo, um livro, um poema, uma música, um filme, uma
+                    pintura, uma escultura etc.).
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading50">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                      Figure
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse50" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading50">
+                  <div class="panel-body">
+                    Deve ser usada para definir ilustrações, fotos e imagens que representem o assunto da página.
+                    Obviamente, para mostrar a imagem, dentro de figure é preciso incluir a <i>tag</i><b> img</b>.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading51">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse51" aria-expanded="false" aria-controls="collapse51">
+                      Figcaption
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse51" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading51">
+                  <div class="panel-body">
+                    Representa a legenda da figura e deve sempre ser utilizada dentro da <i>tag</i> <b>figure</b>.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading52">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse52" aria-expanded="false" aria-controls="collapse52">
+                      Nav
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse52" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading52">
+                  <div class="panel-body">
+                    Serve para representar qualquer conjunto de links.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading53">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse53" aria-expanded="false" aria-controls="collapse53">
+                      Header, section e footer
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse53" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading53">
+                  <div class="panel-body">
+                    Servem para representar o cabeçalho do <i>site</i> ou da seção, os setores do <i>site</i> e o seu
+                    rodapé.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading54">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse54" aria-expanded="false" aria-controls="collapse54">
+                      Thead, tbody e tfoot
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse54" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading54">
+                  <div class="panel-body">
+                    Servem para representar o topo, o corpo e o rodapé de uma tabela.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading55">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion9"
+                      href="#collapse55" aria-expanded="false" aria-controls="collapse55">
+                      Dialog
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse55" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading55">
+                  <div class="panel-body">
+                    Serve para representar janelas modal. Caixas de aviso.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Address</h4>
+            <p>
+              Deve ser utilizada para mostrar informações de contato como <i>e-mail</i>, endereço físico, número de
+              telefone,
+              mídias sociais etc.
+            </p>
+            <h4>Cite</h4>
+            <p>
+              Define o título de um trabalho criativo (por exemplo, um livro, um poema, uma música, um filme, uma
+              pintura,
+              uma escultura etc.).
+            </p>
+            <h4>Figure</h4>
+            <p>
+              Deve ser usada para definir ilustrações, fotos e imagens que representem o assunto da página. Obviamente,
+              para mostrar a imagem, dentro de figure é preciso incluir a <i>tag</i> <b>img</b>.
+            </p>
+            <h4>Figcaption</h4>
+            <p>Representa a legenda da figura e deve sempre ser utilizada dentro da <i>tag</i> <b>figure</b>.</p>
+            <h4>Nav</h4>
+            <p>Serve para representar qualquer conjunto de <i>links</i>.</p>
+            <h4>Header, section e footer</h4>
+            <p>Servem para representar o cabeçalho do <i>site</i> ou da seção, os setores do <i>site</i> e o seu rodapé.
+            </p>
+            <h4>Thead, tbody e tfoot</h4>
+            <p>Servem para representar o topo, o corpo e o rodapé de uma tabela.</p>
+            <h4>Dialog</h4>
+            <p>Serve para representar janelas modal. Caixas de aviso.</p>
+          </div>
+          <p>
+            Para finalizar, reforça-se que é imprescindível visitar regularmente a lista de <i>tags</i> HTML no
+            <i>site</i> da W3Schools
+            para relembrar e manter a correta semântica do seu <i>site</i>, pois isso, além de ser determinante para
+            SEO, ainda
+            ajuda na correta funcionalidade dos navegadores.
+          </p>
+          <h4><b>Title</b> e <b>meta descripition</b></h4>
+          <p>
+            As <i>tags</i> <b>title</b> e <b>meta description</b> são tão importantes para SEO que merecem um tópico
+            exclusivo. As informações
+            essenciais do seu <i>site</i>, que aparecem em qualquer buscador, são controladas por essas duas
+            <i>tags</i>.
+          </p>
+          <p>
+            Bem, a <i>tag</i> <b>title</b> você já deve conhecer. É aquele <i>tag</i> que fica dentro do <b>head</b> no
+            HTML e mostra um texto na aba
+            do navegador. Porém, é com essa <i>tag</i> também que se determina o que aparecerá no título das buscas nas
+            quais seu
+            site será listado.
+          </p>
+          <p>Veja um exemplo de aplicação no código:</p>
+          <pre>
+            <code>
+&lt;head> 
+   &lt;title>O que é tratamento de canal? - Colgate&lt;/title> 
+&lt;/head> 
+            </code>
+          </pre>
+          <p> Agora, veja um exemplo de resultado na busca: </p>
+          <img src="imgs/figura_01.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/figura_01.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/figura_01.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Visualizando as <i>tags</i> <b>title</b> e <b>meta description</b> na busca <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A imagem mostra a simulação de uma pesquisa no buscador Google. Contém uma seta
+            apontando onde aparece o texto da tag title. Outra seta aponta onde vem a descrição breve dos sites
+            listados, com a utilização da tag meta description. </p>
+          <p>
+            Já a <b>meta description</b> é a utilização da <i>tag</i> <b>meta</b>, que serve para passar informações
+            adicionais e importantes
+            ao documento HTML, com o atributo <b>name</b> de valor <b>description</b>.
+          </p>
+          <p>
+            Conforme visto na figura, é por meio dela que se controla o texto que aparecerá na listagem do buscador.
+            Veja
+            um exemplo de utilização:
+          </p>
+          <pre>
+          <code>
+&lt;head> 
+    &lt;title>O que é tratamento de canal? - Colgate&lt;/title> 
+    &lt;meta name="description" content="Aqui vai a descrição breve do meu site. Este texto é mostrado no buscador quando meu site é listado."> 
+&lt;/head> 
+        </code>
+        </pre>
+          <p>
+            Um fator importante sobre a utilização dessas duas <i>tags</i> é a limitação de texto delas. Para mantê-las
+            otimizadas e de acordo com sua estratégia de SEO, devem ser respeitados os seguintes limites:
+          </p>
+          <ul>
+            <li><b>Title</b>: deve conter no máximo 70 caracteres ou 512 pixels.</li>
+            <li>
+              <b>Description</b>: deve ter uma média de 160 caracteres. Em alguns casos, o Google aumenta essa descrição
+              para até
+              230 caracteres. Porém, manter 160 caracteres ainda é mais seguro e garante que seu texto aparecerá por
+              completo.
+            </li>
+          </ul>
+          <p>
+            Há inúmeras ferramentas que simulam como ficariam seus textos dentro dessas <i>tags</i> aplicados à listagem
+            do
+            buscador. Recomenda-se a utilização do <i>site</i> SEOmofo, que é uma ferramenta gratuita que simula as
+            páginas de
+            resultados do mecanismo de pesquisa do Google. Nela, você utiliza um formulário para inserir o título, a
+            meta
+            descrição e a URL de sua página da <i>web</i>. Essa ferramenta gerará uma lista virtual de resultados de
+            pesquisa com
+            base em suas informações.
+          </p>
+          <p class="caixa-destaque icone importante">
+            Por fim, é importante reforçar que é <b>obrigatória</b> a utilização das <i>tags</i> <b>title</b> e <b>meta
+              description</b> para
+            qualquer estratégia de otimização nos mecanismos de busca.
+          </p>
+          <h4>Como funcionam as imagens na busca</h4>
+          <p>
+            Para que um buscador encontre seu <i>site</i>, ele tem robôs programados para ficar constantemente
+            procurando e
+            indexando novas URLs. Basicamente, ele encontra um <i>site</i> e, dentro deste, encontra <i>links</i>,
+            apontando para outras
+            URLs, sejam elas internas, sejam externas. O robô entra nesses <i>links</i> e vai indexando e repetindo o
+            processo
+            infinitamente.
+          </p>
+          <p>
+            Esses “robôs”, ao encontrarem o seu <i>site</i>, não o veem como um humano veria; eles basicamente leem o
+            seu código.
+            Quando chegam a uma imagem, não interpretam o que ela representa, mas apenas leem o caminho na <i>tag</i>
+            <b>img</b> e
+            descobrem o nome dela.
+          </p>
+          <p>
+            Então, para otimizar as imagens pensando em SEO, você deve ter percebido que o nome da imagem tem
+            relevância.
+            Por isso, em vez de a imagem ter o nome “<b>foto-01.png</b>”, é mais prudente ter um nome que a represente.
+            Por
+            exemplo, a foto de uma árvore com laranjas poderia se chamar “<b>laranjeira.png</b>”.
+          </p>
+          <p>
+            Porém, a correta utilização do atributo <b>alt</b>, na <i>tag</i> <b>img</b> do HTML, é ainda mais
+            importante que o nome da imagem.
+            Isso porque o buscador, ao ler seu código, quando encontrar a imagem, lerá o que está escrito no atributo<b>
+              alt</b>
+            dela. Um exemplo de preenchimento desse atributo, para a laranjeira, seria “Árvore laranjeira, com folhas
+            verdes e repleta de laranjas maduras”.
+          </p>
+          <p class="caixa-destaque icone anotar">
+            Por outro lado, o atributo <b>alt</b> também é fundamental quando o assunto é acessibilidade, pois existem
+            leitores
+            de tela utilizados principalmente por pessoas que têm alguma dificuldade na visão. Esses leitores de tela
+            não identificam o que é a imagem nem o que ela representa, então leem o que estiver escrito no atributo
+            <b>alt</b>.
+          </p>
+          <p>
+            De acordo com os padrões W3C, o atributo <b>alt</b> é obrigatório em toda <i>tag</i> <b>img</b>. Porém,
+            agora você percebeu que,
+            além de obrigatório, ele é essencial para a acessibilidade e para a sua estratégia de SEO.
+          </p>
+          <pre>
+            <code>
+&lt;img src="imagens/laranjeira.jpg" alt="Árvore laranjeira, com folhas verdes e repleta de laranjas maduras."> 
+            </code>
+          </pre>
+          <p>
+            Em vídeo disponível no YouTube (How Search [...], 2012), Matt Cutts, na época chefe da equipe de <i>spam</i>
+            da <i>web</i>
+            do Google, declara que o Googlebot (robô de busca do Google) não vê as imagens diretamente, então ele se
+            concentra nas informações fornecidas no atributo <b>alt</b>.
+          </p>
+          <p>
+            Em suma, nunca se esqueça do atributo <b>alt</b> nas imagens, pois é assim que o Google entende o que
+            significa sua
+            imagem e o utiliza também para indexá-la na busca de imagens.
+          </p>
+          <h4>Mapa do <i>site</i> (<i>sitemap</i>)</h4>
+          <div class="row mt-5">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+              <img src="imgs/destaque_sitemap.png" class="center-block img-responsive imagem-destaque">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+              <p>
+                Outro fator determinado em SEO é a criação e disponibilização do mapa do <i>site</i> ou sistema. Um mapa
+                do <i>site</i>,
+                também conhecido como <i>sitemap</i>, é uma representação visual ou textual da estrutura de um
+                <i>site</i>. Ele lista
+                todas as páginas e os conteúdos do <i>site</i> de forma hierárquica, proporcionando uma visão geral
+                clara da
+                organização do conteúdo. Existem dois tipos principais de mapas do <i>site</i>: para usuários e para
+                ferramentas
+                de busca.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-5 painel-azul">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="destaque-usuarios-buscadores usuarios">
+                <div class="icone-y center-block">
+                  <img src="imgs/icon_usuarios.png" alt="Ícone Usuários" />
+                </div>
+                <h3>Usuários</h3>
+                <p>
+                  O mapa do <i>site</i> criado para usuários é projetado para ajudar os visitantes humanos a navegar
+                  pelo <i>site</i>
+                  de maneira fácil e eficiente. Ele geralmente é apresentado como uma página da <i>web</i> que lista
+                  <i>links</i> para
+                  todas as principais seções e páginas do site. Isso pode ser particularmente útil em sites com uma
+                  grande quantidade de conteúdo, tornando a navegação mais intuitiva para os usuários.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="destaque-usuarios-buscadores buscadores">
+                <div class="icone-y center-block">
+                  <img src="imgs/icon_buscadores.png" alt="Ícone Buscadores" />
+                </div>
+                <h3>Buscadores</h3>
+                <p>
+                  Já o mapa do <i>site</i> para buscadores é uma versão especial destinada a ser lida pelos algoritmos
+                  das
+                  ferramentas de busca. Ele fornece informações estruturadas sobre a organização do <i>site</i> e a
+                  relação
+                  entre diferentes páginas. Esse tipo de mapa ajuda os motores de busca a indexar eficientemente todas
+                  as páginas do <i>site</i>, garantindo que o conteúdo seja rastreado e exibido nos resultados de
+                  pesquisa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            O formato mais comum para um mapa do <i>site</i> para motores de busca é o arquivo XML (<i>extensible markup
+              language</i>),
+            conhecido como <i>sitemap</i> XML. Esse arquivo contém uma lista de URLs do <i>site</i>, juntamente com
+            metadados
+            adicionais, como a última data de modificação e a frequência de atualização. É possível enviar esse mapa do
+            <i>site</i> para o Google por meio de uma ferramenta chamada Google Search Console, que será abordada mais
+            adiante
+            neste curso.
+          </p>
+          <p>Veja um exemplo de <i>sitemap</i> XML:</p>
+          <pre>
+            <code>
+&lt;?xml version="1.0" encoding="UTF-8"?> 
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+    &lt;url> 
+          &lt;loc>https://exemplo.com.br/pagina1&lt;/loc> 
+          &lt;lastmod>2024-04-04T23:53:25+00:00&lt;/lastmod> 
+          &lt;changefreq>monthly&lt;/changefreq> 
+          &lt;priority>0.8&lt;/priority> 
+    &lt;/url> 
+    &lt;url> 
+          &lt;loc>https://exemplo.com.br/pagina2&lt;/loc> 
+          &lt;lastmod>2024-04-04T23:53:25+00:00&lt;/lastmod> 
+          &lt;changefreq>monthly&lt;/changefreq> 
+          &lt;priority>0.9&lt;/priority> 
+    &lt;/url> 
+&lt;/urlset> 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, <b>&lt;loc></b> representa a URL da página, <b>&lt;lastmod></b> indica a última modificação,
+            <b>&lt;changefreq></b>
+            especifica a frequência de alterações e <b>&lt;priority></b> indica a prioridade relativa da página.
+          </p>
+          <p>
+            Você pode criar todo o XML do mapa do seu <i>site</i> de forma manual, porém atualmente existem ferramentas
+            que ajudam nesse processo. Basta uma breve pesquisa por “gerador de <i>sitemap</i>” para encontrar
+            ferramentas gratuitas que geram esse mapa do <i>site</i> para você. No entanto, seu <i>site</i> precisa
+            estar
+            publicado na <i>web</i>, então basta informar a URL e a ferramenta gerará esse arquivo XML para você,
+            disponibilizando-o para <i>download</i>.
+          </p>
+          <p>
+            Porém, todas as vezes que você acrescentar, modificar ou remover URLs do seu <i>site</i>, é preciso repetir
+            esse processo.
+          </p>
+          <p>
+            Os mapas do <i>site</i> desempenham um papel importante tanto para a experiência do usuário quanto para o
+            SEO, ajudando a garantir uma navegação eficiente e a indexação adequada nos motores de busca.
+          </p>
+          <h4>URLs e/ou conteúdos duplicados</h4>
+          <p>
+            Para qualquer buscador, o conteúdo do seu <i>site</i> precisa ser exclusivo. Por exemplo, para o Google,
+            você sempre
+            perde “pontos” em SEO se forem encontrados dois ou mais <i>sites</i>, ou mais de uma URL, com o conteúdo
+            idêntico.
+            Dentro disso, há dois problemas a solucionar: URLs duplicadas e conteúdos duplicados.
+          </p>
+          <p>
+            As URLs duplicadas referem-se a múltiplas URLs que apontam para conteúdo idêntico ou muito semelhante em um
+            <i>site</i>. Isso pode ocorrer por várias razões e é problemático para o SEO e até mesmo para a experiência
+            do
+            usuário.
+          </p>
+          <p>Veja alguns cenários comuns de URLs duplicadas:</p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1"
+                      aria-expanded="true" aria-controls="collapse1">
+                      Parâmetros de URL
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    Se um site usa parâmetros de URL para filtrar ou classificar o conteúdo, diferentes combinações
+                    desses parâmetros podem levar a URLs que exibem o mesmo conteúdo. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com/produtos?categoria=eletronicos</b></li>
+                      <li><b>https://www.exemplo.com/produtos?categoria=eletronicos&ordem=preco</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      Versões de URL com e sem “www”
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    Se o <i>site</i> permite o acesso com ou sem “www” no início da URL, as duas versões podem ser
+                    acessadas,
+                    levando a URLs duplicadas. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com</b></li>
+                      <li><b>https://exemplo.com</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      URLs com e sem barra no final
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    URLs que diferem apenas pela presença ou ausência de uma barra no final podem ser consideradas
+                    duplicadas. Por exemplo:
+                    <ul>
+                      <li><b>https://www.exemplo.com/pagina</b></li>
+                      <li><b>https://www.exemplo.com/pagina/</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headin4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                      Conteúdo similar em múltiplas páginas
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    Se várias páginas do <i>site</i> contêm conteúdo substancialmente idêntico, isso pode resultar em
+                    conteúdos
+                    duplicados. Isso pode acontecer, por exemplo, em páginas de categorias ou <i>tags</i> que exibem o
+                    mesmo
+                    conjunto de artigos.
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading5">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                      HTTP e HTTPS
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                  <div class="panel-body">
+                    Se o <i>site</i> for acessível por meio de HTTP (<i>hypertext transfer protocol</i>) e HTTPS
+                    (<i>hypertext transfer
+                      protocol secure</i>), as versões não seguras e seguras podem ser consideradas URLs duplicadas. Por
+                    exemplo:
+                    <ul>
+                      <li><b>http://www.exemplo.com</b></li>
+                      <li><b>https://www.exemplo.com</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Parâmetros de URL</h4>
+            <p>
+              Se um site usa parâmetros de URL para filtrar ou classificar o conteúdo, diferentes combinações
+              desses parâmetros podem levar a URLs que exibem o mesmo conteúdo. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com/produtos?categoria=eletronicos</b></li>
+              <li><b>https://www.exemplo.com/produtos?categoria=eletronicos&ordem=preco</b></li>
+            </ul>
+            <h4>Versões de URL com e sem “www” </h4>
+            <p>
+              Se o <i>site</i> permite o acesso com ou sem “www” no início da URL, as duas versões podem ser
+              acessadas,
+              levando a URLs duplicadas. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com</b></li>
+              <li><b>https://exemplo.com</b></li>
+            </ul>
+            <h4>URLs com e sem barra no final </h4>
+            <p>
+              URLs que diferem apenas pela presença ou ausência de uma barra no final podem ser consideradas
+              duplicadas. Por exemplo:
+            </p>
+            <ul>
+              <li><b>https://www.exemplo.com/pagina</b></li>
+              <li><b>https://www.exemplo.com/pagina/</b></li>
+            </ul>
+            <h4>Conteúdo similar em múltiplas páginas</h4>
+            <p>
+              Se várias páginas do <i>site</i> contêm conteúdo substancialmente idêntico, isso pode resultar em
+              conteúdos
+              duplicados. Isso pode acontecer, por exemplo, em páginas de categorias ou <i>tags</i> que exibem o
+              mesmo
+              conjunto de artigos.
+            </p>
+            <h4>HTTP e HTTPS </h4>
+            Se o <i>site</i> for acessível por meio de HTTP (<i>hypertext transfer protocol</i>) e HTTPS
+            (<i>hypertext transfer
+              protocol secure</i>), as versões não seguras e seguras podem ser consideradas URLs duplicadas. Por
+            exemplo:
+            <ul>
+              <li><b>http://www.exemplo.com</b></li>
+              <li><b>https://www.exemplo.com</b></li>
+            </ul>
+          </div>
+          <p>
+            A presença de URLs ou conteúdos duplicados tem implicações negativas para o SEO, pois os motores de busca
+            podem ter dificuldade em decidir qual versão da URL exibir nos resultados de pesquisa. Além disso, isso
+            resulta em uma dispersão desnecessária de autoridade de página entre diferentes versões da mesma página.
+          </p>
+          <p>
+            Porém, há formas de resolver esses problemas e aumentar a “força” do seu SEO. Para resolver a questão de
+            conteúdos duplicados, ou seja, quando há páginas com o mesmo conteúdo ou conteúdo muito similar, usa-se mais
+            uma vez uma <i>tag</i> do HTML5. Neste caso, usa-se a <i>tag</i> <b>link</b> com o atributo <b>rel
+              canonical</b>. Veja um exemplo de aplicação:
+          </p>
+          <pre>
+            <code>
+&lt;link rel="canonical" href="camisetas.html"> 
+            </code>
+          </pre>
+          <p>
+            Como exemplo prático de conteúdo duplicado, é possível citar um site <i>e-commerce</i> que vende, por
+            exemplo,
+            camisetas. Para cada cor de camiseta há uma URL diferente. Neste caso, o conteúdo das páginas será
+            praticamente o mesmo, pois, afinal, o produto é o mesmo, só o que muda é a cor. Então, para que o buscador
+            não
+            compreenda cada página como conteúdo duplicado, usa-se o <i>link canonical</i>.
+          </p>
+          <p>
+            Na prática, todas as páginas devem avisar, por meio do <i>link canonical</i>, a qual conteúdo daquela página
+            pertencem. Por exemplo: suponha que existam as páginas <b>camiseta-azul.html</b>,
+            <b>camiseta-vermelha.html</b>,
+            <b>camiseta-verde.html</b> e <b>camiseta-preta.html</b>. Deve-se escolher uma dessas páginas como principal,
+            e todas devem
+            conter o <i>link canonical</i>, dentro da <i>tag</i> <b>head</b>, para a página escolhida.
+          </p>
+          <p>
+            Suponha que você decidiu que a página principal será a da camiseta preta. Então, todas as demais páginas da
+            mesma camiseta devem conter o <i>link canonical</i> para a camiseta preta. Exemplo:
+          </p>
+          <pre>
+            <code>
+&lt;head> 
+    &lt;title>Camiseta Azul&lt;/title>  
+    &lt;link rel="canonical" href="camiseta-preta.html"> 
+&lt;/head> 
+            </code>
+          </pre>
+          <p>
+            Quanto às URLs duplicadas, a principal solução é redirecionar a página com o valor 301, isso indica ao
+            buscador que essa URL mudou permanentemente para a qual ele aponta.
+          </p>
+          <p>
+            Existem diversas formas de criar esse redirecionamento, no entanto o mais utilizado em servidores <i>web</i>
+            Linux é
+            via arquivo <b>.htaccess</b>. Esse arquivo é responsável por enviar algumas regras de configuração que
+            impactarão a
+            visualização do seu <i>site</i>.
+          </p>
+          <p>
+            Caso não exista um arquivo com esse nome na pasta onde fica localizado o seu <i>site</i>, basta criá-lo com
+            qualquer
+            editor de código ou até mesmo com o bloco de notas do Windows e nomeá-lo como <b>.htaccess</b>, após inserir
+            dentro
+            dele o seguinte código:
+          </p>
+          <pre>
+            <code>
+Options +FollowSymLinks 
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^seusite.com.br [NC] 
+RewriteRule ^(.*)$ http://www.seusite.com.br/$1 [L,R=301] 
+            </code>
+          </pre>
+          <p>
+            Obviamente, você precisa atualizar a URL para a do <i>site</i> que está construindo. O código acima faz com
+            que
+            sempre que alguém entrar no <i>site</i> sem digitar o “www”, o servidor direcione-o para a página com o
+            “www”.
+          </p>
+          <p>
+            <mark>SSL (<i>secure sockets layer</i>) como fator de ranqueamento:</mark> no dia 6 de agosto de 2014, o
+            Google oficialmente
+            anunciou que priorizaria, na indexação, os <i>sites</i> que tivessem a criptografia SSL, ou seja, que
+            pudessem ser
+            acessados de forma segura por meio do HTTPS.
+          </p>
+          <p> Agora, veja um exemplo de resultado na busca: </p>
+          <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig3.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            SSL como fator de ranqueamento<br>
+            Fonte: Freepik (c2010-2024)
+          </p>
+          <p class="acessivel no-print">
+            Desenho de um cadeado e um escudo verde, simbolizando segurança. Ao lado está o desenho de uma barra de
+            navegador escrito “https”, simbolizando que um site que é acessado via https é seguro.
+          </p>
+          <p>
+            Contudo, conforme descrito anteriormente, qualquer <i>site</i> que permita o acesso tanto com HTTP quanto
+            com HTTPS,
+            para o Google, também é conteúdo duplicado!
+          </p>
+          <p>
+            Para resolver isso, recorre-se novamente ao redirecionamento usando o arquivo <b>.htaccess</b>. O exemplo de
+            código a
+            seguir faz com que toda vez que alguém acesse o <i>site</i> utilizando o HTTP, seja redirecionado para a
+            mesma URL,
+            mas agora com o HTTPS.
+          </p>
+          <pre>
+            <code>
+RewriteEngine On 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+RewriteCond %{HTTPS} off 
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
+            </code>
+          </pre>
+          <p>Esse código deve ser inserido dentro do arquivo <b>.htaccess</b> do seu <i>site</i>.</p>
+          <p>
+            As práticas de redirecionamento e de <i>links canonical</i> são essenciais para o SEO, pois ajudam a
+            consolidar a
+            autoridade do seu <i>site</i> e melhorar a indexação nas ferramentas de busca.
+          </p>
+          <h4>URLs amigáveis</h4>
+          <p>
+            URLs amigáveis, também conhecidas como URLs legíveis por humanos, são URLs estruturadas de uma maneira
+            compreensível e significativa para os usuários. Em contraste, URLs não amigáveis podem ser longas, cheias de
+            caracteres especiais, ou conter códigos dinâmicos que não fazem sentido para quem os lê.
+          </p>
+          <div class="caixa-sites">
+            <div class="caixa-destaque icone exemplo">
+              <p> Veja estes exemplos comparativos:</p>
+              <ul>
+                <li>
+                  URL não amigável: <br>
+                  https://www.exemplo.com/pagina?id=123&categoria=produtos&ref=567
+                </li>
+                <li>
+                  URL amigável: <br>
+                  https://www.exemplo.com/produtos/pagina-567
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Implementar URLs amigáveis no seu site é extremamente importante para as estratégias de SEO, em razão de
+            fatores como:
+          </p>
+          <p class="no-print"> Clique ou toque para visualizar o conteúdo.</p>
+          <div class="no-print painel-amigaveis" aria-hidden="true">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-4 center-block" data-toggle="modal" data-target="#modal-4"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-5 center-block" data-toggle="modal" data-target="#modal-5"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-6 center-block" data-toggle="modal" data-target="#modal-6"></button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <button type="button" class="botao-7 center-block" data-toggle="modal" data-target="#modal-7"></button>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Legibilidade e usabilidade </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      URLs amigáveis melhoram a legibilidade e usabilidade para os usuários. Uma URL clara e descritiva
+                      fornece aos visitantes e motores de busca informações sobre o conteúdo da página antes mesmo de
+                      clicarem no <i>link</i>.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Palavras-chave na URL</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Incluir palavras-chave relevantes na URL pode contribuir para a otimização de mecanismos de busca.
+                      Os motores de busca consideram a presença de palavras-chave na URL ao determinar a relevância de
+                      uma página para determinadas consultas de pesquisa.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Compartilhamento mais fácil</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      URLs amigáveis são mais fáceis de lembrar e compartilhar. Isso é particularmente importante em
+                      ambientes de mídia social, nos quais URLs concisas e compreensíveis têm mais chances de serem
+                      clicadas e compartilhadas.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Aparência nos resultados de pesquisa </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Em alguns casos, os motores de busca exibem partes da URL nas páginas de resultados de pesquisa.
+                      Uma URL amigável pode atrair mais cliques, pois os usuários podem ter uma ideia do conteúdo antes
+                      mesmo de clicarem no <i>link</i>.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Legibilidade e usabilidade</h4>
+            <p>
+              URLs amigáveis melhoram a legibilidade e usabilidade para os usuários. Uma URL clara e descritiva fornece
+              aos visitantes e motores de busca informações sobre o conteúdo da página antes mesmo de clicarem no
+              <i>link</i>.
+            </p>
+            <h4>Palavras-chave na URL</h4>
+            <p>
+              Incluir palavras-chave relevantes na URL pode contribuir para a otimização de mecanismos de busca. Os
+              motores de busca consideram a presença de palavras-chave na URL ao determinar a relevância de uma página
+              para determinadas consultas de pesquisa.
+            </p>
+            <h4>Compartilhamento mais fácil</h4>
+            <p>
+              URLs amigáveis são mais fáceis de lembrar e compartilhar. Isso é particularmente importante em ambientes
+              de
+              mídia social, nos quais URLs concisas e compreensíveis têm mais chances de serem clicadas e
+              compartilhadas.
+            </p>
+            <h4>Aparência nos resultados de pesquisa</h4>
+            <p>
+              Em alguns casos, os motores de busca exibem partes da URL nas páginas de resultados de pesquisa. Uma URL
+              amigável pode atrair mais cliques, pois os usuários podem ter uma ideia do conteúdo antes mesmo de
+              clicarem
+              no <i>link</i>.
+            </p>
+          </div>
+          <p>
+            Suponha que você tenha uma loja <i>on-line</i> que vende <i>laptops</i> e queira otimizar uma página para os
+            <i>laptops</i> da
+            marca “XYZ”. Uma URL amigável seria algo como:
+          </p>
+          <p> https://www.exemplo.com/produtos/laptops/xyz</p>
+          <p>
+            Isso é mais informativo para os motores de busca e usuários do que uma URL não amigável cheia de parâmetros
+            e
+            números.
+          </p>
+          <p>
+            Na hora de criar URLs amigáveis sempre use palavras-chave relevantes para o tema da empresa, mantenha as
+            URLs
+            curtas e descritivas, evite o uso de caracteres especiais, não utilize espaços em branco nem
+            <i>underlines</i> (_)
+            para separar as palavras e use sempre o hífen (-) como separador de palavras da URL.
+          </p>
+          <img src="imgs/fig4.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig4.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig4.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">URL amigável <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            A imagem mostra o exemplo de uma URL com setas informando que as palavras da URL devem ser separadas por
+            hífen. Exemplo: sapato-preto.
+          </p>
+          <p>
+            Porém, tão importante quanto mostrar para o buscador tudo o que você quer indexar é avisar ao buscador
+            aquelas
+            páginas ou os diretórios que você não quer que apareçam na busca, como arquivos com funções ou até mesmo
+            áreas
+            administrativas que tenham acesso restrito.
+          </p>
+          <p>
+            Para isso, usa-se um arquivo chamado <b>robots.txt</b> em seu servidor, no diretório onde fica hospedado o
+            seu <i>site</i>.
+            Esse arquivo indica para o buscador, principalmente, quais URLs ele não deve indexar.
+          </p>
+          <p> Veja um exemplo:</p>
+          <pre>
+            <code class="hljs language-xml">
+User-agent: * 
+Disallow: /administrator/ 
+Disallow: /bin/ 
+            </code>
+          </pre>
+          <p>
+            As linhas que contêm a palavra <b>disallow</b> seguida da URL ou do nome do diretório estão informando ao
+            buscador
+            que ele não deve listá-las, ou seja, essas páginas não aparecerão na busca do Google.
+          </p>
+          <p>
+            É importante reforçar que uma estratégia de SEO eficaz envolve uma combinação de vários elementos, incluindo
+            conteúdo de qualidade, otimização de palavras-chave, experiência do usuário e outros fatores técnicos
+            mostrados neste curso.
+          </p>
+          <h4> Dados estruturados</h4>
+          <p>
+            De acordo com o Google, os dados estruturados são um formato padronizado, enviados via <i>tags</i> ou
+            códigos
+            JavaScript, para fornecer informações sobre uma página e classificar o conteúdo dela. Por exemplo, em uma
+            página de curso, o nome do curso, a duração, o preço e assim por diante.
+          </p>
+          <p>
+            Adicionar dados estruturados pode ativar resultados de pesquisa mais interessantes para os usuários,
+            chamados
+            de pesquisas aprimoradas, e incentivá-los a interagir mais com seu <i>site</i>.
+          </p>
+          <p>
+            De acordo com a Central da Pesquisa Google, que é um <i>site</i> que documenta e orienta sobre como manter
+            um <i>site</i>
+            otimizado para as ferramentas de busca, há diversos tipos de dados que podem ser especificados, como
+            artigos,
+            receitas, cursos, imagem, logotipo, empresa, entre outros. Há alguns que podem – e, sempre que possível,
+            devem
+            – ser utilizados em todos os <i>sites</i>. Por exemplo, os dados do tipo imagem, logotipo e empresa.
+          </p>
+          <p>Veja um exemplo de implementação do tipo de dado logotipo:</p>
+          <pre>
+            <code>
+&lt;script type="application/ld+json"> 
+{ 
+    "@context": "http://schema.org", 
+    "@type": "Organization", 
+    "name": "Nome da empresa ", 
+    "url": "https://www.exemplo.com", 
+    "logo": "https://www.exemplo.com/logo.png" 
+}               
+&lt;/script> 
+            </code>
+          </pre>
+          <p>
+            Com esse simples código, adicionado com a <i>tag</i> <b>script</b> dentro do <b>head</b> do HTML do seu
+            <i>site</i>, você já está passando
+            as informações para o Google. Obviamente, onde diz “URL” você muda para a URL do seu <i>site</i>, e onde diz
+            “logo”
+            você coloca o <i>link</i> da imagem com o logotipo da empresa que o <i>site</i> representa.
+          </p>
+          <p>
+            Infelizmente, adicionar corretamente um dado estruturado em seu <i>site</i> não significa que realmente
+            essas
+            informações adicionais aparecerão em qualquer busca realizada no Google. Quem decide quando, onde e como
+            essas
+            informações aparecerão é o próprio buscador. Contudo, inserir todos os dados estruturados que têm relação
+            com
+            seu <i>site</i> ou sistema é fundamental, pois habilita o seu <i>site</i> a aparecer como destaque em
+            determinadas
+            pesquisas.
+          </p>
+          <p class="caixa-destaque icone anotar">
+            Apesar de a aplicação de dados estruturados ainda não ser mostrada em todas as pesquisas, é um recurso
+            fundamental e até mesmo avançado em SEO, pois deixa seu <i>site</i> em conformidade com as recomendações de
+            SEO do
+            Google e proporciona um destaque a mais para ele na pesquisa.
+          </p>
+          <p>
+            Por fim, recomenda-se visitar periodicamente a Central da Pesquisa Google, pois é lá que o Google informa
+            sobre atualizações e/ou novos recursos implementados nos dados estruturados, além de fornecer recomendações
+            gerais sobre a busca aprimorada no Google.
+          </p>
+          <h3 id="t5">Ferramentas de monitoramento</h3>
+          <p>
+            Conforme visto até agora, você deve ter percebido que o sucesso de uma estratégia de SEO está longe de
+            envolver apenas otimização de códigos. No entanto, há muitos detalhes técnicos envolvidos que vão além da
+            correta programação para a <i>web</i>.
+          </p>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <img src="imgs/logo_google_search.png" class="center-block img-responsive print imagem-google">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+              <p>
+                Uma ferramenta essencial para verificar essas ações de SEO chama-se Google Search Console. O Search
+                Console
+                é
+                uma ferramenta gratuita do Google que permite avaliar o tráfego e o desempenho de pesquisa do seu
+                <i>site</i>,
+                corrigir problemas e destacar suas páginas nos resultados de pesquisa no Google. Com ele, você consegue
+                ver
+                quais termos pesquisados levam os usuários ao seu <i>site</i>, analisar as impressões, os cliques e a
+                posição do seu
+                <i>site</i> na pesquisa do Google, além de poder enviar os <i>sitemaps</i> e URLs individuais do seu
+                <i>site</i>, o que agiliza a
+                indexação.
+              </p>
+            </div>
+          </div>
+          <p>
+            O Search Console também tem uma ferramenta de inspeção de URL na qual é possível acessar informações de
+            veiculação, indexação e rastreamento das páginas diretamente no índice do Google, além de poder verificar
+            os
+            recursos de pesquisas aprimoradas e facilidade de uso em dispositivos móveis, pois há ferramentas que
+            permitem
+            realizar testes e melhorar a usabilidade do seu <i>site</i> em dispositivos móveis com relatórios
+            personalizados.
+          </p>
+          <p>
+            Para começar a utilizar essa ferramenta, basta pesquisar sobre Google Search Console, criar uma conta
+            gratuita
+            e seguir o passo a passo informado na ferramenta para realizar a integração com seu <i>site</i>. A própria
+            ferramenta
+            tem vários tutoriais de utilização.
+          </p>
+          <p class="caixa-destaque icone dica">
+            Há também ferramentas complementares muito úteis e recomendadas, como o Google Analytics, que traz
+            relatórios mais completos sobre como os usuários chegam ao seu <i>site</i> e como interagem com ele, e o
+            Hotjar,
+            que cria um mapa de calor do seu <i>site</i>, indicando os pontos mais vistos e clicados. Além disso, o
+            Hotjar
+            permite realizar gravações da tela, mostrando exatamente como os usuários interagem com a interface do seu
+            <i>site</i>.
+          </p>
+          <p>
+            Outra ferramenta útil é a PageSpeed Insights, que mede a velocidade de carregamento do seu <i>site</i>,
+            trazendo
+            várias recomendações de otimização. Essa ferramenta é abordada no conhecimento <b>Otimização de
+              <i>front-end</i></b> deste
+            curso.
+          </p>
+          <p>
+            Como você deve ter percebido, o SEO é importante por várias razões que afetam diretamente a visibilidade e o
+            sucesso <i>on-line</i> de um <i>site</i>. Quanto mais bem posicionado um <i>site</i> aparecer, maior será
+            sua visibilidade para
+            usuários que buscam informações relacionadas ao seu negócio. <i>Sites</i> bem otimizados são percebidos como
+            mais
+            confiáveis e credíveis. Os usuários frequentemente associam posições mais altas nos resultados de pesquisa a
+            conteúdo de qualidade e autoridade no assunto. E é papel do desenvolvedor <i>web</i> utilizar as diversas
+            estratégias
+            e otimizações demonstradas aqui para que o <i>site</i> construído esteja otimizado e apto a aparecer nas
+            pesquisas
+            dos principais buscadores da internet.
+          </p>
+          <h3 id="t6"> Acessibilidade na <i>web</i></h3>
+          <p>
+            Acessibilidade na <i>web</i> refere-se ao <i>design</i> e desenvolvimento de páginas <i>web</i> que podem
+            ser utilizadas por
+            pessoas com diversas capacidades, incluindo aquelas com deficiências visuais, auditivas, motoras, cognitivas
+            ou outras. O objetivo é garantir que todos os usuários, independentemente de suas limitações, possam
+            acessar,
+            entender e interagir com o conteúdo da <i>web</i> de forma eficaz.
+          </p>
+          <p class="caixa-destaque icone importante">
+            <b>A acessibilidade não é apenas uma questão de inclusão social, mas também de conformidade legal e de boa
+              prática de desenvolvimento <i>web</i></b>. Em muitos países, a legislação exige que os <i>sites</i> sejam
+            acessíveis a pessoas
+            com deficiência. Além disso, a acessibilidade melhora a experiência geral do usuário, pois práticas que
+            facilitam o acesso para pessoas com deficiência também beneficiam usuários em geral, como aqueles que
+            utilizam dispositivos móveis ou têm conexões de internet lentas.
+          </p>
+          <h4>Princípios fundamentais da acessibilidade</h4>
+          <p>Veja, agora, quatro princípios fundamentais da acessibilidade.</p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                  data-toggle="tab">Perceptível </a>
+              </li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Operável
+                </a>
+              </li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                  data-toggle="tab">Compreensível</a>
+              </li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                  data-toggle="tab">Robusto</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <p>
+                  As informações e os componentes da interface do usuário devem ser apresentados de forma que possam ser
+                  percebidos pelos sentidos dos usuários, principalmente visão e audição. Isso significa que todo
+                  conteúdo
+                  deve ser disponibilizado em várias formas (texto, áudio, visual) para garantir que seja acessível para
+                  todos.
+                </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <p>
+                  A interface do usuário e os componentes de navegação devem ser operáveis por todos, inclusive aqueles
+                  que utilizam dispositivos de assistência, como leitores de tela ou teclados especiais. Isso inclui a
+                  possibilidade de navegação por meio do teclado e a garantia de que todas as funcionalidades sejam
+                  acessíveis sem o uso do <i>mouse</i>.
+                </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <p>
+                  As informações e a operação da interface devem ser compreensíveis para todos os usuários. O conteúdo
+                  deve ser apresentado de forma clara e lógica, e a funcionalidade deve ser previsível e fácil de
+                  entender.
+                </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings">
+                <p>
+                  O conteúdo deve ser robusto o suficiente para que possa ser interpretado de forma confiável por uma
+                  ampla gama de agentes de usuário, incluindo tecnologias assistivas. Isso envolve o uso de padrões
+                  <i>web</i>
+                  bem definidos e a garantia de compatibilidade futura com novas tecnologias.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Perceptível</h4>
+            <p>
+              As informações e os componentes da interface do usuário devem ser apresentados de forma que possam ser
+              percebidos pelos sentidos dos usuários, principalmente visão e audição. Isso significa que todo conteúdo
+              deve ser disponibilizado em várias formas (texto, áudio, visual) para garantir que seja acessível para
+              todos.
+            </p>
+            <h4>Operável</h4>
+            <p>
+              A interface do usuário e os componentes de navegação devem ser operáveis por todos, inclusive aqueles que
+              utilizam dispositivos de assistência, como leitores de tela ou teclados especiais. Isso inclui a
+              possibilidade de navegação por meio do teclado e a garantia de que todas as funcionalidades sejam
+              acessíveis
+              sem o uso do <i>mouse</i>.
+            </p>
+            <h4>Compreensível</h4>
+            <p>
+              As informações e a operação da interface devem ser compreensíveis para todos os usuários. O
+              conteúdo deve ser apresentado de forma clara e lógica, e a funcionalidade deve ser previsível e fácil de
+              entender.
+            </p>
+            <h4>Robusto</h4>
+            <p>
+              O conteúdo deve ser robusto o suficiente para que possa ser interpretado de forma confiável por uma
+              ampla gama de agentes de usuário, incluindo tecnologias assistivas. Isso envolve o uso de padrões
+              <i>web</i> bem
+              definidos e a garantia de compatibilidade futura com novas tecnologias.
+            </p>
+          </div>
+          <h4> Práticas de acessibilidade em HTML</h4>
+
+          <p>
+            Muitos dos elementos citados no SEO também têm relação com acessibilidade, por exemplo, o uso de semântica
+            HTML correta:
+          </p>
+          <p>
+            Elementos como <b>&lt;header></b>, <b>&lt;nav></b>, <b>&lt;main></b>, <b>&lt;article></b> e
+            <b>&lt;footer></b> ajudam a estruturar o conteúdo
+            de maneira que
+            leitores de tela possam entender e navegar facilmente.
+          </p>
+          <p>
+            Use cabeçalhos (<b>&lt;h1></b>, <b>&lt;h2></b> etc.) de forma hierárquica para estruturar o conteúdo,
+            facilitando a
+            navegação tanto para usuários de leitores de tela quanto para a navegação por teclado.
+          </p>
+          <div class="infografico-1 hidden-xs no-print" aria-hidden="true">
+            <div class="row bloco1">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right">
+                <img src="imgs/infog1.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <p class="texto-esquerda-1">
+                  Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo
+                  que
+                  o
+                  conteúdo da imagem
+                  possa ser entendido por usuários que não podem vê-la.</p>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                <div class="linha-vertical-1 hidden-xs"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left mt-info">
+                <img src="imgs/infog2.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
+                <div class="texto-direita-1">
+                  <p>
+                    Certifique-se de que o contraste entre o texto e o fundo seja suficiente para
+                    garantir a legibilidade. Utilize ferramentas para verificar o contraste de cores e garantir que
+                    ele
+                    esteja dentro dos padrões de acessibilidade.
+                    <br>
+                    Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
+                    facilitar a leitura.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row bloco2">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo">
+                <img src="imgs/infog3.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+                    controles.
+                    Isso ajuda os usuários de leitores de tela a entender o propósito de cada campo. <br>
+                    Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.</p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                <div class="linha-vertical-2 hidden-xs"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito">
+                <img src="imgs/infog4.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
+                <div class="texto-direita-1">
+                  <p>
+                    Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem
+                    ser
+                    acessados e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que
+                    não podem usar <i>mouse</i>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row bloco3">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo-3">
+                <img src="imgs/infog5.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+                    entender o conteúdo.
+                    <br>
+                    Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que
+                    está acontecendo na tela.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                <div class="linha-vertical-3 hidden-xs"></div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito-3">
+                <img src="imgs/infog6.png" alt="Ícone Texto Alternativo" class="img-responsive img-direita-1">
+                <div class="texto-direita-1">
+                  <p>
+                    Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas.
+                    Evite esse
+                    tipo de conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row bloco4">
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-right lado-esquerdo-4">
+                <img src="imgs/infog7.png" alt="Ícone Texto Alternativo" class="img-responsive img-esquerda-1">
+                <div class="texto-esquerda-2">
+                  <p>
+                    Certifique-se de que seu <i>site</i> é compatível com tecnologias assistivas, como leitores de tela,
+                    ampliadores de tela e teclados alternativos.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-left lado-direito-3">
+              </div>
+            </div>
+          </div>
+          <div class="infografico-2 visible-xs no-print" aria-hidden="true">
+            <img src="imgs/infog1.png" alt="Ícone Texto Alternativo" class="img-responsive">
+            <p class="texto-1">Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo que o
+              conteúdo da imagem
+              possa ser entendido por usuários que não podem vê-la.
+            </p>
+            <img src="imgs/infog2.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-2">
+            <p class="texto-2">
+              Certifique-se de que o contraste entre o texto e o fundo seja suficiente para garantir a legibilidade.
+              Utilize ferramentas para verificar o contraste de cores e garantir que ele esteja dentro dos padrões de
+              acessibilidade.<br>
+              Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
+              facilitar
+              a leitura.
+            </p>
+            <img src="imgs/infog3.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-3">
+            <p class="texto-1">
+              Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+              controles.
+              Isso ajuda os usuários de leitores de tela a entender o propósito de cada campo. <br>
+              Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.
+            </p>
+            <img src="imgs/infog4.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-4">
+            <p class="texto-2">
+              Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem ser
+              acessados
+              e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que não podem usar
+              <i>mouse</i>.
+            </p>
+            <img src="imgs/infog5.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-5">
+            <p class="texto-1">
+              Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+              entender o conteúdo.
+              <br>
+              Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que está
+              acontecendo na tela.
+            </p>
+            <img src="imgs/infog6.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-6">
+            <p class="texto-2">
+              Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas. Evite
+              esse tipo de
+              conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+            </p>
+            <img src="imgs/infog7.png" alt="Ícone Texto Alternativo" class="img-responsive imagem-7">
+            <p class="texto-1">
+              Certifique-se de que seu site é compatível com tecnologias assistivas, como leitores de tela, ampliadores
+              de
+              tela e teclados alternativos.
+            </p>
+          </div>
+          <div class="acessivel print">
+            <h4> Texto alternativo para imagens</h4>
+            <p>
+              Sempre forneça texto alternativo (<b>alt</b>) descritivo para imagens, de modo que o conteúdo da imagem
+              possa ser
+              entendido por usuários que não podem vê-la.
+            </p>
+            <h4>Legibilidade do texto</h4>
+            <p>
+              Certifique-se de que o contraste entre o texto e o fundo seja suficiente para garantir a legibilidade.
+              Utilize ferramentas para verificar o contraste de cores e garantir que ele esteja dentro dos padrões de
+              acessibilidade.
+              <br>
+              Evite blocos longos de texto sem espaçamento e considere o uso de listas e parágrafos curtos para
+              facilitar
+              a leitura.
+            </p>
+            <h4> Formulários acessíveis</h4>
+            <p>
+              Use <b>&lt;label></b> para identificar os campos dos formulários e associe-os corretamente a seus
+              controles. Isso
+              ajuda os usuários de leitores de tela a entender o propósito de cada campo.
+              <br>
+              Certifique-se de que os formulários possam ser navegados e enviados apenas com o teclado.
+            </p>
+            <h4>Navegação por teclado</h4>
+            <p>
+              Verifique se todos os elementos interativos, como <i>links</i>, botões e campos de formulário, podem ser
+              acessados e utilizados apenas com o teclado. Isso é crucial para usuários com deficiência motora que não
+              podem usar <i>mouse</i>.
+            </p>
+            <h4>Conteúdo multimídia</h4>
+            <p>
+              Quando usar vídeos, forneça legendas e transcrições para que pessoas com deficiência auditiva possam
+              entender o conteúdo.
+              <br>
+              Use descrições em áudio para vídeos, o que ajuda pessoas com deficiência visual a entenderem o que está
+              acontecendo na tela.
+            </p>
+            <h4>Cuidado com <i>flashing</i> ou conteúdo que pisca</h4>
+            <p>
+              Conteúdos que piscam ou <i>flashes</i> podem desencadear ataques epilépticos em algumas pessoas. Evite
+              esse tipo
+              de conteúdo ou, se necessário, dê ao usuário a opção de desligar esses efeitos.
+            </p>
+            <h4>Tecnologias assistivas</h4>
+            <p>
+              Certifique-se de que seu <i>site</i> é compatível com tecnologias assistivas, como leitores de tela,
+              ampliadores
+              de tela e teclados alternativos.
+            </p>
+          </div>
+          <p>
+            Acessibilidade é uma prática essencial no desenvolvimento <i>web</i> moderno. Garantir que suas páginas HTML
+            sejam
+            acessíveis significa que você está abrindo as portas para um público maior, proporcionando uma melhor
+            experiência de usuário e cumprindo responsabilidades legais. Com uma abordagem cuidadosa e o uso de boas
+            práticas, você pode criar conteúdo <i>web</i> inclusivo, que serve a todos os usuários, independentemente de
+            suas
+            capacidades.
+          </p>
+          <p>
+            Aprender sobre acessibilidade não é apenas entender técnicas específicas, mas também adotar uma mentalidade
+            inclusiva, considerando sempre como cada decisão de <i>design</i> e desenvolvimento pode afetar todos os
+            usuários.
+          </p>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <!-- <footer class="text-center no-print">
+
+    <ul class="pagination">
+
+    </ul> 
+
+    </footer>-->
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>
