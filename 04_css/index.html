@@ -178,7 +178,7 @@ section > p {color: orange;}
             Para selecionar elementos irmãos, ou seja, que estejam em um mesmo nível de hierarquia, há alguns símbolos
             disponíveis no CSS que auxiliam nesta tarefa.
           </p>
-          <div class="btn-irmaos">
+          <div class="btn-irmaos no-print" aria-hidden="true">
             <button class="btn btn-custom" data-toggle="modal" data-target="#modal-1">Seletor “mais” (+) </button>
             <button class="btn btn-custom" data-toggle="modal" data-target="#modal-2">Seletor “til” (~) </button>
           </div>
@@ -407,14 +407,17 @@ a:hover{ color: #f60; }
             </code>
           </pre>
           <p> Esse código fará com que a cor do texto do elemento <b>a</b> mude ao colocar o <i>mouse</i> sobre ele.</p>
-          <p class="caixa-destaque icone anotar">
-            Note que, antes do nome da pseudoclasse, sempre são colocados os dois-pontos (<b>:</b>) e ela deve vir junto
-            ao
-            elemento ao qual você deseja vinculá-la, ou seja, não pode haver espaços em branco entre o elemento e a
-            pseudoclasse. A pseudoclasse <b>hover</b> é a mais popular, porém há diversas outras que podem ser
-            extremamente
-            úteis na hora de criar interfaces complexas nos seus projetos.
-          </p>
+          <div class="caixa-destaque icone anotar">
+            <p>
+              Note que, antes do nome da pseudoclasse, sempre são colocados os dois-pontos (<b>:</b>) e ela deve vir
+              junto
+              ao
+              elemento ao qual você deseja vinculá-la, ou seja, não pode haver espaços em branco entre o elemento e a
+              pseudoclasse. A pseudoclasse <b>hover</b> é a mais popular, porém há diversas outras que podem ser
+              extremamente
+              úteis na hora de criar interfaces complexas nos seus projetos.
+            </p>
+          </div>
           <p>
             A pseudoclasse <b>checked</b> é ativada quando um campo está marcado. Para utilizá-la, é preciso usar os
             elementos
@@ -499,42 +502,2848 @@ input:checked + label{ background: #f60; color: #fff;}
             do usuário.
           </p>
           <h3>Pseudoelementos</h3>
-         <p>
-            Os pseudoelementos do CSS permitem estilizar e selecionar partes específicas de uma <i>tag</i>, indo além da seleção
-            do próprio elemento. Eles são indicados pelo uso de dois-pontos duplos (<b>::</b>) seguidos por um identificador que
-            representa a parte específica do elemento que você deseja estilizar.
-         </p>
           <p>
-            Alguns pseudoelementos funcionam como se criassem uma nova <i>tag</i> dentro do elemento selecionado. Além disso,
+            Os pseudoelementos do CSS permitem estilizar e selecionar partes específicas de uma <i>tag</i>, indo além da
+            seleção
+            do próprio elemento. Eles são indicados pelo uso de dois-pontos duplos (<b>::</b>) seguidos por um
+            identificador que
+            representa a parte específica do elemento que você deseja estilizar.
+          </p>
+          <p>
+            Alguns pseudoelementos funcionam como se criassem uma nova <i>tag</i> dentro do elemento selecionado. Além
+            disso,
             apesar de serem parecidos com as pseudoclasses, nestas, a seleção é feita com base em uma característica de
-            uma <i>tag</i> ou ação realizada pelos usuários, enquanto nos pseudoelementos a seleção é realizada em partes
+            uma <i>tag</i> ou ação realizada pelos usuários, enquanto nos pseudoelementos a seleção é realizada em
+            partes
             específicas de um elemento, permitindo estilizar essas partes independentemente. Conheça alguns
             pseudoelementos a seguir:
           </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading48">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse48"
+                      aria-expanded="true" aria-controls="collapse48">
+                      first-line
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse48" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading48">
+                  <div class="panel-body">
+                    <p> É utilizado para estilizar a primeira linha de um parágrafo. Por exemplo:</p>
+                    <p class="text-center"><b>p::first-line { color: #f60; }</b></p>
+                    <p>
+                      Nesse exemplo, o pseudoelemento mudará a cor somente da primeira linha de qualquer <i>tag</i>
+                      <b>p</b>. Obviamente
+                      ele funcionará melhor se os estilos aplicados se relacionarem à fonte ou considerarem displays
+                      inline.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading49">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                      first-letter
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse49" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading49">
+                  <div class="panel-body">
+                    <p> É utilizado para aplicar um estilo diferente na primeira letra de um texto. Por exemplo:</p>
+                    <p class="text-center"><b>p::first-letter { font-size: 24px }</b></p>
+                    <p>
+                      Nesse exemplo, o pseudoelemento mudará o tamanho da fonte apenas da primeira letra do parágrafo
+                      para
+                      24px.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading50">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                      before
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse50" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading50">
+                  <div class="panel-body">
+                    <p>
+                      Esse pseudoelemento adiciona um conteúdo dentro de seu elemento pai, porém antes do conteúdo
+                      escrito. Exemplo:
+                    </p>
+                    <p class="text-center"><b>h1::before {content: “Bem vindo”;}</b></p>
+                    <p>Nesse exemplo, o <b>before</b> inserirá o texto “Bem vindo” antes do texto que estiver no HTML da
+                      <i>tag</i> <b>h1</b>.
+                    </p>
+                    <p>
+                      É possível usar vários estilos dentro do <b>before</b>, porém só funcionarão se o estilo
+                      <b>content</b> for
+                      colocado dentro dele, mesmo que o valor de <b>content</b> esteja vazio.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading51">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse51" aria-expanded="false" aria-controls="collapse51">
+                      after
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse51" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading51">
+                  <div class="panel-body">
+                    <p>
+                      O pseudoelemento <b>after</b> é muito similar ao <b>before</b>, porém adiciona um conteúdo após o
+                      texto do
+                      elemento pai. Exemplo:
+                    </p>
+                    <p class="text-center"><b>h1::after {content: “...”;}</b></p>
+                    <p> Esse exemplo incluirá três pontos após o texto do <b>h1</b>.</p>
+                    <p>
+                      Tanto o <b>after</b> quanto o <b>before</b> são bastante utilizados em CSS para aplicar estilos
+                      complexos, como
+                      adicionar máscaras e filtros dentro de outros elementos, pois eles se comportam como se fosse
+                      outra
+                      <i>tag</i> dentro de uma <i>tag</i> pai. Então, é possível aplicar vários estilos avançados de CSS
+                      neles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading52">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse52" aria-expanded="false" aria-controls="collapse52">
+                      selection
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse52" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading52">
+                  <div class="panel-body">
+                    <p>
+                      Esse pseudoelemento é utilizado basicamente para aplicar um estilo diferente ao selecionar um
+                      texto
+                      na tela. Essa seleção refere-se à ação de clicar com o botão do <i>mouse</i> em caso de PCs, e
+                      segurar
+                      puxando o texto que deseja selecionar ou dar dois toques na palavra em caso de dispositivos
+                      móveis.
+                      Exemplo:
+                    </p>
+                    <p class="text-center"> <b>p::selection{ color: #f00 }</b></p>
+                    <p>
+                      No <b>selection</b>, entretanto, podem-se aplicar apenas as seguintes propriedades: <b>color</b>,
+                      <b>background</b>,
+                      cursor e <b>outline</b>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading53">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1"
+                      href="#collapse53" aria-expanded="false" aria-controls="collapse53">
+                      marker
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse53" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading53">
+                  <div class="panel-body">
+                    <p>
+                      Esse pseudoelemento serve basicamente para selecionar os ícones das listas (<b>ul</b> ou
+                      <b>ol</b>). Geralmente é
+                      utilizado para deixar a fonte com uma cor diferente. Exemplo:
+                    </p>
+                    <p class="text-center"><b>li::marker { color: #f00;}</b></p>
+                    <p>Esse exemplo deixará o ícone de qualquer <b>li</b> na cor vermelha.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4><b>first-line</b></h4>
+            <p> É utilizado para estilizar a primeira linha de um parágrafo. Por exemplo:</p>
+            <p class="text-center"><b>p::first-line { color: #f60; }</b></p>
+            <p>
+              Nesse exemplo, o pseudoelemento mudará a cor somente da primeira linha de qualquer <i>tag</i>
+              <b>p</b>. Obviamente
+              ele funcionará melhor se os estilos aplicados se relacionarem à fonte ou considerarem displays
+              inline.
+            </p>
+            <h4><b>first-letter</b></h4>
+            <p> É utilizado para aplicar um estilo diferente na primeira letra de um texto. Por exemplo:</p>
+            <p class="text-center"><b>p::first-letter { font-size: 24px }</b></p>
+            <p>
+              Nesse exemplo, o pseudoelemento mudará o tamanho da fonte apenas da primeira letra do parágrafo
+              para
+              24px.
+            </p>
+            <h4><b>before</b></h4>
+            <p>
+              Esse pseudoelemento adiciona um conteúdo dentro de seu elemento pai, porém antes do conteúdo
+              escrito. Exemplo:
+            </p>
+            <p class="text-center"><b>h1::before {content: “Bem vindo”;}</b></p>
+            <p>Nesse exemplo, o <b>before</b> inserirá o texto “Bem vindo” antes do texto que estiver no HTML da
+              <i>tag</i> <b>h1</b>.
+            </p>
+            <p>
+              É possível usar vários estilos dentro do <b>before</b>, porém só funcionarão se o estilo
+              <b>content</b> for
+              colocado dentro dele, mesmo que o valor de <b>content</b> esteja vazio.
+            </p>
+            <h4><b>after</b></h4>
+            <p>
+              O pseudoelemento <b>after</b> é muito similar ao <b>before</b>, porém adiciona um conteúdo após o
+              texto do
+              elemento pai. Exemplo:
+            </p>
+            <p class="text-center"><b>h1::after {content: “...”;}</b></p>
+            <p> Esse exemplo incluirá três pontos após o texto do <b>h1</b>.</p>
+            <p>
+              Tanto o <b>after</b> quanto o <b>before</b> são bastante utilizados em CSS para aplicar estilos
+              complexos, como
+              adicionar máscaras e filtros dentro de outros elementos, pois eles se comportam como se fosse
+              outra
+              <i>tag</i> dentro de uma <i>tag</i> pai. Então, é possível aplicar vários estilos avançados de CSS
+              neles.
+            </p>
+            <h4><b>selection</b></h4>
+            <p>
+              Esse pseudoelemento é utilizado basicamente para aplicar um estilo diferente ao selecionar um
+              texto
+              na tela. Essa seleção refere-se à ação de clicar com o botão do <i>mouse</i> em caso de PCs, e
+              segurar
+              puxando o texto que deseja selecionar ou dar dois toques na palavra em caso de dispositivos
+              móveis.
+              Exemplo:
+            </p>
+            <p class="text-center"> <b>p::selection{ color: #f00 }</b></p>
+            <p>
+              No <b>selection</b>, entretanto, podem-se aplicar apenas as seguintes propriedades: <b>color</b>,
+              <b>background</b>,
+              cursor e <b>outline</b>.
+            </p>
+            <h4><b>marker</b></h4>
+            <p>
+              Esse pseudoelemento serve basicamente para selecionar os ícones das listas (<b>ul</b> ou <b>ol</b>).
+              Geralmente é
+              utilizado para deixar a fonte com uma cor diferente. Exemplo:
+            </p>
+            <p class="text-center"><b>li::marker { color: #f00;}</b></p>
+            <p>Esse exemplo deixará o ícone de qualquer <b>li</b> na cor vermelha.</p>
+          </div>
+          <p>
+            Repare que alguns pseudoelementos são bem específicos e consequentemente pouco utilizados, como é o caso do
+            <b>selection</b> e do <b>marker</b>. Porém, há elementos, como <b>after</b> e <b>before</b>, que são
+            fundamentais para a estilização de
+            interfaces mais complexas, pois possibilitam desenvolver um estilo mais avançado sem a necessidade de
+            modificar o HTML da página.
+          </p>
+          <h3>Estilos avançados de CSS</h3>
+          <p>
+            Nesta seção, você aprenderá alguns estilos avançados disponíveis no CSS3, que auxiliam no desenvolvimento de
+            interfaces dinâmicas e atrativas e de usabilidades mais otimizadas para o usuário final.
+          </p>
+          <h4><i>Background</i> gradiente</h4>
+          <p>
+            Em CSS, todos os estilos que começam com a palavra <i>background</i> têm a ver com o plano de fundo de algum
+            elemento. Assim, é possível inserir cores e até mesmo imagens por meio das propriedades
+            <b>background-color</b> e
+            <b>background-image</b>. Porém, a propriedade <b>background-color</b> permite utilizar apenas cores sólidas
+            nos elementos,
+            ou seja, uma única cor por elemento.
+          </p>
+          <p>
+            Entretanto, com o passar dos anos, tornou-se um conceito de <i>design</i> moderno a utilização de cores
+            gradientes,
+            ou “degradê”. Gradiente é um efeito visual que cria uma transição suave entre duas ou mais cores em uma
+            superfície. Essa técnica é frequentemente usada em <i>design</i> gráfico, <i>web design</i> e outras
+            disciplinas de <i>design</i>
+            para criar efeitos visuais atraentes e transições suaves de cor.
+          </p>
+          <p>
+            A ideia por trás de uma cor gradiente é que as cores mudam gradualmente de uma para outra, criando uma
+            transição fluida ao longo de uma direção específica. Pode haver gradientes horizontais, verticais, diagonais
+            ou radiais, dependendo do efeito desejado.
+          </p>
+          <p>
+            No CSS, existem funções para que se consiga aplicar esses efeitos de cores gradiente no fundo dos elementos.
+            Essas funções são utilizadas no estilo <b>background-image</b> ou em sua forma compacta, escrevendo apenas a
+            palavra
+            <i>background</i> como propriedade. Conheça a seguir os dois tipos de gradiente:
+          </p>
+          <div class="btn-gradiente no-print" aria-hidden="true">
+            <button class="btn-linear" data-toggle="modal" data-target="#modal-3"></button>
+            <button class="btn-radial" data-toggle="modal" data-target="#modal-4"></button>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Gradiente linear </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Em um gradiente linear, as cores mudam ao longo de uma linha reta, podendo ser horizontal,
+                      vertical
+                      ou em qualquer ângulo desejado. Exemplo:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+background: linear-gradient(to right, #ffe74c 0%, #ff920a 100%); 
+                      </code>
+                    </pre>
+                    <p> Nesse exemplo, foi criado um gradiente horizontal, de uma cor amarela até um tom de laranja.</p>
+                    <p>
+                      A função <b>linear-gradient</b> tem diversos valores a serem preenchidos. Primeiro, é preciso
+                      indicar a
+                      direção das cores que formarão o efeito de gradiente, podendo usar os seguintes valores:
+                    </p>
+                    <ul>
+                      <li>
+                        <b>to</b>: esse comando indica para onde vai a direção do gradiente linear, então é possível
+                        usar esse
+                        comando junto com as direções <b>left</b>, <b>right</b>, <b>top</b> e <b>bottom</b>, que
+                        basicamente representam as direções
+                        “esquerda”, “direita”, “acima” e “abaixo”.
+                      </li>
+                    </ul>
+                    <p>Assim, pode-se orientar qualquer direção com a combinação destes comandos:</p>
+                    <ul>
+                      <li>Esquerda para a direita: <b>linear-gradient(to right, cor1. , cor2. );</b></li>
+                      <li>De cima para baixo: <b>linear-gradient(to bottom, cor1. , cor2. );</b></li>
+                    </ul>
+                    <p>
+                      Com esses dois exemplos, você cria qualquer efeito gradiente horizontal ou vertical. Para inverter
+                      a
+                      ordem, basta inverter a ordem das cores.
+                    </p>
+                    <p>
+                      Porém, usando a mesma lógica, consegue-se criar orientações diferentes para o gradiente, como na
+                      diagonal, por exemplo, criando combinações de direção. Analise este código:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+linear-gradient(to bottom right, #499bea, #7b20e3); 
+                      </code>
+                    </pre>
+                    <p>
+                      Repare que foram utilizadas após o <b>to</b> as direções <b>bottom</b> e <b>right</b>, o que
+                      indica que o <i>background</i>
+                      começa de cima para baixo e da esquerda para a direita, formando assim uma linha de transição
+                      diagonal. Veja um exemplo:
+                    </p>
+                    <img src="imgs/fig3.png" class="center-block img-responsive print">
+                    <p class="legenda-imagem">Gradiente linear diagonal <br>
+                      Fonte: Senac EAD (2024)
+                    </p>
+                    <p class="acessivel no-print">Quadro demonstrando a transição suave, na diagonal, entre as cores
+                      azul e roxo.
+                    </p>
+                    <p>
+                      Contudo, para aplicar efeitos de gradiente linear em direções diferentes, é válido você usar, ao
+                      invés do comando <b>to</b> junto às direções, a direção com os graus em sentido horário. Então,
+                      você pode
+                      passar um valor de 0 a 360 seguidos da unidade de medida <b>deg</b>. Confira um exemplo:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+background: linear-gradient(135deg, #499bea, #7b20e3); 
+                      </code>
+                    </pre>
+                    <p>
+                      Então, usando o comando <b>to</b> ou informando os valores com <b>deg</b>, é possível orientar
+                      qualquer direção
+                      para o efeito de gradiente. Porém, nos exemplos citados, foi utilizada somente a transição entre
+                      duas cores, mas a função <b>linear-gradient</b> permite inserir uma quantidade ilimitada de cores.
+                      Para
+                      isso, basta inserir as novas cores na função, sempre separando-as com vírgula. Analise este
+                      código:
+                    </p>
+                    <pre>
+                    <code class="hljs language-css">
+background: linear-gradient(to right, #499bea, #4be8c9, #7b20e3); 
+                    </code>
+                    </pre>
+                    <p>
+                      Esse exemplo criará um gradiente horizontal entre as três cores. Confira o resultado dessa
+                      transição
+                      na figura.
+                    </p>
+                    <img src="imgs/fig4.png" class="center-block img-responsive print">
+                    <p class="legenda-imagem">Gradiente linear com três cores <br>
+                      Fonte: Senac EAD (2024)
+                    </p>
+                    <p class="acessivel no-print">Quadro demonstrando a transição suave, na horizontal, entre as cores
+                      azul, verde e roxo.
+                    </p>
+                    <p>
+                      Todos os exemplos que vimos até agora são da função <b>linear-gradient</b>, mas existe outra
+                      função para
+                      criar efeitos de gradiente em forma de círculo.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Gradiente radial</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Em um gradiente radial, as cores mudam a partir de um ponto central em direção às bordas. Isso
+                      cria
+                      um efeito de radiação de cores.
+                    </p>
+                    <p>
+                      As funcionalidades do gradiente radial são muito parecidas com as do linear gradiente, porém a
+                      direção sempre parte do meio dos elementos e segue em formato circular. Considere o seguinte
+                      código:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+background: radial-gradient( circle, #499bea , #7b20e3); 
+                      </code>
+                    </pre>
+                    <p>
+                      Repare que, nessa função, foi utilizado o comando <b>circle</b> ao invés da direção. Esse comando
+                      fará com
+                      que o gradiente forme um círculo perfeito na transição entre as cores.
+                    </p>
+                    <img src="imgs/fig5.png" class="center-block img-responsive print">
+                    <p class="legenda-imagem">Gradiente radial com o comando <b>circle</b> <br>
+                      Fonte: Senac EAD (2024)
+                    </p>
+                    <p class="acessivel no-print">Quadro demonstrando a transição suave usando o radial-gradient.
+                    </p>
+                    <p>
+                      Repare na figura anterior que o gradiente forma um círculo perfeito, mesmo que sua transição de
+                      cores acabe cortando o plano de fundo do elemento. Neste caso, para formar o círculo, acabou
+                      cortando um pouco a transição na altura.
+                    </p>
+                    <p>
+                      Com o radial gradiente, é possível formar uma elipse ao invés de um círculo e, para isso, basta
+                      não
+                      informar o comando <b>circle</b> dentro da função.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Gradiente linear</h4>
+            <p>
+              Em um gradiente linear, as cores mudam ao longo de uma linha reta, podendo ser horizontal,
+              vertical
+              ou em qualquer ângulo desejado. Exemplo:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+background: linear-gradient(to right, #ffe74c 0%, #ff920a 100%); 
+               </code>
+             </pre>
+            <p> Nesse exemplo, foi criado um gradiente horizontal, de uma cor amarela até um tom de laranja.</p>
+            <p>
+              A função <b>linear-gradient</b> tem diversos valores a serem preenchidos. Primeiro, é preciso
+              indicar a
+              direção das cores que formarão o efeito de gradiente, podendo usar os seguintes valores:
+            </p>
+            <ul>
+              <li>
+                <b>to</b>: esse comando indica para onde vai a direção do gradiente linear, então é possível
+                usar esse
+                comando junto com as direções <b>left</b>, <b>right</b>, <b>top</b> e <b>bottom</b>, que
+                basicamente representam as direções
+                “esquerda”, “direita”, “acima” e “abaixo”.
+              </li>
+            </ul>
+            <p>Assim, pode-se orientar qualquer direção com a combinação destes comandos:</p>
+            <ul>
+              <li>Esquerda para a direita: <b>linear-gradient(to right, cor1. , cor2. );</b></li>
+              <li>De cima para baixo: <b>linear-gradient(to bottom, cor1. , cor2. );</b></li>
+            </ul>
+            <p>
+              Com esses dois exemplos, você cria qualquer efeito gradiente horizontal ou vertical. Para inverter
+              a
+              ordem, basta inverter a ordem das cores.
+            </p>
+            <p>
+              Porém, usando a mesma lógica, consegue-se criar orientações diferentes para o gradiente, como na
+              diagonal, por exemplo, criando combinações de direção. Analise este código:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+linear-gradient(to bottom right, #499bea, #7b20e3); 
+               </code>
+             </pre>
+            <p>
+              Repare que foram utilizadas após o <b>to</b> as direções <b>bottom</b> e <b>right</b>, o que
+              indica que o <i>background</i>
+              começa de cima para baixo e da esquerda para a direita, formando assim uma linha de transição
+              diagonal. Veja um exemplo:
+            </p>
+            <img src="imgs/fig3.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Gradiente linear diagonal <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Quadro demonstrando a transição suave, na diagonal, entre as cores
+              azul e roxo.
+            </p>
+            <p>
+              Contudo, para aplicar efeitos de gradiente linear em direções diferentes, é válido você usar, ao
+              invés do comando <b>to</b> junto às direções, a direção com os graus em sentido horário. Então,
+              você pode
+              passar um valor de 0 a 360 seguidos da unidade de medida <b>deg</b>. Confira um exemplo:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+background: linear-gradient(135deg, #499bea, #7b20e3); 
+               </code>
+             </pre>
+            <p>
+              Então, usando o comando <b>to</b> ou informando os valores com <b>deg</b>, é possível orientar
+              qualquer direção
+              para o efeito de gradiente. Porém, nos exemplos citados, foi utilizada somente a transição entre
+              duas cores, mas a função <b>linear-gradient</b> permite inserir uma quantidade ilimitada de cores.
+              Para
+              isso, basta inserir as novas cores na função, sempre separando-as com vírgula. Analise este
+              código:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+background: linear-gradient(to right, #499bea, #4be8c9, #7b20e3); 
+              </code>
+            </pre>
+            <p>
+              Esse exemplo criará um gradiente horizontal entre as três cores. Confira o resultado dessa
+              transição
+              na figura.
+            </p>
+            <img src="imgs/fig4.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Gradiente linear com três cores <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Quadro demonstrando a transição suave, na horizontal, entre as cores
+              azul, verde e roxo.
+            </p>
+            <p>
+              Todos os exemplos que vimos até agora são da função <b>linear-gradient</b>, mas existe outra
+              função para
+              criar efeitos de gradiente em forma de círculo.
+            </p>
+            <h4>Gradiente radial</h4>
+            <p>
+              Em um gradiente radial, as cores mudam a partir de um ponto central em direção às bordas. Isso
+              cria
+              um efeito de radiação de cores.
+            </p>
+            <p>
+              As funcionalidades do gradiente radial são muito parecidas com as do linear gradiente, porém a
+              direção sempre parte do meio dos elementos e segue em formato circular. Considere o seguinte
+              código:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+background: radial-gradient( circle, #499bea , #7b20e3); 
+               </code>
+             </pre>
+            <p>
+              Repare que, nessa função, foi utilizado o comando <b>circle</b> ao invés da direção. Esse comando
+              fará com
+              que o gradiente forme um círculo perfeito na transição entre as cores.
+            </p>
+            <img src="imgs/fig5.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Gradiente radial com o comando <b>circle</b> <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">Quadro demonstrando a transição suave usando o radial-gradient.
+            </p>
+            <p>
+              Repare na figura anterior que o gradiente forma um círculo perfeito, mesmo que sua transição de
+              cores acabe cortando o plano de fundo do elemento. Neste caso, para formar o círculo, acabou
+              cortando um pouco a transição na altura.
+            </p>
+            <p>
+              Com o radial gradiente, é possível formar uma elipse ao invés de um círculo e, para isso, basta
+              não
+              informar o comando <b>circle</b> dentro da função.
+            </p>
+          </div>
+          <p>
+            Por se tratar de comandos inteiramente visuais, você só conseguirá ter certeza do resultado final depois de
+            visualizar o <i>background</i> no navegador. Aconselha-se a utilização de ferramentas geradoras de
+            gradiente. Basta
+            uma rápida pesquisa por “gradiente <i>generator</i>” em qualquer buscador da <i>web</i> que você encontrará
+            diversas
+            ferramentas gratuitas com esse fim.
+          </p>
+          <p>
+            Por fim, os gradientes são amplamente utilizados para criar fundos de páginas, botões, barras de navegação e
+            outros elementos de <i>design</i>. Eles proporcionam uma maneira visualmente atraente de adicionar
+            profundidade e
+            interesse aos elementos de uma interface ou <i>layout</i>. Além disso, a capacidade de criar gradientes com
+            CSS
+            facilita a implementação desses efeitos em qualquer site ou sistema <i>web</i>.
+          </p>
+          <h3>Propriedade transform e suas funções</h3>
+          <p>
+            A propriedade <b>transform</b> serve para inserir uma função de transformação em um elemento HTML. Com essa
+            propriedade, você pode aplicar modificações como girar, mover, inclinar e mudar o tamanho do elemento. Essas
+            transformações podem ocorrer no formato 2D e, em alguns casos, em formato 3D.
+          </p>
+          <p>
+            A sintaxe para utilizar os estilos de transformação consiste em aplicar a propriedade <b>transform</b> no
+            elemento
+            selecionado seguido de um valor, que sempre é uma ou várias funções. Veja as funções disponíveis para se
+            usar
+            na propriedade <b>transform</b> no formato de duas dimensões.
+          </p>
+          <h4>Funções de transformações em formato 2D</h4>
+          <p class="no-print" aria-hidden="true">Clique ou toque para visualizar o conteúdo.</p>
+          <div class="btn-2d no-print" aria-hidden="true">
+            <div class="left-panel">
+              <button class="btn btn-5" data-toggle="modal" data-target="#modal-5">translate(x, y) </button>
+              <button class="btn btn-6" data-toggle="modal" data-target="#modal-6">rotate(ângulo) </button>
+              <button class="btn btn-7" data-toggle="modal" data-target="#modal-7">scale(x, y) </button>
+              <button class="btn btn-8" data-toggle="modal" data-target="#modal-8">skew(x, y) </button>
+            </div>
+            <div class="right-panel">
+              <img src="imgs/painel_clicavel1_translate.png" alt="Imagem grande imagem-translate">
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">translate(x, y) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O método <b>translate</b> move, desloca, o elemento de acordo com os valores inseridos no eixo X
+                      (horizontal) e no eixo Y (vertical). Exemplos:
+                    </p>
+                    <p>
+                      <b>transform: translate(50px, 20px);</b>: deslocará o elemento 50 <i>pixels</i> para a direita de
+                      sua posição
+                      original e <i>20 pixels</i> para baixo.
+                    </p>
+                    <p>
+                      Agora, para deslocar o elemento para a esquerda ou para cima, utilizam-se os valores negativos em
+                      <i>pixels</i>.
+                    </p>
+                    <p>
+                      <b>transform: translate(-20px, -30px);</b>: o elemento será deslocado 20 <i>pixels</i> à esquerda
+                      de sua posição
+                      original e 30 <i>pixels</i> acima.
+                    </p>
+                    <p>
+                      Então, usando valores negativos e positivos, é possível controlar quando e para qual direção o
+                      elemento será movido.
+                    </p>
+                    <p>
+                      Existem duas funções derivadas da <b>translate</b>, a <b>translateX</b> e <b>translateY</b>. É
+                      intuitivo perceber que a
+                      <b>translateX</b> cuidará somente do movimento horizontal e a <b>translateY</b> do deslocamento
+                      vertical.
+                      Exemplos:
+                    </p>
+                    <p><b>transform: translateX(100px);</b>: deslocará o elemento 20 <i>pixels</i> à direita.</p>
+                    <p><b>transform: translateY(50px);</b>: deslocará o elemento 50 <i>pixels</i> para baixo.</p>
+                    <p>
+                      As funções <b>translateX</b> e <b>translateY</b> também aceitam valores negativos. A utilização
+                      delas só é
+                      indicada quando você necessita deslocar o elemento apenas em um eixo (vertical ou horizontal).
+                      Portanto, se sua necessidade é deslocar o elemento nos dois eixos, o mais indicado é usar a função
+                      <b>translate</b> original.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <!-- painel gaitinha pg 10 -->
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">rotate(ângulo)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      A função <b>rotate</b> serve para girar em elemento. Para que ela funcione, basta indicar o valor
+                      de ângulo
+                      a ser rotacionado, que vai de 0 a 360 graus, representado pela sigla <b>deg</b>. Exemplo:
+                    </p>
+                    <p><b>transform: rotate(180deg);</b>: este valor girará o elemento a 180 graus de sua posição
+                      original.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">scale(x, y)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      A função <b>scale</b> aumenta a escala, ou seja, o tamanho de um elemento HTML. Os valores X e Y
+                      controlam
+                      a escala na altura e largura respectivamente. Funciona da seguinte forma: todo elemento começa da
+                      escala 1, ou seja, o número 1 é o tamanho original do elemento; se for colocado o número 2, ele
+                      vai
+                      aumentar em 2 vezes o seu tamanho. Confira o exemplo:
+                    </p>
+                    <p>
+                      <b>transform: scale(3, 3);</b>: com esses valores, considerando que o elemento selecionado tenha
+                      100 <i>pixels</i>
+                      de largura e altura, o elemento ficará com um tamanho total de 300 por 300 <i>pixels</i>.
+                    </p>
+                    <p>
+                      Para aumentar valores menores que o dobro, utilize o número em formato decimal, separado por
+                      ponto.
+                      Para aumentar metade do tamanho do elemento, utilize o valor 1.5. Observe:
+                    </p>
+                    <p>
+                      <b>transform: scale(1.5, 1.3);</b>: neste exemplo, o elemento aumentará metade do seu tamanho
+                      original na
+                      largura e 30% do seu tamanho original na altura.
+                    </p>
+                    <p>
+                      Porém, também é possível reduzir o tamanho de qualquer elemento com a função <b>scale</b>. Para
+                      isso,
+                      lembre-se de que a função considera que o número 1 é o valor original do elemento, então, se você
+                      colocar o valor 1 na função <b>scale</b>, o elemento não mudará de tamanho. Seguindo essa lógica,
+                      para
+                      reduzir o tamanho do elemento selecionado, basta inserir o valor 0 (zero) seguido de uma casa
+                      decimal, por exemplo, 0.5 reduzirá o tamanho do elemento pela metade. Mas, se você colocar o valor
+                      zero, o elemento desaparecerá, por isso, controla-se sua escala de redução com os números
+                      decimais.
+                      Confira os exemplos:
+                    </p>
+                    <p><b>transform: scale(0.3, 0.3);</b>: fará o elemento ficar com apenas 30% do seu tamanho original.
+                    </p>
+                    <p><b>transform: scale(0.5, 0.5);</b>: fará o elemento reduzir 50% do seu tamanho.</p>
+                    <p><b>transform: scale(0, 0);</b>: fará o elemento desaparecer.</p>
+                    <p>
+                      Existe uma forma compacta de os valores serem inseridos na função <b>scale</b>. Se tanto o valor
+                      de X
+                      quanto o de Y forem o mesmo, é possível inserir apenas um número. Veja os exemplos:
+                    </p>
+                    <p><b>transform: scale(2);</b>: fará o elemento dobrar de tamanho na altura e largura.</p>
+                    <p>
+                      <b> transform: scale(0.5);</b>: fará o elemento reduzir 50% do seu tamanho original, tanto na
+                      altura quanto
+                      na largura.
+                    </p>
+                    <p>
+                      É mais comum, no dia a dia, usar o <b>scale</b> com apenas um número, pois isso fará o elemento
+                      aumentar ou
+                      diminuir mantendo suas proporções de altura e largura. Geralmente só se usa a sintaxe com dois
+                      números, caso precise mudar o tamanho em proporções diferentes.
+                    </p>
+                    <p>
+                      No entanto, assim como a função <b>translate</b>, a função <b>scale</b> tem duas variações mais
+                      simples, que
+                      controlam separadamente os eixos X e Y. São a <b>scaleX</b> e a <b>scaleY</b>. Veja um exemplo de
+                      utilização
+                      dessas funções:
+                    </p>
+                    <p><b>transform: scaleX(1.5);</b>: fará o elemento aumentar 50% do seu tamanho na largura.</p>
+                    <p><b>transform: scaleY(2);</b>: fará o elemento dobrar de tamanho na altura.</p>
+                    <p>
+                      Todas as particularidades mostradas na função <b>scale</b> original funcionam nas funções
+                      <b>scaleX</b> e <b>scaleY</b>,
+                      como reduzir e controlar a escala com números decimais.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">skew(x, y)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O método <b>skew</b> distorce, inclina, um elemento ao longo dos eixos X e Y por meio dos valores
+                      fornecidos. Para isso, nas posições X e Y, inserem-se os valores a serem inclinados com o
+                      <b>deg</b>. Por
+                      exemplo:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+transform: skew(20deg, 30deg); 
+                      </code>
+                    </pre>
+                    <p>Esse comando fará o elemento inclinar e distorcer 20 graus no eixo X e 30 no eixo Y.</p>
+                    <p>
+                      É comum a utilização da função <b>skew</b> com apenas um valor. Quando isso ocorre, é aplicado
+                      apenas o
+                      valor do eixo X e o navegador entende que o eixo Y será igual a zero, o que mantém o elemento em
+                      seu
+                      estado original, fazendo a inclinação apenas no eixo X. Observe:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+transform: skew(20deg); 
+                      </code>
+                    </pre>
+                    <p>Esse comando fará o elemento inclinar 20 graus no eixo X. A distorção no eixo Y não será
+                      aplicada. Veja a figura: </p>
+                    <img src="imgs/fig6.png" class="center-block img-responsive print">
+                    <p class="legenda-imagem">Exemplo da função skew com apenas um valor declarado <br>
+                      Fonte: Adaptado de IconArchive (2024)
+                    </p>
+                    <p class="acessivel no-print">Ilustração de um alienígena da cor roxa em posição original e, ao
+                      lado, a mesma imagem inclinada através da função skew, aplicada somente no eixo X.
+                    </p>
+                    <p>
+                      Como os valores de <b>skew</b> são aplicados por meio da unidade <b>deg</b>, ou seja, em graus, os
+                      números irão de
+                      0 a 360 <b>deg</b>. Mas é possível indicar esses valores no formato negativo, utilizando o hífen
+                      (-), o
+                      que, neste caso, inverterá a posição da inclinação.
+                    </p>
+                    <p>
+                      A função <b>skew</b> também tem suas variações individuais:<b> skewX</b> e <b>skewY</b>, que
+                      obviamente, controlam
+                      individualmente seus eixos.
+                    </p>
+                    <p>
+                      Uma forma eficaz de aplicar mais de uma transformação em um elemento é usar a propriedade
+                      <b>transform</b>
+                      e declarar as funções separadas por espaço em branco. Veja o exemplo:
+                    </p>
+                    <pre>
+                      <code class="hljs language-css">
+transform: scale(0.5) skew(0, 30deg) translate(50px, 100px); 
+                      </code>
+                    </pre>
+                    <p>Nesse exemplo, o elemento aplicará todas as transformações declaradas. </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>translate(x, y)</h4>
+            <p>
+              O método <b>translate</b> move, desloca, o elemento de acordo com os valores inseridos no eixo X
+              (horizontal) e no eixo Y (vertical). Exemplos:
+            </p>
+            <p>
+              <b>transform: translate(50px, 20px);</b>: deslocará o elemento 50 <i>pixels</i> para a direita de
+              sua posição
+              original e <i>20 pixels</i> para baixo.
+            </p>
+            <p>
+              Agora, para deslocar o elemento para a esquerda ou para cima, utilizam-se os valores negativos em
+              <i>pixels</i>.
+            </p>
+            <p>
+              <b>transform: translate(-20px, -30px);</b>: o elemento será deslocado 20 <i>pixels</i> à esquerda
+              de sua posição
+              original e 30 <i>pixels</i> acima.
+            </p>
+            <p>
+              Então, usando valores negativos e positivos, é possível controlar quando e para qual direção o
+              elemento será movido.
+            </p>
+            <p>
+              Existem duas funções derivadas da <b>translate</b>, a <b>translateX</b> e <b>translateY</b>. É
+              intuitivo perceber que a
+              <b>translateX</b> cuidará somente do movimento horizontal e a <b>translateY</b> do deslocamento
+              vertical.
+              Exemplos:
+            </p>
+            <p><b>transform: translateX(100px);</b>: deslocará o elemento 20 <i>pixels</i> à direita.</p>
+            <p><b>transform: translateY(50px);</b>: deslocará o elemento 50 <i>pixels</i> para baixo.</p>
+            <p>
+              As funções <b>translateX</b> e <b>translateY</b> também aceitam valores negativos. A utilização
+              delas só é
+              indicada quando você necessita deslocar o elemento apenas em um eixo (vertical ou horizontal).
+              Portanto, se sua necessidade é deslocar o elemento nos dois eixos, o mais indicado é usar a função
+              <b>translate</b> original.
+            </p>
+            <h4>rotate(ângulo)</h4>
+            <p>
+              A função <b>rotate</b> serve para girar em elemento. Para que ela funcione, basta indicar o valor
+              de ângulo
+              a ser rotacionado, que vai de 0 a 360 graus, representado pela sigla <b>deg</b>. Exemplo:
+            </p>
+            <p><b>transform: rotate(180deg);</b>: este valor girará o elemento a 180 graus de sua posição
+              original.</p>
+            <h4> scale(x, y)</h4>
+            <p>
+              A função <b>scale</b> aumenta a escala, ou seja, o tamanho de um elemento HTML. Os valores X e Y
+              controlam
+              a escala na altura e largura respectivamente. Funciona da seguinte forma: todo elemento começa da
+              escala 1, ou seja, o número 1 é o tamanho original do elemento; se for colocado o número 2, ele
+              vai
+              aumentar em 2 vezes o seu tamanho. Confira o exemplo:
+            </p>
+            <p>
+              <b>transform: scale(3, 3);</b>: com esses valores, considerando que o elemento selecionado tenha
+              100 <i>pixels</i>
+              de largura e altura, o elemento ficará com um tamanho total de 300 por 300 <i>pixels</i>.
+            </p>
+            <p>
+              Para aumentar valores menores que o dobro, utilize o número em formato decimal, separado por
+              ponto.
+              Para aumentar metade do tamanho do elemento, utilize o valor 1.5. Observe:
+            </p>
+            <p>
+              <b>transform: scale(1.5, 1.3);</b>: neste exemplo, o elemento aumentará metade do seu tamanho
+              original na
+              largura e 30% do seu tamanho original na altura.
+            </p>
+            <p>
+              Porém, também é possível reduzir o tamanho de qualquer elemento com a função <b>scale</b>. Para
+              isso,
+              lembre-se de que a função considera que o número 1 é o valor original do elemento, então, se você
+              colocar o valor 1 na função <b>scale</b>, o elemento não mudará de tamanho. Seguindo essa lógica,
+              para
+              reduzir o tamanho do elemento selecionado, basta inserir o valor 0 (zero) seguido de uma casa
+              decimal, por exemplo, 0.5 reduzirá o tamanho do elemento pela metade. Mas, se você colocar o valor
+              zero, o elemento desaparecerá, por isso, controla-se sua escala de redução com os números
+              decimais.
+              Confira os exemplos:
+            </p>
+            <p><b>transform: scale(0.3, 0.3);</b>: fará o elemento ficar com apenas 30% do seu tamanho original.
+            </p>
+            <p><b>transform: scale(0.5, 0.5);</b>: fará o elemento reduzir 50% do seu tamanho.</p>
+            <p><b>transform: scale(0, 0);</b>: fará o elemento desaparecer.</p>
+            <p>
+              Existe uma forma compacta de os valores serem inseridos na função <b>scale</b>. Se tanto o valor
+              de X
+              quanto o de Y forem o mesmo, é possível inserir apenas um número. Veja os exemplos:
+            </p>
+            <p><b>transform: scale(2);</b>: fará o elemento dobrar de tamanho na altura e largura.</p>
+            <p>
+              <b> transform: scale(0.5);</b>: fará o elemento reduzir 50% do seu tamanho original, tanto na
+              altura quanto
+              na largura.
+            </p>
+            <p>
+              É mais comum, no dia a dia, usar o <b>scale</b> com apenas um número, pois isso fará o elemento
+              aumentar ou
+              diminuir mantendo suas proporções de altura e largura. Geralmente só se usa a sintaxe com dois
+              números, caso precise mudar o tamanho em proporções diferentes.
+            </p>
+            <p>
+              No entanto, assim como a função <b>translate</b>, a função <b>scale</b> tem duas variações mais
+              simples, que
+              controlam separadamente os eixos X e Y. São a <b>scaleX</b> e a <b>scaleY</b>. Veja um exemplo de
+              utilização
+              dessas funções:
+            </p>
+            <p><b>transform: scaleX(1.5);</b>: fará o elemento aumentar 50% do seu tamanho na largura.</p>
+            <p><b>transform: scaleY(2);</b>: fará o elemento dobrar de tamanho na altura.</p>
+            <p>
+              Todas as particularidades mostradas na função <b>scale</b> original funcionam nas funções
+              <b>scaleX</b> e <b>scaleY</b>,
+              como reduzir e controlar a escala com números decimais.
+            </p>
+            <h4> skew(x, y)</h4>
+            <p>
+              O método <b>skew</b> distorce, inclina, um elemento ao longo dos eixos X e Y por meio dos valores
+              fornecidos. Para isso, nas posições X e Y, inserem-se os valores a serem inclinados com o
+              <b>deg</b>. Por
+              exemplo:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+transform: skew(20deg, 30deg); 
+              </code>
+            </pre>
+            <p>Esse comando fará o elemento inclinar e distorcer 20 graus no eixo X e 30 no eixo Y.</p>
+            <p>
+              É comum a utilização da função <b>skew</b> com apenas um valor. Quando isso ocorre, é aplicado
+              apenas o
+              valor do eixo X e o navegador entende que o eixo Y será igual a zero, o que mantém o elemento em
+              seu
+              estado original, fazendo a inclinação apenas no eixo X. Observe:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+transform: skew(20deg); 
+              </code>
+            </pre>
+            <p>Esse comando fará o elemento inclinar 20 graus no eixo X. A distorção no eixo Y não será
+              aplicada. Veja a figura: </p>
+            <img src="imgs/fig6.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Exemplo da função skew com apenas um valor declarado <br>
+              Fonte: Adaptado de IconArchive (2024)
+            </p>
+            <p class="acessivel no-print">Ilustração de um alienígena da cor roxa em posição original e, ao
+              lado, a mesma imagem inclinada através da função skew, aplicada somente no eixo X.
+            </p>
+            <p>
+              Como os valores de <b>skew</b> são aplicados por meio da unidade <b>deg</b>, ou seja, em graus, os
+              números irão de
+              0 a 360 <b>deg</b>. Mas é possível indicar esses valores no formato negativo, utilizando o hífen
+              (-), o
+              que, neste caso, inverterá a posição da inclinação.
+            </p>
+            <p>
+              A função <b>skew</b> também tem suas variações individuais:<b> skewX</b> e <b>skewY</b>, que
+              obviamente, controlam
+              individualmente seus eixos.
+            </p>
+            <p>
+              Uma forma eficaz de aplicar mais de uma transformação em um elemento é usar a propriedade
+              <b>transform</b>
+              e declarar as funções separadas por espaço em branco. Veja o exemplo:
+            </p>
+            <pre>
+              <code class="hljs language-css">
+transform: scale(0.5) skew(0, 30deg) translate(50px, 100px); 
+              </code>
+            </pre>
+            <p>Nesse exemplo, o elemento aplicará todas as transformações declaradas. </p>
+          </div>
+          <h3>Aplicando transições de estilo (<i>transitions</i>) </h3>
+          <p>
+            As transições no CSS são uma técnica que permite criar efeitos suaves de animação durante as mudanças de
+            estado de um elemento. Elas permitem que você especifique como as propriedades CSS devem se transformar de
+            um
+            estado para outro ao longo do tempo, proporcionando uma transição visualmente agradável entre esses estados.
+          </p>
+          <p>
+            A propriedade principal usada para definir transições em CSS é a <b>transition</b>. A propriedade
+            <b>transition</b> aceita
+            quatro valores principais:
+          </p>
+          <div class="infografico-valores no-print" aria-hidden="true">
+            <div class="box" id="box-1">
+              <img src="imgs/infog2_1propriede.png" alt="Propriedade a ser animada" />
+              <p class="titulo-1"><strong>Propriedade a ser animada</strong></p>
+              <p class="paragrafo-1">
+                Indica qual propriedade CSS será afetada pela transição.
+              </p>
+            </div>
+            <div class="box" id="box-2">
+              <img src="imgs/infog2_2duracao.png" alt="Duração da transição" />
+              <p class="titulo-2"><strong>Duração da transição</strong></p>
+              <p>
+                Especifica o tempo que a transição deve levar para ser concluída. Pode ser definida em segundos (s) ou
+                milissegundos (ms).
+              </p>
+            </div>
+            <div class="box" id="box-3">
+              <img src="imgs/infog2_3funcao_do_tempo.png" alt="Função de tempo" />
+              <p class="titulo-3"><strong>Função de tempo (<i>timing function</i>)</strong></p>
+              <p>
+                Define o ritmo da transição, ou seja, como a animação progride ao longo do tempo. Algumas funções comuns
+                são <b>ease</b>, <b>ease-in</b>, <b>ease-out</b>, <b>ease-in-out</b>, <b>linear</b> e
+                <b>cubic-bezier()</b>.
+              </p>
+            </div>
+            <div class="box" id="box-4">
+              <img src="imgs/infog2_4atraso.png" alt="Atraso" />
+              <p class="titulo-4"><strong>Atraso (<i>delay</i>)</strong></p>
+              <p>
+                Determina o tempo que deve passar antes de a transição começar. Também pode ser especificado em segundos
+                ou milissegundos.
+              </p>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4> Propriedade a ser animada</h4>
+            <p>Indica qual propriedade CSS será afetada pela transição.</p>
+            <h4>Duração da transição</h4>
+            <p>
+              Especifica o tempo que a transição deve levar para ser concluída. Pode ser definida em segundos (s) ou
+              milissegundos (ms).
+            </p>
+            <h4>Função de tempo (<i>timing function</i>)</h4>
+            <p>
+              Define o ritmo da transição, ou seja, como a animação progride ao longo do tempo. Algumas funções comuns
+              são <b>ease</b>, <b>ease-in</b>, <b>ease-out</b>, <b>ease-in-out</b>, <b>linear</b> e
+              <b>cubic-bezier()</b>.
+            </p>
+            <h4>Atraso (<i>delay</i>)</h4>
+            <p>
+              Determina o tempo que deve passar antes de a transição começar. Também pode ser especificado em segundos
+              ou
+              milissegundos.
+            </p>
+          </div>
+          <pre>
+            <code class="hljs language-css">
+/* Define uma transição na propriedade 'width' com duração de 1 segundo, função de tempo 'ease-in-out' e sem atraso. */
+ .element { 
+      transition: width 1s ease-in-out 0s; 
+ } 
+ /* Quando a largura da 'element' muda, a transição é acionada. */  
+ .element:hover { 
+      width: 200px; 
+ } 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, quando o <i>mouse</i> passa sobre o elemento, a largura do elemento muda suavemente de seu
+            valor
+            inicial para 200 <i>pixels</i> ao longo de 1 segundo, seguindo a função de tempo <b>ease-in-out</b>.
+          </p>
+          <p>
+            Na propriedade a ser animada você pode aplicar em praticamente qualquer estilo. Mas pode usar o valor
+            <b>all</b>, o
+            que fará com que se aplique o efeito de transição em qualquer estilo modificado. Observe o exemplo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+transition: all 1s linear 0s; 
+            </code>
+          </pre>
+          <p>
+            Também é importante aplicar o <b>transition</b> sempre no elemento principal. Repare que, no exemplo
+            anterior, o
+            <b>transition</b> não é aplicado no <b>hover</b>, e sim no elemento inicial. Isso fará com que a transição
+            seja aplicada
+            tanto ao colocar o ponteiro do <i>mouse</i> sobre o elemento quanto ao tirar o ponteiro de sobre ele.
+          </p>
+          <p>
+            As funções de tempo (<i>timing functions</i>) são utilizadas não só na propriedade <b>transition</b>, mas em
+            animações
+            também, determinando como a transição ou animação progride ao longo do tempo, especificando a aceleração ou
+            desaceleração da mudança de propriedade. Veja como funcionam as principais funções:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                  data-toggle="tab">ease </a>
+              </li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">ease-in
+                </a>
+              </li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">ease-out
+                </a>
+              </li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">linear
+                </a>
+              </li>
+              <li role="presentation"><a href="#settings-2" aria-controls="settings-2" role="tab"
+                  data-toggle="tab">cubic-bezier(n, n, n, n) </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <p>
+                  É a função de tempo-padrão, que inicia devagar, acelera no meio da transição e desacelera novamente no
+                  final. É uma escolha comum para proporcionar transições suaves e naturais.
+                </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <p>Começa devagar e acelera à medida que a transição progride. </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <p>Começa rápido e desacelera à medida que a transição progride. </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings">
+                <p> Mantém uma taxa de mudança constante ao longo de toda a transição. Não há aceleração ou
+                  desaceleração.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings-2">
+                <p>
+                  Permite uma curva de aceleração personalizada usando
+                  quatro valores numéricos (entre 0 e 1). Cada valor controla a posição dos pontos da curva de Bézier.
+                  Os
+                  valores para n definem a curva de aceleração/desaceleração. Por exemplo, <b>cubic-bezier(0.42, 0,
+                    0.58, 1)</b>
+                  cria uma curva semelhante à função <b>ease</b>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>ease</h4>
+            <p>
+              É a função de tempo-padrão, que inicia devagar, acelera no meio da transição e desacelera novamente no
+              final. É uma escolha comum para proporcionar transições suaves e naturais.
+            </p>
+            <h4>ease-in</h4>
+            <p>Começa devagar e acelera à medida que a transição progride.</p>
+            <h4>ease-out</h4>
+            <p>Começa rápido e desacelera à medida que a transição progride.</p>
+            <h4>linear</h4>
+            <p>Mantém uma taxa de mudança constante ao longo de toda a transição. Não há aceleração ou desaceleração.
+            </p>
+            <h4>cubic-bezier(n, n, n, n)</h4>
+            <p>
+              Permite uma curva de aceleração personalizada usando quatro valores numéricos (entre 0 e 1). Cada valor
+              controla a posição dos pontos da curva de Bézier. Os valores para n definem a curva de
+              aceleração/desaceleração. Por exemplo, <b>cubic-bezier(0.42, 0, 0.58, 1)</b> cria uma curva semelhante à
+              função
+              <b>ease</b>.
+            </p>
+          </div>
+          <p>
+            A escolha da função de tempo depende do efeito desejado e da sensação que se quer dar à transição ou
+            animação.
+            Experimentar diferentes funções de tempo pode ser útil para encontrar a que se ajusta melhor ao estilo
+            visual
+            desejado.
+          </p>
+          <p>
+            Para visualizar uma transição, é preciso vincular o elemento a alguma ação, como as que são vistas nas
+            pseudoclasses. A forma mais comum de usar as <b>transitions</b> é por meio do <b>hover</b>, mas também é
+            possível aplicá-las
+            em pseudoclasses como <b>focus</b> e <b>checked</b>. Também é comum utilizar os efeitos de transições em
+            conjunto com as
+            funções de <b>transform</b> do CSS.
+          </p>
         </div>
       </div>
       <div class="pagina">
         <div class="container">
+          <h3>Animation – Criando animações com CSS</h3>
+          <p>
+            Agora, você aprenderá a criar animações utilizando o CSS3. Uma animação em CSS permite que um elemento mude
+            gradualmente de um estilo para outro.
+          </p>
+          <p>
+            Diferentemente das transições, que precisam de um evento para serem disparadas, a propriedade
+            <b>animation</b> faz
+            com que essa transição entre estilos possa ocorrer sem qualquer ação realizada pelo usuário. Isso significa
+            que se pode, por exemplo, fazer com que um elemento fique se deslocando de um lado para o outro da tela
+            ininterruptamente assim que a página for carregada.
+          </p>
+          <p>
+            As animações também têm propriedades que proporcionam um maior controle de como e onde ocorrem os estilos.
+            Porém, para criar animações no CSS, é preciso primeiro criar essa transição de estilos por meio de uma
+            propriedade chamada <b>keyframes</b> e, depois, utilizando as propriedades de <b>animation</b>, indicar a
+            qual elemento
+            determinada animação será executada.
+          </p>
+          <div class="caixa-destaque icone importante">
+            <p>
+              <b> Keyframes</b> são pontos-chave definidos em uma animação, os quais indicam estados específicos durante
+              a
+              animação. Eles são usados em conjunto com a regra <b>@keyframes</b> para criar animações suaves e
+              personalizadas em
+              propriedades CSS ao longo do tempo.
+            </p>
+          </div>
+          <p>
+            Existem duas formas de declarar os <b>keyframes</b>. A primeira é por meio dos comandos <b>from</b> e
+            <b>to</b> (de – para), o que
+            indica que um estilo começa de um ponto e termina em outro. A segunda é declarar as alterações dos estilos e
+            até mesmo dimensionar sua proporção de tempo usando valores percentuais.
+          </p>
+          <p>A estrutura básica a ser utilizada no <b>keyframe</b> é a seguinte:</p>
+          <pre>
+            <code  class="hljs language-css">
+@keyframes nomedaanimacao{  
+    from {background-color: red; width:100px}  
+    to {background-color: yellow;width: 250px}      
+} 
+            </code>
+          </pre>
+          <p>
+            Esse exemplo criará uma animação na qual o elemento começa com a cor vermelha e 100 <i>pixels</i> de
+            largura, mas
+            modifica-se até que se transforme na cor amarela e aumente o tamanho para 250 <i>pixels</i>.
+          </p>
+          <p>
+            Repare que logo após o código <b>@keyframe</b>s deve-se criar um nome para essa animação. Você pode escolher
+            qualquer
+            nome, porém precisa respeitar algumas regras básicas, como usar prioritariamente caracteres minúsculos, não
+            usar caracteres especiais, como cedilhas (ç), acentos e tils (~), e também não inserir espaços em branco.
+          </p>
+          <p>
+            Usar os <b>keyframes</b> com os comandos <b>from</b> e <b>to</b> torna o código mais limpo e prático,
+            contudo, limita um pouco suas
+            ações. Isso porque há apenas dois pontos para mudar os estilos: os pontos inicial e final. Usar valores
+            percentuais aumenta seu controle sobre as modificações dos estilos. Veja um exemplo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+@keyframes nomeDaAnimacao { 
+  0% {background-color: red; width:100px } 
+  50% {background-color: blue; width:200px } 
+  100% {background-color: yellow; width:250px  } 
+} 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo foi indicado que o elemento começa com a cor vermelha e com 100 <i>pixels</i> de largura, mas,
+            quando
+            chegar na metade da animação, terá a cor azul e 200 <i>pixels</i> de tamanho, terminando com a cor amarela e
+            250
+            <i>pixels</i>.
+          </p>
+          <p>
+            Nele também foram usados apenas três pontos (0%, 50% e 100%), mas você poderia incrementar quantos pontos
+            quiser de 0 a 100%. Obviamente, a quantidade de pontos será proporcional à quantidade de estilos diferentes
+            que você deseja aplicar durante a animação.
+          </p>
+          <p>
+            O <b>keyframes</b>, no entanto, serve apenas para criar a animação. Para aplicar as animações em
+            determinados
+            elementos, é preciso utilizar a propriedade <b>animation</b>.
+          </p>
+          <div class="caixa-destaque">
+            <p>
+              <b>Animation</b> é a propriedade utilizada para criar animações personalizadas em elementos selecionados.
+              Ela
+              permite que você defina uma sequência de <b>keyframes</b> (pontos-chave) para especificar como uma
+              propriedade deve
+              mudar ao longo do tempo. A propriedade <b>animation</b> é bastante flexível e pode ser usada para criar
+              uma ampla
+              variedade de animações em suas interfaces.
+            </p>
+          </div>
+          <ul>
+            <li>
+              <b>animation-name: nomedaanimacao;</b>: nesse estilo deve-se colocar o nome da animação criada
+              anteriormente com o
+              uso do <b>@keyframes</b>.
+            </li>
+            <li>
+              <b>animation-duration: 4s;</b>: nesse estilo é inserida a duração da animação, que pode ser expressa em
+              segundos
+              (s).
+            </li>
+            <li>
+              <b>animation-timing-function: ease;</b>: é nessa propriedade que se pode inserir a função de tempo na
+              animação. As
+              funções disponíveis aqui são exatamente as mesmas descritas no tópico que ensina a <b>aplicar
+                transições</b> deste
+              material.
+            </li>
+            <li>
+              <b>animation-delay: 2s;</b>: com essa propriedade é possível inserir um atraso na animação, ou seja, nesse
+              exemplo,
+              a animação somente começa a ser executada após 2 segundos do carregamento da página.
+            </li>
+            <li>
+              <b>animation-iteration-count: 4;</b>: essa propriedade indica quantas vezes a animação desenvolvida com o
+              <b>keyframes</b>
+              será executada. Por padrão, a animação é executada uma única vez, mas, nesse exemplo, ela seria executada
+              4
+              vezes consecutivas. Porém, caso você deseje que a animação continue sendo executada ininterruptamente,
+              basta
+              colocar no lugar do número a palavra “infinite”, por exemplo, <b>animation-iteration-count: infinite;</b>.
+            </li>
+            <li>
+              <b>animation-direction: alternate;</b>: com essa propriedade é possível controlar a direção da animação.
+              Quando se
+              cria um conjunto de estilos no <b>keyframes</b>, por padrão, a animação ocorrerá do ponto inicial até o
+              final e
+              depois voltará ao ponto inicial. Mas essa propriedade tem alguns valores que mudam esse comportamento.
+            </li>
+          </ul>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      reverse
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p>Com esse valor, a animação ocorre de forma inversa, ou seja, do ponto final até o inicial. </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      alternate
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>
+                      Esse valor é bem útil em determinados efeitos, pois alterna a direção da animação. Ele começa
+                      aplicando a transição do ponto inicial até o final, mas, ao chegar no final, ele troca a direção
+                      aplicando do final até o inicial. Sem esse valor, a transição ocorre de forma brusca, ou seja,
+                      quando ele chegar no ponto final, retorna ao inicial sem aplicar uma transição entre eles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      alternate-reverse
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <p>Faz o mesmo que o <b>alternate</b>, porém a animação é iniciada do ponto final para o inicial.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>reverse</h4>
+            <p>Com esse valor, a animação ocorre de forma inversa, ou seja, do ponto final até o inicial.</p>
+            <h4>alternate</h4>
+            <p>
+              Esse valor é bem útil em determinados efeitos, pois alterna a direção da animação. Ele começa aplicando a
+              transição do ponto inicial até o final, mas, ao chegar no final, ele troca a direção aplicando do final
+              até
+              o inicial. Sem esse valor, a transição ocorre de forma brusca, ou seja, quando ele chegar no ponto final,
+              retorna ao inicial sem aplicar uma transição entre eles.
+            </p>
+            <h4>alternate-reverse</h4>
+            <p>Faz o mesmo que o <b>alternate</b>, porém a animação é iniciada do ponto final para o inicial.</p>
+          </div>
+          <ul>
+            <li>
+              <b>animation-fill-mode: forwards;</b>: essa propriedade especifica um estilo para o elemento selecionado
+              quando a
+              animação não está sendo reproduzida (antes de começar, depois de terminar ou ambos). Ela pode ter os
+              seguintes valores:
+            </li>
+          </ul>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading1">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapse1"
+                      aria-expanded="true" aria-controls="collapse1">
+                      none
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                  <div class="panel-body">
+                    <p>É o valor-padrão. A animação não aplicará nenhum estilo ao elemento antes ou depois de ser
+                      executada </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading2">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-1"
+                      href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      forwards
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                  <div class="panel-body">
+                    <p>
+                      O elemento manterá os valores de estilo definidos pelo último quadro-chave (<i>keyframe</i>) e
+                      depende da
+                      direção da animação e da contagem de iterações da animação.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading3">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-1"
+                      href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      backwards
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                  <div class="panel-body">
+                    <p>O elemento obterá os valores de estilo definidos pelo primeiro quadro-chave (<i>keyframe</i>) e
+                      os
+                      manterá durante o período de atraso da animação.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading4">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-1"
+                      href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                      both
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                  <div class="panel-body">
+                    <p>A animação seguirá as regras tanto para frente quanto para trás, estendendo as propriedades da
+                      animação em ambas as direções.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>none</h4>
+            <p>É o valor-padrão. A animação não aplicará nenhum estilo ao elemento antes ou depois de ser executada</p>
+            <h4>forwards</h4>
+            <p>
+              O elemento manterá os valores de estilo definidos pelo último quadro-chave (<i>keyframe</i>) e depende da
+              direção
+              da animação e da contagem de iterações da animação.
+            </p>
+            <h4>backwards</h4>
+            <p>
+              O elemento obterá os valores de estilo definidos pelo primeiro quadro-chave (<i>keyframe</i>) e os manterá
+              durante
+              o período de atraso da animação.
+            </p>
+            <h4>both</h4>
+            <p>
+              A animação seguirá as regras tanto para frente quanto para trás, estendendo as propriedades da animação em
+              ambas as direções.
+            </p>
+          </div>
+          <p>Então, é possível definir todas essas propriedades de forma individual ou na forma compacta. Veja um
+            exemplo:</p>
+          <pre>
+            <code class="hljs language-css">
+.destaque{ 
+    animation-name: nomeDaAnimacao; 
+    animation-duration: 5s; 
+    animation-timing-function: linear;  
+    animation-delay: 2s; 
+    animation-iteration-count: infinite;  
+    animation-direction: alternate;  
+    animation-fill-mode: forwards;  
+} 
+            </code>
+          </pre>
+          <p>Agora veja um exemplo aplicando todos esses valores na forma compacta: </p>
+          <pre>
+            <code class="hljs language-css">
+.destaque{ 
+    animation: nomeDaAnimacao  5s linear 2s infinite alternate forwards; 
+} 
+            </code>
+          </pre>
+          <p>
+            As duas sintaxes são totalmente válidas e aceitas pelos navegadores. Cabe a você escolher o padrão que mais
+            terá facilidade de executar, mas lembre-se de que apenas os valores do <b>animation-name</b> e
+            <b>animation-duration</b> são
+            obrigatórios. Por exemplo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+animation: nomeDaAnimacao  5s; 
+            </code>
+          </pre>
+          <p>
+            As animações podem melhorar significativamente a experiência do usuário, tornar o conteúdo mais envolvente e
+            adicionar um toque de modernidade ao <i>design</i>. No entanto, é importante usar animações com moderação e
+            garantir
+            que elas aprimorem, em vez de prejudicar, a experiência do usuário.
+          </p>
+          <h3>CSS <i>media queries</i></h3>
+          <p>
+            O <i>media query</i> é uma técnica utilizada no CSS que permite aplicar estilos diferentes com base em
+            características específicas do dispositivo ou da tela em que uma página da <i>web</i> está sendo exibida.
+            Isso é
+            particularmente útil para criar <i>designs</i> responsivos que se ajustam a diferentes tamanhos de tela,
+            orientações
+            ou características do dispositivo.
+          </p>
+          <p>
+            De forma usual, você cria todo o estilo CSS do seu <i>site</i> normalmente, deixando a interface-padrão
+            aplicada para
+            todos os tamanhos de tela e, geralmente, no final do arquivo CSS, você determina as modificações necessárias
+            nos estilos em cada tamanho de tela necessário.
+          </p>
+          <p>A estrutura do <i>media query</i> é bem simples, confira:</p>
+          <pre>
+            <code class="hljs language-css">
+@media tipo-de-mídia and (condição) { 
+/* Estilos a serem aplicados quando a condição for atendida */ 
+} 
+            </code>
+          </pre>
+          <p>
+            Basicamente se usa o código <b>@media</b> seguido de um tipo de mídia, porém o parâmetro tipo de mídia é
+            opcional e
+            dentro dos parênteses vai a condição para ser aplicado o estilo que estará entre as chaves do <b>@media</b>.
+            Geralmente na “condição” vai o tamanho da largura de tela máximo ou mínimo a que esse estilo deve ser
+            aplicado.
+          </p>
+          <p>Atualmente existem dois tipos de mídias válidos e aplicáveis ao <i>media query</i>. São eles:</p>
+          <!-- TEXTOS LADO A LADO: -->
+          <p> <b>Screen</b> – Representa qualquer tipo de tela digital, como computadores, <i>tablets</i>,
+            <i>smartphones</i> etc.
+          </p>
+          <p>
+            <b>Print</b> – Aplicado somente à impressão. Imagine que você clique no botão <b>imprimir</b> do seu
+            navegador (função pouco
+            usual hoje). Sim, todos os navegadores têm a opção de imprimir uma página. Usando o tipo de mídia
+            <b>print</b> no
+            <i>media query</i>, você consegue especificar o estilo daquela página ao imprimi-la.
+          </p>
+          <!-- TEXTOS LADO A LADO -->
+          <div class="caixa-destaque icone anotar">
+            <p>
+              Existe também um terceiro valor chamado <b>all</b>, que basicamente avisa que aquele estilo é aplicado a
+              qualquer
+              tipo de mídia. Porém, <b>all</b> já é o valor-padrão, então não é necessário declará-lo.
+            </p>
+          </div>
+          <p>
+            Já na <b>condição</b> é possível usar os valores <b>max-width</b> e <b>min-width</b> para determinar a que
+            tamanho de tela deve ser
+            aplicado o estilo do <b>@media</b>.
+          </p>
+          <p>
+            Seguindo para outro exemplo, considere que originalmente há três colunas em uma seção de um <i>site</i>.
+            Essas
+            colunas estão definidas da seguinte forma no CSS:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.blocos{ width: 33%; … } 
+            </code>
+          </pre>
+          <p>
+            Em determinados tamanhos de tela, os blocos ficaram visivelmente adequados, mas, em telas menores, a
+            visualização não ficará adequada. Veja:
+          </p>
+          <img src="imgs/fig7.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig7.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig7.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            Exemplo de tela sem media query <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Duas telas lado a lado, uma maior que 1000 pixels, na qual há três colunas bem ajustadas uma ao lado das
+            outras, e outra menor que 797 pixels de largura, na qual o conteúdo das mesmas colunas começa a se sobrepor.
+          </p>
+          <p>
+            A solução para esse problema se torna bem simples com a utilização do <b>@media</b>. Para isso, mantém-se o
+            código
+            original e acrescenta-se o código a seguir posteriormente ao original.
+          </p>
+          <pre>
+            <code class="hljs language-css">
+@media (max-width: 797px) { 
+    .blocos{width:100%;} 
+} 
+            </code>
+          </pre>
+          <p>
+            Nesse código foi indicado que com telas menores que 797 <i>pixels</i> será aplicado o estilo de <b>width:
+              100%</b> na classe
+            <b>blocos</b>, ou seja, agora, cada coluna ocupará o tamanho total na largura do seu elemento.
+            Consequentemente, as
+            colunas ficaram umas abaixo das outras. Repare que na parte da condição foi colocado <b>max-width</b>, o que
+            indica
+            que o estilo dentro dele será aplicado com telas que tenham no máximo a largura de 797 <i>pixels</i>.
+          </p>
+          <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img src="imgs/"
+              class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            Exemplo de tela com media query <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Duas telas lado a lado, uma maior que 1000 pixels, na qual há três colunas bem ajustadas uma ao lado das
+            outras, e uma menor que 797 pixels de largura, na qual o conteúdo das mesmas colunas se ajustou à tela,
+            ficando uma acima da outra.
+          </p>
+          <p>
+            Os <i>media queries</i> são fundamentais para o desenvolvimento de <i>designs</i> responsivos, permitindo
+            que os
+            desenvolvedores ajustem o <i>layout</i> e o estilo de uma página da <i>web</i> com base nas características
+            específicas da
+            tela em que ela está sendo exibida. Essa abordagem é crucial para garantir uma experiência consistente e
+            otimizada em diferentes dispositivos, desde grandes monitores de <i>desktop</i> ou TVs até dispositivos
+            móveis.
+          </p>
+          <h3><i>Display</i> grid (Grid Layout)</h3>
+          <p>
+            O Grid Layout, também conhecido como GridBox, serve para criar o <i>layout</i> de qualquer interface
+            <i>web</i> usando como
+            base uma grade, organizada em linhas e colunas. A ideia é facilitar o desenvolvimento do <i>design</i> de
+            qualquer
+            interface <i>web</i> sem a necessidade de usar propriedades como <b>floats</b> e <b>positions</b>.
+          </p>
+          <p>
+            O primeiro passo para desenvolver um <i>layout</i> com base no GridBox é definir a propriedade <b>display:
+              grid</b>, que
+            nada mais é que uma propriedade CSS que permite a criação dos <i>layouts</i> baseados no Grid Layout e
+            servirá para o
+            desenvolvimento de páginas complexas e responsivas por meio de uma grade (<i>grid</i>).
+          </p>
+          <p>
+            A estrutura básica para utilizar o <b>display: grid</b> é aplicar a propriedade ao contêiner pai (o elemento
+            que
+            envolve os itens que você deseja organizar na grade). Por exemplo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container {  display: grid; … } 
+            </code>
+          </pre>
+          <p>Lembre-se de que o <b>display: grid</b> deve ser aplicado no elemento pai. Para isso, considere o HTML a
+            seguir: </p>
+          <pre>
+            <code class="hljs language-html">
+&lt;div class="container"> 
+&lt;div class="item">1&lt;/div>   
+&lt;div class="item">2&lt;/div>  
+&lt;div class="item">3&lt;/div> 
+&lt;div class="item">4&lt;/div>  
+&lt;div class="item">5&lt;/div>  
+&lt;div class="item">6&lt;/div> 
+&lt;/div> 
+            </code>
+          </pre>
+          <p>
+            Ao aplicar o <b>display: grid</b> na classe <b>container</b>, entende-se que os elementos abaixo dele
+            servirão para formar a
+            grade do <i>layout</i> e respeitar as demais propriedades do Grid Layout a serem definidas.
+          </p>
+          <p>Assim, é possível definir a formatação desse <i>layout</i> com alguns estilos:</p>
+          <p>
+            A propriedade <b>grid-template-columns</b> indica quantas colunas o <i>layout</i> terá e quais serão os
+            tamanhos delas. Esse
+            estilo deve ser aplicado no elemento pai, o mesmo em que foi definido o <b>display: grid</b>. Por exemplo,
+            <b>.container
+              { grid-template-columns: auto auto auto; … }</b> fará com que o <i>layout</i> fique dividido em três
+            colunas, com
+            tamanhos automáticos, ou seja, cada coluna será distribuída igualmente completando a largura total do seu
+            elemento pai. Além disso, caso seu HTML tenha mais de três elementos filhos, a cada três elementos ele irá
+            formar uma nova linha (<i>row</i>).
+          </p>
+          <p>
+            Também é possível declarar valores fixos para as colunas. Por exemplo, no caso de <b>grid-template-columns:
+              100px
+              300px 200px;</b>, o <i>layout</i> também será distribuído em três colunas, mas com larguras fixas. Para
+            alterar o número
+            de colunas, basta incluí-las ou retirá-las do elemento, veja os exemplos:
+          </p>
+          <p><b>grid-template-columns: auto auto;</b>: formará o layout com duas colunas.</p>
+          <p>
+            <b>grid-template-columns: auto auto auto auto;</b>: formará o layout com quatro colunas. Em todos os casos,
+            é
+            possível usar valores fixos ou percentuais para controlar o layout. Observe um exemplo usando valores em
+            percentual, considerando o seguinte:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+grid-template-columns: 20% 60% 20% 
+            </code>
+          </pre>
+          <p>Veja o resultado desse estilo nesta figura:</p>
+          <img src="imgs/fig8.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            <i>Layout</i> com <b>grid-template-columns </b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout em formato de grade com três colunas.
+          </p>
+          Além de definir a largura das colunas, é possível definir o tamanho das linhas por meio da propriedade
+          <b>grid-template-rows</b>. Veja um exemplo:
+          <pre>
+            <code class="hljs language-css">
+.container { grid-template-rows: 100px 200px ; … } 
+            </code>
+          </pre>
+          <p>
+            Aqui foi definido o tamanho fixo de altura que cada linha terá. Nesse caso, como foram definidos apenas dois
+            valores, caso haja mais de duas linhas, elas terão o valor <b>auto</b>, que basicamente indica que sua
+            altura
+            dependerá do conteúdo dentro do elemento.
+          </p>
+          <div class="caixa-destaque icone importante">
+            <p>
+              É importante destacar que, para ter um melhor controle do <i>layout</i>, é fundamental o uso do
+              <b>grid-template-columns</b>, no entanto, o uso do <b>grid-template-rows</b> em muitos casos é
+              dispensável. Sua utilização
+              só ocorrerá nos casos em que é necessário que seu <i>layout</i> tenha um valor fixo na altura de
+              determinadas
+              linhas do <i>grid</i>. E, na maioria dos casos, o uso do <b>grid-template-rows</b> não dispensará o uso em
+              conjunto com a
+              propriedade <b>grid-template-columns</b>.
+            </p>
+          </div>
+          <p>
+            O Grid Layout tem um conjunto de propriedades com funcionalidades e resultados únicos. Inclusive, ele tem
+            sua
+            própria forma de aplicar margens entre suas colunas ou linhas. É o caso do <b>gap</b>, pois é com essa
+            propriedade
+            que se controla o distanciamento no seu <i>layout</i>.
+          </p>
+          <p>Para o controle dos <b>gaps</b>, o CSS tem três propriedades.</p>
+          <p><b>column-gap: 10px</b>: determina a margem entre as colunas.</p>
+          <p><b>row-gap: 20px</b>: determina o valor da margem entre as linhas.</p>
+          <p>
+            Mas também é possível usar a forma compacta, utilizando apenas a palavra “gap” seguida do valor da margem
+            entre as linhas e colunas respectivamente.
+          </p>
+          <p><b>gap: 20px 10px</b>: esta síntese definirá o valor de 20 <i>pixels</i> entre as linhas e 10 <i>pixels</i>
+            entre as colunas.</p>
+          <img src="imgs/fig9.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Aplicando <b>gap</b> em seu <i>layout</i> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout em formato de grade com três colunas.
+          </p>
+          <p>
+            Uma das principais vantagens da utilização do Grid Layout em relação aos métodos mais tradicionais, como a
+            utilização de <b>floats</b>, é o alinhamento dos elementos, ou seja, com o Grid Layout, é possível usar
+            propriedades
+            simples com as quais você consegue mudar totalmente a forma como os elementos da sua <i>grid</i> se alinham.
+          </p>
+          <p>
+            É importante começar entendendo como alinhar os elementos da <i>grid</i> na horizontal, mas, para isso,
+            obviamente os
+            elementos não podem ocupar a largura total do elemento pai, pois, dessa forma, não se conseguirá ver as
+            modificações.
+          </p>
+          <p>Então, para isso, continue considerando o seguinte código HTML:</p>
+          <pre>
+            <code class="hljs language-html">
+&lt;div class="container"> 
+&lt;div class="item">1&lt;/div> 
+&lt;div class="item">2&lt;/div> 
+&lt;div class="item">3&lt;/div> 
+&lt;div class="item">4&lt;/div> 
+&lt;div class="item">5&lt;/div> 
+&lt;div class="item">6&lt;/div> 
+&lt;/div> 
+            </code>
+          </pre>
+          <p>Tenha em mente que esse código tem sempre os seguintes estilos: </p>
+          <pre>
+            <code class="hljs language-css">
+.item{ 
+  background: #5ef9ef;    
+  padding: 30px;   
+  font-size: 30px;   
+  text-align: center;  
+  border-radius: 8px;   
+        box-shadow: inset 2px 2px 4px 0px #ffffff; 
+        border: solid 2px #000; 
+        font-weight: bold; 
+        color: #111a23; 
+} 
+.container{  
+  display: grid;  
+  grid-template-columns: 200px 200px 200px;  
+  … 
+} 
+            </code>
+          </pre>
+          <p>
+            A propriedade que define esse alinhamento horizontal é chamada de <b>justify-content</b> e contém diversos
+            valores
+            que definem como será o alinhamento. São eles: <b>start</b>, <b>end</b>, <b>center</b>, <b>space-evenly</b>,
+            <b>space-around</b> e <b>space-between</b>.
+          </p>
+          <ul>
+            <li><b>justify-content: start</b>: valor-padrão; indica que os elementos estarão alinhados da esquerda para
+              a direita.</li>
+            <li>
+              <b>justify-content: end</b>: inverte o alinhamento; indica que os elementos ficarão alinhados da direita
+              para a
+              esquerda.
+            </li>
+            <li><b>justify-content: center</b>: centraliza os elementos.</li>
+          </ul>
+          <img src="imgs/fig10.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de <b>justify-content: center </b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout em formato de grade, com três colunas e duas linhas centralizadas na horizontal.
+          </p>
+          <p>
+            Existem, porém, valores que mudam o distanciamento entre os elementos, justificando-os, ou seja,
+            distribuindo
+            os elementos horizontalmente.
+          </p>
+          <ul>
+            <li>
+              <b>justify-content: space-evenly</b>: os elementos são distribuídos de forma que o espaçamento entre eles,
+              incluindo entre as bordas do elemento pai, seja igual.
+            </li>
+          </ul>
+          <img src="imgs/fig11.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de <b>justify-content: space-evenly</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout em formato de grade, com três colunas, cujo espaçamento entre elas, incluindo entre as bordas, é
+            igual.
+          </p>
+          <ul>
+            <li>
+              <b>justify-content: space-around</b>: esse valor terá um efeito similar ao <b>space-evenly</b>, porém,
+              aqui, os elementos
+              são distribuídos nas bordas com o mesmo espaçamento entre eles. Na prática, é como se cada elemento
+              tivesse
+              uma margem à direita e outra à esquerda. Se cada elemento tem sua própria margem, consequentemente essa
+              margem fica duplicada entre os elementos internos, mas, como o primeiro elemento e o último não têm
+              elementos entre eles, haverá então somente o espaço do próprio elemento. Repare então que, no
+              <b>space-around</b>,
+              o primeiro e o último elemento de cada linha ficaram mais próximos das bordas se comparados ao
+              <b>space-evenly</b>.
+            </li>
+            <li>
+              <b>justify-content: space-between</b>: os elementos são distribuídos com espaçamentos iguais entre eles.
+              No
+              entanto, o primeiro e o último elemento de cada linha ficam colados em suas extremidades, ou seja, não a
+              margens horizontais entre o início e o fim de cada linha.
+            </li>
+          </ul>
+          <img src="imgs/fig12.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de <b>justify-content: space-between</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout em formato de grade, com três colunas, no qual o espaçamento entre elas é igual, porém o primeiro e o
+            último elemento ficam colados às suas extremidades.
+          </p>
+          <p>
+            Além dos alinhamentos horizontais, é possível realizar alinhamentos e espaçamentos predeterminados
+            verticais,
+            por meio da propriedade <b>align-content</b>, também presente no Grid Layout. Porém, para que você consiga
+            visualizar
+            esses efeitos, é preciso que o elemento pai tenha uma altura determinada.
+          </p>
+          <p>Então, para os próximos exemplos, será adicionada a propriedade <b>height: 400px</b> à classe
+            <b>container</b>.
+          </p>
+          <p>
+            A propriedade <b>align-content</b> contém os mesmos valores que o <b>justify-content</b>, no entanto, em seu
+            valor-padrão,
+            as linhas ocuparão o espaço total da altura de seu elemento pai. Isso se a propriedade
+            <b>grid-template-rows</b> não
+            estiver definida. Veja um exemplo:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Situação da altura das linhas com elemento pai de altura fixa <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            A imagem mostra um layout em formato de grade, com 3 colunas. Onde ao definir uma altura fixa para o
+            elemento pai, faz com que as linhas sejam distribuídas verticalmente entre o elemento.
+          </p>
+          <p>
+            Conforme mencionado anteriormente, os valores de <b>align-content</b> são exatamente os mesmos que o
+            <b>justify-content</b>,
+            porém aplicados na vertical, logo, a explicação deles será a mesma. Veja nas imagens a seguir exemplos de
+            aplicação desses estilos.
+          </p>
+          <img src="imgs/fig13.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Comparação entre <b>align-content start</b>, <b>center</b> e <b>end</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Três telas lado a lado, com Layout Grid, mostrando que o valor start alinha os elementos acima, o center
+            alinha no meio e o end, abaixo.
+          </p>
+          <p>
+            Veja na figura a comparação entre os valores <b>space-evenly</b>, <b>space-around</b> e
+            <b>space-between</b>, aplicados na
+            propriedade align-content.
+          </p>
+          <img src="imgs/fig14.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Comparação entre <b>space-evenly</b>, <b>space-around</b> e <b>space-between</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Três telas lado a lado com Layout Grid, mostrando a diferença entre os espaços aplicados pelos valores de
+            space.
+          </p>
+          <p>
+            Todas as propriedades vistas até agora são aplicadas no elemento pai, neste exemplo, na classe
+            <b>container</b>, e
+            têm ação direta em seus elementos sucessores, neste caso, em todas as <b>divs</b> com a classe <b>item</b>.
+          </p>
+          <h4>Propriedades <b>grid</b> aplicadas nos elementos sucessores</h4>
+          <p>
+            Em Grid Layout também existem algumas propriedades que são aplicadas individualmente nos elementos filhos de
+            um elemento com <i>display</i> <b>grid</b>. Por exemplo, é possível determinar que um elemento ocupe o
+            espaço de mais
+            colunas ou até mesmo de outras linhas da grade. Além disso, ainda existe a possibilidade de mudar a ordem de
+            visualização dos elementos só utilizando algumas propriedades do Grid Layout, isso sem ter que modificar a
+            estrutura HTML da sua página.
+          </p>
+          <p>
+            É importante compreender que a primeira <i>column line</i> começa entre a borda do elemento pai e o primeiro
+            elemento
+            filho, e o mesmo ocorre com as <i>row line</i>.
+          </p>
+          <p>
+            Então, para manipular o tamanho de um item, fazendo com que ele ocupe o espaço de outros elementos, são
+            utilizadas as propriedades <b>grid-column</b> para as colunas e <b>grid-row</b> para as linhas da grade.
+          </p>
+          <p>
+            Para que funcione corretamente, é preciso especificar o elemento filho a ser estilizado. Neste caso,
+            considere
+            o primeiro item da classe <b>container</b>.
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:first-child{ grid-column: 1 / 3 } 
+            </code>
+          </pre>
+          <p>
+            Nesse código, está indicado que o primeiro elemento da classe <b>item</b> deve ocupar o espaço da linha 1
+            até a linha
+            3. Como ele foi modificado para terminar na linha 3 da grade, ele deve ocupar agora o espaço de duas
+            colunas.
+          </p>
+          <img src="imgs/fig15.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de <b>grid-column</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout de grade com o primeiro item ocupando o espaço de duas colunas.
+          </p>
+          <p>
+            Quando o item 1 ocupa o espaço de duas colunas, consequentemente empurra as demais colunas para a direita,
+            mas
+            sempre respeitando os valores definidos em <b>grid-template-column</b>, o que, neste exemplo, fez com que a
+            grade
+            agora tenha três linhas.
+          </p>
+          <p>
+            Observe também na figura que o último item, o item 6, agora ocupa uma posição na linha 3 da grade. Seguindo
+            a
+            lógica das <i>columns lines</i>, agora o item 6 está ocupando da linha 1 à linha 2. Caso você deseje fazer
+            com que o
+            último item ocupe o espaço das colunas restantes, insira o seguinte estilo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:last-child{ grid-column: 1 / 4 } 
+            </code>
+          </pre>
+          <p>Lembre-se de que a pseudoclasse <b>last-child</b> seleciona o último elemento especificado. Veja o
+            resultado nesta figura: </p>
+          <img src="imgs/fig16.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de <b>grid-column</b> ocupando três colunas <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout de grade com o último item ocupando o espaço de três colunas.
+          </p>
+          <p>
+            Seguindo essa mesma lógica, é possível manipular o comportamento das <i>row line</i>. Como exemplo, o item 3
+            será
+            ajustado para ocupar o espaço de duas linhas. Para isso, será usado o seguinte código:
+          </p>
+          <pre>
+          <code class="hljs language-css">
+.container .item:nth-child(3){ grid-row: 2 / 4; } 
+          </code>
+         </pre>
+          <p>
+            Esse código indica que o terceiro elemento foi selecionado com a classe <b>item</b> e que houve a
+            solicitação para
+            que ele ocupe a <i>row line</i> de 2 a 4. Como já está posicionado na segunda linha da grade, ele
+            originalmente já
+            começa da <i>row line</i> 2, então, mudar o final para 4 faz com que ele ocupe dois espaços de linha. Porém,
+            como as
+            linhas da grade não têm alturas predefinidas, o item 6 está ocupando todo o espaço da última linha.
+          </p>
+          <p>
+            Assim, para se visualizar com maior exatidão os efeitos de <i>grid-row</i>, o estilo do item 6 será
+            modificado para
+            começar de <i>column line</i> 2 ao invés de 1:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:last-child{grid-column: 2 / 4;}
+            </code>
+          </pre>
+          <p>Analise o resultado na imagem: </p>
+          <img src="imgs/fig17.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de Grid Layout utilizando <b>grid-row</b> e <b>grid-column</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout de grade ajustado e simétrico ao manipular o tamanho de alguns itens.
+          </p>
+          <p>
+            Caso você necessite mudar o <i>row line</i> e o <i>column line</i> de um mesmo elemento, pode fazê-lo usando
+            separadamente
+            as propriedades <b>grid-column</b> e <b>grid-row</b>, mostradas anteriormente.
+          </p>
+          <p>
+            Mas também é possível fazer isso com uma propriedade que abrevia esses dois estilos chamada
+            <b>grid-area</b>. Os
+            valores de <b>grid-area</b> são os seguintes:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+grid-area: Row inícial  / Column inícial / Row final / Column final; 
+            </code>
+          </pre>
+          <p>Agora serão “resetadas” as propriedades inseridas nos exemplos anteriores e inserido o seguinte código:</p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(2) { grid-area: 1 / 2 / 3 / 4; }
+            </code>
+          </pre>
+          <p>
+            Aqui foi indicado que o item 2 ocupará da <i>row line</i> 1 até 3 e da <i>column line</i> 2 até a 4. Isso
+            seria o
+            equivalente a <b>.container .item:nth-child(2) {grid-column: 2 / 4; grid-row: 1 / 3; }</b>.
+          </p>
+          <p>
+            Contudo, a propriedade <b>grid-area</b> tem outra funcionalidade. Ela também serve para nomear elementos
+            filhos da
+            <b>grid</b>, neste caso, os elementos com a classe <b>item</b>. Posteriormente, essas nomenclaturas podem
+            servir para montar
+            seu <i>layout</i> de uma forma extremamente única e exclusiva do Grid Layout. Com a propriedade
+            <b>grid-template-areas</b> é
+            possível referenciar os nomes definidos em <b>grid-area</b> para montar seu <i>layout</i>.
+          </p>
+          <p>Confira um exemplo de aplicação. Primeiro, define-se o nome de cada elemento filho do <i>display</i>
+            <b>grid</b>:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:first-child{ grid-area: logo;} 
+.container .item:nth-child(2){ grid-area: menu;} 
+.container .item:nth-child(3){ grid-area: esquerda;} 
+.container .item:nth-child(4){ grid-area: principal;}  
+.container .item:nth-child(5){ grid-area: direita;} 
+.container .item:last-child{ grid-area: rodape;} 
+            </code>
+          </pre>
+          <p>
+            Depois, no elemento pai, insere-se o <b>grid-template-areas</b>, separando as colunas por espaço e as linhas
+            pelos
+            apóstrofos (‘).
+          </p>
+          <pre>
+            <code class="hljs language-css">
+grid-template-areas: 'logo menu menu'  
+    'esquerda principal direita' 
+    'rodape rodape rodape'; 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, como não há conteúdo, define-se <b>grid-template-columns: 200px 200px 200px</b>. Também se
+            renomeiam
+            os números dos itens para se ter uma visualização melhor do posicionamento do <i>layout</i> deste exemplo.
+          </p>
+          <img src="imgs/fig18.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplo de Grid Layout – <b>grid-template-areas</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Layout de grade utilizando a nomenclatura definida em grid-area e referenciada no estilo
+            grid-template-areas.
+          </p>
+          <p>
+            Apesar de essa técnica de montar o <i>layout</i> parecer bem atrativa inicialmente, é preciso alertar que
+            ela se
+            torna um pouco complexa na hora de deixar seu <i>site</i> responsivo. Além disso, também é comum ocorrerem
+            comportamentos inesperados no <i>layout</i> quando o número de colunas é pequeno. Mesmo assim, acaba sendo
+            mais um
+            recurso valioso de CSS se bem utilizado.
+          </p>
+          <p>
+            De forma geral, o Grid Layout é uma ferramenta cheia de recursos que simplificam a criação de <i>layouts</i>
+            complexos, oferecendo flexibilidade, controle e clareza no código.
+          </p>
+          <!-- FALTA ICONE -->
+          <div class="caixa-destaque icone">
+            <p>
+              Seu uso é especialmente benéfico para projetos nos quais a estrutura da página é fundamental e ele se
+              tornou
+              uma escolha popular entre os desenvolvedores <i>front-end</i>. No entanto, pelo menos no Brasil,
+              atualmente é mais
+              comum a utilização de outro método para construir <i>layouts</i> complexos e responsivos, o chamado
+              Flexbox.
+            </p>
+          </div>
+          <p>
+            Isso não quer dizer que o Grid Layout seja inferior ao Flexbox, pelo contrário, ele tem uma maior variedade
+            de
+            recursos e estilos, mas talvez seja a simplicidade do Flexbox que o tenha tornado tão – ou mais – popular
+            que
+            o Grid Layout.
+          </p>
+          <h3><i>Display</i> flex (Flexbox)</h3>
+          <p>
+            O Flexbox consiste em um conjunto de estilos CSS projetado para criar <i>layouts</i> com um <i>design</i>
+            mais eficiente e
+            responsivo. Com o Flexbox, é possível criar <i>layouts</i> complexos e distribuir o espaço disponível de
+            maneira mais
+            flexível entre itens em um contêiner, independentemente de seu tamanho ou da ordem no código HTML.
+          </p>
+          <p>
+            O Flexbox é similar ao Grid Layout em muitos aspectos, porém com recursos um pouco mais simples, mas não
+            menos
+            úteis.
+          </p>
+          <p>
+            O primeiro passo para desenvolver um <i>layout</i> com Flexbox é definir a propriedade <b>display: flex</b>
+            ao elemento pai
+            (o elemento que envolve os itens que você deseja organizar no <i>layout</i>). Ao definir esse estilo,
+            automaticamente
+            os elementos filhos ficaram dispostos lado a lado. Para os exemplos das propriedades do <b>display:
+              flex</b>,
+            considere a seguinte estrutura HTML:
+          </p>
+          <pre>
+            <code class="hljs language-html">
+&lt;div class="container"> 
+&lt;div class="item">1&lt;/div> 
+&lt;div class="item">2&lt;/div> 
+&lt;div class="item">3&lt;/div> 
+&lt;div class="item">4&lt;/div> 
+&lt;div class="item">5&lt;/div> 
+&lt;div class="item">6&lt;/div> 
+&lt;/div> 
+            </code>
+          </pre>
+          <p>
+            Depois de definir a propriedade display: flex, pode-se definir a direção dos elementos com a propriedade
+            <b>flex-direction</b>.
+          </p>
+          <pre>
+          <code class="hljs language-css">
+.container { display: flex; … } 
+          </code>
+         </pre>
+          <p>Observe estes exemplos de valores:</p>
+          <p>
+            <b>flex-direction: row;</b>: valor-padrão; deixa os elementos filhos dispostos na horizontal da esquerda
+            para a
+            direita.
+          </p>
+          <p><b>flex-direction: row-reverse;</b>: inverte a ordem dos elementos, iniciando da direita para a esquerda.
+          </p>
+          <p>
+            <b>flex-direction: column;</b>: coloca os elementos em formato de coluna, de cima para baixo. Na próxima
+            figura,
+            repare que os elementos não têm largura definida e, como consequência, ocupam a largura total da tela.
+          </p>
+          <p><b>flex-direction: column-reverse;</b>: coloca os elementos em formato de coluna, porém na ordem
+            decrescente.</p>
+          <p>
+            Diferentemente do Grid Layout, que contém propriedades para definir a largura dos elementos filhos, no
+            Flexbox
+            é preciso defini-las diretamente no item filho com a propriedade <b>width</b>. Porém, há recursos no Flexbox
+            que
+            manipulam como esses elementos se comportam em relação à largura da tela.
+          </p>
+          <p>
+            É o caso da propriedade <b>flex-wrap</b>, que basicamente controla o comportamento dos itens filhos em
+            relação ao
+            tamanho da tela. Para você entender melhor as funcionalidades do <b>flex-wrap</b>, será definido o estilo
+            <b>flex-direction: row</b>. Confira o seguinte exemplo:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.item{	width: 150px; …} 
+            </code>
+          </pre>
+          <p>
+            Definiu-se que a largura de cada <b>div</b> com a classe <b>item</b> terá 150 <i>pixels</i>. Porém, se a
+            tela em que esses
+            elementos forem abertos for menor que a soma dos itens, ou seja, quando não couber na tela esses 150
+            <i>pixels</i>,
+            os itens reduzirão sua largura automaticamente. Então, esses 150 <i>pixels</i> se comportam como se fosse
+            uma largura
+            máxima para cada item.
+          </p>
+          <img src="imgs/fig19.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Comportamento dos elementos com <b>flex-wrap</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Dois exemplos com 6 elementos HTML dispostos lado a lado. Um dos exemplos indica que, em telas maiores, as
+            tags ficam com seu tamanho original e, em telas menores, elas reduzem seu tamanho.
+          </p>
+          <p>
+            Repare no exemplo da figura que, mesmo com um tamanho fixo, os itens acabam reduzindo seu tamanho em telas
+            que
+            não comportam sua largura total. Mas, em tamanhos de tela que suportam sua largura completa, ou têm mais
+            espaço que a largura total dos elementos, os itens param seu tamanho na largura declarada com a propriedade
+            <b>width</b> do CSS.
+          </p>
+          <p>
+            Esse é o comportamento-padrão da propriedade <b>flex-wrap</b>. Essa propriedade tem três valores, são eles:
+            <b>wrap</b>,
+            <b>nowrap</b> e <b>wrap-reverse</b>. Quando se define que um elemento terá o <i>display</i> <b>flex</b>,
+            originalmente seus elementos
+            filhos adotam o estilo de <b>flex-wrap: nowrap</b>, que é o comportamento visto na figura anterior. É
+            importante
+            salientar que esse estilo vai no elemento pai, que, neste exemplo, é a classe <b>container</b>. Analise os
+            exemplos
+            com os outros valores:
+          </p>
+          <p>
+            <b>flex-wrap: wrap;</b>: caso os elementos não caibam na tela, esse valor irá reagrupá-los em mais linhas,
+            mantendo
+            sua largura originalmente definida.
+          </p>
+          <p>
+            <b>flex-wrap: wrap-reverse;</b>: têm o mesmo efeito que <b>wrap</b>, porém, quando os elementos não cabem na
+            tela,
+            são
+            agrupados em ordem inversa.
+          </p>
+          <p>
+            Dessa forma, pensando na responsividade do <i>site</i>, você possivelmente definirá a propriedade
+            <b>flex-wrap</b> com o
+            valor <b>wrap</b> ou <b>wrap-reverse</b>. E, caso queira mudar os valores de <b>flex-direction</b> e
+            <b>flex-wrap</b> juntos, existe uma
+            propriedade que é a forma compactada delas, chamada <b>flex-flow</b>.
+          </p>
+          <p>
+            Como exemplo, a propriedade <b>flex-flow: row wrap;</b> substitui os valores de <b>flex-direction</b> e
+            <b>flex-wrap</b>, pois
+            basicamente aqui se está definindo a direção em <b>row</b> e o <b>wrap</b>. Em síntese:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container{ flex-direction: column-reverse; flex-wrap: wrap-reverse … } 
+            </code>
+          </pre>
+          <p>Esse código é o mesmo que: </p>
+          <pre>
+            <code class="hljs language-css">
+.container{flex-flow: row wrap…}. 
+            </code>
+          </pre>
+          <p>Em todos os casos, é preciso definir o <b>display: flex</b>.</p>
+          <p>
+            Agora, conheça os estilos que definem o alinhamento e a distribuição entre os elementos. Assim como visto no
+            capítulo sobre Grid Layout, o Flexbox também contém recursos que facilitam o alinhamento de seus elementos
+            filhos. Comece então entendendo como alinhar os elementos na horizontal e, para isso, obviamente, os
+            elementos
+            não podem ocupar a largura total do elemento pai, pois, dessa forma, você não conseguiria ver as
+            modificações.
+          </p>
+          <p>
+            A propriedade que define esses estilos é muito parecida com a mencionada no Grid Layout e chama-se
+            <b>justify-content</b>.
+          </p>
+          <!-- CARDS -->
+
+
+
+          <div class="acessivel print">
+            <p><b>justify-content: flex-start</b></p>
+            <p> É o valor-padrão e alinha os elementos da esquerda para a direita.</p>
+            <p><b>justify-content: flex-center</b></p>
+            <p>Centraliza os elementos.</p>
+            <p><b>justify-content: flex-end</b></p>
+            <p>Alinha os elementos à direita.</p>
+          </div>
+          <p>Observe na figura a comparação entre o resultado desses três valores: </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Comparação entre <b>justify-content flex-start</b>, <b>center</b> e <b>flex-end</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Três telas lado a lado, com layout flex, mostrando que o valor flex-start alinha os elementos à esquerda, o
+            center alinha no meio e o flex-end, à direita.
+          </p>
+          <p>
+            Também é possível usar valores para distribuir os elementos na tela, exatamente como se faz no Grid Layout.
+            Analise os seguintes exemplos:
+          </p>
+          <ul>
+            <li>
+              <b>justify-content: space-evenly</b>: os elementos são distribuídos de modo que o espaçamento entre eles,
+              incluindo
+              entre as bordas do elemento pai, seja igual.
+            </li>
+            <li>
+              <b>justify-content: space-around</b>: esse valor terá um efeito similar ao <b>space-evenly</b>, porém,
+              aqui, os elementos
+              são distribuídos nas bordas com o mesmo espaçamento entre eles. Na prática, é como se cada elemento
+              tivesse
+              uma margem à direita e outra à esquerda. Se cada elemento tem sua própria margem, consequentemente essa
+              margem fica duplicada entre os elementos internos, mas, como o primeiro elemento e o último não contêm
+              elementos entre eles, haverá então somente o espaço do próprio elemento. Repare então que, no
+              <b>space-around</b>,
+              o primeiro e o último elemento de cada linha ficaram mais próximos das bordas se comparados ao
+              <b>space-evenly</b>.
+            </li>
+            <li>
+              <b>justify-content: space-between</b>: os elementos são distribuídos com espaçamentos iguais entre eles.
+              No
+              entanto, o primeiro e o último elemento de cada linha ficam colados em suas extremidades, ou seja, não a
+              margens horizontais entre o início e o fim de cada linha.
+            </li>
+          </ul>
+          <p>Aqui, os valores e os efeitos são exatamente os mesmos estudados no Grid Layout.</p>
+          <p>
+            Já para alinhar os elementos na vertical, o Flexbox também tem recursos muito parecidos com o Grid Layout,
+            porém, o Flexbox trata individualmente cada linha ou coluna. É possível dizer que o Grid Layout é um modelo
+            bidimensional, pois em seu modelo é sempre entendido que haverá linhas e colunas, ou seja, dois elementos.
+            Já
+            o Flexbox é um modelo de <i>layout</i> unidimensional, pois trata individualmente cada agrupamento de
+            elementos, seja
+            ele uma linha ou uma coluna.
+          </p>
+          <p>
+            Assim, para alinhar os elementos na vertical, o Flexbox contém a propriedade <b>align-items</b>. Essa
+            propriedade
+            entende que o alinhamento ocorrerá somente em uma linha. Para que você consiga visualizar esses estilos,
+            precisará definir uma altura fixa para o elemento pai, neste caso, a classe <b>container</b>. Então, para os
+            próximos
+            exemplos, será adicionada a propriedade <b>height: 400px</b> à classe <b>container</b>. Para uma melhor
+            compreensão desses
+            estilos, será definida a propriedade <b>flex-wrap</b> para <b>nowrap</b>.
+          </p>
+          <p>O elemento <b>align-itens</b> contém os seguintes valores: <b>flex-start</b>, <b>flex-end</b>,
+            <b>center</b>, <b>stretch</b> e <b>baseline</b>. Confira:
+          </p>
+          <ul>
+            <li><b>align-items: stretch</b>: valor-padrão; faz com que os elementos ocupem a altura total do container.
+            </li>
+            <li><b>align-items: flex-start</b>: faz os elementos ordenarem-se na parte de cima.</li>
+            <li><b>align-items: flex-end</b>: faz os elementos alinharem-se na parte de baixo.</li>
+            <li><b>align-items: center</b>: centraliza os elementos na vertical.</li>
+            <li>
+              <b>align-items: baseline</b>: faz os elementos alinharem-se de acordo com a altura da linha de base. Sua
+              utilização
+              não é tão comum e, para que se possa enxergar seu estilo, é preciso ter altura de linhas diferentes entre
+              os
+              elementos ou ter fontes de tamanhos diferentes.
+            </li>
+          </ul>
+
+          <!-- SLIDESHOW -->
+
+          <p class="no-print" aria-hidden="true">Clique ou toque nas setas para visualizar as imagens.</p>
+
+
+
+          <div class="acessivel print">
+            <img src="imgs/" class="center-block img-responsive print">
+            <p class="legenda-imagem">
+              Comparação entre<b> align-itens flex-start</b>, <b>center</b> e <b>flex-end</b> <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">
+              Três telas lado a lado exemplificando que o valor flex-start alinha os elementos acima, o center alinha no
+              meio e o flex-end, abaixo.
+            </p>
+            <img src="imgs/" class="center-block img-responsive print">
+            <p class="legenda-imagem">
+              Exemplo de linha de base (<b>baseline</b>) <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">
+              Seis itens lado a lado, alinhados pela linha base de suas letras.
+            </p>
+          </div>
+          <p>
+            O Flexbox também tem a propriedade <b>align-content</b>, porém, para que se consiga visualizar suas
+            aplicações, é
+            preciso definir a propriedade <b>flex-wrap</b> com valor <b>wrap</b> em seu container.
+          </p>
+          <p>
+            Os valores de <b>align-content</b> são exatamente os mesmos de <b>justify-content</b> e os estilos/efeitos
+            aplicados são
+            exatamente os mesmos vistos no capítulo que aborda Grid Layout; na verdade, é a mesma propriedade, porém, em
+            Flexbox, utilizam-se os valores <b>flex-start</b> e <b>flex-end</b> no lugar de <b>start</b> e <b>end</b>.
+          </p>
+          <p>
+            É importante reforçar, contudo, que, para que funcionem corretamente os estilos de <b>align-content</b>, é
+            preciso
+            definir o <b>flex-wrap: wrap</b>, pois isso permite que o Flexbox tenha mais de uma linha.
+          </p>
+          <h4>Propriedades do Flexbox aplicadas nos elementos sucessores (filhos)</h4>
+          <p>
+            Todas as propriedades do Flexbox mostradas até agora são aplicadas no elemento pai. As propriedades deste
+            capítulo devem ser inseridas nos elementos filhos, neste caso, nos elementos com a classe <b>item</b>.
+          </p>
+          <p>
+            Com Flexbox, é possível alinhar na vertical individualmente cada item. Para isso, utiliza-se a propriedade
+            <b>align-self</b>. É importante destacar que os elementos aos quais se insere o <b>align-self</b> irão
+            sobrepor o que foi
+            definido em align-items.
+          </p>
+
+          <!-- AQUI É PRA SER ICONE EXEMPLO MAS N TEMOS - ver com amanda o que usar -->
+          <div class="caixa-destaque icone fundamental">
+            <p>
+              Os valores aceitos em <b>align-self</b> são os mesmos mostrados em <b>align-items: flex-start</b>,
+              <b>flex-end</b>, <b>center</b>,
+              <b>stretch</b> e <b>baseline</b>, considerando que no elemento pai foi definido o <b>align-items:
+                flex-start</b>. Veja alguns
+              exemplos:
+            </p>
+            <p><b>.container .item:first-child{ align-self: flex-end }</b> – Define o primeiro item como alinhado
+              abaixo.</p>
+            <p><b>.container .item:nth-child(2){ align-self: center }</b> – Define o segundo item como alinhado ao
+              centro.</p>
+            <p><b>.container .item:nth-child(3){ align-self: start}</b> – Define o terceiro item como alinhado ao topo.
+            </p>
+            <p><b>.container .item:nth-child(4){ align-self: center }</b> – Define o quarto item como alinhado ao
+              centro.</p>
+            <p><b>.container .item:nth-child(5){ align-self: flex-end }</b> – Define o quinto item como alinhado abaixo.
+            </p>
+            <p><b>.container .item:nth-child(6){ align-self: stretch}</b> – Define o sexto item com altura total.</p>
+          </div>
+          <p>
+            É importante destacar que não é necessário criar o estilo para todos os itens. Você aplicará o
+            <b>align-self</b>
+            somente nos itens que deseja modificar. Veja o resultado desses estilos na figura:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Exemplos de <b>align-self</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, alinhados individualmente pelo align-self. Os itens 1 e 5 estão alinhados pela base,
+            os itens 2 e 4 estão alinhados no centro e o item 3, no topo.
+          </p>
+          <p>
+            Uma vantagem do Flexbox é que ele permite mudar a ordem dos elementos de uma maneira bem prática,
+            diretamente
+            pelo CSS, sem a necessidade de modificar sua estrutura HTML. Isso é feito com a propriedade <b>order</b>.
+          </p>
+          <p>
+            A propriedade <b>order</b> é feita nos elementos filhos e o <b>Flexbox</b> leva como base que todos os
+            elementos têm <b>order</b>
+            com valor 0 (zero). Observe:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(2){ order: 1;} 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, está sendo definido que o elemento de filho <b>2</b> ficará com <b>order 1</b>. Como
+            resultado, o segundo
+            elemento ficará na <b>última posição</b>. Analise a figura:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Mudando a ordem dos elementos <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, porém o item com número 2 ficou na última posição, ao definir order: 1.
+          </p>
+          <p>
+            Isso pode causar alguma confusão, pois, intuitivamente, se o estilo <b>order 1</b> for definido, entende-se
+            que ele
+            deveria ir para a primeira posição. Mas isso não ocorre porque, conforme mencionado anteriormente, por
+            padrão,
+            todo o elemento começa com <b>order</b> zero. Então, quando se define o valor 1, este passa a ser o maior
+            valor entre
+            todos, consequentemente indo para a última posição.
+          </p>
+          <p>
+            Dito isso, na maioria das vezes, para que um posicionamento funcione como o esperado, será preciso definir a
+            ordem de todos os elementos. Confira:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:first-child{ order: 2 }  
+.container .item:nth-child(2){ order: 5 }     
+.container .item:nth-child(3){ order: 1}  
+.container .item:nth-child(4){ order: 3} 
+.container .item:nth-child(5){ order: 4 } 
+            </code>
+          </pre>
+          <p>Veja o resultado: </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Ordenando todos os elementos <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Seis itens lado a lado, porém reordenados. </p>
+          <p>
+            Com o Flexbox também é possível manipular o comportamento individual dos elementos com propriedades que
+            definirão o quando ele irá crescer ou diminuir em relação aos outros. Porém, essa alteração no tamanho
+            também
+            levará em conta o espaço, na largura, que irá sobrar nos casos em que os elementos tenham tamanhos fixos.
+          </p>
+          <p>
+            Comece aprendendo a propriedade <b>flex-grow</b>. É ela que define quanto um elemento aumentará. Para
+            utilizá-la,
+            basta inserir a propriedade no elemento, ou elementos, que você deseja que tenha prioridade no crescimento.
+            É
+            importante destacar que, por padrão, todos os elementos têm o valor <b>flex-grow</b> igual a 0 (zero).
+          </p>
+          <p>
+            Para os próximos exemplos serão removidas as propriedades <b>order</b> dos elementos, será considerado que o
+            <b>container</b> está com propriedade <b>flex-wrap: nowrap</b> e será redefinida a largura dos elementos com
+            a classe item
+            para <b>width: 50px</b>. Agora será aplicado o <b>flex-grow</b> no quinto elemento. Veja:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(5){ flex-grow: 1 } 
+            </code>
+          </pre>
+          <p>
+            Nesse caso, o elemento preencherá todo o espaço sobrando na largura da tela. Como ele é o único que tem
+            prioridade de crescimento, mesmo com o valor 1, ele ocupará todo o espaço disponível na linha.
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Aplicando <b>flex-grow </b>em um elemento <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, em que cada um tem 50 pixels de largura, alinhados à esquerda, porém, o quinto
+            elemento aumenta para ocupar todo o espaço que sobraria entre os elementos e a borda da tela.
+          </p>
+          <p>
+            Percebe-se então que, aplicando o <b>flex-grow</b>, mesmo que em apenas um elemento, ele fará com que seja
+            preenchida
+            a linha inteira.
+          </p>
+          <p>
+            Isso ocorre porque os dois elementos têm o mesmo valor, neste caso o 1, porém, mesmo que eles tivessem
+            valores
+            altos, como 9, eles se mantêm no mesmo tamanho, pois o valor de <b>flex-grow</b> trata da prioridade de
+            crescimento e
+            não da proporção de crescimento.
+          </p>
+          <p>
+            É possível ver diferentes proporções de crescimento quando houver mais de um elemento com o
+            <b>flex-grow</b>, porém
+            com valores diferentes. Será adicionado um valor diferente agora para o sexto elemento.
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(6){ flex-grow: 2 } 
+            </code>
+          </pre>
+          <p>
+            Repare que o sexto elemento ficará maior que os elementos 4 e 5, porém não terá exatamente o dobro do
+            tamanho,
+            pois ele considera o espaço que sobra entre os elementos e a tela, ou seja, o <b>flex-grow</b> não reduz a
+            largura
+            dos demais elementos. Veja o resultado:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Aplicando <b>flex-grow</b> com valores diferentes <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, em que cada um tem 50 pixels de largura, alinhados à esquerda. Porém, o quinto e o
+            quarto elementos aumentam com proporções iguais e o sexto elemento aumenta com tamanho maior que os demais
+            elementos que contêm o flex-grow.
+          </p>
+          <p>
+            Outro estilo muito parecido com o <b>flex-grow</b> é o <b>flex-shrink</b>. Contudo, diferentemente do
+            <b>flex-grow</b>, o
+            <b>flex-shrink</b> indica a prioridade de diminuição dos elementos quando estes são maiores que a tela
+            aberta.
+          </p>
+          <p>
+            Outra diferença é que o valor-padrão de <b>flex-shrink</b> para todos os elementos filhos do <i>display</i>
+            <b>flex</b> é 1 (repare
+            que no <b>flex-grow</b> é zero). Então, para avisar que um elemento deve reduzir mais que os outros, quando
+            eles não
+            couberem na tela, é preciso definir <b>flex-shrink</b> com valor igual a 2 ou maior.
+          </p>
+          <p>
+            Para que se consiga visualizar o próximo exemplo, foram retirados os valores de <b>flex-grow</b> e foi
+            aumentado o
+            <b>width</b> dos itens para 300 <i>pixels</i>.
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(4){ flex-shrink: 2 } 
+            </code>
+          </pre>
+          <p>
+            Esse código indica que o quarto elemento começará a diminuir proporcionalmente mais que os outros. Observe
+            na
+            figura que o elemento 4 é ligeiramente menor que os demais:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Aplicando <b>flex-shrink </b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, com o elemento de número 4 sendo um pouco menor que os demais.
+          </p>
+          <p>
+            O Flexbox também tem outra propriedade que controla o tamanho dos elementos, chamada <b>flex-basis</b>, a
+            qual
+            determina um tamanho inicial para o elemento especificado e cujo valor pode ser especificado em
+            <i>pixels</i>. Veja
+            um exemplo considerando que todos os elementos tenham a largura-padrão de 100px (<b>width: 100px</b>).
+          </p>
+          <pre>
+            <code class="hljs language-css">
+.container .item:nth-child(3){ flex-basis: 200px } 
+            </code>
+          </pre>
+          <p>
+            Esse estilo fará com que o elemento de número 3 comece com o valor de 200 pixels de largura, caso haja
+            espaço
+            suficiente na tela.
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">
+            Aplicando <b>flex-basis</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Seis itens lado a lado, todos com o tamanho-padrão de 100 pixels, porém o elemento de número 3 tem 200
+            pixels de largura.
+          </p>
+          <p>
+            Por fim, existe a forma compacta de inserir essas propriedades <b>flex-grow</b>,<b> flex-shrink</b> e
+            <b>flex-basis</b>. Para usar
+            os três estilos em uma propriedade única, você pode usar a propriedade <b>flex</b>. Por exemplo, <b>flex: 1
+              2 200px;</b>
+            basicamente informa que o valor de <b>flex-grow</b> será 1, o valor de <b>flex-shrink</b> será 2 e o
+            <b>flex-basis</b> será de 200
+            <i> pixels</i>. Apesar de prática, essa definição dos três valores em um elemento não ocorre em todos os
+            casos. Então,
+            essa forma abreviada não é tão comum de se ver no dia a dia.
+          </p>
+          <p>
+            Em suma, o Flexbox é especialmente útil para criar barras de navegação, caixas de comentários, galerias de
+            imagens e outros <i>layouts</i> nos quais a distribuição de espaço é crucial. Ele simplifica a criação de
+            <i>layouts</i>
+            complexos que podem ser desafiadores com modelos de <i>layout</i> mais tradicionais e hoje em dia é
+            amplamente
+            utilizado para o desenvolvimento de <i>template</i>-padrão de CMSs (<i>content management system</i>) e
+            <i>frameworks</i>
+            <i>front-end</i>, como o Bootstrap.
+          </p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="container">
+          <h3>Unidades de medidas absolutas e relativas</h3>
+          <p>
+            No CSS, as unidades de medida podem ser classificadas em duas categorias principais: unidades absolutas e
+            unidades relativas. Cada tipo de unidade tem suas próprias características e é apropriado para diferentes
+            contextos de <i>design</i>.
+          </p>
+          <p>
+            Uma unidade absoluta tem um tamanho fixo, ou seja, não varia em diferentes contextos e, apesar de no CSS
+            existirem unidades de medidas como centímetros, milímetros e polegadas, elas não são usuais em interfaces
+            para
+            <i> web</i>, pois são adequadas a elementos físicos, como impressos.
+          </p>
+
+          <!-- pg 64 caixa destaque -->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -542,7 +3351,6 @@ input:checked + label{ background: #f60; color: #fff;}
 
         </div>
       </div>
-
 
 
     </section>
