@@ -19,19 +19,19 @@ Texto: OK
 Layout: OK
 Mobile: OK
 
-Conhecimento 8:
-Acessibilidade: OK 
-Impressão: OK
-Texto: OK, faltou só o infográfico
-Layout:
-Mobile:
-
-Conhecimento 11:
+Conhecimento 8*
 Acessibilidade: OK 
 Impressão: OK
 Texto: OK
-Layout:
-Mobile:
+Layout: OK
+Mobile: OK
+
+Conhecimento 11*
+Acessibilidade: OK 
+Impressão: OK
+Texto: OK
+Layout: OK
+Mobile: OK
 
 Conhecimento Referência*
 Acessibilidade: OK 
