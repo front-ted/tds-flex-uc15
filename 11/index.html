@@ -115,9 +115,8 @@
                   <div class="modal-body">
                     <div class="container">
                       <div class="modal-header" style="padding-top: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                       </div>
-                      <h4>Testes unitários</h4>
+                      <h4 class="titulo-modalb1">Testes unitários</h4>
                       <p>Verificam a menor parte testável do <i>software</i>, conhecida como “unidade”. Em geral, isso
                         significa testar funções ou métodos individuais em isolamento para garantir que funcionem
                         conforme
@@ -203,9 +202,8 @@
                   <div class="modal-body">
                     <div class="container">
                       <div class="modal-header" style="padding-top: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                       </div>
-                      <h4>Testes de integração</h4>
+                      <h4 class="titulo-modalb1">Testes de integração</h4>
                       <p>Enquanto os testes unitários focam unidades isoladas, os testes de integração verificam o
                         funcionamento conjunto de diferentes módulos ou componentes do sistema. O objetivo é garantir
                         que as unidades se integrem corretamente e que a comunicação entre elas esteja funcionando como
@@ -269,9 +267,8 @@
                   <div class="modal-body">
                     <div class="container">
                       <div class="modal-header" style="padding-top: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                       </div>
-                      <h4>Testes E2E</h4>
+                      <h4 class="titulo-modalb1">Testes E2E</h4>
                       <p>Os testes E2E (<i>end-to-end</i>) simulam o fluxo completo de uso de uma aplicação, desde a
                         interação
                         inicial do usuário até o resultado final. O objetivo é garantir que o sistema funcione conforme
@@ -967,9 +964,16 @@
                   <div class="modal-body">
                     <div class="container">
                       <div class="modal-header" style="padding-top: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                       </div>
-                      <h4>Selenium</h4>
+                      <div class="row">
+                        <div class="col-lg-3 titulo-borda1">
+                          <img src="imgs/logo_modal1.png" class="img-responsive center-block no-print"
+                            aria-hidden="true">
+                        </div>
+                        <div class="col-lg-9 titulo-borda">
+                          <h4>Selenium</h4>
+                        </div>
+                      </div>
                       <p>O Selenium é uma ferramenta de automação de testes muito popular e poderosa utilizada para
                         testar
                         aplicações <i>web</i>. O Selenium permite aos desenvolvedores e testadores escreverem
@@ -1011,7 +1015,7 @@
                       <p>Com o Node previamente instalado, crie um diretório para o seu projeto e abra-o no VS Code.
                         Então,
                         digite no terminal o seguinte comando para instalar o Selenium:</p>
-                      <p class="marca-texto">npm install selenium-webdriver</p>
+                      <p><mark>npm install selenium-webdriver</mark></p>
                       <p>Então, ele criará todas as dependências e os arquivos necessários ao funcionamento do Selenium.
                       </p>
                       <img src="imgs/figura_08.png" class="center-block img-responsive hidden-sm hidden-xs print">
@@ -1257,9 +1261,16 @@
                   <div class="modal-body">
                     <div class="container">
                       <div class="modal-header" style="padding-top: 30px;">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                       </div>
-                      <h4>Cypress</h4>
+                      <div class="row">
+                        <div class="col-lg-3 titulo-borda1">
+                          <img src="imgs/logo_modal2.png" class="img-responsive center-block no-print"
+                            aria-hidden="true">
+                        </div>
+                        <div class="col-lg-9 titulo-borda">
+                          <h4>Cypress</h4>
+                        </div>
+                      </div>
                       <p>O <b>Cypress</b> tem uma API (<i>application programming interface</i>) simples e fluente,
                         projetada
                         especificamente
@@ -1517,7 +1528,7 @@
                 escrever tanto o código do lado do cliente quanto do servidor em uma única linguagem.</p>
               <p>Com o Node previamente instalado, crie um diretório para o seu projeto e abra-o no VS Code. Então,
                 digite no terminal o seguinte comando para instalar o Selenium:</p>
-              <p class="marca-texto">npm install selenium-webdriver</p>
+              <p><mark>npm install selenium-webdriver</mark></p>
               <p>Então, ele criará todas as dependências e os arquivos necessários ao funcionamento do Selenium.</p>
               <img src="imgs/figura_08.png" class="center-block img-responsive hidden-sm hidden-xs print">
               <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
@@ -2027,6 +2038,19 @@
       }
     </style>
   </noscript>
+  <script>
+    $(document).ready(function () {
+      $('#accordion').on('shown.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').addClass('open');
+        target.prev('.panel-heading').find('.panel-title a').addClass('open');
+      }).on('hidden.bs.collapse', function (e) {
+        var target = $(e.target);
+        target.prev('.panel-heading').removeClass('open');
+        target.prev('.panel-heading').find('.panel-title a').removeClass('open');
+      });
+    });
+  </script>
   <script>
 
     document.addEventListener('DOMContentLoaded', (event) => {
