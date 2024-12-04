@@ -36,24 +36,6 @@ body {
   background-color: aquamarine !important;
 }
 
-.lista2 li {
-  list-style: none;
-}
-
-.lista2 li::before {
-  content: '';
-  display: inline-block;
-  margin-right: 10px;
-
-  /* Height of the list image*/
-  height: 25px;
-
-  /* Width of the list image*/
-  width: 25px;
-  background-image: url("../imgs/fig-37.png");
-  background-size: cover;
-}
-
 /* carrosel */
 
 
@@ -450,7 +432,6 @@ label.menu-toggle {
   cursor: pointer;
   text-indent: -9999px;
   background: #004b8a url("../imgs/menu-alt.png") 50% 50%/25px 25px no-repeat;
-
 }
 
 .imgBorder {
@@ -461,7 +442,6 @@ label.menu-toggle {
 }
 
 /*---------- FIM MENU ----------*/
-
 
 .marcador-curso li {
   margin-bottom: 0.8em;
@@ -587,7 +567,6 @@ mark {
   display: flex;
   flex-direction: column;
   gap: 15px;
-
 }
 
 .left-panel button {
@@ -688,8 +667,6 @@ mark {
   margin-top: -25%;
 }
 
-
-
 #box-1,
 #box-2,
 #box-3,
@@ -701,11 +678,7 @@ mark {
   color: #64b5f6 !important;
 }
 
-
-
-
 /* fim infografico valores */
-
 
 .caixa-screen {
   margin-left: 5%;
@@ -793,43 +766,6 @@ mark {
   justify-content: space-evenly;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .bt-transcricao{
-  border: unset !important;
-}
-
-.botao-tr{
-  margin-top: -50px;
-}
-
-.audio-1{
-  margin-top: 5%;
-} */
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 820px) {
   body {
     overflow-x: hidden;
@@ -860,13 +796,7 @@ mark {
   .carousel-control.left {
     left: 15%;
   }
-
-
 }
-
-
-
-@media screen and (max-width: 780px) {}
 
 @media screen and (max-width: 480px) {
 
@@ -946,6 +876,3 @@ mark {
     left: 5%;
   }
 }
-
-
-@media screen and (max-width: 375px) {}
