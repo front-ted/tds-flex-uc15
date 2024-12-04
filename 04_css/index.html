@@ -1200,7 +1200,6 @@ background: radial-gradient( circle, #499bea , #7b20e3);
               </div>
             </div>
           </div>
-
           <div class="no-print" aria-hidden="true">
             <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
               aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -1227,7 +1226,6 @@ background: radial-gradient( circle, #499bea , #7b20e3);
               </div>
             </div>
           </div>
-
           <div class="no-print" aria-hidden="true">
             <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
               aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -2147,18 +2145,26 @@ animation: nomeDaAnimacao  5s;
             aplicado.
           </p>
           <p>Atualmente existem dois tipos de mídias válidos e aplicáveis ao <i>media query</i>. São eles:</p>
-          <!-- TEXTOS LADO A LADO: -->
-          <p> <b>Screen</b> – Representa qualquer tipo de tela digital, como computadores, <i>tablets</i>,
-            <i>smartphones</i> etc.
-          </p>
-          <p>
-            <b>Print</b> – Aplicado somente à impressão. Imagine que você clique no botão <b>imprimir</b> do seu
-            navegador (função pouco
-            usual hoje). Sim, todos os navegadores têm a opção de imprimir uma página. Usando o tipo de mídia
-            <b>print</b> no
-            <i>media query</i>, você consegue especificar o estilo daquela página ao imprimi-la.
-          </p>
-          <!-- TEXTOS LADO A LADO -->
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 caixa-screen">
+              <div class="caixa-destaque">
+                <p> <b>Screen</b> – Representa qualquer tipo de tela digital, como computadores, <i>tablets</i>,
+                  <i>smartphones</i> etc.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 caixa-print">
+              <div class="caixa-destaque">
+                <p>
+                  <b>Print</b> – Aplicado somente à impressão. Imagine que você clique no botão <b>imprimir</b> do seu
+                  navegador (função pouco
+                  usual hoje). Sim, todos os navegadores têm a opção de imprimir uma página. Usando o tipo de mídia
+                  <b>print</b> no
+                  <i>media query</i>, você consegue especificar o estilo daquela página ao imprimi-la.
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="caixa-destaque icone anotar">
             <p>
               Existe também um terceiro valor chamado <b>all</b>, que basicamente avisa que aquele estilo é aplicado a
@@ -2435,7 +2441,10 @@ grid-template-columns: 20% 60% 20%
             </li>
             <li><b>justify-content: center</b>: centraliza os elementos.</li>
           </ul>
-          <img src="imgs/fig10.png" class="center-block img-responsive print">
+          <img src="imgs/fig10.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig10.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig10.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de <b>justify-content: center </b><br>
             Fonte: Senac EAD (2024)
@@ -2454,7 +2463,10 @@ grid-template-columns: 20% 60% 20%
               incluindo entre as bordas do elemento pai, seja igual.
             </li>
           </ul>
-          <img src="imgs/fig11.png" class="center-block img-responsive print">
+          <img src="imgs/fig11.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig11.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig11.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de <b>justify-content: space-evenly</b> <br>
             Fonte: Senac EAD (2024)
@@ -2483,7 +2495,10 @@ grid-template-columns: 20% 60% 20%
               margens horizontais entre o início e o fim de cada linha.
             </li>
           </ul>
-          <img src="imgs/fig12.png" class="center-block img-responsive print">
+          <img src="imgs/fig12.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig12.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig12.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de <b>justify-content: space-between</b> <br>
             Fonte: Senac EAD (2024)
@@ -2524,7 +2539,10 @@ grid-template-columns: 20% 60% 20%
             porém aplicados na vertical, logo, a explicação deles será a mesma. Veja nas imagens a seguir exemplos de
             aplicação desses estilos.
           </p>
-          <img src="imgs/fig13.png" class="center-block img-responsive print">
+          <img src="imgs/fig13.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig13.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig13.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Comparação entre <b>align-content start</b>, <b>center</b> e <b>end</b> <br>
             Fonte: Senac EAD (2024)
@@ -2538,7 +2556,10 @@ grid-template-columns: 20% 60% 20%
             <b>space-between</b>, aplicados na
             propriedade align-content.
           </p>
-          <img src="imgs/fig14.png" class="center-block img-responsive print">
+          <img src="imgs/fig14.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig14.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig14.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Comparação entre <b>space-evenly</b>, <b>space-around</b> e <b>space-between</b> <br>
             Fonte: Senac EAD (2024)
@@ -2586,7 +2607,10 @@ grid-template-columns: 20% 60% 20%
             3. Como ele foi modificado para terminar na linha 3 da grade, ele deve ocupar agora o espaço de duas
             colunas.
           </p>
-          <img src="imgs/fig15.png" class="center-block img-responsive print">
+          <img src="imgs/fig15.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig15.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig15.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de <b>grid-column</b> <br>
             Fonte: Senac EAD (2024)
@@ -2615,7 +2639,10 @@ grid-template-columns: 20% 60% 20%
           </pre>
           <p>Lembre-se de que a pseudoclasse <b>last-child</b> seleciona o último elemento especificado. Veja o
             resultado nesta figura: </p>
-          <img src="imgs/fig16.png" class="center-block img-responsive print">
+          <img src="imgs/fig16.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig16.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig16.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de <b>grid-column</b> ocupando três colunas <br>
             Fonte: Senac EAD (2024)
@@ -2653,7 +2680,10 @@ grid-template-columns: 20% 60% 20%
             </code>
           </pre>
           <p>Analise o resultado na imagem: </p>
-          <img src="imgs/fig17.png" class="center-block img-responsive print">
+          <img src="imgs/fig17.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig17.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig17.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de Grid Layout utilizando <b>grid-row</b> e <b>grid-column</b> <br>
             Fonte: Senac EAD (2024)
@@ -2726,7 +2756,10 @@ grid-template-areas: 'logo menu menu'
             renomeiam
             os números dos itens para se ter uma visualização melhor do posicionamento do <i>layout</i> deste exemplo.
           </p>
-          <img src="imgs/fig18.png" class="center-block img-responsive print">
+          <img src="imgs/fig18.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig18.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig18.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplo de Grid Layout – <b>grid-template-areas</b> <br>
             Fonte: Senac EAD (2024)
@@ -2850,7 +2883,10 @@ grid-template-areas: 'logo menu menu'
             uma largura
             máxima para cada item.
           </p>
-          <img src="imgs/fig19.png" class="center-block img-responsive print">
+          <img src="imgs/fig19.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig19.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig19.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Comportamento dos elementos com <b>flex-wrap</b> <br>
             Fonte: Senac EAD (2024)
@@ -2937,7 +2973,10 @@ grid-template-areas: 'logo menu menu'
             <p>Alinha os elementos à direita.</p>
           </div>
           <p>Observe na figura a comparação entre o resultado desses três valores: </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig20.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig20.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig20.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Comparação entre <b>justify-content flex-start</b>, <b>center</b> e <b>flex-end</b> <br>
             Fonte: Senac EAD (2024)
@@ -3020,7 +3059,7 @@ grid-template-areas: 'logo menu menu'
 
 
           <div class="acessivel print">
-            <img src="imgs/" class="center-block img-responsive print">
+            <img src="imgs/slide_fig21.png" class="center-block img-responsive print">
             <p class="legenda-imagem">
               Comparação entre<b> align-itens flex-start</b>, <b>center</b> e <b>flex-end</b> <br>
               Fonte: Senac EAD (2024)
@@ -3029,7 +3068,7 @@ grid-template-areas: 'logo menu menu'
               Três telas lado a lado exemplificando que o valor flex-start alinha os elementos acima, o center alinha no
               meio e o flex-end, abaixo.
             </p>
-            <img src="imgs/" class="center-block img-responsive print">
+            <img src="imgs/slide_fig22.png" class="center-block img-responsive print">
             <p class="legenda-imagem">
               Exemplo de linha de base (<b>baseline</b>) <br>
               Fonte: Senac EAD (2024)
@@ -3092,7 +3131,10 @@ grid-template-areas: 'logo menu menu'
             <b>align-self</b>
             somente nos itens que deseja modificar. Veja o resultado desses estilos na figura:
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig23.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig23.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig23.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Exemplos de <b>align-self</b> <br>
             Fonte: Senac EAD (2024)
@@ -3121,7 +3163,10 @@ grid-template-areas: 'logo menu menu'
             resultado, o segundo
             elemento ficará na <b>última posição</b>. Analise a figura:
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig24.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig24.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig24.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Mudando a ordem dos elementos <br>
             Fonte: Senac EAD (2024)
@@ -3152,7 +3197,10 @@ grid-template-areas: 'logo menu menu'
             </code>
           </pre>
           <p>Veja o resultado: </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig25.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig25.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig25.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Ordenando todos os elementos <br>
             Fonte: Senac EAD (2024)
@@ -3186,7 +3234,10 @@ grid-template-areas: 'logo menu menu'
             Nesse caso, o elemento preencherá todo o espaço sobrando na largura da tela. Como ele é o único que tem
             prioridade de crescimento, mesmo com o valor 1, ele ocupará todo o espaço disponível na linha.
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig26.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig26.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig26.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Aplicando <b>flex-grow </b>em um elemento <br>
             Fonte: Senac EAD (2024)
@@ -3224,7 +3275,10 @@ grid-template-areas: 'logo menu menu'
             largura
             dos demais elementos. Veja o resultado:
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig27.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig27.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig27.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Aplicando <b>flex-grow</b> com valores diferentes <br>
             Fonte: Senac EAD (2024)
@@ -3262,7 +3316,10 @@ grid-template-areas: 'logo menu menu'
             na
             figura que o elemento 4 é ligeiramente menor que os demais:
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig28.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig28.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig28.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Aplicando <b>flex-shrink </b><br>
             Fonte: Senac EAD (2024)
@@ -3287,7 +3344,10 @@ grid-template-areas: 'logo menu menu'
             espaço
             suficiente na tela.
           </p>
-          <img src="imgs/" class="center-block img-responsive print">
+          <img src="imgs/fig29.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig29.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig29.png" class="center-block img-responsive"></a>
           <p class="legenda-imagem">
             Aplicando <b>flex-basis</b> <br>
             Fonte: Senac EAD (2024)
@@ -3333,22 +3393,287 @@ grid-template-areas: 'logo menu menu'
             para
             <i> web</i>, pois são adequadas a elementos físicos, como impressos.
           </p>
-
-          <!-- pg 64 caixa destaque -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="caixa-destaque icone importante">
+            <p>
+              A unidade de medida absoluta mais comum e amplamente utilizada é o <i><b>pixel</b></i>. Um <i>pixel</i>
+              (px) é um ponto de imagem
+              na tela, muito utilizado em <i>design</i> digital e <i>web</i>, sendo a menor unidade visual exibida. Em
+              contextos <i>web</i>, os
+              <i>pixels</i> são uma medida relativa à resolução do dispositivo e são frequentemente usados para
+              especificar
+              tamanhos de fontes, margens, larguras, alturas e outras dimensões.
+            </p>
+          </div>
+          <p>
+            A principal característica dos <i>pixels</i> é que eles são unidades absolutas, ou seja, não dependem do
+            contexto da
+            tela ou do dispositivo. Um <i>pixel</i> em um dispositivo com alta densidade de <i>pixels</i> (como um
+            dispositivo de
+            retina) tem a mesma dimensão visual que um <i>pixel</i> em um dispositivo com baixa densidade de
+            <i>pixels</i>.
+          </p>
+          <p>
+            Você viu vários exemplos de aplicação de <i>pixels</i> durante os capítulos deste material. Porém, quando o
+            assunto é
+            responsividade, em muitos casos, é mais apropriada a utilização de unidades de medidas relativas.
+          </p>
+          <p>
+            Existem unidades de medidas relativas mais adequadas a fontes e outras que são mais apropriadas a tamanhos
+            de
+            elementos, como é o caso da unidade de medida <b>em</b>.
+          </p>
+          <p>
+            O <b>em</b> representa o tamanho da fonte do elemento pai. Por exemplo, se o tamanho da fonte do pai for 16
+            <i>pixels</i>, 1
+            <b>em</b> será igual a 16 <i>pixels</i>.
+          </p>
+          <p>
+            Muito semelhante ao <b>em</b> existe a unidade de medida <b>rem</b> (significa root <b>em</b>), porém, o
+            tamanho desta sempre é
+            baseado no tamanho da fonte do elemento raiz (normalmente o elemento HTML).
+          </p>
+          <p>
+            Por exemplo, se o tamanho raiz da fonte foi determinado em 10 <i>pixels</i>, quando se determinar
+            <b>h1{font-size:
+              2.5rem; }</b>, essa fonte terá o equivalente a 25 <i>pixels</i>, pois terá 2 vezes e meia o tamanho da
+            fonte raiz, nesse
+            exemplo, 10 <i>pixels</i>.
+          </p>
+          <div class="caixa-destaque icone anotar">
+            <p>
+              Em <i>sites</i> responsivos, a unidade mais utilizada para determinar o tamanho dos elementos é o <b>%</b>
+              (percentual),
+              pois é feita com ele a representação de uma porcentagem do valor do elemento pai. Por exemplo, <b>50%</b>
+              é o mesmo
+              que metade do tamanho do elemento pai.
+            </p>
+          </div>
+          <p>Se não houver elemento pai, o percentual considerará o tamanho da tela. Exemplo: </p>
+          <pre>
+            <code class="hljs language-css">
+div {width: 33%;} 
+            </code>
+          </pre>
+          <p>Esse comando indica que a <b>div</b> ocupará um terço da largura de seu elemento pai.</p>
+          <p>
+            A utilização da unidade em percentual é perfeita para se utilizar na determinação da largura dos elementos,
+            mas não é muito indicada para determinar alturas, pois a maioria das interfaces terá uma altura de tela
+            indeterminada, o que resulta em comportamentos inesperados. Para definir a unidade de medida percentual para
+            determinar a altura de algum elemento, seu elemento pai deve ter uma altura absoluta fixa, com
+            <i>pixels</i>, por
+            exemplo.
+          </p>
+          <p> Veja algumas outras unidades relativas:</p>
+          <ul>
+            <li>
+              <b>vw (viewport width)</b>: representa uma porcentagem da largura da <i>viewport</i> (área visível da
+              janela do
+              navegador). Exemplo: <b>font-size: 5vw</b>.
+            </li>
+            <li><b>vh (viewport height)</b>: representa uma porcentagem da altura da <i>viewport</i>. Exemplo:
+              <b>height: 80vh</b>.
+            </li>
+            <li>
+              <b>vmin</b> e <b>vmax</b>: a unidade relativa <b>vmin</b> representa a porcentagem da menor dimensão da
+              <i>viewport</i> (largura ou
+              altura), enquanto a <b>vmax</b> representa a porcentagem da maior dimensão. Exemplo: <b>font-size:
+                3vmin</b>.
+            </li>
+          </ul>
+          <p>
+            As unidades relativas são frequentemente utilizadas para a criação de <i>layouts</i> mais flexíveis e
+            responsivos,
+            pois ajustam-se automaticamente com base nas dimensões da tela de exibição. Porém, é com a utilização em
+            conjunto das unidades absolutas e relativas que você conseguirá desenvolver interfaces modernas e otimizadas
+            para o usuário final.
+          </p>
+          <h3>Retrocompatibilidade – CSS</h3>
+          <p>
+            A retrocompatibilidade no contexto de CSS refere-se à capacidade de garantir que as folhas de estilo CSS
+            sejam
+            interpretadas e exibidas corretamente em navegadores mais antigos ou versões mais antigas de navegadores que
+            podem não suportar todas as funcionalidades CSS mais recentes.
+          </p>
+          <div class="caixa-destaque icone importante">
+            <p>
+              A retrocompatibilidade é importante especialmente em um ambiente <i>web</i>, no qual diferentes usuários
+              podem
+              estar usando uma variedade de navegadores e versões diferentes. Garantir que um <i>site</i> ou sistema
+              <i>web</i> seja
+              acessível e visualmente consistente em uma ampla gama de plataformas é essencial para oferecer uma boa
+              experiência ao usuário.
+            </p>
+          </div>
+          <p>
+            Entre as práticas mais comuns para garantir a compatibilidade está a utilização de <i>media queries</i>
+            vista
+            anteriormente. Entretanto, é extremamente importante salientar que nem todos os estilos de CSS são
+            suportados
+            em todos os navegadores. Na verdade, a maioria dos estilos de CSS3 não funciona em navegadores mais antigos.
+          </p>
+          <p>
+            Para verificar se uma propriedade, valor ou até mesmo unidade de medida funciona em determinado dispositivo,
+            você pode verificar o <i>site</i> da W3Schools. Em todas as páginas que ele explica sobre determinada
+            propriedade, há
+            uma área que mostra a versão do navegador suportada.
+          </p>
+          <p>
+            Porém, não são apenas as propriedades que não são aceitas em todos os navegadores, alguns não aceitam também
+            determinadas <i>tags</i> HTML e até mesmo unidades de medida específicas.
+          </p>
+          <p>
+            Uma ferramenta extremamente útil para verificar isso é o <i>site</i> Can I Use, que traz informações mais
+            completas
+            sobre a compatibilidade de determinados estilos em diferentes dispositivos.
+          </p>
+          <img src="imgs/fig30.png" class="center-block hidden-sm hidden-xs img-responsive print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig30.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig30.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">
+            Ferramenta Can I Use – <b>flex-shrink</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">
+            Tabela com lista de navegadores web, indicando com a cor verde as versões de cada navegador que suporta o
+            estilo pesquisado.
+          </p>
+          <p>
+            Nessa figura você pode ver um exemplo da ferramenta Can I Use. Repare que ela traz informações com mais
+            dispositivos se comparada ao <i>site</i> da W3, além de mostrar visualmente as versões que não são
+            suportadas,
+            grifadas em vermelho.
+          </p>
+          <h4>Prefixos de fornecedor</h4>
+          <p>
+            Prefixos em desenvolvimento <i>web</i> geralmente se referem ao uso de prefixos de fornecedor em
+            propriedades CSS e,
+            em menor medida, em propriedades JavaScript. Esses prefixos são adicionados a propriedades específicas para
+            indicar que a funcionalidade ainda está em fase de experimentação ou implementação e pode não ser totalmente
+            compatível entre navegadores.
+          </p>
+          <p>Os principais prefixos em propriedades CSS são: <b>-webkit-</b>, <b>-moz-</b>, <b>-ms-</b> e <b>-o-</b>.
+          </p>
+          <div class="table-responsive">
+            <table class="senac">
+              <tbody>
+                <tr>
+                  <th style="width: 25%;">Prefixo </th>
+                  <th style="width: 15%;">Navegador/fornecedor </th>
+                  <th style="width: 60%;">Descrição </th>
+                </tr>
+                <tr>
+                  <td><b>-webkit-</b></td>
+                  <td>Chrome, Safari e Opera</td>
+                  <td>Usado para dar compatibilidade em navegadores que usam como base o modelo WebKit.</td>
+                </tr>
+                <tr>
+                  <td><b>-moz-</b></td>
+                  <td>Firefox</td>
+                  <td>Funciona em <i>softwares</i> da Mozilla.</td>
+                </tr>
+                <tr>
+                  <td><b>-ms-</b></td>
+                  <td>Internet Explorer e Edge</td>
+                  <td>Funciona em <i>softwares</i> da Microsoft.</td>
+                </tr>
+                <tr>
+                  <td><b>-o-</b></td>
+                  <td>Opera</td>
+                  <td>
+                    Usado para dar compatibilidade em navegadores antigos do Opera, porém, este já adotou há anos o
+                    modelo
+                    WebKit.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="legenda-imagem">
+            Prefixos CSS <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p>
+            O uso excessivo de prefixos de fornecedor levou a problemas, pois diferentes navegadores implementam
+            funcionalidades de maneira diferente. Isso resultou em código CSS que precisava conter várias versões da
+            mesma
+            propriedade com diferentes prefixos para garantir compatibilidade.
+          </p>
+          <p>
+            Por exemplo, para a propriedade <b>border-radius</b>, você pode considerar o seguinte código para garantir
+            que
+            funcione em vários navegadores:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+div { 
+  border-radius: 10px; 
+  -webkit-border-radius: 10px; /* Safari/Chrome */ 
+  -moz-border-radius: 10px; /* Firefox */ 
+  -ms-border-radius: 10px; /* IE */ 
+  -o-border-radius: 10px; /* Opera */ 
+} 
+            </code>
+          </pre>
+          <p>
+            Ao usar prefixos de fornecedor, é fundamental equilibrar a experimentação e a preocupação com a
+            compatibilidade entre navegadores. O uso responsável desses prefixos, juntamente com práticas modernas, pode
+            garantir uma experiência de desenvolvimento <i>web</i> mais consistente.
+          </p>
+          <p>
+            Com o tempo, muitos prefixos de fornecedor foram descontinuados à medida que as implementações se tornaram
+            mais consistentes entre navegadores. No entanto, alguns ainda são usados em circunstâncias específicas.
+          </p>
+          <p>
+            Voltando à questão da retrocompatibilidade, é preciso lembrar que cada elemento HTML adota um estilo-padrão
+            e
+            cada navegador é quem decide como será esse estilo. Então, é comum algumas <i>tags</i> às quais não foram
+            adicionados
+            estilos ficarem diferentes em determinados navegadores.
+          </p>
+          <p>
+            Uma forma de resolver isso é fazendo o que se chama de <i>reset</i> CSS. O <i>reset</i> CSS é uma técnica
+            utilizada em
+            desenvolvimento <i>web</i> para garantir que todos os elementos HTML tenham uma aparência mais consistente e
+            previsível em diferentes navegadores. A ideia é remover ou redefinir estilos-padrão aplicados pelos
+            navegadores, proporcionando uma base limpa e consistente para a estilização posterior. Confira um exemplo
+            básico de um <i>reset</i> CSS simples:
+          </p>
+          <pre>
+            <code class="hljs language-css">
+/* Remove a margem e o preenchimento padrão dos elementos */ 
+body, h1, h2, h3, p, ul, li { 
+    margin: 0; 
+    padding: 0; 
+} 
+/* Garante que os elementos de bloco tenham largura total */ 
+body, html, div, article, section, main { 
+    width: 100%; 
+} 
+/* Remove o sublinhado (underline) e a cor do texto padrão dos links */ 
+a { 
+    text-decoration: none; 
+    color: inherit; 
+} 
+/* Redefine as configurações padrão de fonte e tamanho */ 
+body { 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+} 
+            </code>
+          </pre>
+          <p>
+            Mesmo usando todas as técnicas mostradas neste material, para garantir a retrocompatibilidade, é
+            <b>indispensável</b>
+            realizar testes, ou seja, testar seu sistema ou <i>site</i> em diferentes dispositivos e navegadores e assim
+            conseguir corrigir qualquer incompatibilidade que possa ocorrer.
+          </p>
+          <p>
+            Por fim, a retrocompatibilidade é importante porque os desenvolvedores podem garantir que seus <i>sites</i>
+            sejam
+            acessíveis a uma ampla variedade de usuários, independentemente dos navegadores ou dispositivos que estão
+            utilizando. Isso é fundamental para criar uma presença <i>web</i> inclusiva e eficaz.
+          </p>
         </div>
       </div>
 

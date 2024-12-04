@@ -1,9 +1,8 @@
- /* body {
+ /* body{
   background: url('../imgs/bg1.png') no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   overflow-x: hidden;
-}   */
+}     */
 
  .container {
    background-color: #fff;
@@ -630,17 +629,25 @@
    background-color: #67a2f1;
  }
 
- .hljs-selector-pseudo{
-  color: #64b5f6 !important;
-}
- 
+ .hljs-selector-pseudo {
+   color: #64b5f6 !important;
+ }
+
 
 
 
  /* fim infografico valores */
 
 
+ .caixa-screen {
+   margin-left: 5%;
+   margin-right: 0%;
+ }
 
+ .caixa-print {
+   margin-left: -10%;
+   margin-right: 5%;
+ }
 
 
 
@@ -693,6 +700,15 @@
      justify-content: center;
      flex-wrap: wrap;
    }
+   .caixa-screen {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+ 
+  .caixa-print {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 
 
 
@@ -745,7 +761,9 @@
      margin-left: 19%;
    }
 
-   #box-2, #box-3, #box-4 {
+   #box-2,
+   #box-3,
+   #box-4 {
      margin-top: 5%;
    }
 
@@ -761,7 +779,15 @@
      margin-left: 20%;
    }
 
+   .caixa-screen {
+     margin-left: 0%;
+     margin-right: 0%;
+   }
 
+   .caixa-print {
+     margin-left: 0%;
+     margin-right: 0%;
+   }
  }
 
 
