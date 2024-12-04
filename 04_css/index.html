@@ -2330,8 +2330,10 @@ grid-template-columns: 20% 60% 20%
           <p class="acessivel no-print">
             Layout em formato de grade com três colunas.
           </p>
-          Além de definir a largura das colunas, é possível definir o tamanho das linhas por meio da propriedade
-          <b>grid-template-rows</b>. Veja um exemplo:
+          <p>
+            Além de definir a largura das colunas, é possível definir o tamanho das linhas por meio da propriedade
+            <b>grid-template-rows</b>. Veja um exemplo:
+          </p>
           <pre>
             <code class="hljs language-css">
 .container { grid-template-rows: 100px 200px ; … } 
@@ -2960,10 +2962,47 @@ grid-template-areas: 'logo menu menu'
             A propriedade que define esses estilos é muito parecida com a mencionada no Grid Layout e chama-se
             <b>justify-content</b>.
           </p>
-          <!-- CARDS -->
-
-
-
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <div class="cards">
+              <div class="flip-card mx-auto my-5" aria-hidden="true">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="imgs/card_start.png">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      É o valor-padrão e alinha os elementos da esquerda para a direita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card mx-auto my-5" aria-hidden="true">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="imgs/card_center.png">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Centraliza os elementos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card mx-auto my-5" aria-hidden="true">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="imgs/card_end.png">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>
+                      Alinha os elementos à direita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="acessivel print">
             <p><b>justify-content: flex-start</b></p>
             <p> É o valor-padrão e alinha os elementos da esquerda para a direita.</p>
@@ -2982,16 +3021,19 @@ grid-template-areas: 'logo menu menu'
             Fonte: Senac EAD (2024)
           </p>
           <p class="acessivel no-print">
-            Três telas lado a lado, com layout flex, mostrando que o valor flex-start alinha os elementos à esquerda, o
+            Três telas lado a lado, com layout flex, mostrando que o valor flex-start alinha os elementos à
+            esquerda, o
             center alinha no meio e o flex-end, à direita.
           </p>
           <p>
-            Também é possível usar valores para distribuir os elementos na tela, exatamente como se faz no Grid Layout.
+            Também é possível usar valores para distribuir os elementos na tela, exatamente como se faz no Grid
+            Layout.
             Analise os seguintes exemplos:
           </p>
           <ul>
             <li>
-              <b>justify-content: space-evenly</b>: os elementos são distribuídos de modo que o espaçamento entre eles,
+              <b>justify-content: space-evenly</b>: os elementos são distribuídos de modo que o espaçamento entre
+              eles,
               incluindo
               entre as bordas do elemento pai, seja igual.
             </li>
@@ -3000,7 +3042,8 @@ grid-template-areas: 'logo menu menu'
               aqui, os elementos
               são distribuídos nas bordas com o mesmo espaçamento entre eles. Na prática, é como se cada elemento
               tivesse
-              uma margem à direita e outra à esquerda. Se cada elemento tem sua própria margem, consequentemente essa
+              uma margem à direita e outra à esquerda. Se cada elemento tem sua própria margem, consequentemente
+              essa
               margem fica duplicada entre os elementos internos, mas, como o primeiro elemento e o último não contêm
               elementos entre eles, haverá então somente o espaço do próprio elemento. Repare então que, no
               <b>space-around</b>,
@@ -3008,17 +3051,22 @@ grid-template-areas: 'logo menu menu'
               <b>space-evenly</b>.
             </li>
             <li>
-              <b>justify-content: space-between</b>: os elementos são distribuídos com espaçamentos iguais entre eles.
+              <b>justify-content: space-between</b>: os elementos são distribuídos com espaçamentos iguais entre
+              eles.
               No
-              entanto, o primeiro e o último elemento de cada linha ficam colados em suas extremidades, ou seja, não a
+              entanto, o primeiro e o último elemento de cada linha ficam colados em suas extremidades, ou seja, não
+              a
               margens horizontais entre o início e o fim de cada linha.
             </li>
           </ul>
           <p>Aqui, os valores e os efeitos são exatamente os mesmos estudados no Grid Layout.</p>
           <p>
-            Já para alinhar os elementos na vertical, o Flexbox também tem recursos muito parecidos com o Grid Layout,
-            porém, o Flexbox trata individualmente cada linha ou coluna. É possível dizer que o Grid Layout é um modelo
-            bidimensional, pois em seu modelo é sempre entendido que haverá linhas e colunas, ou seja, dois elementos.
+            Já para alinhar os elementos na vertical, o Flexbox também tem recursos muito parecidos com o Grid
+            Layout,
+            porém, o Flexbox trata individualmente cada linha ou coluna. É possível dizer que o Grid Layout é um
+            modelo
+            bidimensional, pois em seu modelo é sempre entendido que haverá linhas e colunas, ou seja, dois
+            elementos.
             Já
             o Flexbox é um modelo de <i>layout</i> unidimensional, pois trata individualmente cada agrupamento de
             elementos, seja
@@ -3028,7 +3076,8 @@ grid-template-areas: 'logo menu menu'
             Assim, para alinhar os elementos na vertical, o Flexbox contém a propriedade <b>align-items</b>. Essa
             propriedade
             entende que o alinhamento ocorrerá somente em uma linha. Para que você consiga visualizar esses estilos,
-            precisará definir uma altura fixa para o elemento pai, neste caso, a classe <b>container</b>. Então, para os
+            precisará definir uma altura fixa para o elemento pai, neste caso, a classe <b>container</b>. Então,
+            para os
             próximos
             exemplos, será adicionada a propriedade <b>height: 400px</b> à classe <b>container</b>. Para uma melhor
             compreensão desses
@@ -3038,26 +3087,52 @@ grid-template-areas: 'logo menu menu'
             <b>center</b>, <b>stretch</b> e <b>baseline</b>. Confira:
           </p>
           <ul>
-            <li><b>align-items: stretch</b>: valor-padrão; faz com que os elementos ocupem a altura total do container.
+            <li><b>align-items: stretch</b>: valor-padrão; faz com que os elementos ocupem a altura total do
+              container.
             </li>
             <li><b>align-items: flex-start</b>: faz os elementos ordenarem-se na parte de cima.</li>
             <li><b>align-items: flex-end</b>: faz os elementos alinharem-se na parte de baixo.</li>
             <li><b>align-items: center</b>: centraliza os elementos na vertical.</li>
             <li>
-              <b>align-items: baseline</b>: faz os elementos alinharem-se de acordo com a altura da linha de base. Sua
+              <b>align-items: baseline</b>: faz os elementos alinharem-se de acordo com a altura da linha de base.
+              Sua
               utilização
-              não é tão comum e, para que se possa enxergar seu estilo, é preciso ter altura de linhas diferentes entre
+              não é tão comum e, para que se possa enxergar seu estilo, é preciso ter altura de linhas diferentes
+              entre
               os
               elementos ou ter fontes de tamanhos diferentes.
             </li>
           </ul>
-
-          <!-- SLIDESHOW -->
-
-          <p class="no-print" aria-hidden="true">Clique ou toque nas setas para visualizar as imagens.</p>
-
-
-
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque nas setas para visualizar as imagens.</p>
+            <div id="carousel-example-generic" class="carousel slide no-print" data-ride="carousel"
+              data-interval="false" aria-hidden="true">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="imgs/slide_fig21.png" class="center-block img-responsive hidden-sm hidden-xs img-borda">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/slide_fig21.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/slide_fig21.png" class="center-block img-responsive"></a>
+                </div>
+                <div class="item">
+                  <img src="imgs/slide_fig22.png" class="center-block img-responsive hidden-sm hidden-xs img-borda">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/slide_fig22.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/slide_fig22.png" class="center-block img-responsive"></a>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
           <div class="acessivel print">
             <img src="imgs/slide_fig21.png" class="center-block img-responsive print">
             <p class="legenda-imagem">
@@ -3065,7 +3140,8 @@ grid-template-areas: 'logo menu menu'
               Fonte: Senac EAD (2024)
             </p>
             <p class="acessivel no-print">
-              Três telas lado a lado exemplificando que o valor flex-start alinha os elementos acima, o center alinha no
+              Três telas lado a lado exemplificando que o valor flex-start alinha os elementos acima, o center
+              alinha no
               meio e o flex-end, abaixo.
             </p>
             <img src="imgs/slide_fig22.png" class="center-block img-responsive print">
@@ -3083,23 +3159,29 @@ grid-template-areas: 'logo menu menu'
             preciso definir a propriedade <b>flex-wrap</b> com valor <b>wrap</b> em seu container.
           </p>
           <p>
-            Os valores de <b>align-content</b> são exatamente os mesmos de <b>justify-content</b> e os estilos/efeitos
+            Os valores de <b>align-content</b> são exatamente os mesmos de <b>justify-content</b> e os
+            estilos/efeitos
             aplicados são
-            exatamente os mesmos vistos no capítulo que aborda Grid Layout; na verdade, é a mesma propriedade, porém, em
-            Flexbox, utilizam-se os valores <b>flex-start</b> e <b>flex-end</b> no lugar de <b>start</b> e <b>end</b>.
+            exatamente os mesmos vistos no capítulo que aborda Grid Layout; na verdade, é a mesma propriedade,
+            porém, em
+            Flexbox, utilizam-se os valores <b>flex-start</b> e <b>flex-end</b> no lugar de <b>start</b> e
+            <b>end</b>.
           </p>
           <p>
-            É importante reforçar, contudo, que, para que funcionem corretamente os estilos de <b>align-content</b>, é
+            É importante reforçar, contudo, que, para que funcionem corretamente os estilos de <b>align-content</b>,
+            é
             preciso
             definir o <b>flex-wrap: wrap</b>, pois isso permite que o Flexbox tenha mais de uma linha.
           </p>
           <h4>Propriedades do Flexbox aplicadas nos elementos sucessores (filhos)</h4>
           <p>
-            Todas as propriedades do Flexbox mostradas até agora são aplicadas no elemento pai. As propriedades deste
+            Todas as propriedades do Flexbox mostradas até agora são aplicadas no elemento pai. As propriedades
+            deste
             capítulo devem ser inseridas nos elementos filhos, neste caso, nos elementos com a classe <b>item</b>.
           </p>
           <p>
-            Com Flexbox, é possível alinhar na vertical individualmente cada item. Para isso, utiliza-se a propriedade
+            Com Flexbox, é possível alinhar na vertical individualmente cada item. Para isso, utiliza-se a
+            propriedade
             <b>align-self</b>. É importante destacar que os elementos aos quais se insere o <b>align-self</b> irão
             sobrepor o que foi
             definido em align-items.
@@ -3118,13 +3200,16 @@ grid-template-areas: 'logo menu menu'
               abaixo.</p>
             <p><b>.container .item:nth-child(2){ align-self: center }</b> – Define o segundo item como alinhado ao
               centro.</p>
-            <p><b>.container .item:nth-child(3){ align-self: start}</b> – Define o terceiro item como alinhado ao topo.
+            <p><b>.container .item:nth-child(3){ align-self: start}</b> – Define o terceiro item como alinhado ao
+              topo.
             </p>
             <p><b>.container .item:nth-child(4){ align-self: center }</b> – Define o quarto item como alinhado ao
               centro.</p>
-            <p><b>.container .item:nth-child(5){ align-self: flex-end }</b> – Define o quinto item como alinhado abaixo.
+            <p><b>.container .item:nth-child(5){ align-self: flex-end }</b> – Define o quinto item como alinhado
+              abaixo.
             </p>
-            <p><b>.container .item:nth-child(6){ align-self: stretch}</b> – Define o sexto item com altura total.</p>
+            <p><b>.container .item:nth-child(6){ align-self: stretch}</b> – Define o sexto item com altura total.
+            </p>
           </div>
           <p>
             É importante destacar que não é necessário criar o estilo para todos os itens. Você aplicará o
@@ -3140,13 +3225,15 @@ grid-template-areas: 'logo menu menu'
             Fonte: Senac EAD (2024)
           </p>
           <p class="acessivel no-print">
-            Seis itens lado a lado, alinhados individualmente pelo align-self. Os itens 1 e 5 estão alinhados pela base,
+            Seis itens lado a lado, alinhados individualmente pelo align-self. Os itens 1 e 5 estão alinhados pela
+            base,
             os itens 2 e 4 estão alinhados no centro e o item 3, no topo.
           </p>
           <p>
             Uma vantagem do Flexbox é que ele permite mudar a ordem dos elementos de uma maneira bem prática,
             diretamente
-            pelo CSS, sem a necessidade de modificar sua estrutura HTML. Isso é feito com a propriedade <b>order</b>.
+            pelo CSS, sem a necessidade de modificar sua estrutura HTML. Isso é feito com a propriedade
+            <b>order</b>.
           </p>
           <p>
             A propriedade <b>order</b> é feita nos elementos filhos e o <b>Flexbox</b> leva como base que todos os
@@ -3175,16 +3262,19 @@ grid-template-areas: 'logo menu menu'
             Seis itens lado a lado, porém o item com número 2 ficou na última posição, ao definir order: 1.
           </p>
           <p>
-            Isso pode causar alguma confusão, pois, intuitivamente, se o estilo <b>order 1</b> for definido, entende-se
+            Isso pode causar alguma confusão, pois, intuitivamente, se o estilo <b>order 1</b> for definido,
+            entende-se
             que ele
             deveria ir para a primeira posição. Mas isso não ocorre porque, conforme mencionado anteriormente, por
             padrão,
-            todo o elemento começa com <b>order</b> zero. Então, quando se define o valor 1, este passa a ser o maior
+            todo o elemento começa com <b>order</b> zero. Então, quando se define o valor 1, este passa a ser o
+            maior
             valor entre
             todos, consequentemente indo para a última posição.
           </p>
           <p>
-            Dito isso, na maioria das vezes, para que um posicionamento funcione como o esperado, será preciso definir a
+            Dito isso, na maioria das vezes, para que um posicionamento funcione como o esperado, será preciso
+            definir a
             ordem de todos os elementos. Confira:
           </p>
           <pre>
@@ -3210,18 +3300,22 @@ grid-template-areas: 'logo menu menu'
             Com o Flexbox também é possível manipular o comportamento individual dos elementos com propriedades que
             definirão o quando ele irá crescer ou diminuir em relação aos outros. Porém, essa alteração no tamanho
             também
-            levará em conta o espaço, na largura, que irá sobrar nos casos em que os elementos tenham tamanhos fixos.
+            levará em conta o espaço, na largura, que irá sobrar nos casos em que os elementos tenham tamanhos
+            fixos.
           </p>
           <p>
             Comece aprendendo a propriedade <b>flex-grow</b>. É ela que define quanto um elemento aumentará. Para
             utilizá-la,
-            basta inserir a propriedade no elemento, ou elementos, que você deseja que tenha prioridade no crescimento.
+            basta inserir a propriedade no elemento, ou elementos, que você deseja que tenha prioridade no
+            crescimento.
             É
             importante destacar que, por padrão, todos os elementos têm o valor <b>flex-grow</b> igual a 0 (zero).
           </p>
           <p>
-            Para os próximos exemplos serão removidas as propriedades <b>order</b> dos elementos, será considerado que o
-            <b>container</b> está com propriedade <b>flex-wrap: nowrap</b> e será redefinida a largura dos elementos com
+            Para os próximos exemplos serão removidas as propriedades <b>order</b> dos elementos, será considerado
+            que o
+            <b>container</b> está com propriedade <b>flex-wrap: nowrap</b> e será redefinida a largura dos elementos
+            com
             a classe item
             para <b>width: 50px</b>. Agora será aplicado o <b>flex-grow</b> no quinto elemento. Veja:
           </p>
@@ -3247,7 +3341,8 @@ grid-template-areas: 'logo menu menu'
             elemento aumenta para ocupar todo o espaço que sobraria entre os elementos e a borda da tela.
           </p>
           <p>
-            Percebe-se então que, aplicando o <b>flex-grow</b>, mesmo que em apenas um elemento, ele fará com que seja
+            Percebe-se então que, aplicando o <b>flex-grow</b>, mesmo que em apenas um elemento, ele fará com que
+            seja
             preenchida
             a linha inteira.
           </p>
@@ -3271,7 +3366,8 @@ grid-template-areas: 'logo menu menu'
           <p>
             Repare que o sexto elemento ficará maior que os elementos 4 e 5, porém não terá exatamente o dobro do
             tamanho,
-            pois ele considera o espaço que sobra entre os elementos e a tela, ou seja, o <b>flex-grow</b> não reduz a
+            pois ele considera o espaço que sobra entre os elementos e a tela, ou seja, o <b>flex-grow</b> não reduz
+            a
             largura
             dos demais elementos. Veja o resultado:
           </p>
@@ -3284,8 +3380,10 @@ grid-template-areas: 'logo menu menu'
             Fonte: Senac EAD (2024)
           </p>
           <p class="acessivel no-print">
-            Seis itens lado a lado, em que cada um tem 50 pixels de largura, alinhados à esquerda. Porém, o quinto e o
-            quarto elementos aumentam com proporções iguais e o sexto elemento aumenta com tamanho maior que os demais
+            Seis itens lado a lado, em que cada um tem 50 pixels de largura, alinhados à esquerda. Porém, o quinto e
+            o
+            quarto elementos aumentam com proporções iguais e o sexto elemento aumenta com tamanho maior que os
+            demais
             elementos que contêm o flex-grow.
           </p>
           <p>
@@ -3295,9 +3393,11 @@ grid-template-areas: 'logo menu menu'
             aberta.
           </p>
           <p>
-            Outra diferença é que o valor-padrão de <b>flex-shrink</b> para todos os elementos filhos do <i>display</i>
+            Outra diferença é que o valor-padrão de <b>flex-shrink</b> para todos os elementos filhos do
+            <i>display</i>
             <b>flex</b> é 1 (repare
-            que no <b>flex-grow</b> é zero). Então, para avisar que um elemento deve reduzir mais que os outros, quando
+            que no <b>flex-grow</b> é zero). Então, para avisar que um elemento deve reduzir mais que os outros,
+            quando
             eles não
             couberem na tela, é preciso definir <b>flex-shrink</b> com valor igual a 2 ou maior.
           </p>
@@ -3312,7 +3412,8 @@ grid-template-areas: 'logo menu menu'
             </code>
           </pre>
           <p>
-            Esse código indica que o quarto elemento começará a diminuir proporcionalmente mais que os outros. Observe
+            Esse código indica que o quarto elemento começará a diminuir proporcionalmente mais que os outros.
+            Observe
             na
             figura que o elemento 4 é ligeiramente menor que os demais:
           </p>
@@ -3328,7 +3429,8 @@ grid-template-areas: 'logo menu menu'
             Seis itens lado a lado, com o elemento de número 4 sendo um pouco menor que os demais.
           </p>
           <p>
-            O Flexbox também tem outra propriedade que controla o tamanho dos elementos, chamada <b>flex-basis</b>, a
+            O Flexbox também tem outra propriedade que controla o tamanho dos elementos, chamada <b>flex-basis</b>,
+            a
             qual
             determina um tamanho inicial para o elemento especificado e cujo valor pode ser especificado em
             <i>pixels</i>. Veja
@@ -3359,7 +3461,8 @@ grid-template-areas: 'logo menu menu'
           <p>
             Por fim, existe a forma compacta de inserir essas propriedades <b>flex-grow</b>,<b> flex-shrink</b> e
             <b>flex-basis</b>. Para usar
-            os três estilos em uma propriedade única, você pode usar a propriedade <b>flex</b>. Por exemplo, <b>flex: 1
+            os três estilos em uma propriedade única, você pode usar a propriedade <b>flex</b>. Por exemplo,
+            <b>flex: 1
               2 200px;</b>
             basicamente informa que o valor de <b>flex-grow</b> será 1, o valor de <b>flex-shrink</b> será 2 e o
             <b>flex-basis</b> será de 200
@@ -3368,8 +3471,10 @@ grid-template-areas: 'logo menu menu'
             essa forma abreviada não é tão comum de se ver no dia a dia.
           </p>
           <p>
-            Em suma, o Flexbox é especialmente útil para criar barras de navegação, caixas de comentários, galerias de
-            imagens e outros <i>layouts</i> nos quais a distribuição de espaço é crucial. Ele simplifica a criação de
+            Em suma, o Flexbox é especialmente útil para criar barras de navegação, caixas de comentários, galerias
+            de
+            imagens e outros <i>layouts</i> nos quais a distribuição de espaço é crucial. Ele simplifica a criação
+            de
             <i>layouts</i>
             complexos que podem ser desafiadores com modelos de <i>layout</i> mais tradicionais e hoje em dia é
             amplamente
@@ -3383,21 +3488,26 @@ grid-template-areas: 'logo menu menu'
         <div class="container">
           <h3>Unidades de medidas absolutas e relativas</h3>
           <p>
-            No CSS, as unidades de medida podem ser classificadas em duas categorias principais: unidades absolutas e
-            unidades relativas. Cada tipo de unidade tem suas próprias características e é apropriado para diferentes
+            No CSS, as unidades de medida podem ser classificadas em duas categorias principais: unidades absolutas
+            e
+            unidades relativas. Cada tipo de unidade tem suas próprias características e é apropriado para
+            diferentes
             contextos de <i>design</i>.
           </p>
           <p>
             Uma unidade absoluta tem um tamanho fixo, ou seja, não varia em diferentes contextos e, apesar de no CSS
-            existirem unidades de medidas como centímetros, milímetros e polegadas, elas não são usuais em interfaces
+            existirem unidades de medidas como centímetros, milímetros e polegadas, elas não são usuais em
+            interfaces
             para
             <i> web</i>, pois são adequadas a elementos físicos, como impressos.
           </p>
           <div class="caixa-destaque icone importante">
             <p>
-              A unidade de medida absoluta mais comum e amplamente utilizada é o <i><b>pixel</b></i>. Um <i>pixel</i>
+              A unidade de medida absoluta mais comum e amplamente utilizada é o <i><b>pixel</b></i>. Um
+              <i>pixel</i>
               (px) é um ponto de imagem
-              na tela, muito utilizado em <i>design</i> digital e <i>web</i>, sendo a menor unidade visual exibida. Em
+              na tela, muito utilizado em <i>design</i> digital e <i>web</i>, sendo a menor unidade visual exibida.
+              Em
               contextos <i>web</i>, os
               <i>pixels</i> são uma medida relativa à resolução do dispositivo e são frequentemente usados para
               especificar
@@ -3413,17 +3523,20 @@ grid-template-areas: 'logo menu menu'
             <i>pixels</i>.
           </p>
           <p>
-            Você viu vários exemplos de aplicação de <i>pixels</i> durante os capítulos deste material. Porém, quando o
+            Você viu vários exemplos de aplicação de <i>pixels</i> durante os capítulos deste material. Porém,
+            quando o
             assunto é
             responsividade, em muitos casos, é mais apropriada a utilização de unidades de medidas relativas.
           </p>
           <p>
-            Existem unidades de medidas relativas mais adequadas a fontes e outras que são mais apropriadas a tamanhos
+            Existem unidades de medidas relativas mais adequadas a fontes e outras que são mais apropriadas a
+            tamanhos
             de
             elementos, como é o caso da unidade de medida <b>em</b>.
           </p>
           <p>
-            O <b>em</b> representa o tamanho da fonte do elemento pai. Por exemplo, se o tamanho da fonte do pai for 16
+            O <b>em</b> representa o tamanho da fonte do elemento pai. Por exemplo, se o tamanho da fonte do pai for
+            16
             <i>pixels</i>, 1
             <b>em</b> será igual a 16 <i>pixels</i>.
           </p>
@@ -3441,9 +3554,11 @@ grid-template-areas: 'logo menu menu'
           </p>
           <div class="caixa-destaque icone anotar">
             <p>
-              Em <i>sites</i> responsivos, a unidade mais utilizada para determinar o tamanho dos elementos é o <b>%</b>
+              Em <i>sites</i> responsivos, a unidade mais utilizada para determinar o tamanho dos elementos é o
+              <b>%</b>
               (percentual),
-              pois é feita com ele a representação de uma porcentagem do valor do elemento pai. Por exemplo, <b>50%</b>
+              pois é feita com ele a representação de uma porcentagem do valor do elemento pai. Por exemplo,
+              <b>50%</b>
               é o mesmo
               que metade do tamanho do elemento pai.
             </p>
@@ -3456,9 +3571,11 @@ div {width: 33%;}
           </pre>
           <p>Esse comando indica que a <b>div</b> ocupará um terço da largura de seu elemento pai.</p>
           <p>
-            A utilização da unidade em percentual é perfeita para se utilizar na determinação da largura dos elementos,
+            A utilização da unidade em percentual é perfeita para se utilizar na determinação da largura dos
+            elementos,
             mas não é muito indicada para determinar alturas, pois a maioria das interfaces terá uma altura de tela
-            indeterminada, o que resulta em comportamentos inesperados. Para definir a unidade de medida percentual para
+            indeterminada, o que resulta em comportamentos inesperados. Para definir a unidade de medida percentual
+            para
             determinar a altura de algum elemento, seu elemento pai deve ter uma altura absoluta fixa, com
             <i>pixels</i>, por
             exemplo.
@@ -3474,7 +3591,8 @@ div {width: 33%;}
               <b>height: 80vh</b>.
             </li>
             <li>
-              <b>vmin</b> e <b>vmax</b>: a unidade relativa <b>vmin</b> representa a porcentagem da menor dimensão da
+              <b>vmin</b> e <b>vmax</b>: a unidade relativa <b>vmin</b> representa a porcentagem da menor dimensão
+              da
               <i>viewport</i> (largura ou
               altura), enquanto a <b>vmax</b> representa a porcentagem da maior dimensão. Exemplo: <b>font-size:
                 3vmin</b>.
@@ -3484,19 +3602,22 @@ div {width: 33%;}
             As unidades relativas são frequentemente utilizadas para a criação de <i>layouts</i> mais flexíveis e
             responsivos,
             pois ajustam-se automaticamente com base nas dimensões da tela de exibição. Porém, é com a utilização em
-            conjunto das unidades absolutas e relativas que você conseguirá desenvolver interfaces modernas e otimizadas
+            conjunto das unidades absolutas e relativas que você conseguirá desenvolver interfaces modernas e
+            otimizadas
             para o usuário final.
           </p>
           <h3>Retrocompatibilidade – CSS</h3>
           <p>
             A retrocompatibilidade no contexto de CSS refere-se à capacidade de garantir que as folhas de estilo CSS
             sejam
-            interpretadas e exibidas corretamente em navegadores mais antigos ou versões mais antigas de navegadores que
+            interpretadas e exibidas corretamente em navegadores mais antigos ou versões mais antigas de navegadores
+            que
             podem não suportar todas as funcionalidades CSS mais recentes.
           </p>
           <div class="caixa-destaque icone importante">
             <p>
-              A retrocompatibilidade é importante especialmente em um ambiente <i>web</i>, no qual diferentes usuários
+              A retrocompatibilidade é importante especialmente em um ambiente <i>web</i>, no qual diferentes
+              usuários
               podem
               estar usando uma variedade de navegadores e versões diferentes. Garantir que um <i>site</i> ou sistema
               <i>web</i> seja
@@ -3509,20 +3630,24 @@ div {width: 33%;}
             vista
             anteriormente. Entretanto, é extremamente importante salientar que nem todos os estilos de CSS são
             suportados
-            em todos os navegadores. Na verdade, a maioria dos estilos de CSS3 não funciona em navegadores mais antigos.
+            em todos os navegadores. Na verdade, a maioria dos estilos de CSS3 não funciona em navegadores mais
+            antigos.
           </p>
           <p>
-            Para verificar se uma propriedade, valor ou até mesmo unidade de medida funciona em determinado dispositivo,
+            Para verificar se uma propriedade, valor ou até mesmo unidade de medida funciona em determinado
+            dispositivo,
             você pode verificar o <i>site</i> da W3Schools. Em todas as páginas que ele explica sobre determinada
             propriedade, há
             uma área que mostra a versão do navegador suportada.
           </p>
           <p>
-            Porém, não são apenas as propriedades que não são aceitas em todos os navegadores, alguns não aceitam também
+            Porém, não são apenas as propriedades que não são aceitas em todos os navegadores, alguns não aceitam
+            também
             determinadas <i>tags</i> HTML e até mesmo unidades de medida específicas.
           </p>
           <p>
-            Uma ferramenta extremamente útil para verificar isso é o <i>site</i> Can I Use, que traz informações mais
+            Uma ferramenta extremamente útil para verificar isso é o <i>site</i> Can I Use, que traz informações
+            mais
             completas
             sobre a compatibilidade de determinados estilos em diferentes dispositivos.
           </p>
@@ -3535,7 +3660,8 @@ div {width: 33%;}
             Fonte: Senac EAD (2024)
           </p>
           <p class="acessivel no-print">
-            Tabela com lista de navegadores web, indicando com a cor verde as versões de cada navegador que suporta o
+            Tabela com lista de navegadores web, indicando com a cor verde as versões de cada navegador que suporta
+            o
             estilo pesquisado.
           </p>
           <p>
@@ -3548,11 +3674,14 @@ div {width: 33%;}
           <p>
             Prefixos em desenvolvimento <i>web</i> geralmente se referem ao uso de prefixos de fornecedor em
             propriedades CSS e,
-            em menor medida, em propriedades JavaScript. Esses prefixos são adicionados a propriedades específicas para
-            indicar que a funcionalidade ainda está em fase de experimentação ou implementação e pode não ser totalmente
+            em menor medida, em propriedades JavaScript. Esses prefixos são adicionados a propriedades específicas
+            para
+            indicar que a funcionalidade ainda está em fase de experimentação ou implementação e pode não ser
+            totalmente
             compatível entre navegadores.
           </p>
-          <p>Os principais prefixos em propriedades CSS são: <b>-webkit-</b>, <b>-moz-</b>, <b>-ms-</b> e <b>-o-</b>.
+          <p>Os principais prefixos em propriedades CSS são: <b>-webkit-</b>, <b>-moz-</b>, <b>-ms-</b> e
+            <b>-o-</b>.
           </p>
           <div class="table-responsive">
             <table class="senac">
@@ -3600,7 +3729,8 @@ div {width: 33%;}
             propriedade com diferentes prefixos para garantir compatibilidade.
           </p>
           <p>
-            Por exemplo, para a propriedade <b>border-radius</b>, você pode considerar o seguinte código para garantir
+            Por exemplo, para a propriedade <b>border-radius</b>, você pode considerar o seguinte código para
+            garantir
             que
             funcione em vários navegadores:
           </p>
@@ -3617,26 +3747,33 @@ div {
           </pre>
           <p>
             Ao usar prefixos de fornecedor, é fundamental equilibrar a experimentação e a preocupação com a
-            compatibilidade entre navegadores. O uso responsável desses prefixos, juntamente com práticas modernas, pode
+            compatibilidade entre navegadores. O uso responsável desses prefixos, juntamente com práticas modernas,
+            pode
             garantir uma experiência de desenvolvimento <i>web</i> mais consistente.
           </p>
           <p>
-            Com o tempo, muitos prefixos de fornecedor foram descontinuados à medida que as implementações se tornaram
+            Com o tempo, muitos prefixos de fornecedor foram descontinuados à medida que as implementações se
+            tornaram
             mais consistentes entre navegadores. No entanto, alguns ainda são usados em circunstâncias específicas.
           </p>
           <p>
-            Voltando à questão da retrocompatibilidade, é preciso lembrar que cada elemento HTML adota um estilo-padrão
+            Voltando à questão da retrocompatibilidade, é preciso lembrar que cada elemento HTML adota um
+            estilo-padrão
             e
-            cada navegador é quem decide como será esse estilo. Então, é comum algumas <i>tags</i> às quais não foram
+            cada navegador é quem decide como será esse estilo. Então, é comum algumas <i>tags</i> às quais não
+            foram
             adicionados
             estilos ficarem diferentes em determinados navegadores.
           </p>
           <p>
-            Uma forma de resolver isso é fazendo o que se chama de <i>reset</i> CSS. O <i>reset</i> CSS é uma técnica
+            Uma forma de resolver isso é fazendo o que se chama de <i>reset</i> CSS. O <i>reset</i> CSS é uma
+            técnica
             utilizada em
-            desenvolvimento <i>web</i> para garantir que todos os elementos HTML tenham uma aparência mais consistente e
+            desenvolvimento <i>web</i> para garantir que todos os elementos HTML tenham uma aparência mais
+            consistente e
             previsível em diferentes navegadores. A ideia é remover ou redefinir estilos-padrão aplicados pelos
-            navegadores, proporcionando uma base limpa e consistente para a estilização posterior. Confira um exemplo
+            navegadores, proporcionando uma base limpa e consistente para a estilização posterior. Confira um
+            exemplo
             básico de um <i>reset</i> CSS simples:
           </p>
           <pre>
@@ -3665,13 +3802,16 @@ body {
           <p>
             Mesmo usando todas as técnicas mostradas neste material, para garantir a retrocompatibilidade, é
             <b>indispensável</b>
-            realizar testes, ou seja, testar seu sistema ou <i>site</i> em diferentes dispositivos e navegadores e assim
+            realizar testes, ou seja, testar seu sistema ou <i>site</i> em diferentes dispositivos e navegadores e
+            assim
             conseguir corrigir qualquer incompatibilidade que possa ocorrer.
           </p>
           <p>
-            Por fim, a retrocompatibilidade é importante porque os desenvolvedores podem garantir que seus <i>sites</i>
+            Por fim, a retrocompatibilidade é importante porque os desenvolvedores podem garantir que seus
+            <i>sites</i>
             sejam
-            acessíveis a uma ampla variedade de usuários, independentemente dos navegadores ou dispositivos que estão
+            acessíveis a uma ampla variedade de usuários, independentemente dos navegadores ou dispositivos que
+            estão
             utilizando. Isso é fundamental para criar uma presença <i>web</i> inclusiva e eficaz.
           </p>
         </div>
@@ -3751,6 +3891,7 @@ body {
   <script src="../template/js/highlight.min.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="js/bg.js"></script>
   <noscript>
     <style media="screen">
       .over-loader {
