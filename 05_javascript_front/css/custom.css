@@ -487,7 +487,9 @@ mark {
   font-weight: bold;
 }
 
-
+.language-react.tag1{
+  color: #800080 !important;
+}
 
 
 
