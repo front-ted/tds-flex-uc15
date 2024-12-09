@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>jQuery – funcionalidades para mobile </title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <link href="../template/css/atividades_interativas.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Bruna Flores de Oliveira</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46172400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Bruna Flores de Oliveira</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <nav class="menu-lateral no-print" aria-hidden="true">
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+    <i class="glyphicon glyphicon-remove"></i>
+    <ul>
+      <li id="link2"><a href="index.html?page=2">O que é jQuery? <span></span></a></li>
+      <li id="link3"><a href="index.html?page=3">Começando a utilizar jQuery <span></span></a></li>
+      <li id="link4"><a href="index.html?page=4">Selecionado elementos<span></span></a></li>
+      <li id="link5"><a href="index.html?page=5">Manipulando atributos <span></span></a></li>
+      <li id="link6"><a href="index.html?page=6">Manipulando elementos com jQuery <span></span></a></li>
+      <li id="link7"><a href="index.html?page=7">Obtendo Valores De Campos De Formulários Html <span></span></a></li>
+      <li id="link8"><a href="index.html?page=8">Disparando eventos <span></span></a></li>
+      <li id="link9"><a href="index.html?page=9">Efeitos do jQuery <span></span></a></li>
+      <li id="link10"><a href="index.html?page=10">Encerramento <span></span></a></li>
+    </ul>
+  </nav>
+
+  <div id="booklet" class="container fundo-tecnicos">
+
+    <div class="acessivel no-print">
+      <p>Como sugestão, configure a opção de leitura de caracteres e de pontuação de seu leitor de tela para o grau
+        máximo de leitura, a fim de que os códigos disponibilizados neste material sejam lidos corretamente. No caso do
+        NVDA (Nonvisual Desktop Access), para localizar a opção <b>Grau de pontuação/símbolos</b>, acesse
+        <b>Preferências</b> – <b>Configurações</b> – <b>Fala</b>. Altere o padrão <b>Pouco</b> para <b>Tudo</b>. Dessa
+        forma, o leitor passará a ler os segmentos de código em sua totalidade.
+      </p>
+    </div>
+
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="no-print" aria-hidden="true">
+        <div class="side left" id="left-side"></div>
+        <div class="side right" id="right-side"></div>
+      </div>
+      <div class="pagina">
+        <h2><b>jQuery:</b> <br>funcionalidades para mobile </h2>
+        <p>
+          Neste material, você conhecerá uma biblioteca <i>front-end</i> muito utilizada, leve e fácil de se trabalhar, chamada
+          jQuery. O jQuery é uma biblioteca JavaScript lançada em janeiro de 2006. Ao contrário do que muitos pensam,
+          apesar de antiga, ela continua extremamente atual, pois, até o momento, sua última atualização estável ocorreu
+          em 2023 e acaba de ser lançada, em 2024, uma atualização beta (para testes) da nova versão.
+        </p>
+
+
+
+
+
+
+      </div>
+      <div class="pagina">
+
+      </div>
+    </section>
+
+
+
+
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <!-- <footer class="text-center no-print">
+          <ul class="pagination">
+
+          </ul>
+        </footer> -->
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/interativos.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+
+  <script>
+    // Função para criar linhas dinâmicas e desacelerar até parar em 12 segundos
+    function createLines(containerId) {
+      const container = document.getElementById(containerId);
+
+      // Número de linhas por lado
+      const lineCount = 15;
+
+      for (let i = 0; i < lineCount; i++) {
+        const line = document.createElement('div');
+        line.className = 'line';
+
+        // Define largura variável para as linhas
+        const lineWidth = Math.random() * 10 + 5 + 'vw'; // Entre 5vw e 15vw
+        line.style.width = lineWidth;
+
+        // Posição horizontal aleatória
+        line.style.left = Math.random() * 10 + 'vw'; // Deslocamento horizontal aleatório
+
+        // Posição vertical uniforme
+        line.style.top = i * (100 / lineCount) + 'vh'; // Divisão uniforme da altura
+
+        // Define um atraso escalonado para cada linha
+        line.style.animationDelay = i * 0.6 + 's'; // Atraso escalonado entre as linhas
+
+        container.appendChild(line);
+      }
+
+      // Desaceleração suave até 12 segundos
+      let elapsedTime = 0;
+      const interval = setInterval(() => {
+        elapsedTime += 1; // Incrementa o tempo decorrido em 1 segundo
+        const lines = container.querySelectorAll('.line');
+
+        lines.forEach(line => {
+          const currentDuration = parseFloat(
+            window.getComputedStyle(line).animationDuration
+          );
+
+          // Aumenta gradualmente a duração da animação para desacelerar
+          if (elapsedTime <= 12) {
+            line.style.animationDuration = (currentDuration + 0.5) + 's';
+          } else {
+            // Pausa a animação e mantém o estado final
+            line.style.animation = 'fadeInOutPaused 1s infinite';
+          }
+        });
+
+        if (elapsedTime >= 12) {
+          clearInterval(interval); // Para o ajuste após 12 segundos
+        }
+      }, 1000); // Ajusta a cada 1 segundo
+    }
+
+    // Cria linhas para as laterais
+    createLines('left-side');
+    createLines('right-side');
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Versao atual do handtalk -->
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+
+  </script>
+
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+    if (window.location.toString().includes('page=1')) {
+      $('#link1').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=2')) {
+      $('#link2').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=3')) {
+      $('#link3').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=4')) {
+      $('#link4').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=5')) {
+      $('#link5').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=6')) {
+      $('#link6').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=7')) {
+      $('#link7').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=8')) {
+      $('#link8').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=9')) {
+      $('#link9').addClass('ativo');
+    }
+    if (window.location.toString().includes('page=10')) {
+      $('#link10').addClass('ativo');
+      $('#link1').removeClass('ativo');
+    }
+    if (window.location.toString().includes('page=11')) {
+      $('#link11').addClass('ativo');
+      $('#link1').removeClass('ativo');
+    }
+    if (window.location.toString().includes('page=12')) {
+      $('#link12').addClass('ativo');
+      $('#link1').removeClass('ativo');
+    }
+  });
+
+  $('.menu-lateral > span').click(function () {
+    $('.menu-lateral ul').css('left', '0');
+    $(this).css('opacity', '0');
+    $('.menu-lateral > i').css({ 'opacity': '1', 'right': 'unset', 'left': '350px' });
+  });
+  $('.menu-lateral > i').click(function () {
+    $('.menu-lateral ul').css('left', '-100%');
+    $(this).css('opacity', '0');
+    $('.menu-lateral > span').css({ 'opacity': '1', 'right': 'unset', 'right': '-80px' });
+  });
+
+</script>

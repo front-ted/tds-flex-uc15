@@ -992,8 +992,6 @@ import Acesso from './components/Acesso'
               </div>
             </div>
 
-
-
             <div class="modal modal-100 fade" id="modal-2" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content no-print">
@@ -1708,21 +1706,459 @@ export class BoasVindasComponent {
                         bem-vindo, mostrando o valor da propriedade username, no caso o valor fulano, criada no
                         componente superior.
                       </p>
-                      <!-- figura 26, pg 46 -->
                       <h4>Renderização condicional </h4>
-
-
-
-
-
-
-
-
-
-
-
+                      <p>
+                        Agora, você entenderá como criar conteúdos condicionais no Angular, ou seja, mostrar um conteúdo
+                        ou até mesmo realizar uma ação de acordo com alguma condição. Para exemplificar esse recurso,
+                        veja
+                        como criar uma mensagem na tela que será exibida apenas ao clicar (ou tocar) em um determinado
+                        conteúdo.
+                      </p>
+                      <p>
+                        Comece criando um componente novo chamado <b>alerta</b>. Para isso, realize todo aquele processo
+                        de
+                        criação de componentes no Angular. Digite no terminal o <b>ng generate component
+                          components/alerta</b> e
+                        importe o novo componente no arquivo <b>app.components.ts</b>.
+                      </p>
+                      <p>
+                        Para iniciar o processo de conteúdo condicional, vá ao arquivo <b>alerta.component.ts</b> e crie
+                        uma
+                        variável do tipo <b>boolean</b>, que servirá de parâmetro para mostrar ou não determinado
+                        conteúdo.
+                      </p>
+                      <pre>
+                        <code>
+export class AlertaComponent { 
+  mostrarOcultar: boolean = true 
+}  
+                        </code>
+                      </pre>
+                      <p>
+                        Repare, nesse código, que foi criada a propriedade <b>mostrarOcultar</b>. Essa propriedade é do
+                        tipo
+                        <b>boolean</b> e seu valor inicial é igual a <b>true</b>.
+                      </p>
+                      <p>Agora, no arquivo <b>.html</b> do componente <b>alerta</b>, insira seu conteúdo condicional:
+                      </p>
+                      <pre>
+                        <code>
+@if(mostrarOcultar) { 
+    &lt;div>    
+            &lt;h2>Aviso Condicional&lt;/h2>    
+            &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+    &lt;/div>             
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        Observe que a sintaxe da versão mais atual do Angular para criar condicionais é muito similar à
+                        sintaxe do JavaScript tradicional. Aqui, só se acrescentou o arroba (@) antes do <b>if</b>.
+                      </p>
+                      <p>Agora é preciso incluir o componente alerta dentro do HTML do <b>app</b>:</p>
+                      <pre>
+                        <code>
+&lt;app-alerta>&lt;/app-alerta> 
+                        </code>
+                      </pre>
+                      <p>
+                        Ao visualizar a tela no navegador, ele deverá mostrar o conteúdo do componente <b>alerta</b>
+                        normalmente.
+                        Isso porque a propriedade <b>mostrarOcultar</b> está com o valor <b>true</b>. Ao mudar o valor
+                        para <b>false</b>, o
+                        conteúdo deve desaparecer.
+                      </p>
+                      <p>Veja um exemplo na figura a seguir:</p>
+                      <img src="imgs/fig25.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/fig25.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/fig25.png" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">Renderização condicional <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A imagem mostra duas telas do projeto Angular no navegador, uma com
+                        o valor da propriedade igual a false, onde não é mostrado o conteúdo, e outra com o valor true,
+                        onde o conteúdo do componente alerta é mostrado.
+                      </p>
+                      <p>
+                        Para adicionar uma condição de “senão”, no caso, o <b>else</b>, também é bem simples: basta
+                        adicionar o
+                        <b>@else</b> logo após o fechamento de <b>if</b>. Veja um exemplo, complementando o arquivo
+                        <b>alerta.component.html</b>:
+                      </p>
+                      <pre>
+                        <code>
+@if(mostrarOcultar) { 
+&lt;div>   
+    &lt;h2>Aviso Condicional&lt;/h2>   
+    &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+&lt;/div> 
+} @else{ 
+  &lt;h2>Sem Avisos&lt;/h2> 
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        Nesse caso, se a variável <b>mostrarOcultar</b> estiver com valor <b>false</b>, então será
+                        mostrada a mensagem
+                        do <b>else</b>.
+                      </p>
+                      <p>
+                        Agora veja como unir o conteúdo condicional a um evento do JavaScript. Para fazer isso, é
+                        preciso
+                        colocar o nome do evento entre parênteses e vinculá-lo a algum método. Será criada uma
+                        <i>tag</i> <b>button</b>
+                        no conteúdo e depois será criado o método no <b>.ts</b> do seu componente.
+                      </p>
+                      <p>
+                        Para esse exemplo, será removido o <b>else</b> e acrescentada a <i>tag</i> que servirá de alvo
+                        para disparar uma
+                        função:
+                      </p>
+                      <pre>
+                        <code>
+@if(mostrarOcultar) { 
+&lt;div>                     
+  &lt;h2>Aviso Condicional&lt;/h2>                           
+  &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+                            
+&lt;/div> 
+} 
+&lt;button (click)="mostrar()">Mostrar Aviso&lt;/button> 
+                        </code>
+                      </pre>
+                      <p> Agora vá ao arquivo <b>alerta.component.ts</b> e crie esse método chamado <b>mostrar()</b>:
+                      </p>
+                      <pre>
+                        <code>
+export class AlertaComponent { 
+  mostrarOcultar: boolean = false 
+  mostrar(): void { 
+  this.mostrarOcultar = true 
+  }                          
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        O que ocorrerá agora é que a propriedade <b>mostrarOcultar</b> começa como <b>false</b>, mas, ao
+                        clicar no
+                        botão, será disparado o método <b>mostrar()</b> e mudará o valor da propriedade para
+                        <b>true</b>. Isso fará
+                        mostrar novamente a mensagem.
+                      </p>
+                      <p>
+                        Porém, para que o exemplo fique mais completo e funcional, será usada uma sintaxe lógica do
+                        JavaScript que permite mudar o valor de um <b>boolean</b> sempre que for clicado. Para isso,
+                        será
+                        modificado o método <b>mostrar</b> para:
+                      </p>
+                      <pre>
+                        <code>
+mostrar(): void { 
+  this.mostrarOcultar = !this.mostrarOcultar 
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        Esse código indica que o valor da propriedade <b>mostrarOcultar</b> sempre será o oposto do
+                        valor atual,
+                        ou seja, se ele estiver como <b>true</b>, mudará para <b>false</b> e vice-versa. Isso faz com
+                        que o botão, ao
+                        ser clicado, primeiramente mostre a mensagem, mas, ao ser clicado novamente, oculte a mensagem,
+                        alternando assim entre os dois estados, visível e oculto.
+                      </p>
+                      <p>
+                        Contudo, agora, complemente ainda mais sua interface, mudando dinamicamente a mensagem do botão.
+                        Para isso, primeiro, crie em sua função do componente a variável que conterá o texto do botão e,
+                        depois, crie uma condição para mudar o texto. Veja um exemplo:
+                      </p>
+                      <pre>
+                        <code>
+export class AlertaComponent { 
+  mostrarOcultar: boolean = false 
+  btAviso = "Mostrar Mensagem" 
+  mostrar(): void { 
+    this.mostrarOcultar = !this.mostrarOcultar 
+    if(this.mostrarOcultar){ 
+      this.btAviso = "Fechar Mensagem" 
+    }else{ 
+      this.btAviso = "Mostrar Mensagem" 
+    } 
+  } 
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        Agora é preciso inserir a propriedade <b>btAviso</b> no lugar do texto estático do botão, no
+                        <b>.html</b> do
+                        componente <b>Aviso</b>:
+                      </p>
+                      <pre>
+                        <code>
+@if(mostrarOcultar) { 
+&lt;div>              
+    &lt;h2>Aviso Condicional&lt;/h2>                     
+    &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+&lt;/div> 
+} 
+&lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+                        </code>
+                      </pre>
+                      <p>Observe, na próxima figura, que o texto do botão também é atualizado conforme o evento de
+                        clique: </p>
+                      <img src="imgs/fig26.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/fig26.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/fig26.png" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">Renderização condicional com evento de clique <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A imagem mostra duas telas do projeto Angular no navegador, uma
+                        antes de clicar no botão, onde o aviso está oculto e no texto do botão está escrito “Ver
+                        mensagem”, e uma após clicar, onde o conteúdo é mostrado na tela e o texto do botão muda para
+                        “fechar mensagem”.
+                      </p>
+                      <p>
+                        Caso você deseje criar uma janela modal, com um estilo mais profissional, veja um exemplo –
+                        primeiro foi atualizado o <b>.html</b> do seu componente:
+                      </p>
+                      <pre>
+                        <code>
+@if(mostrarOcultar) { 
+&lt;dialog class="alerta">          
+    &lt;h2>Caixa de Aviso&lt;/h2>                        
+    &lt;div>                           
+            &lt;h3>Aviso Condicional&lt;/h3>                     
+            &lt;div class="conteudo">                      
+                &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+            &lt;/div>                       
+    &lt;/div>                    
+    &lt;div class="rodape"> 
+       &lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+    &lt;/div> 
+&lt;/dialog> 
+} 
+&lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+                        </code>
+                      </pre>
+                      <p>Agora basta adicionar os estilos no arquivo <b>.css</b> do componente <b>Alerta</b>.</p>
+                      <pre>
+                        <code>
+.alerta{ 
+  width: 70%; 
+  max-width: 650px; 
+  padding: 0px; 
+  position: absolute; 
+  top: 0; 
+  margin: 3% auto; 
+  display: block; 
+  border: solid 1px #ccc; 
+  box-shadow: 0 0 20px 5px #333; 
+  text-align: left;   
+} 
+.alerta > div{ 
+  padding: 0 15px; 
+} 
+.alerta h2{ 
+  background: #343434; 
+  color: #f7f7f7; 
+  margin-top: 0; 
+  font-size: 16px; 
+  text-align: left; 
+  font-weight: normal; 
+  padding: 5px; 
+} 
+.alerta h3{ 
+  color: #8a2be2 
+} 
+.alerta p{ 
+  padding: 10px; 
+  background-color: #ebebeb; 
+} 
+.alerta .rodape{ 
+  border-top: solid 1px #ebebeb; 
+  padding: 15px; 
+  text-align: right; 
+} 
+.alerta button{ 
+  background: #8d00df; 
+  color: #fff; 
+  border: none; 
+  padding: 6px 15px; 
+} 
+                        </code>
+                      </pre>
+                      <p>Veja o resultado na figura: </p>
+                      <img src="imgs/fig27.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/fig27.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/fig27.png" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">Janela modal <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com a funcionalidade de
+                        conteúdo condicional ao clicar, porém agora com estilos CSS aplicados.
+                      </p>
+                      <p>
+                        Agora você aprenderá alguns recursos do Angular aplicados a formulários. Um recurso essencial em
+                        qualquer linguagem ou <i>framework</i> é conseguir resgatar os valores preenchidos nos
+                        formulários HTML.
+                      </p>
+                      <p>
+                        Então, para exemplificar esse recurso, veja como criar um outro componente, que será chamado de
+                        <b>acessos</b>. Para criar esse componente, basta repetir os processos de criação de componentes
+                        Angular
+                        mostrados anteriormente.
+                      </p>
+                      <p>
+                        Após criar o componente, lembre-se de importá-lo no arquivo <b>app.component.ts</b> e já o
+                        chamar dentro
+                        de <b>app.component.html</b>.
+                      </p>
+                      <pre>
+                        <code>
+&lt;app-acessos>&lt;/app-acessos> 
+                        </code>
+                      </pre>
+                      <p>
+                        Para conseguir usar o recurso de obter os valores preenchidos nos campos dos formulários,
+                        primeiramente é preciso importar um recurso adicional do Angular em seu componente. Sendo assim,
+                        vá ao arquivo <b>acessos.component.ts</b>, importe o <b>FormsModule</b> e já crie uma
+                        propriedade chamada <b>email</b>:
+                      </p>
+                      <pre>
+                        <code>
+  import { Component } from '@angular/core'; 
+  import { FormsModule } from '@angular/forms'; 
+@Component({ 
+  selector: 'app-acessos', 
+  standalone: true, 
+  imports: [FormsModule], 
+  templateUrl: './acessos.component.html', 
+  styleUrl: './acessos.component.css' 
+}) 
+export class AcessosComponent { 
+  email: string = "" 
+} 
+                        </code>
+                      </pre>
+                      <p>Agora, no arquivo <b>.html</b> do seu componente, crie um formulário e adicione um recurso do
+                        Angular chamado <b>ngModel</b>:
+                      </p>
+                      <pre>
+                          <code>
+&lt;form> 
+  &lt;input type="email" name="email" placeholder="Seu E-mail" [(ngModel)]="email"> 
+  &lt;input type="submit" name="enviar"> 
+&lt;/form> 
+&lt;div> 
+  Seu email é: {{ email }} 
+&lt;/div> 
+                          </code>
+                        </pre>
+                      <p>
+                        É importante destacar que o valor inserido em <b>ngModel</b> é exatamente o nome da propriedade
+                        criada
+                        na
+                        função anterior, neste caso, <b>email</b>.
+                      </p>
+                      <p>
+                        Se tudo estiver funcionando corretamente, ao digitar qualquer valor no campo do seu formulário,
+                        ele deve escrever esse valor na <b>div</b> inserida.
+                      </p>
+                      <img src="imgs/fig28.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                      <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                      <a href="imgs/fig28.png" target="_blank" class="no-print visible-sm visible-xs"
+                        aria-hidden="true"><img src="imgs/fig28.png" class="center-block img-responsive"></a>
+                      <p class="legenda-imagem">Resgatando valores de um formulário <br>
+                        Fonte: Senac EAD (2024)
+                      </p>
+                      <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, e ao digitar um valor no
+                        campo do formulário ele é inserido no conteúdo HTML da tela.
+                      </p>
+                      <p>
+                        Agora veja como criar mais um campo em seu formulário e como criar uma função para que os
+                        valores
+                        só apareçam na tela após clicar no botão de enviar do formulário.
+                      </p>
+                      <p>
+                        No arquivo <b>.ts</b> do componente <b>acessos</b>, atualize sua <i>class</i> com novas
+                        propriedades e um método para
+                        mostrar os valores somente se os campos <b>email</b> e <b>usuario</b> estiverem preenchidos:
+                      </p>
+                      <pre>
+                        <code>
+export class AcessosComponent { 
+  email: string = "" 
+  usuario: string = "" 
+  confirme: boolean = false 
+  verDados(): void {     
+    if(this.email && this.usuario){ 
+      this.confirme = true 
+    }else{ 
+      this.confirme = false 
+    } 
+  } 
+} 
+                        </code>
+                      </pre>
+                      Já no <b>acessos.component.html</b>, inclua um novo campo e uma lógica condicional para mostrar os
+                      valores:
+                      <pre>
+                        <code>
+&lt;form> 
+    &lt;input type="text" name="usuario" placeholder="Seu Nome" [(ngModel)]="usuario"> 
+    &lt;input type="email" name="email" placeholder="Seu E-mail" [(ngModel)]="email"> 
+    &lt;input type="submit" name="enviar" (click)="verDados()"> 
+&lt;/form> 
+@if (confirme){ 
+    &lt;div> 
+           &lt;p>Bem vindo, {{ usuario }}&lt;/p> 
+           &lt;p>Você acessou com o e-mail: {{ email }}&lt;/p> 
+    &lt;/div> 
+} 
+                        </code>
+                      </pre>
+                      <p>
+                        Perceba, em sua lógica, que o botão de enviar dispara a função <b>verDados()</b>, e, de acordo
+                        com o <b>if</b>,
+                        os dados só serão mostrados se a propriedade <b>confirme</b> estiver como <b>true</b>. O método
+                        <b>verDados()</b> só
+                        transforma a propriedade confirme em <b>true</b> se os valores dos campos <b>email</b> e
+                        <b>usuario</b> estiverem
+                        preenchidos.
+                      </p>
+                      <div class="caixa-destaque icone importante">
+                        <p>
+                          O Angular continua sendo uma ferramenta extremamente relevante e poderosa no desenvolvimento
+                          <i>web</i>
+                          atual. A importância do Angular no desenvolvimento <i>web</i> se deve à sua robustez,
+                          modularidade e
+                          capacidade de lidar com aplicações complexas e de grande escala. Ele oferece estrutura sólida,
+                          suporte extensivo e ferramentas que aumentam a produtividade e garantem a qualidade do código.
+                          Por essas razões, o Angular continua sendo uma escolha popular entre desenvolvedores e
+                          empresas
+                          que buscam construir aplicações performáticas, escaláveis e seguras.
+                        </p>
+                      </div>
+                      <p>
+                        Para conseguir compreender com facilidade todos os recursos do Angular e usufruir deles, é
+                        importante ter sólidos conhecimentos em HTML, CSS e JavaScript. Porém, como esse
+                        <i>framework</i> também
+                        utiliza TypeScript, é importante estudar essa linguagem. Contudo, mesmo que você não tenha
+                        conhecimento anterior em TypeScript, conseguirá compreender a maioria das funcionalidades do
+                        Angular.
+                      </p>
+                      <p>
+                        Assim como acontece com o React, o Angular muda um pouco a forma de desenvolvimento
+                        <i>front-end</i>, o
+                        que pode ser frustrante para desenvolvedores mais tradicionais ou que estejam acostumados com
+                        ferramentas que não “mudam” a forma de construir as aplicações. No entanto, diferentemente do
+                        React, o Angular mantém a escrita tradicional do HTML5, o que leva muitos desenvolvedores a
+                        sentirem mais afinidade com a forma de programar do Angular, tornando a aprendizagem mais
+                        intuitiva.
+                      </p>
                     </div>
-
                     <button type="button" class="btn btn-fechar" data-dismiss="modal">Fechar</button>
                   </div>
                 </div>
@@ -1742,9 +2178,34 @@ export class BoasVindasComponent {
                   </div>
                   <div class="modal-body">
                     <div class="container">
-
+                      <h3>A importância de JavaScript no desenvolvimento <i>mobile</i> </h3>
+                      <p>
+                        Com a crescente popularidade dos dispositivos móveis, o desenvolvimento <i>web</i> responsivo
+                        tornou-se
+                        essencial. O JavaScript, por meio de suas bibliotecas e seus <i>frameworks</i>, oferece as
+                        ferramentas
+                        necessárias para criar aplicações que não apenas se adaptam a diferentes tamanhos de tela, mas
+                        também oferecem uma experiência de usuário rica e fluida. Isso inclui tudo, desde o carregamento
+                        rápido e eficiente de páginas até a criação de animações suaves e a integração com APIs
+                        (<i>application programming interface</i>) móveis.
+                      </p>
+                      <p>
+                        O uso de JavaScript e suas bibliotecas específicas para <i>mobile</i> é essencial para o
+                        desenvolvimento
+                        de aplicações <i>web</i> modernas e interativas que funcionam de forma eficiente em dispositivos
+                        móveis.
+                        A escolha da biblioteca ou do <i>framework</i> certo depende das necessidades específicas do
+                        projeto,
+                        como a complexidade da interface do usuário, a necessidade de integração com APIs nativas e o
+                        desejo de reutilização de código entre plataformas.
+                      </p>
+                      <p>
+                        As bibliotecas e os <i>frameworks</i> mostrados neste conhecimento são ótimos exemplos de ferramentas
+                        modernas e úteis para o desenvolvimento <i>front-end</i> atual. Ao dominar essas ferramentas, os
+                        desenvolvedores podem criar experiências de usuário ricas e responsivas, que são essenciais
+                        atualmente.
+                      </p>
                     </div>
-
                     <button type="button" class="btn btn-fechar" data-dismiss="modal">Fechar</button>
                   </div>
                 </div>
@@ -2514,57 +2975,1123 @@ npx create-vite.
               eficiência
               o React.
             </p>
+            <h3>Angular </h3>
+            <!--texto video-->
+            <p>
+              AngularJS é um framework JavaScript open-source, desenvolvido inicialmente por Misko Hevery e Adam Abrons
+              em
+              2009, e posteriormente mantido pelo Google. Foi criado para facilitar a construção e o teste de aplicações
+              de página única (Single Page Applications - SPAs), onde, conforme vimos no capítulo sobre React, a maioria
+              das atividades acontece em uma única página web, proporcionando uma experiência de usuário mais fluida e
+              rápida.
+            </p>
+            <p>
+              Em 2016, o AngularJS evoluiu para uma nova plataforma chamada simplesmente de Angular (às vezes referido
+              como Angular 2+), que é uma reescrita completa do AngularJS com melhor desempenho, uma arquitetura mais
+              moderna e um melhor suporte para dispositivos móveis. Angular não é uma atualização direta do AngularJS,
+              mas
+              sim uma re-implementação que usa TypeScript e oferece funcionalidades melhoradas, como componentes web
+              padrões e melhores práticas de desenvolvimento.
+            </p>
+            <p>
+              Assim como o React, para conseguir evoluir com o Angular é necessário ter domínio de HTML, CSS e
+              JavaScript.
+              E também será necessário ter o Node instalado, como editor também vamos utilizar o VS Code.
+            </p>
+            <h4>Desenvolvendo com Angular</h4>
+            <p>
+              Para iniciar seu primeiro projeto com o Angular, é preciso instalar o Node.js. Usando o terminal
+              do seu computador, instale o CLI (<i>command-line interface</i>) do Angular. É preciso
+              instalá-lo e criar
+              o projeto antes de poder usar o terminal no VS Code.
+            </p>
+            <p>
+              Para isso, você pode ir à pesquisa do Windows, digitar “cmd” e clicar em <b>Prompt de
+                Comando</b>. Isso
+              abrirá o terminal do Windows. Veja a figura:
+            </p>
+            <img src="imgs/fig15.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Pesquisa do Windows <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra a busca do Windows com o cmd digitado e sugerindo o
+              Prompt de Comando.
+            </p>
+            <p>Então, digite no terminal o seguinte código, para instalar o CLI do Angular: </p>
+            <pre>
+              <code>
+npm install -g @angular/cli  
+              </code>
+            </pre>
+            <img src="imgs/fig16.png" class="center-block img-responsive print">
+            <p class="legenda-imagem"><i>Prompt</i> de comando do Windows <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o prompt de comando do Windows.
+            </p>
+            <p>
+              Após a instalação, será necessário, nesse mesmo terminal, indicar uma pasta para o seu novo
+              projeto e criar um projeto novo em Angular. Para determinar sua pasta, escreva “cd” e o caminho no
+              qual deseja colocar seu projeto. Veja um exemplo:
+            </p>
+            <pre>
+              <code>
+cd C:\MEU D\Aulas - SENAC\TDS\Angular 
+              </code>
+            </pre>
+            <p>
+              Atenção: esse código só funcionará caso você tenha os mesmos diretórios. Será <b>necessário atualizar
+                com os nomes das pastas</b> do seu computador.
+            </p>
+            <p>
+              Então, para criar o seu projeto, digite o código <b>ng new</b> e o “nome do seu projeto”. Veja um
+              exemplo:
+            </p>
+            <pre>
+              <code>
+ng new projeto-novo 
+              </code>
+            </pre>
+            <p>
+              Ele perguntará se seu projeto deve ser com CSS, SASS (<i>syntactically awesome style sheets</i>) ou LESS
+              (<i>leaner style sheets</i>). Escolha CSS e depois confirme com o <b>y</b>. A instalação começará.
+            </p>
+            <p>
+              Você observará que na pasta que você indicou a instalação, serão criados vários arquivos
+              necessários ao seu projeto novo.
+            </p>
+            <p>Agora, para começar a rodar o servidor JS e ver sua aplicação em Angular, digite no terminal:</p>
+            <pre>
+              <code>
+ng serve   
+              </code>
+            </pre>
+            <p>Se tudo correr bem, o terminal lhe indicará uma porta para rodar seu projeto: </p>
+            <img src="imgs/fig17.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Servidor para o Angular <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A figura mostra o terminal do Windows com o ng server executado.
+            </p>
+            <p>
+              Neste caso, ele indicou o seguinte endereço: http://localhost:4200/. Porém, esse número final,
+              no
+              caso, a porta, pode ser diferente dependendo de cada ambiente e computador. É importante
+              destacar
+              que será necessário <b>repetir esse comando</b> (<b>ng serve</b>) toda vez que o computador
+              reiniciar, o <i>prompt</i>
+              de comando fechar ou, por algum motivo, o servidor parar de funcionar.
+            </p>
+            <p>
+              Agora, ao acessar essa URL, aparecerá a interface inicial do Angular. Basicamente, o que é
+              mostrado é um exemplo de projeto.
+            </p>
+            <img src="imgs/fig18.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Tela inicial de um projeto Angular <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela inicial de um projeto Angular.
+            </p>
+            <p>
+              Depois disso, você pode abrir o VS Code e incluir a pasta do seu projeto Angular. Se você digitar
+              no prompt de comando o seguinte código, o VS Code abre de forma automática, já com o seu projeto
+              aberto:
+            </p>
+            <pre>
+              <code>
+code .   
+              </code>
+            </pre>
+            <p>
+              O <i>template</i> inicial do Angular fica na pasta “src/app” no arquivo <b>app.component.html</b>, no qual
+              se
+              encontra todo o conteúdo da página inicial com os estilos incluídos na página. O próprio Angular
+              recomenda deletar todo o conteúdo desse arquivo para iniciar seu projeto personalizado. Então
+              delete todo o conteúdo e escreva:
+            </p>
+            <pre>
+              <code>
+&lt;h1>Primeiro Projeto com Angular&lt;/h1> 
+              </code>
+            </pre>
+            <p>O resultado no navegador será imediato, conforme mostra a figura:</p>
+            <img src="imgs/fig19.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Tela inicial do projeto Angular com a modificação<br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela inicial de um projeto Angular com a
+              modificação no código.
+            </p>
+            <p>
+              Você deve ter percebido que, diferentemente do React, em que se pode digitar todos os comandos
+              direto no terminal do VS Code, o Angular não permite fazer isso. É necessário realizar a
+              instalação via terminal do Windows, conforme foi mostrado anteriormente. Porém, você deve ter
+              percebido também que, ao executar o comando para iniciar o servidor JavaScript no terminal do
+              Windows, se fechar o <i>prompt</i> de comando, o servidor para de funcionar.
+            </p>
+            <p>
+              Nessa etapa de iniciar o servidor (<b>ng serve</b>), é possível fazer direto no terminal do VS Code, o
+              que tornará o desenvolvimento mais prático, pois o servidor ficará ativo enquanto o VS Code ficar
+              aberto, sem a necessidade de manter aberto o <i>prompt</i> de comando. Porém, na maioria dos casos, o
+              Windows vem com uma configuração que bloqueia executar os <i>scripts</i> em outro editor, no caso, o VS
+              Code. Tente executar o <b>ng serve</b> no terminal do VS Code. Se aparecer um erro relacionado a
+              bloqueios de permissão da Microsoft, será necessário alterar essas políticas de execução.
+            </p>
+            <p>
+              Então, para poder usar o VS Code para iniciar o servidor, primeiro será necessário mudar essa
+              configuração do Windows. Para isso, é preciso alterar as políticas de execução do <b>PowerShell</b>. A
+              própria documentação oficial do PowerShell no <i>site</i> da Microsoft ensina a fazer isso. Contudo, na
+              prática, é preciso que você abra o terminal do VS Code na pasta do seu projeto Angular e execute o
+              seguinte comando:
+            </p>
+            <pre>
+            <code>
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+            </code>
+           </pre>
+            <p>
+              Isso mudará as permissões de execução do PowerShell, permitindo que o VS Code execute os comandos
+              da CLI do Angular.
+            </p>
+            <p>Se tudo deu certo, agora você pode inserir o <b>ng serve</b> direto no terminal do VS Code:</p>
+            <img src="imgs/fig20.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Iniciando o servidor pelo VS Code <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra o terminal do VS Code iniciando o servidor com o comando ng
+              serve.
+            </p>
+            <p>
+              Agora você entenderá a estrutura de diretórios e arquivos do Angular. Basicamente haverá a pasta
+              “node_modules”, que é onde ficam as configurações do Node com as dependências do seu projeto,
+              muito similar ao que você viu com o React.
+            </p>
+            <p>
+              A pasta “src” é onde você efetivamente criará as lógicas e os comandos do seu projeto. A pasta
+              “app” (que fica dentro de “src”) é a pasta principal do projeto; é nela que estarão seus
+              componentes, serviços, estilos e demais conteúdos.
+            </p>
+            <p>
+              Agora você aprenderá a criar um novo componente no Angular. Basicamente, serão criados diversos
+              componentes reaproveitáveis, para formar o <i>layout</i> do seu <i>site</i> ou sistema. Para a
+              correta
+              organização do seu projeto, o ideal é criar uma pasta, chamada “components”, e nela ficarão seus
+              componentes personalizados. É possível fazer isso de forma manual, mas cada componente é
+              composto
+              de diversos arquivos, então o Angular traz alguns comandos que podem ser inseridos no terminal
+              para que crie um novo componente com todos os arquivos e todas as configurações necessárias.
+            </p>
+            <p>
+              Se você está rodando o <b>ng serve</b> no VS Code, perceberá que não conseguirá digitar outro comando no
+              mesmo terminal. Para resolver isso, basta clicar no botão de mais (+) localizado no canto superior
+              direito da janela do terminal. Isso abrirá um novo espaço para digitar seus comandos, enquanto o
+              servidor fica rodando no terminal anterior. É possível também clicar com o botão direito do <i>mouse</i>
+              em cima da pasta com o nome do seu projeto e selecionar <b>Open in Integrated Terminal</b>. Isso fará com
+              que o VS Code já abra um novo espaço para digitar seus comandos no diretório correto.
+            </p>
+            <p>
+              Para criar um novo componente, o comando deve ser <b>ng generate component
+                components/nome-do-seu-componente</b>. Por exemplo:
+            </p>
+            <pre>
+              <code>
+ng generate component components/boas-vindas 
+              </code>
+            </pre>
 
+            <p>Esse comando criará automaticamente a pasta e o componente com nome boas-vindas. Veja a figura:
+            </p>
+            <img src="imgs/fig21.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Criando um componente via terminal <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra o terminal do VS Code com a execução da criação de
+              um componente.
+            </p>
+            <p>
+              Repare que, ao criar o componente <b>boas-vindas</b>, foram criados quatro arquivos. Basicamente, o
+              <b>.html</b>
+              é onde vai o conteúdo HTML; e o <b>.css</b> é onde vai o CSS exclusivo desse componente. Os arquivos
+              <b>.ts</b>
+              são configurações necessárias ao Angular.
+            </p>
+            <p>Agora, no arquivo <b>boas-vindas.component.html</b>, será inserido um conteúdo HTML:</p>
+            <pre>
+              <code>
+&lt;h2>Bem Vindo!&lt;/h2> 
+              </code>
+            </pre>
+            <p>E no arquivo <b>boas-vindas.component.css</b>, será adicionado um estilo personalizado a esse HTML: </p>
+            <pre>
+              <code>
+h2{ 
+  color: #5f9ea0; 
+} 
+              </code>
+            </pre>
+            <p>
+              Para conseguir visualizar o conteúdo desse componente, é preciso importá-lo em seu projeto. Então,
+              vá ao arquivo <b>app.components.ts</b>, que fica dentro da pasta “apps”. Primeiro você deve importá-lo no
+              topo do documento:
+            </p>
+            <pre>
+            <code>
+import { BoasVindasComponent } from './components/boas-vindas/boas-vindas.component'; 
+            </code>
+           </pre>
+            <p>Dentro do<b> @Component</b> em <b>import</b>, coloca-se uma vírgula e adiciona-se o nome do
+              componente, conforme o exemplo: </p>
+            <pre>
+                <code>
+@Component({ 
+  selector: 'app-root', 
+  standalone: true, 
+  imports: [RouterOutlet, BoasVindasComponent], 
+  templateUrl: './app.component.html', 
+  styleUrl: './app.component.css' 
+}) 
+                </code>
+              </pre>
+            <p>Repare que, no índice <b>imports</b>, foi adicionado o componente logo após o <b>RouterOutlet</b>.</p>
+            <p>
+              Feito isso, agora você pode adicionar o seu componente dentro do arquivo <b>app.component.html</b>. Para
+              isso, siga a seguinte sintaxe: <b>app-nome-do-componente>&lt;/app-nome-do-componente></b>. Veja um
+              exemplo:
+            </p>
+            <pre>
+            <code>
+&lt;h1>Primeiro Projeto com Angular&lt;/h1> 
+&lt;app-boas-vindas>&lt;/app-boas-vindas> 
+            </code>
+           </pre>
+            <p>
+              Agora, ao visualizar seu projeto no navegador, ele contará com o conteúdo adicionado no seu
+              componente de boas-vindas. Veja:
+            </p>
+            <img src="imgs/fig22.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Visualizando um componente<br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com o conteúdo do
+              componente adicionado.
+            </p>
+            <h4>Inserindo dados dinâmicos (variáveis) no Angular</h4>
+            <p>
+              Entenda agora como funciona a interpolação de dados nos componentes do Angular, que basicamente é
+              a forma de mostrar variáveis na tela junto ao seu conteúdo HTML. Na estrutura do Angular, criam-se
+              as variáveis (ou propriedades, já que se trata de orientação a objetos) diretamente no arquivo
+              <b>nome-componente.components.ts</b>. Neste exemplo, será usado o componente
+              <b>boas-vindas.components.ts</b>.
+              Abrindo esse arquivo, você perceberá que há uma classe chamada <b>BoasVindasComponent</b>, e é nessa
+              classe que são criadas suas propriedades. Veja um exemplo no seguinte código:
+            </p>
+            <pre>
+              <code>
+export class BoasVindasComponent { 
+  nome = "Robert" 
+  idade = 4 
+  hobbies = ["Jogar Video game", "Correr", "Jardinagem"] 
+  curso = { 
+    nome: "TDS", 
+    semestre: 3, 
+    cidade: "Porto Alegre" 
+} 
+} 
+              </code>
+            </pre>
+            <p>
+              Repare que foram criados quatro tipos de dados diferentes para exemplificar suas saídas. Na
+              função, foram criados dados tipo número, texto, <i>array</i> e objeto (ou <i>array</i> associativo). Claro
+              que
+              esses dados estão sendo criados de forma direta, mas, quando se usa também uma estrutura de
+              <i>back-end</i> com banco de dados, esses dados vêm do banco.
+            </p>
+            <p>
+              Agora, para mostrar essas propriedades na <i>view</i> do seu componente, vá até o arquivo
+              <b>boas-vindas.components.html</b> e use a seguinte sintaxe: <b>{{ nome-propriedade }}</b>. Para a
+              visualização
+              HTML da página, não importa o tipo de dado, pois o que se vê na tela é sempre convertido em <i>string</i>
+              pelo navegador. Veja os exemplos:
+            </p>
+            <pre>
+              <code>
+&lt;h2>Bem Vindo! {{ nome }}&lt;/h2> 
+&lt;p>Sua idade é {{ idade }} anos&lt;/p> 
+&lt;p>Seus Hobbies são:&lt;/p> 
+&lt;ul> 
+  &lt;li>{{hobbies[0]}} &lt;/li> 
+  &lt;li>{{hobbies[1]}}&lt;/li> 
+  &lt;li>{{hobbies[2]}}&lt;/li> 
+&lt;/ul> 
+&lt;p>Curso: {{curso.nome}} - {{curso.semestre}} - {{curso.cidade}} &lt;/p>
+              </code>
+            </pre>
+            <p>Veja na figura o resultado no navegador: </p>
+            <img src="imgs/" class="center-block img-responsive print">
+            <p class="legenda-imagem">Visualizando variáveis com Angular<br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com o conteúdo das
+              propriedades inserido.
+            </p>
+            <h4>Inserindo CSS no Angular</h4>
+            <p>
+              Adicionar estilos CSS no Angular é bem simples. Basicamente, há dois modos de adicionar estilos:
+              o
+              estilo global, no qual o que for inserido vale para todo o projeto, e modo via componente, no
+              qual
+              o que é adicionado de estilo fica valendo exclusivamente para o componente, mesmo que tenham
+              classes ou <i>tags</i> iguais.
+            </p>
+            <p>
+              Primeiramente, veja como adicionar um estilo global. Suponha que você quer mudar o tipo de
+              fonte-padrão de todo o seu projeto Angular. Para isso, vá ao arquivo <b>style.css</b>,
+              localizado na raiz
+              da pasta “src”:
+            </p>
+            <pre>
+              <code>
+body{ 
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+} 
+              </code>
+            </pre>
+            <p>
+              Isso mudará o tipo de fonte em todo o projeto. Mesmo que você crie mais componentes, esse estilo
+              será aplicado a ele também.
+            </p>
+            <p>
+              Você deve ter percebido que, quando se cria um componente novo, em seus arquivos há também um
+              arquivo de CSS, e se for colocado um estilo no arquivo CSS do componente, ele aplicará o estilo
+              única e exclusivamente ao HTML desse componente. Veja um exemplo no arquivo
+              <b>boas-vindas.component.css</b>:
+            </p>
+            <pre>
+              <code>
+h2{ 
+  color: #5f9ea0; 
+}   
+h1{ 
+  color: #8a2be2; 
+  text-transform: uppercase; 
+  font-size: 22px; 
+} 
+              </code>
+            </pre>
+            <p>
+              Nesse exemplo, já havia sido criado um estilo para a <i>tag</i> <b>h2</b>. Agora, foi adicionado um estilo
+              para
+              a <i>tag</i> <b>h1</b>. No entanto, se você olhar o arquivo HTML do seu componente, verá que não foi
+              adicionada
+              nenhuma <i>tag</i> <b>h1</b> ainda. Contudo, se verificar o arquivo principal do seu projeto
+              (<b>app.component.html</b>), há uma <i>tag</i> <b>h1</b>, mas ela não sofrerá as modificações de estilo
+              inseridas no
+              CSS do componente.
+            </p>
+            <p>Agora, veja como incluir um conteúdo com a <i>tag</i> <b>h1</b> no HTML do componente <b>boas-vindas</b>:
+            </p>
+            <pre>
+              <code class="hljs language-html">
+&lt;h1>Este é o nosso primeiro Componente com Angular&lt;/h1> 
+&lt;h2>Bem Vindo! {{ nome }}&lt;/h2> 
+&lt;p>Sua idade é {{ idade }} anos&lt;/p> 
+&lt;p>Seus Hobbies são:&lt;/p> 
+&lt;ul> 
+    &lt;li>{{hobbies[0]}}&lt;/li> 
+    &lt;li>{{hobbies[1]}}&lt;/li> 
+    &lt;li>{{hobbies[2]}}&lt;/li> 
+&lt;/ul> 
+&lt;p>Curso: {{curso.nome}} - {{curso.semestre}} - {{curso.cidade}}&lt;/p> 
+              </code>
+            </pre>
+            <p> Veja o resultado na figura: </p>
+            <img src="imgs/fig23.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">CSS com Angular <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com os estilos CSS aplicados.
+            </p>
+            <p>
+              Perceba, na figura, que as frases “Primeiro Projeto com Angular” e “Este é o nosso primeiro
+              componente com Angular” são construídas com a <i>tag</i> <b>h1</b>, mas somente na tag presente
+              no componente
+              foram aplicados os estilos CSS do componente em questão.
+            </p>
+            <p>
+              Você já deve ter percebido que, ao criar qualquer componente, via terminal, automaticamente será
+              criado um arquivo CSS para esse componente. E nele você sempre poderá adicionar estilos
+              exclusivos. Isso melhora e otimiza o carregamento da sua interface, pois o Angular só adiciona
+              os
+              estilos quando e onde você usar o componente.
+            </p>
+            <h4>Dados dinâmicos e compartilhamento de dados</h4>
+            <p>
+              Com o Angular, é possível compartilhar dados do componente de nível superior (pai) com os
+              componentes inferiores (filhos). Para exemplificar esse recurso, veja como criar um componente
+              chamado <b>cursos</b>. Digite no terminal do VS Code o comando para criar componentes novos:
+            </p>
+            <pre>
+              <code>
+ng generate component components/cursos 
+              </code>
+            </pre>
+            <p>
+              Esse comando gera, então, os arquivos para o novo componente dentro da pasta “components”.
+              Agora,
+              vá até o arquivo <b>app.components.ts</b> e importe o novo componente. Veja o arquivo completo e
+              atualizado:
+            </p>
+            <pre>
+              <code>
+  import { Component } from '@angular/core'; 
+  import { RouterOutlet } from '@angular/router'; 
+  import { BoasVindasComponent } from './components/boas-vindas/boas-vindas.component'; 
+  import { CursosComponent } from './components/cursos/cursos.component'; 
 
+@Component({ 
+  selector: 'app-root', 
+  standalone: true, 
+  imports: [RouterOutlet, BoasVindasComponent, CursosComponent], 
+  templateUrl: './app.component.html', 
+  styleUrl: './app.component.css' 
+}) 
+export class AppComponent { 
+  title = 'projeto-novo'; 
+} 
+              </code>
+            </pre>
+            <p>
+              Para iniciar essa funcionalidade de dados dinâmicos e compartilhamento de dados, vá até o
+              arquivo
+              <b>cursos.component.ts</b> e importe um recurso do Angular chamado <b>input</b>.
+            </p>
+            <pre>
+              <code>
+import { Component, Input } from '@angular/core'; 
+              </code>
+            </pre>
+            <p>Crie essas variáveis com a função <b>input</b>, a princípio com valor vazio, conforme o
+              exemplo:</p>
+            <pre>
+              <code>
+export class CursosComponent { 
+  @Input() titulo = "" 
+  @Input() imagemCurso = "" 
+} 
+              </code>
+            </pre>
+            <p>Agora você pode chamar essas propriedades dentro do HTML do seu componente <b>cursos</b>, no
+              arquivo <b>cursos.component.html</b>: </p>
+            <pre>
+              <code>
+&lt;img src="{{ imagemCurso }}" alt="{{ titulo }}"> 
+&lt;h3>{{ titulo }}&lt;/h3> 
+              </code>
+            </pre>
+            <p>Para inserir esse componente em seu projeto com os dados dinâmicos, realiza-se a chamada dele
+              dentro do <b>app.component.html</b>: </p>
+            <pre>
+                <code>
+&lt;h1>Primeiro Projeto com Angular&lt;/h1> 
+&lt;app-boas-vindas>&lt;/app-boas-vindas> 
+&lt;app-cursos titulo="CSS 3" imagem="teste">&lt;/app-cursos> 
+                </code>
+              </pre>
+            <p>
+              Para inserir imagens em seu projeto, crie uma pasta chamada “images” dentro do diretório
+              “src/assets” e insira nela as imagens da sua interface. Então, atualize o arquivo HTML, chamando o
+              componente três vezes:
+            </p>
+            <pre>
+              <code class="hljs language-html">
+&lt;h1>Primeiro Projeto com Angular&lt;/h1> 
+&lt;app-boas-vindas>&lt;/app-boas-vindas> 
+&lt;div class="cursos"> 
+    &lt;app-cursos titulo="CSS 3" imagemCurso="assets/images/css.png">&lt;/app-cursos> 
+    &lt;app-cursos titulo="HTML 5" imagemCurso="assets/images/html.png">&lt;/app-cursos> 
+    &lt;app-cursos titulo="PHP" imagemCurso="assets/images/php.png">&lt;/app-cursos> 
+&lt;/div> 
+              </code>
+            </pre>
+            <p>
+              Antes de ver o resultado no navegador, insira um pouco de CSS em seu componente. Já que foi
+              criada
+              a classe <b>cursos</b> no HTML do <b>app</b>, abra o <b>app.component.css</b>:
+            </p>
+            <pre>
+              <code>
+.cursos{ 
+    display: flex;                         
+    justify-content: center;                         
+    text-align: center;                         
+} 
+              </code>
+            </pre>
+            <p>No <b>style.css</b>, que é o arquivo global de estilo do Angular, centralize os textos: </p>
+            <pre>
+              <code>
+body{ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    text-align: center; 
+} 
+              </code>
+            </pre>
+            <p>E no <b>boas-vindas.component.css</b>, acrescente o seguinte: </p>
+            <pre>
+              <code>
+ul{ 
+    list-style: none; 
+    padding: 20px 0; 
+    background: #f7f7f7; 
+    border: 1px #ddd solid; 
+} 
+              </code>
+            </pre>
+            <p>Agora veja o resultado da sua interface no navegador: </p>
+            <img src="imgs/fig24.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Dados dinâmicos <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com os estilos CSS
+              aplicados e a reutilização do componente.
+            </p>
+            <p>
+              Para compartilhar dados de um componente pai com algum componente filho, é preciso primeiramente
+              criar as propriedades no arquivo <b>.ts</b> do componente superior. Então, vá até o arquivo
+              <b>app.componente.ts</b> e crie uma propriedade lá dentro da função <b>export</b>:
+            </p>
+            <pre>
+              <code>
+export class AppComponent {   
+  title = 'projeto-novo'; 
+  username = "Fulano"; 
+} 
+              </code>
+            </pre>
+            <p>
+              Nesse exemplo, foi criada a variável <b>username</b> com o valor <b>Fulano</b>. Então, use o
+              valor dessa
+              variável como valor de alguma variável de algum componente filho. Será usado esse valor no
+              componente <b>boas-vindas</b>, mas, para isso funcionar, é preciso criar os <i>inputs</i>, igual
+              foi feito com o
+              componente <b>cursos</b>.
+            </p>
+            <p>Assim, o arquivo <b>boas-vindas.componente.ts</b> foi atualizado:</p>
+            <pre>
+            <code class="hljs language-typescript">
+import { Component, Input } from '@angular/core'; 
 
+@Component({ 
+  selector: 'app-boas-vindas', 
+  standalone: true, 
+  imports: [], 
+  templateUrl: './boas-vindas.component.html', 
+  styleUrl: './boas-vindas.component.css' 
+}) 
+export class BoasVindasComponent { 
+  @Input() nome = "" 
+  idade = 4 
+  hobbies = ["Jogar Video game", "Correr", "Jardinagem"] 
+  curso = { 
+    nome: "TDS", 
+    semestre: 3, 
+    cidade: "Porto Alegre" 
+} 
+} 
+            </code>
+           </pre>
+            <p>E na chamada ao componente no HTML do <b>app</b>, foi inserido o valor da seguinte maneira:
+            </p>
+            <pre>
+            <code>
+&lt;h1>Primeiro Projeto com Angular&lt;/h1> 
+&lt;app-boas-vindas [nome]="username">&lt;/app-boas-vindas> 
+&lt;div class="cursos"> 
+    &lt;app-cursos titulo="CSS 3" imagemCurso="assets/images/css.png">&lt;/app-cursos> 
+    &lt;app-cursos titulo="HTML 5" imagemCurso="assets/images/html.png">&lt;/app-cursos> 
+    &lt;app-cursos titulo="PHP" imagemCurso="assets/images/php.png">&lt;/app-cursos> 
+&lt;/div> 
+            </code>
+           </pre>
+            <p>
+              Repare que foram inseridos os colchetes em volta da propriedade <b>nome</b>, e seu valor
+              <b>username</b> é o
+              nome da propriedade criada no componente superior.
+            </p>
+            <p>Veja o resultado no navegador:</p>
+            <img src="imgs/" class="center-block img-responsive print">
+            <p class="legenda-imagem">Compartilhamento de dados<br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com o valor do componente
+              bem-vindo, mostrando o valor da propriedade username, no caso o valor fulano, criada no
+              componente superior.
+            </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <h4>Renderização condicional </h4>
+            <p>
+              Agora, você entenderá como criar conteúdos condicionais no Angular, ou seja, mostrar um conteúdo
+              ou até mesmo realizar uma ação de acordo com alguma condição. Para exemplificar esse recurso,
+              veja
+              como criar uma mensagem na tela que será exibida apenas ao clicar (ou tocar) em um determinado
+              conteúdo.
+            </p>
+            <p>
+              Comece criando um componente novo chamado <b>alerta</b>. Para isso, realize todo aquele processo
+              de
+              criação de componentes no Angular. Digite no terminal o <b>ng generate component
+                components/alerta</b> e
+              importe o novo componente no arquivo <b>app.components.ts</b>.
+            </p>
+            <p>
+              Para iniciar o processo de conteúdo condicional, vá ao arquivo <b>alerta.component.ts</b> e crie
+              uma
+              variável do tipo <b>boolean</b>, que servirá de parâmetro para mostrar ou não determinado
+              conteúdo.
+            </p>
+            <pre>
+              <code>
+export class AlertaComponent { 
+  mostrarOcultar: boolean = true 
+}  
+              </code>
+            </pre>
+            <p>
+              Repare, nesse código, que foi criada a propriedade <b>mostrarOcultar</b>. Essa propriedade é do
+              tipo
+              <b>boolean</b> e seu valor inicial é igual a <b>true</b>.
+            </p>
+            <p>Agora, no arquivo <b>.html</b> do componente <b>alerta</b>, insira seu conteúdo condicional:
+            </p>
+            <pre>
+              <code>
+@if(mostrarOcultar) { 
+&lt;div>    
+  &lt;h2>Aviso Condicional&lt;/h2>    
+  &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+&lt;/div>             
+} 
+              </code>
+            </pre>
+            <p>
+              Observe que a sintaxe da versão mais atual do Angular para criar condicionais é muito similar à
+              sintaxe do JavaScript tradicional. Aqui, só se acrescentou o arroba (@) antes do <b>if</b>.
+            </p>
+            <p>Agora é preciso incluir o componente alerta dentro do HTML do <b>app</b>:</p>
+            <pre>
+              <code>
+&lt;app-alerta>&lt;/app-alerta> 
+              </code>
+            </pre>
+            <p>
+              Ao visualizar a tela no navegador, ele deverá mostrar o conteúdo do componente <b>alerta</b> normalmente.
+              Isso porque a propriedade <b>mostrarOcultar</b> está com o valor <b>true</b>. Ao mudar o valor para
+              <b>false</b>, o
+              conteúdo deve desaparecer.
+            </p>
+            <p>Veja um exemplo na figura a seguir:</p>
+            <img src="imgs/fig25.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Renderização condicional <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra duas telas do projeto Angular no navegador, uma com
+              o valor da propriedade igual a false, onde não é mostrado o conteúdo, e outra com o valor true,
+              onde o conteúdo do componente alerta é mostrado.
+            </p>
+            <p>
+              Para adicionar uma condição de “senão”, no caso, o <b>else</b>, também é bem simples: basta
+              adicionar o
+              <b>@else</b> logo após o fechamento de <b>if</b>. Veja um exemplo, complementando o arquivo
+              <b>alerta.component.html</b>:
+            </p>
+            <pre>
+              <code>
+@if(mostrarOcultar) { 
+&lt;div>   
+    &lt;h2>Aviso Condicional&lt;/h2>   
+    &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+&lt;/div> 
+} @else{ 
+    &lt;h2>Sem Avisos&lt;/h2> 
+} 
+              </code>
+            </pre>
+            <p>
+              Nesse caso, se a variável <b>mostrarOcultar</b> estiver com valor <b>false</b>, então será
+              mostrada a mensagem
+              do <b>else</b>.
+            </p>
+            <p>
+              Agora veja como unir o conteúdo condicional a um evento do JavaScript. Para fazer isso, é
+              preciso
+              colocar o nome do evento entre parênteses e vinculá-lo a algum método. Será criada uma
+              <i>tag</i> <b>button</b>
+              no conteúdo e depois será criado o método no <b>.ts</b> do seu componente.
+            </p>
+            <p>
+              Para esse exemplo, será removido o <b>else</b> e acrescentada a <i>tag</i> que servirá de alvo
+              para disparar uma
+              função:
+            </p>
+            <pre>
+              <code>
+@if(mostrarOcultar) { 
+&lt;div>                     
+      &lt;h2>Aviso Condicional&lt;/h2>                           
+      &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p>             
+&lt;/div> 
+} 
+&lt;button (click)="mostrar()">Mostrar Aviso&lt;/button> 
+              </code>
+            </pre>
+            <p> Agora vá ao arquivo <b>alerta.component.ts</b> e crie esse método chamado <b>mostrar()</b>:
+            </p>
+            <pre>
+              <code>
+export class AlertaComponent { 
+      mostrarOcultar: boolean = false 
+      mostrar(): void { 
+        this.mostrarOcultar = true 
+      }                          
+} 
+              </code>
+            </pre>
+            <p>
+              O que ocorrerá agora é que a propriedade <b>mostrarOcultar</b> começa como <b>false</b>, mas, ao
+              clicar no
+              botão, será disparado o método <b>mostrar()</b> e mudará o valor da propriedade para
+              <b>true</b>. Isso fará
+              mostrar novamente a mensagem.
+            </p>
+            <p>
+              Porém, para que o exemplo fique mais completo e funcional, será usada uma sintaxe lógica do
+              JavaScript que permite mudar o valor de um <b>boolean</b> sempre que for clicado. Para isso,
+              será
+              modificado o método <b>mostrar</b> para:
+            </p>
+            <pre>
+              <code>
+mostrar(): void { 
+  this.mostrarOcultar = !this.mostrarOcultar 
+} 
+              </code>
+            </pre>
+            <p>
+              Esse código indica que o valor da propriedade <b>mostrarOcultar</b> sempre será o oposto do
+              valor atual,
+              ou seja, se ele estiver como <b>true</b>, mudará para <b>false</b> e vice-versa. Isso faz com
+              que o botão, ao
+              ser clicado, primeiramente mostre a mensagem, mas, ao ser clicado novamente, oculte a mensagem,
+              alternando assim entre os dois estados, visível e oculto.
+            </p>
+            <p>
+              Contudo, agora, complemente ainda mais sua interface, mudando dinamicamente a mensagem do botão.
+              Para isso, primeiro, crie em sua função do componente a variável que conterá o texto do botão e,
+              depois, crie uma condição para mudar o texto. Veja um exemplo:
+            </p>
+            <pre>
+              <code>
+export class AlertaComponent { 
+  mostrarOcultar: boolean = false 
+  btAviso = "Mostrar Mensagem" 
+  mostrar(): void { 
+    this.mostrarOcultar = !this.mostrarOcultar 
+    if(this.mostrarOcultar){ 
+      this.btAviso = "Fechar Mensagem" 
+    }else{ 
+      this.btAviso = "Mostrar Mensagem" 
+    } 
+  } 
+} 
+              </code>
+            </pre>
+            <p>
+              Agora é preciso inserir a propriedade <b>btAviso</b> no lugar do texto estático do botão, no
+              <b>.html</b> do
+              componente <b>Aviso</b>:
+            </p>
+            <pre>
+              <code>
+@if(mostrarOcultar) { 
+&lt;div>              
+      &lt;h2>Aviso Condicional&lt;/h2>                     
+      &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+&lt;/div> 
+} 
+&lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+              </code>
+            </pre>
+            <p>Observe, na próxima figura, que o texto do botão também é atualizado conforme o evento de
+              clique: </p>
+            <img src="imgs/fig26.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Renderização condicional com evento de clique <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra duas telas do projeto Angular no navegador, uma
+              antes de clicar no botão, onde o aviso está oculto e no texto do botão está escrito “Ver
+              mensagem”, e uma após clicar, onde o conteúdo é mostrado na tela e o texto do botão muda para
+              “fechar mensagem”.
+            </p>
+            <p>
+              Caso você deseje criar uma janela modal, com um estilo mais profissional, veja um exemplo –
+              primeiro foi atualizado o <b>.html</b> do seu componente:
+            </p>
+            <pre>
+              <code>
+@if(mostrarOcultar) { 
+&lt;dialog class="alerta">          
+    &lt;h2>Caixa de Aviso&lt;/h2>                        
+    &lt;div>                           
+      &lt;h3>Aviso Condicional&lt;/h3>                     
+      &lt;div class="conteudo">                      
+          &lt;p>Este conteúdo será mostrado de acordo com uma condição.&lt;/p> 
+      &lt;/div>                       
+    &lt;/div>                    
+    &lt;div class="rodape"> 
+      &lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+    &lt;/div> 
+&lt;/dialog> 
+} 
+&lt;button (click)="mostrar()">{{btAviso}}&lt;/button> 
+              </code>
+            </pre>
+            <p>Agora basta adicionar os estilos no arquivo <b>.css</b> do componente <b>Alerta</b>.</p>
+            <pre>
+              <code>
+.alerta{ 
+width: 70%; 
+max-width: 650px; 
+padding: 0px; 
+position: absolute; 
+top: 0; 
+margin: 3% auto; 
+display: block; 
+border: solid 1px #ccc; 
+box-shadow: 0 0 20px 5px #333; 
+text-align: left;   
+} 
+.alerta > div{ 
+padding: 0 15px; 
+} 
+.alerta h2{ 
+background: #343434; 
+color: #f7f7f7; 
+margin-top: 0; 
+font-size: 16px; 
+text-align: left; 
+font-weight: normal; 
+padding: 5px; 
+} 
+.alerta h3{ 
+color: #8a2be2 
+} 
+.alerta p{ 
+padding: 10px; 
+background-color: #ebebeb; 
+} 
+.alerta .rodape{ 
+border-top: solid 1px #ebebeb; 
+padding: 15px; 
+text-align: right; 
+} 
+.alerta button{ 
+background: #8d00df; 
+color: #fff; 
+border: none; 
+padding: 6px 15px; 
+} 
+              </code>
+            </pre>
+            <p>Veja o resultado na figura: </p>
+            <img src="imgs/fig27.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Janela modal <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, com a funcionalidade de
+              conteúdo condicional ao clicar, porém agora com estilos CSS aplicados.
+            </p>
+            <p>
+              Agora você aprenderá alguns recursos do Angular aplicados a formulários. Um recurso essencial em
+              qualquer linguagem ou <i>framework</i> é conseguir resgatar os valores preenchidos nos
+              formulários HTML.
+            </p>
+            <p>
+              Então, para exemplificar esse recurso, veja como criar um outro componente, que será chamado de
+              <b>acessos</b>. Para criar esse componente, basta repetir os processos de criação de componentes
+              Angular
+              mostrados anteriormente.
+            </p>
+            <p>
+              Após criar o componente, lembre-se de importá-lo no arquivo <b>app.component.ts</b> e já o
+              chamar dentro
+              de <b>app.component.html</b>.
+            </p>
+            <pre>
+              <code>
+&lt;app-acessos>&lt;/app-acessos> 
+              </code>
+            </pre>
+            <p>
+              Para conseguir usar o recurso de obter os valores preenchidos nos campos dos formulários,
+              primeiramente é preciso importar um recurso adicional do Angular em seu componente. Sendo assim,
+              vá ao arquivo <b>acessos.component.ts</b>, importe o <b>FormsModule</b> e já crie uma
+              propriedade chamada <b>email</b>:
+            </p>
+            <pre>
+              <code>
+  import { Component } from '@angular/core'; 
+  import { FormsModule } from '@angular/forms'; 
+@Component({ 
+  selector: 'app-acessos', 
+  standalone: true, 
+  imports: [FormsModule], 
+  templateUrl: './acessos.component.html', 
+  styleUrl: './acessos.component.css' 
+}) 
+export class AcessosComponent { 
+  email: string = "" 
+} 
+              </code>
+            </pre>
+            <p>Agora, no arquivo <b>.html</b> do seu componente, crie um formulário e adicione um recurso do
+              Angular chamado <b>ngModel</b>:
+            </p>
+            <pre>
+                <code>
+&lt;form> 
+  &lt;input type="email" name="email" placeholder="Seu E-mail" [(ngModel)]="email"> 
+  &lt;input type="submit" name="enviar"> 
+&lt;/form> 
+&lt;div> 
+  Seu email é: {{ email }} 
+&lt;/div> 
+                </code>
+              </pre>
+            <p>
+              É importante destacar que o valor inserido em <b>ngModel</b> é exatamente o nome da propriedade
+              criada
+              na
+              função anterior, neste caso, <b>email</b>.
+            </p>
+            <p>
+              Se tudo estiver funcionando corretamente, ao digitar qualquer valor no campo do seu formulário,
+              ele deve escrever esse valor na <b>div</b> inserida.
+            </p>
+            <img src="imgs/fig28.png" class="center-block img-responsive print">
+            <p class="legenda-imagem">Resgatando valores de um formulário <br>
+              Fonte: Senac EAD (2024)
+            </p>
+            <p class="acessivel no-print">A imagem mostra a tela do projeto Angular, e ao digitar um valor no
+              campo do formulário ele é inserido no conteúdo HTML da tela.
+            </p>
+            <p>
+              Agora veja como criar mais um campo em seu formulário e como criar uma função para que os
+              valores
+              só apareçam na tela após clicar no botão de enviar do formulário.
+            </p>
+            <p>
+              No arquivo <b>.ts</b> do componente <b>acessos</b>, atualize sua <i>class</i> com novas
+              propriedades e um método para
+              mostrar os valores somente se os campos <b>email</b> e <b>usuario</b> estiverem preenchidos:
+            </p>
+            <pre>
+              <code>
+export class AcessosComponent { 
+  email: string = "" 
+  usuario: string = "" 
+  confirme: boolean = false 
+  verDados(): void {     
+    if(this.email && this.usuario){ 
+      this.confirme = true 
+    }else{ 
+      this.confirme = false 
+    } 
+  } 
+} 
+              </code>
+            </pre>
+            Já no <b>acessos.component.html</b>, inclua um novo campo e uma lógica condicional para mostrar os
+            valores:
+            <pre>
+              <code>
+&lt;form> 
+&lt;input type="text" name="usuario" placeholder="Seu Nome" [(ngModel)]="usuario"> 
+&lt;input type="email" name="email" placeholder="Seu E-mail" [(ngModel)]="email"> 
+&lt;input type="submit" name="enviar" (click)="verDados()"> 
+&lt;/form> 
+@if (confirme){ 
+&lt;div> 
+ &lt;p>Bem vindo, {{ usuario }}&lt;/p> 
+ &lt;p>Você acessou com o e-mail: {{ email }}&lt;/p> 
+&lt;/div> 
+} 
+              </code>
+            </pre>
+            <p>
+              Perceba, em sua lógica, que o botão de enviar dispara a função <b>verDados()</b>, e, de acordo
+              com o <b>if</b>,
+              os dados só serão mostrados se a propriedade <b>confirme</b> estiver como <b>true</b>. O método
+              <b>verDados()</b> só
+              transforma a propriedade confirme em <b>true</b> se os valores dos campos <b>email</b> e
+              <b>usuario</b> estiverem
+              preenchidos.
+            </p>
+            <div class="caixa-destaque icone importante">
+              <p>
+                O Angular continua sendo uma ferramenta extremamente relevante e poderosa no desenvolvimento
+                <i>web</i>
+                atual. A importância do Angular no desenvolvimento <i>web</i> se deve à sua robustez,
+                modularidade e
+                capacidade de lidar com aplicações complexas e de grande escala. Ele oferece estrutura sólida,
+                suporte extensivo e ferramentas que aumentam a produtividade e garantem a qualidade do código.
+                Por essas razões, o Angular continua sendo uma escolha popular entre desenvolvedores e
+                empresas
+                que buscam construir aplicações performáticas, escaláveis e seguras.
+              </p>
+            </div>
+            <p>
+              Para conseguir compreender com facilidade todos os recursos do Angular e usufruir deles, é
+              importante ter sólidos conhecimentos em HTML, CSS e JavaScript. Porém, como esse <i>framework</i> também
+              utiliza TypeScript, é importante estudar essa linguagem. Contudo, mesmo que você não tenha
+              conhecimento anterior em TypeScript, conseguirá compreender a maioria das funcionalidades do
+              Angular.
+            </p>
+            <p>
+              Assim como acontece com o React, o Angular muda um pouco a forma de desenvolvimento <i>front-end</i>, o
+              que pode ser frustrante para desenvolvedores mais tradicionais ou que estejam acostumados com
+              ferramentas que não “mudam” a forma de construir as aplicações. No entanto, diferentemente do
+              React, o Angular mantém a escrita tradicional do HTML5, o que leva muitos desenvolvedores a
+              sentirem mais afinidade com a forma de programar do Angular, tornando a aprendizagem mais
+              intuitiva.
+            </p>
+            <h3>A importância de JavaScript no desenvolvimento <i>mobile</i> </h3>
+            <p>
+              Com a crescente popularidade dos dispositivos móveis, o desenvolvimento <i>web</i> responsivo
+              tornou-se
+              essencial. O JavaScript, por meio de suas bibliotecas e seus <i>frameworks</i>, oferece as
+              ferramentas
+              necessárias para criar aplicações que não apenas se adaptam a diferentes tamanhos de tela, mas
+              também oferecem uma experiência de usuário rica e fluida. Isso inclui tudo, desde o carregamento
+              rápido e eficiente de páginas até a criação de animações suaves e a integração com APIs
+              (<i>application programming interface</i>) móveis.
+            </p>
+            <p>
+              O uso de JavaScript e suas bibliotecas específicas para <i>mobile</i> é essencial para o
+              desenvolvimento
+              de aplicações <i>web</i> modernas e interativas que funcionam de forma eficiente em dispositivos
+              móveis.
+              A escolha da biblioteca ou do <i>framework</i> certo depende das necessidades específicas do
+              projeto,
+              como a complexidade da interface do usuário, a necessidade de integração com APIs nativas e o
+              desejo de reutilização de código entre plataformas.
+            </p>
+            <p>
+              As bibliotecas e os <i>frameworks</i> mostrados neste conhecimento são ótimos exemplos de ferramentas
+              modernas e úteis para o desenvolvimento <i>front-end</i> atual. Ao dominar essas ferramentas, os
+              desenvolvedores podem criar experiências de usuário ricas e responsivas, que são essenciais
+              atualmente.
+            </p>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
 
