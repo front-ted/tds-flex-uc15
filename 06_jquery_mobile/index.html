@@ -96,7 +96,7 @@
         <li id="link7"><a href="index.html?page=7">Obtendo Valores De Campos De Formulários Html <span></span></a></li>
         <li id="link8"><a href="index.html?page=8">Disparando eventos <span></span></a></li>
         <li id="link9"><a href="index.html?page=9">Efeitos do jQuery <span></span></a></li>
-        <li id="link10"><a href="index.html?page=10">Encerramento <span></span></a></li> 
+        <li id="link10"><a href="index.html?page=10">Encerramento <span></span></a></li>
       </ul>
     </nav>
 
@@ -125,9 +125,7 @@
             </a>
           </div>
         </div>
-        
       </div>
-
 
       <div class="pagina">
         <h3>O que é jQuery? </h3>
@@ -142,7 +140,7 @@
           a forma como milhões de pessoas escrevem o JavaScript.
         </p>
 
-
+        <!-- 2 paragrafo pg2 -->
 
       </div>
 
@@ -361,32 +359,32 @@
 
 </html>
 <script>
-$(document).ready(function () {
-  // Pega o parâmetro "page" da URL
-  const pageParam = new URLSearchParams(window.location.search).get('page');
+  $(document).ready(function () {
+    // Pega o parâmetro "page" da URL
+    const pageParam = new URLSearchParams(window.location.search).get('page');
 
-  // Esconde o menu lateral na primeira página ou quando "page" não estiver definido
-  if (!pageParam || pageParam === '1') {
-    $('.menu-lateral').hide(); // Oculta o menu lateral
-  }
+    // Esconde o menu lateral na primeira página ou quando "page" não estiver definido
+    if (!pageParam || pageParam === '1') {
+      $('.menu-lateral').hide(); // Oculta o menu lateral
+    }
 
-  // Adiciona classe "ativo" ao item correspondente no menu
-  if (pageParam) {
-    $(`#link${pageParam}`).addClass('ativo').siblings().removeClass('ativo');
-  }
+    // Adiciona classe "ativo" ao item correspondente no menu
+    if (pageParam) {
+      $(`#link${pageParam}`).addClass('ativo').siblings().removeClass('ativo');
+    }
 
-  // Lógica de exibição do menu lateral
-  $('.menu-lateral > span').click(function () {
-    $('.menu-lateral ul').css('left', '0');
-    $(this).css('opacity', '0');
-    $('.menu-lateral > i').css({ 'opacity': '1', 'left': '350px' });
+    // Lógica de exibição do menu lateral
+    $('.menu-lateral > span').click(function () {
+      $('.menu-lateral ul').css('left', '0');
+      $(this).css('opacity', '0');
+      $('.menu-lateral > i').css({ 'opacity': '1', 'left': '350px' });
+    });
+
+    $('.menu-lateral > i').click(function () {
+      $('.menu-lateral ul').css('left', '-100%');
+      $(this).css('opacity', '0');
+      $('.menu-lateral > span').css({ 'opacity': '1', 'right': '-80px' });
+    });
   });
-
-  $('.menu-lateral > i').click(function () {
-    $('.menu-lateral ul').css('left', '-100%');
-    $(this).css('opacity', '0');
-    $('.menu-lateral > span').css({ 'opacity': '1', 'right': '-80px' });
-  });
-});
 
 </script>
