@@ -30,7 +30,7 @@ body {
   /* 100% da largura da tela */
   height: 100vh;
   /* 100% da altura da tela */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background: #2164A6;
   /* Azul sólido */
   color: white;
@@ -115,6 +115,9 @@ body {
 }
 
 
+.grupo-imprimir {
+  width: 920px;
+}
 
 
 
@@ -172,12 +175,20 @@ h5 {
   display: block;
 }
 
-.caixa-destaque p{
+.caixa-destaque p {
+  color: #000;
+}
+
+.modal-content p{
+  color: #000;
+}
+
+.modal-content h4{
   color: #000;
 }
 
 
-
+/* menu */
 
 .menu-lateral {
   position: fixed;
@@ -372,10 +383,207 @@ h5 {
 
 /* botão com as laterais quadradas */
 
+.fundo-tecnicos {
+  overflow-x: hidden !important;
+}
+
+
+/* codigos */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px
+}
+
+pre {
+  background-color: unset;
+  border: unset;
+  padding: unset;
+}
+
+.hljs {
+  background: #000;
+  color: #a39e9b;
+}
+
+.hljs-attr,
+.hljs-template-tag {
+  color: #8787d7;
+}
+
+.hljs-comment,
+.hljs-doctag,
+.hljs-quote {
+  color: #396
+}
+
+.hljs-params {
+  color: #a39e9b;
+}
+
+.hljs-regexp {
+  color: #d700ff;
+}
+
+.hljs-literal,
+.hljs-number,
+.hljs-selector-id,
+.hljs-tag {
+  color: #ef5350;
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+  color: #0087ff;
+}
+
+.hljs-code,
+.hljs-formula,
+.hljs-keyword,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-variable {
+  color: #64b5f6;
+}
+
+.hljs-built_in,
+.hljs-deletion,
+.hljs-title {
+  color: #ff8700;
+}
+
+.hljs-attribute,
+.hljs-function,
+.hljs-name,
+.hljs-property,
+.hljs-section,
+.hljs-type {
+  color: #ffd75f;
+}
+
+.hljs-addition,
+.hljs-bullet,
+.hljs-meta .hljs-string,
+.hljs-string,
+.hljs-subst,
+.hljs-symbol {
+  color: #558b2f;
+}
+
+.hljs-selector-tag {
+  color: #96f;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.destaque-bloco {
+  background-color: rgb(125, 39, 39) !important;
+  color: white;
+  /* Ajuste conforme necessário */
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.btn-classes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-2 {
+  background: url('../imgs/bt1.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-2:hover {
+  background: url('../imgs/bt1_hv.png');
+  border: none;
+}
+
+.botao-3 {
+  background: url('../imgs/bt2.png');
+  width: 156px;
+  height: 128px;
+  border: none;
+}
+
+.botao-3:hover {
+  background: url('../imgs/bt2_hv.png');
+  border: none;
+}
+
+.botao-4 {
+  background: url('../imgs/bt3.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-4:hover {
+  background: url('../imgs/bt3_hv.png');
+  border: none;
+}
+
+.botao-5 {
+  background: url('../imgs/bt4.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-5:hover {
+  background: url('../imgs/bt4_hv.png');
+  border: none;
+}
+
+.botao-6 {
+  background: url('../imgs/bt5.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-6:hover {
+  background: url('../imgs/bt5_hv.png');
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 @media screen and (max-width: 1650px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
   .menu-lateral>span {
     opacity: 1;
     position: absolute;
@@ -383,7 +591,7 @@ h5 {
     transition: 1s;
     z-index: 99;
     background: none;
-    top: -65px;
+    top: 8px;
   }
 
   .menu-lateral ul {
@@ -412,6 +620,57 @@ h5 {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .grupo-imprimir {
+    display: block;
+    text-align: right;
+    width: 850px;
+  }
+
+}
+
+
+@media screen and (max-width: 820px) {
+  .side {
+    display: none;
+  }
+
+  .grupo-imprimir {
+    display: block;
+    text-align: right;
+    width: 665px;
+  }
+
+  .container {
+    width: unset;
+  }
+
+  .fundo-tecnicos {
+    overflow-x: hidden !important;
+  }
+
+  .btn-classes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grupo-imprimir {
+    display: block;
+    text-align: right;
+    width: 615px;
+  }
+
+  .fundo-tecnicos {
+    overflow-x: hidden !important;
+  }
+}
+
+
 @media screen and (max-width: 480px) {
   .botoes {
     opacity: 1;
@@ -420,6 +679,25 @@ h5 {
   iframe {
     max-width: 100%;
   }
+
+  .grupo-imprimir {
+    display: block;
+    text-align: right;
+    width: unset;
+  }
+
+  .fundo-tecnicos {
+    overflow-x: hidden !important;
+  }
+
+  .btn-classes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 
 }
 
@@ -440,5 +718,11 @@ h5 {
 
   .menu-lateral>span {
     top: 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .fundo-tecnicos {
+    overflow-x: hidden !important;
   }
 }
