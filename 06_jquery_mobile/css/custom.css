@@ -30,7 +30,7 @@ body {
   /* 100% da largura da tela */
   height: 100vh;
   /* 100% da altura da tela */
-  overflow: hidden;
+  overflow-x: hidden;
   background: #2164A6;
   /* Azul sólido */
   color: white;
@@ -45,7 +45,7 @@ body {
   height: 100vh;
   /* 100% da altura da tela */
   top: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .left {
@@ -172,7 +172,9 @@ h5 {
   display: block;
 }
 
-
+.caixa-destaque p{
+  color: #000;
+}
 
 
 
@@ -330,30 +332,29 @@ h5 {
   width: 100% !important;
 }
 
+/* botão com as laterais quadradas */
+
 .botao-borda {
   clip-path: polygon(9% 1%, 91% 0%, 96% 15%, 96% 85%, 91% 100%, 9% 100%, 4% 86%, 4% 16%);
   background-color: #004B90;
-  /* Cor da borda */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   padding: 2px;
-  /* Espessura da borda */
   margin: auto;
-  /* Para centralizar */
   width: 200px;
   height: 75px;
 }
 
 .botao-1 {
-  clip-path:polygon(10% 0%, 90% 0%, 95% 15%, 95% 85%, 90% 100%, 10% 100%, 5% 85%, 5% 15%);
+  clip-path: polygon(10% 0%, 90% 0%, 95% 15%, 95% 85%, 90% 100%, 10% 100%, 5% 85%, 5% 15%);
   background-color: #2875C6;
   width: 200px;
   height: 70px;
 }
 
-.botao-1:hover{
+.botao-1:hover {
   background-color: #66A4F3;
 }
 
@@ -363,13 +364,13 @@ h5 {
   font-weight: bold;
 }
 
-
 .botao-titulo {
   margin-top: 1.3%;
   margin-left: 2%;
   position: absolute;
 }
 
+/* botão com as laterais quadradas */
 
 
 
