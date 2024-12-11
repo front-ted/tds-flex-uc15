@@ -179,11 +179,11 @@ h5 {
   color: #000;
 }
 
-.modal-content p{
+.modal-content p {
   color: #000;
 }
 
-.modal-content h4{
+.modal-content h4 {
   color: #000;
 }
 
@@ -565,7 +565,178 @@ pre {
   border: none;
 }
 
+.painel-eventos {
+  background: url('../imgs/painel_clicavel.png') no-repeat;
+  width: 630px;
+  height: 539px;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 
+.botao-7 {
+  background: url('../imgs/bt_mouseover.png') no-repeat;
+  width: 152px;
+  height: 145px;
+  position: absolute;
+  border: none;
+  margin-top: 8%;
+  margin-left: -1%;
+}
+
+.botao-7:hover {
+  transform: scale(1.1);
+}
+
+.botao-8 {
+  background: url('../imgs/bt_mouseout.png') no-repeat;
+  width: 142px;
+  height: 136px;
+  position: absolute;
+  border: none;
+  margin-top: 18%;
+  margin-left: 1%;
+}
+
+.botao-8:hover {
+  transform: scale(1.1);
+}
+
+.botao-9 {
+  background: url('../imgs/bt_mousedown.png') no-repeat;
+  width: 152px;
+  height: 146px;
+  position: absolute;
+  border: none;
+  margin-top: 25%;
+  margin-left: 8%;
+}
+
+.botao-9:hover {
+  transform: scale(1.1);
+}
+
+.botao-10 {
+  background: url('../imgs/bt_mouseup.png') no-repeat;
+  width: 125px;
+  height: 119px;
+  position: absolute;
+  border: none;
+  margin-top: 25%;
+  margin-left: 21%;
+}
+
+.botao-10:hover {
+  transform: scale(1.1);
+}
+
+.botao-11 {
+  background: url('../imgs/bt_mouseup.png') no-repeat;
+  width: 125px;
+  height: 119px;
+  position: absolute;
+  border: none;
+  margin-top: 17%;
+  margin-left: 27%;
+}
+
+.botao-11:hover {
+  transform: scale(1.1);
+}
+
+.botao-12 {
+  background: url('../imgs/bt_mouseover_1.png') no-repeat;
+  width: 152px;
+  height: 145px;
+  position: absolute;
+  border: none;
+  margin-top: 8%;
+  margin-left: 30%;
+}
+
+.botao-12:hover {
+  transform: scale(1.1);
+}
+
+.painel-efeitos {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botao-13 {
+  background: url('../imgs/bt2_1.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-13:hover {
+  background: url('../imgs/bt2_1_hv.png');
+  border: none;
+}
+
+.botao-14 {
+  background: url('../imgs/bt2_2.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-14:hover {
+  background: url('../imgs/bt2_2_hv.png');
+  border: none;
+}
+
+.botao-15 {
+  background: url('../imgs/bt2_3.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-15:hover {
+  background: url('../imgs/bt2_3_hv.png');
+  border: none;
+}
+
+.botao-16 {
+  background: url('../imgs/bt2_4.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-16:hover {
+  background: url('../imgs/bt2_4_hv.png');
+  border: none;
+}
+
+.botao-17 {
+  background: url('../imgs/bt_2_5.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-17:hover {
+  background: url('../imgs/bt2_6_1.png');
+  border: none;
+}
+
+.botao-18 {
+  background: url('../imgs/bt2_6.png');
+  width: 155px;
+  height: 128px;
+  border: none;
+}
+
+.botao-18:hover {
+  background: url('../imgs/bt2_5.png');
+  border: none;
+}
 
 
 
@@ -620,12 +791,209 @@ pre {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+  .botao-7 {
+    background: url(../imgs/bt_mouseover.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 8%;
+    margin-left: -2%;
+  }
+
+  .botao-8 {
+    background: url(../imgs/bt_mouseout.png) no-repeat;
+    width: 142px;
+    height: 136px;
+    position: absolute;
+    border: none;
+    margin-top: 20%;
+    margin-left: -4%;
+  }
+
+  .botao-9 {
+    background: url(../imgs/bt_mousedown.png) no-repeat;
+    width: 152px;
+    height: 146px;
+    position: absolute;
+    border: none;
+    margin-top: 31%;
+    margin-left: 7%;
+  }
+
+  .botao-12 {
+    background: url(../imgs/bt_mouseover_1.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 9%;
+    margin-left: 40%;
+  }
+
+  .botao-11 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 22%;
+    margin-left: 38%;
+  }
+
+  .botao-10 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 32%;
+    margin-left: 26%;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+  .botao-8 {
+    background: url(../imgs/bt_mouseout.png) no-repeat;
+    width: 142px;
+    height: 136px;
+    position: absolute;
+    border: none;
+    margin-top: 20%;
+    margin-left: -4%;
+  }
+
+  .botao-9 {
+    background: url(../imgs/bt_mousedown.png) no-repeat;
+    width: 152px;
+    height: 146px;
+    position: absolute;
+    border: none;
+    margin-top: 31%;
+    margin-left: 7%;
+  }
+
+  .botao-10 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 33%;
+    margin-left: 29%;
+  }
+
+  .botao-11 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 21%;
+    margin-left: 40%;
+  }
+
+  .botao-12 {
+    background: url(../imgs/bt_mouseover_1.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 8%;
+    margin-left: 41%;
+  }
+
+}
+
+
 @media screen and (max-width: 1024px) {
   .grupo-imprimir {
     display: block;
     text-align: right;
     width: 850px;
   }
+
+  .botao-9 {
+    background: url(../imgs/bt_mousedown.png) no-repeat;
+    width: 152px;
+    height: 146px;
+    position: absolute;
+    border: none;
+    margin-top: 43%;
+    margin-left: 12%;
+  }
+
+  .botao-8 {
+    background: url(../imgs/bt_mouseout.png) no-repeat;
+    width: 142px;
+    height: 136px;
+    position: absolute;
+    border: none;
+    margin-top: 26%;
+    margin-left: -7%;
+  }
+
+  .botao-7 {
+    background: url(../imgs/bt_mouseover.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 9%;
+    margin-left: -3%;
+  }
+
+  .botao-12 {
+    background: url(../imgs/bt_mouseover_1.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 9%;
+    margin-left: 56%;
+  }
+
+  .botao-11 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 30%;
+    margin-left: 56%;
+  }
+
+  .botao-10 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 44%;
+    margin-left: 40%;
+  }
+
 
 }
 
@@ -656,7 +1024,66 @@ pre {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .botao-8 {
+    background: url(../imgs/bt_mouseout.png) no-repeat;
+    width: 142px;
+    height: 136px;
+    position: absolute;
+    border: none;
+    margin-top: 30%;
+    margin-left: -7%;
+  }
+
+  .botao-9 {
+    background: url(../imgs/bt_mousedown.png) no-repeat;
+    width: 152px;
+    height: 146px;
+    position: absolute;
+    border: none;
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+
+  .botao-10 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 53%;
+    margin-left: 45%;
+  }
+
+  .botao-12 {
+    background: url(../imgs/bt_mouseover_1.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 10%;
+    margin-left: 65%;
+  }
+
+  .botao-11 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 38%;
+    margin-left: 66%;
+  }
 }
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .grupo-imprimir {
@@ -668,6 +1095,64 @@ pre {
   .fundo-tecnicos {
     overflow-x: hidden !important;
   }
+
+  .painel-eventos {
+    transform: scale(0.8);
+  }
+
+  .botao-9 {
+    background: url(../imgs/bt_mousedown.png) no-repeat;
+    width: 152px;
+    height: 146px;
+    position: absolute;
+    border: none;
+    margin-top: 67%;
+    margin-left: 12%;
+  }
+
+  .botao-8 {
+    background: url(../imgs/bt_mouseout.png) no-repeat;
+    width: 142px;
+    height: 136px;
+    position: absolute;
+    border: none;
+    margin-top: 38%;
+    margin-left: -7%;
+  }
+
+  .botao-12 {
+    background: url(../imgs/bt_mouseover_1.png) no-repeat;
+    width: 152px;
+    height: 145px;
+    position: absolute;
+    border: none;
+    margin-top: 10%;
+    margin-left: 89%;
+  }
+
+  .botao-11 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 45%;
+    margin-left: 88%;
+  }
+
+  .botao-10 {
+    background: url(../imgs/bt_mouseup.png) no-repeat;
+    width: 125px;
+    height: 119px;
+    position: absolute;
+    border: none;
+    margin-top: 70%;
+    margin-left: 60%;
+  }
+
+
+
+
 }
 
 
@@ -698,6 +1183,21 @@ pre {
     flex-wrap: wrap;
   }
 
+  .painel-eventos {
+    transform: scale(0.45);
+    margin-left: -60%;
+    margin-top: -44%;
+    margin-bottom: -20%;
+  }
+
+  .botao-7,
+  .botao-8,
+  .botao-9,
+  .botao-10,
+  .botao-11,
+  .botao-12 {
+    transform: scale(1.5)
+  }
 
 }
 
@@ -725,4 +1225,19 @@ pre {
   .fundo-tecnicos {
     overflow-x: hidden !important;
   }
+
+  .painel-eventos {
+    transform: scale(0.45);
+    margin-left: -66%;
+    margin-top: -44%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .painel-eventos {
+    transform: scale(0.4);
+    margin-left: -46%;
+    margin-top: -40%;
+  }
+
 }

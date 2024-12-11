@@ -288,7 +288,8 @@ $( document ).ready(function() {
         <p>
           Agora, veja um exemplo prático. Suponha que você deseja que, ao clicar em um elemento específico do HTML,
           outro
-          elemento mude de estilo. Fazer isso com jQuery é muito simples, pois há o método <b>.css()</b>, que serve para
+          elemento mude de estilo. Fazer isso com jQuery é muito simples, pois há o método <b>.css( )</b>, que serve
+          para
           adicionar qualquer estilo em um elemento determinado. Considere o seguinte código HTML:
         </p>
         <pre>
@@ -332,7 +333,7 @@ $( document ).ready(function() {
           elemento que tem a <i>class</i> <b>titulo</b> e mudará também a cor de fundo da <i>tag</i><b> body</b>.
         </p>
         <p>
-          Já a função <b>show()</b> fará aparecer na tela o elemento que tiver a <i>class</i> <b>dark</b>. E o seletor
+          Já a função <b>show( )</b> fará aparecer na tela o elemento que tiver a <i>class</i> <b>dark</b>. E o seletor
           <b>this</b> seleciona o próprio
           elemento que foi clicado, neste caso, a classe <b>claro</b>. A função <b>hide</b> faz com que o elemento
           selecionado fique
@@ -427,7 +428,7 @@ $( document ).ready(function() {
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                       aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><b>attr() </b></h4>
+                  <h4 class="modal-title" id="myModalLabel"><b>attr( ) </b></h4>
                 </div>
                 <div class="modal-body">
                   <p>
@@ -462,12 +463,12 @@ alert(atributo);
                     atributo class da tag h1. No caso, o valor é a palavra “título”.
                   </p>
                   <p>
-                    Então, com a função <b>attr()</b>, consegue-se pegar o valor de qualquer atributo de um elemento
+                    Então, com a função <b>attr( )</b>, consegue-se pegar o valor de qualquer atributo de um elemento
                     selecionado;
                     basta colocar o nome do atributo dentro da função.
                   </p>
                   <p>
-                    Contudo, a função <b>attr()</b> também serve para adicionar um ou mais atributos a um elemento
+                    Contudo, a função <b>attr( )</b> também serve para adicionar um ou mais atributos a um elemento
                     selecionado.
                     Por exemplo, se quiser inserir o atributo <b>id</b> à <i>tag</i> <b>h1</b>, usa-se o seguinte
                     código:
@@ -485,7 +486,8 @@ $("h1").attr("id", "principal");
                     o atributo original.
                   </p>
                   <p>
-                    Usando a função <b>attr()</b>, também é possível adicionar mais de um atributo ao mesmo tempo. Neste
+                    Usando a função <b>attr( )</b>, também é possível adicionar mais de um atributo ao mesmo tempo.
+                    Neste
                     caso,
                     muda-se um pouco a sintaxe do código, usando o símbolo de chaves para adicionar os múltiplos
                     valores.
@@ -509,7 +511,6 @@ $("h1").attr({
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -518,11 +519,19 @@ $("h1").attr({
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                       aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><b>removeAttr()</b></h4>
+                  <h4 class="modal-title" id="myModalLabel"><b>removeAttr( )</b></h4>
                 </div>
                 <div class="modal-body">
-
-
+                  <p>
+                    Esse método basicamente remove um atributo de qualquer elemento selecionado. Para que ele funcione,
+                    basta inserir dentro da função o nome do atributo a ser removido.
+                  </p>
+                  <pre>
+                    <code>
+$("h1").removeAttr("id");
+                    </code>
+                  </pre>
+                  <p>Esse código removerá o atributo <b>id</b> da tag <b>h1</b>. </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -531,7 +540,6 @@ $("h1").attr({
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -540,11 +548,49 @@ $("h1").attr({
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                       aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><b>addClass()</b></h4>
+                  <h4 class="modal-title" id="myModalLabel"><b>addClass( )</b></h4>
                 </div>
                 <div class="modal-body">
-
-
+                  <p>
+                    Esse método serve para adicionar uma classe ao elemento selecionado. É muito útil para inserir
+                    estilos
+                    predefinidos no CSS, pois, ao assumir uma classe, o elemento automaticamente herda todos os estilos
+                    definidos para essa classe no CSS.
+                  </p>
+                  <p>Suponha o seguinte CSS para a classe <b>ativo</b>:</p>
+                  <pre>
+                    <code>
+.ativo{ 
+      background: #38954d;    		 
+      color: #f5f5f5;    		 
+      box-shadow: 1px 1px 3px #333;                         
+} 
+                    </code>
+                  </pre>
+                  <p> Agora, será criada uma condição para inserir essa classe a um botão, após clicar nele: </p>
+                  <pre>
+                    <code>
+$(".bt-template").click(function(){ 
+      $(this).addClass("ativo"); 
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Esse código está indicando que, ao clicar em algum elemento que tenha a classe <b>bt-template</b>,
+                    adiciona a
+                    classe <b>ativo</b>. Um detalhe é que essa função não remove classes, apenas acrescenta. Veja um
+                    exemplo:
+                  </p>
+                  <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                      src="imgs/fig3.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Adicionando classes<br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print">A imagem mostra botões lado a lado, um sem os estilos da classe “ativo”
+                    e outro com os estilos adicionados.
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -553,7 +599,6 @@ $("h1").attr({
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -562,11 +607,25 @@ $("h1").attr({
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                       aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><b>removeClass() </b></h4>
+                  <h4 class="modal-title" id="myModalLabel"><b>removeClass( ) </b></h4>
                 </div>
                 <div class="modal-body">
-
-
+                  <p>
+                    Esse método serve para remover uma classe do elemento selecionado. Ele torna-se útil para remover
+                    algum estilo predefinido no CSS. Porém, para que esse método funcione corretamente, a classe já
+                    precisa estar declarada no HTML ao carregar a página.
+                  </p>
+                  <p> Veja um exemplo:</p>
+                  <pre>
+                    <code>
+$("h1").removeClass("ativo"); 
+                    </code>
+                  </pre>
+                  <p>
+                    Nesse exemplo, será removida a classe <b>ativo</b> de qualquer elemento <b>h1</b> – reforçando que,
+                    para funcionar
+                    corretamente, a classe já precisa estar declarada diretamente no elemento ao carregar a página.
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -575,9 +634,6 @@ $("h1").attr({
             </div>
           </div>
         </div>
-
-
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -586,11 +642,1865 @@ $("h1").attr({
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                       aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel"><b>toggleClass()</b></h4>
+                  <h4 class="modal-title" id="myModalLabel"><b>toggleClass( )</b></h4>
                 </div>
                 <div class="modal-body">
+                  <p>
+                    Esse método ficará alternando entre adicionar e remover uma classe ao elemento selecionado. Sua
+                    utilização é perfeita para botões, abas ou qualquer <i>design</i> de interface em que você necessite
+                    mudar a
+                    visualização conforme o clique no elemento.
+                  </p>
+                  <p>
+                    No exemplo abordado na função <b>addClass</b>, ele apenas inserirá a classe no botão ao clicar uma
+                    vez, ou
+                    seja, se clicar novamente no botão, ele não voltará ao seu estilo original. Com a utilização do
+                    método
+                    <b>toggleClass</b>, criar essa funcionalidade torna-se bem simples. Veja o código:
+                  </p>
+                  <pre>
+                    <code>
+$(".bt-template").click(function(){ 
+      $(this).toggleClass("ativo");			 
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Repare que, basicamente, foi substituída a função <b>addClass</b> pela <b>toggleClass</b>. Porém, o
+                    que ocorrerá
+                    aqui é que, ao clicar a primeira vez no elemento com a classe <b>bt-template</b>, adicionará a
+                    classe <b>ativo</b> a
+                    ele, exatamente como a função <b>addClass</b> faria. No entanto, ao clicar novamente no elemento, a
+                    função
+                    <b>toggleClass</b> removerá a classe <b>ativo</b> dele, similar ao que faz o método
+                    <b>removeClass</b>.
+                  </p>
+                  <p>
+                    Visualmente, ficará como a figura mostrada anteriormente, porém agora o botão adicionará e removerá
+                    o
+                    estilo conforme o clique, alternadamente.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="acessivel print">
+          <h4><b>attr() </b></h4>
+          <p>
+            Com esse método, você pode obter valor de um atributo para o primeiro elemento no conjunto de
+            elementos correspondentes ou definir um ou mais atributos para cada elemento correspondente.
+          </p>
+          <p>
+            Com essa função, é possível obter o valor de um atributo de algum elemento para usar em qualquer
+            parte
+            do código. Veja um exemplo guardando esse valor em uma variável JavaScript:
+          </p>
+          <pre>
+            <code>
+var atributo = $("h1").attr("class");  
+alert(atributo); 
+            </code>
+          </pre>
+          <p>
+            Nesse código, foi criada a variável <b>atributo</b> com a classe do elemento <b>h1</b>. E a função
+            <b>alert</b>, neste
+            caso, servirá apenas para ver o valor desse atributo na tela.
+          </p>
+          <p>Veja o resultado ao atualizar a página no navegador:</p>
+          <img src="imgs/fig2_1.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Obtendo o valor de um atributo<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A imagem mostra uma caixa de alerta do JavaScript, mostrando o valor do
+            atributo class da tag h1. No caso, o valor é a palavra “título”.
+          </p>
+          <p>
+            Então, com a função <b>attr()</b>, consegue-se pegar o valor de qualquer atributo de um elemento
+            selecionado;
+            basta colocar o nome do atributo dentro da função.
+          </p>
+          <p>
+            Contudo, a função <b>attr()</b> também serve para adicionar um ou mais atributos a um elemento
+            selecionado.
+            Por exemplo, se quiser inserir o atributo <b>id</b> à <i>tag</i> <b>h1</b>, usa-se o seguinte
+            código:
+          </p>
+          <pre>
+            <code>
+$("h1").attr("id", "principal"); 
+            </code>
+          </pre>
+          <p>
+            Esse código inserirá um atributo <b>id</b> com o valor <b>principal</b> dentro da <i>tag</i>
+            <b>h1</b>. Uma observação importante
+            é que, se adicionar um atributo que já exista no elemento selecionado com essa função, ele
+            substituirá
+            o atributo original.
+          </p>
+          <p>
+            Usando a função <b>attr()</b>, também é possível adicionar mais de um atributo ao mesmo tempo. Neste
+            caso,
+            muda-se um pouco a sintaxe do código, usando o símbolo de chaves para adicionar os múltiplos
+            valores.
+            Veja o exemplo:
+          </p>
+          <pre>
+            <code>
+$("h1").attr({ 
+      id: "principal", 
+      title: "Título da página" 
+}); 
+            </code>
+          </pre>
+          <p>Esse código inserirá os atributos <b>id</b> e <b>title</b> em todos os elementos <b>h1</b> do
+            documento HTML. </p>
+          <h4><b>removeAttr()</b></h4>
+          <p>
+            Esse método basicamente remove um atributo de qualquer elemento selecionado. Para que ele funcione,
+            basta inserir dentro da função o nome do atributo a ser removido.
+          </p>
+          <pre>
+            <code>
+$("h1").removeAttr("id");
+            </code>
+          </pre>
+          <p>Esse código removerá o atributo <b>id</b> da tag <b>h1</b>. </p>
+          <h4><b>addClass()</b></h4>
+          <p>
+            Esse método serve para adicionar uma classe ao elemento selecionado. É muito útil para inserir
+            estilos
+            predefinidos no CSS, pois, ao assumir uma classe, o elemento automaticamente herda todos os estilos
+            definidos para essa classe no CSS.
+          </p>
+          <p>Suponha o seguinte CSS para a classe <b>ativo</b>:</p>
+          <pre>
+            <code>
+.ativo{ 
+      background: #38954d;    		 
+      color: #f5f5f5;    		 
+      box-shadow: 1px 1px 3px #333;                         
+} 
+            </code>
+          </pre>
+          <p> Agora, será criada uma condição para inserir essa classe a um botão, após clicar nele: </p>
+          <pre>
+            <code>
+$(".bt-template").click(function(){ 
+      $(this).addClass("ativo"); 
+}); 
+            </code>
+          </pre>
+          <p>
+            Esse código está indicando que, ao clicar em algum elemento que tenha a classe <b>bt-template</b>,
+            adiciona a
+            classe <b>ativo</b>. Um detalhe é que essa função não remove classes, apenas acrescenta. Veja um
+            exemplo:
+          </p>
+          <img src="imgs/fig3.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Adicionando classes<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A imagem mostra botões lado a lado, um sem os estilos da classe “ativo”
+            e outro com os estilos adicionados.
+          </p>
+          <h4><b>removeClass()</b></h4>
+          <p>
+            Esse método serve para remover uma classe do elemento selecionado. Ele torna-se útil para remover
+            algum estilo predefinido no CSS. Porém, para que esse método funcione corretamente, a classe já
+            precisa estar declarada no HTML ao carregar a página.
+          </p>
+          <p> Veja um exemplo:</p>
+          <pre>
+            <code>
+$("h1").removeClass("ativo"); 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo, será removida a classe <b>ativo</b> de qualquer elemento <b>h1</b> – reforçando que, para
+            funcionar
+            corretamente, a classe já precisa estar declarada diretamente no elemento ao carregar a página.
+          </p>
+          <h4><b>toggleClass()</b></h4>
+          <p>
+            Esse método ficará alternando entre adicionar e remover uma classe ao elemento selecionado. Sua
+            utilização é perfeita para botões, abas ou qualquer <i>design</i> de interface em que você necessite
+            mudar a
+            visualização conforme o clique no elemento.
+          </p>
+          <p>
+            No exemplo abordado na função <b>addClass</b>, ele apenas inserirá a classe no botão ao clicar uma
+            vez, ou
+            seja, se clicar novamente no botão, ele não voltará ao seu estilo original. Com a utilização do
+            método
+            <b>toggleClass</b>, criar essa funcionalidade torna-se bem simples. Veja o código:
+          </p>
+          <pre>
+            <code>
+$(".bt-template").click(function(){ 
+      $(this).toggleClass("ativo");			 
+}); 
+            </code>
+          </pre>
+          <p>
+            Repare que, basicamente, foi substituída a função <b>addClass</b> pela <b>toggleClass</b>. Porém, o que
+            ocorrerá
+            aqui é que, ao clicar a primeira vez no elemento com a classe <b>bt-template</b>, adicionará a classe
+            <b>ativo</b> a
+            ele, exatamente como a função <b>addClass</b> faria. No entanto, ao clicar novamente no elemento, a função
+            <b>toggleClass</b> removerá a classe <b>ativo</b> dele, similar ao que faz o método <b>removeClass</b>.
+          </p>
+          <p>
+            Visualmente, ficará como a figura mostrada anteriormente, porém agora o botão adicionará e removerá o
+            estilo conforme o clique, alternadamente.
+          </p>
+        </div>
+      </div>
+      <div class="pagina">
+        <h3>Manipulando elementos com jQuery</h3>
+        <p>
+          No tópico anterior, você viu alguns métodos que servem para manipular os atributos dos elementos selecionados.
+          Agora, você aprenderá métodos que podem manipular os próprios elementos, como modificar textos, pegar valores,
+          duplicar e até mesmo criar novos elementos por meio do jQuery.
+        </p>
+        <ul>
+          <li>
+            <b>text( )</b> – Esse método serve para inserir ou obter um texto de dentro de um elemento selecionado,
+            porém, caso
+            o elemento já tenha um texto, ao usar esse método, para inserir, o texto será substituído.
+          </li>
+        </ul>
+        <p>Exemplo: obtendo um texto, levando em consideração o seguinte HTML: </p>
+        <pre>
+          <code>
+&lt;h2 class="destaque">Bem vindo ao nosso site!&lt;/h2> 
+          </code>
+        </pre>
+        <p>É possível usar o código jQuery a seguir para obter o texto da <i>tag</i> acima e mostrá-la em uma caixa de
+          alerta
+          do JS.
+        </p>
+        <pre>
+          <code>
+var destaque = $(".destaque").text(); 
+alert(destaque); 
+          </code>
+        </pre>
+        <p>O resultado será como na figura: </p>
+        <img src="imgs/fig4.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig4.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig4.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Obtendo texto de um elemento <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A tela mostra uma caixa de alerta que traz o mesmo texto da tag selecionada,
+          “Bem-vindo ao nosso site”.
+        </p>
+        <p>Agora, vá ao mesmo HTML do exemplo anterior para mudar o texto do elemento <b>h2</b>, usando a função
+          <b>text( )</b>.
+        </p>
+        <pre>
+          <code>
+$(".destaque").text("Tenha um excelente dia!"); 
+          </code>
+        </pre>
+        <img src="imgs/fig5.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig5.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig5.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Modificando textos com a função <b>text</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra uma tela, na qual a <i>tag</i>, em que estava escrito “Bem vindo
+          ao nosso
+          site”, agora mudou seu texto, conforme o código, para “Tenha um excelente dia!”.
+        </p>
+        <p>
+          É importante destacar que a função <b>text( )</b> não insere <i>tags</i> HTML. Com ela, só é possível inserir
+          conteúdos
+          textuais que não serão convertidos em <i>tags</i>. Outro detalhe importante é que não se deve usar a função
+          <b>text( )</b> para
+          obter o valor de campos de formulários. Para isso, usa-se uma função chamada <b>val( )</b>, que será abordada
+          mais
+          profundamente no decorrer deste material.
+        </p>
+        <ul>
+          <li>
+            <b>html( )</b> – Essa função é muito parecida com a função <b>text( )</b>, porém serve para obter ou inserir
+            conteúdos
+            dentro de um elemento pré-selecionado. A grande diferença é que com a função <b>html( )</b> é possível
+            inserir <i>tags</i>
+            HTML com o conteúdo, e ele será convertido e interpretado como <i>tag</i> pelo navegador.
+          </li>
+        </ul>
+        <p>Levando em consideração o mesmo contexto HTML do exemplo anterior, veja o código: </p>
+        <pre>
+          <code>
+$(".destaque").html("Tenha um &lt;mark>excelente&lt;/mark> dia!"); 
+          </code>
+        </pre>
+        <p>
+          Então, com a função <b>html( )</b>, é possível inserir qualquer conteúdo e incluir qualquer <i>tag</i> HTML
+          dentro do elemento
+          selecionado.
+        </p>
+        <ul>
+          <li>
+            <b> after( )</b> – O método <b>after( )</b> serve para inserir um conteúdo após o elemento selecionado. Essa
+            função aceita
+            conteúdos em HTML e é parecida com a função <b>html( )</b> vista anteriormente, porém ela sempre acrescenta
+            o
+            conteúdo após o fechamento da <i>tag</i> selecionada.
+          </li>
+        </ul>
+        <p> Por exemplo, seguindo ainda a mesma estrutura HTML dos exemplos anteriores: </p>
+        <pre>
+          <code>
+&lt;h2 class="destaque">Bem vindo ao nosso site!&lt;/h2> 
+          </code>
+        </pre>
+        <p>Insira o seguinte código jQuery: </p>
+        <pre>
+          <code>
+$(".destaque").after("&lt;h3>Tenha um excelente dia!&lt;/h3>"); 
+          </code>
+        </pre>
+        <p>Esse código inserirá uma <i>tag</i> <b>h3</b> com o texto acima, logo após o fechamento da <i>tag</i>
+          <b>h2</b>.
+        </p>
+        <ul>
+          <li>
+            <b>before( )</b> – O método <b>before( )</b> serve para inserir um conteúdo antes do elemento selecionado.
+            Essa função é
+            muito similar à função <b>after( )</b>, porém, enquanto esta insere o conteúdo HTML após o elemento
+            selecionado, o
+            <b>before( )</b> insere antes da abertura de <b>tag</b> do elemento.
+          </li>
+        </ul>
+        <p> Por exemplo, se você inserir o seguinte código jQuery: </p>
+        <pre>
+          <code>
+$(".destaque").before("&lt;h3>Tenha um excelente dia!&lt;/h3>"); 
+          </code>
+        </pre>
+        <p>Esse código inserirá uma <i>tag</i> <b>h3</b> com o texto acima, antes da abertura da <i>tag</i> <b>h2</b>.
+          Veja a figura:</p>
+        <img src="imgs/fig6.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig6.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig6.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Inserindo HTML com a função <b>before( )</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra uma tela onde foi inserida uma nova tag antes da tag selecionada.
+        </p>
+        <p>Observe, na figura, que, diferente da figura referente à função <b>after( )</b>, o conteúdo HTML foi inserido
+          antes da <i>tag</i> <b>h2</b>. </p>
+        <ul>
+          <li>
+            <b>prepend( )</b> – Essa função jQuery insere um conteúdo HTML dentro do elemento especificado, porém antes
+            de seu
+            conteúdo original. Ou seja, insere o conteúdo logo após a abertura da <i>tag</i>. Esse método é extremamente
+            similar ao <b>before( )</b>, porém o <b>before( )</b> insere o conteúdo antes da abertura da <i>tag</i>,
+            enquanto o <b>prepend( )</b>
+            insere o conteúdo dentro da <i>tag</i> selecionada.
+          </li>
+        </ul>
+        <p>Veja um exemplo. Suponha que você tem a seguinte estrutura HTML: </p>
+        <pre>
+          <code>
+&lt;div class="conter"> 
+        &lt;h2 class="destaque">Bem vindo ao nosso site!&lt;/h2>       
+&lt;/div> 
+          </code>
+        </pre>
+        <p>Agora, será utilizado o <b>prepend( )</b> para adicionar um novo conteúdo HTML dentro da <b>div</b> com a
+          classe <b>conter</b>. </p>
+        <pre>
+          <code>
+$(".conter").prepend("&lt;h1>Olá, tudo bem?&lt;/h1>"); 
+          </code>
+        </pre>
+        <p>Veja o resultado na figura:</p>
+        <img src="imgs/fig7.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig7.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig7.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Inserindo HTML com a função <b>prepend( )</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra uma tela dividida entre a visualização HTML e o código gerado. No
+          código gerado, mostra que a tag inserida via prepend ficou dentro da tag selecionada, porém antes de todo o
+          conteúdo.
+        </p>
+        <p>Agora, veja a comparação do resultado de <b>prepend( )</b> com o resultado que o método <b>before( )</b>
+          traria usando o mesmo exemplo: </p>
+        <pre>
+            <code>
+$(".conter").before("&lt;h1>Olá, tudo bem?&lt;/h1>"); 
+            </code>
+          </pre>
+        <img src="imgs/fig8.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig8.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig8.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Comparando a função <b>prepend( )</b> com a função <b>before( )</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra uma tela dividida entre a visualização HTML e o código gerado. No
+          código gerado, mostra que a tag inserida via before ficou fora da tag selecionada, porém antes dela.
+        </p>
+        <p>
+          Para entender bem a diferença entre esses dois métodos, compare a figura com a função <b>prepend( )</b> com a
+          que tem a
+          função <b>before( )</b>. Enquanto <b>prepend</b> mantém o conteúdo dentro da <i>tag</i> selecionada,
+          <b>before</b> insere esse conteúdo HTML
+          fora do elemento selecionado. No entanto, ambas inserem o conteúdo antes do conteúdo atual da <i>tag</i>.
+        </p>
+        <ul>
+          <li>
+            <b>append( )</b> – Esse método insere um conteúdo HTML dentro do elemento especificado, porém após o seu
+            conteúdo
+            original. Isso quer dizer que ele insere o conteúdo logo antes do fechamento da <i>tag</i>. Esse método é
+            extremamente similar ao <b>after( )</b>, porém o <b>after( )</b> insere o conteúdo após a <i>tag</i>,
+            enquanto o <b>append( )</b> insere o
+            conteúdo dentro da <i>tag</i> selecionada.
+          </li>
+        </ul>
+        <p>Veja este exemplo:</p>
+        <pre>
+          <code>
+$(".conter").append("&lt;h1>Olá, tudo bem?&lt;/h1>"); 
+          </code>
+        </pre>
+        <img src="imgs/fig9.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig9.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig9.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Inserindo HTML com a função <b>append( )</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra uma tela, dividida entre a visualização HTML e o código gerado. No
+          código gerado, mostra que a tag inserida via append ficou dentro da tag selecionada, porém após todo o
+          conteúdo.
+        </p>
+        <p>Veja, na figura, um exemplo comparativo do código gerado pela função <b>append( )</b> e pela <b>after( )</b>:
+        </p>
+        <img src="imgs/fig10.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig10.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig10.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Comparação entre os métodos <b>append</b> e <b>after</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra duas telas lado a lado, com o código gerado pelas funções append e
+          after. Enquanto com a append o conteúdo HTML é inserido dentro da class conter, com a after ele é inserido
+          após a class conter.
+        </p>
+        <ul>
+          <li>
+            <b>remove( )</b> – Esse método serve para remover qualquer elemento especificado da sua interface. O
+            <b>remove()</b> deleta
+            o elemento especificado e todos os seus elementos filhos. É importante frisar que esse método não oculta o
+            elemento da tela, ou seja, não aplica o <b>display none</b> do CSS, e sim deleta o elemento, não sendo mais
+            possível retorná-lo.
+          </li>
+        </ul>
+        <p>
+          Todas as funções abordadas nesta seção são extremamente úteis na hora de criar interfaces mais dinâmicas e
+          otimizadas para qualquer dispositivo, pois com elas é possível manipular o conteúdo e o HTML dos elementos
+          após
+          o carregamento do <i>site</i> ou sistema <i>web</i>. O jQuery proporciona isso, com uma sintaxe clara,
+          intuitiva e muito
+          enxuta.
+        </p>
+      </div>
+      <div class="pagina">
+        <h3>Obtendo valores de campos de formulários HTML </h3>
+        <p>
+          Uma das principais formas de interagir com uma interface <i>web</i> é por meio de formulários. O HTML5 tem uma
+          grande
+          variedade de tipos de campos de formulário, então, aliado ao jQuery, isso se torna uma poderosa, útil e
+          diversificada ferramenta para criar interfaces criativas e dinâmicas entre o usuário e o seu sistema.
+        </p>
+        <p>
+          O jQuery tem algumas propriedades e alguns métodos muito úteis e práticos para auxiliar a interação com
+          formulários HTML.
+        </p>
+        <p>
+          O método <b>val( )</b> é uma forma simples de obter o valor de qualquer campo de formulário. Ele pode ser
+          utilizado com
+          os principais tipos de <i>tags</i> <b>input</b>, <b>select</b> e <b>textarea</b>.
+        </p>
+        <p>Considere o seguinte formulário HTML:</p>
+        <pre>
+          <code>
+&lt;form> 
+    &lt;label>Nome completo:&lt;/label> 
+    &lt;input type="text" name="nome">		 
+    &lt;button class="bt" id="enviar">Enviar&lt;/button> 
+&lt;/form> 
+          </code>
+        </pre>
+        <p>Para obter o valor digitado no campo <b>input</b> é bem simples; basta chamar o elemento e usar a função
+          <b>val( )</b>.
+        </p>
+        <pre>
+          <code>
+var nome = $('input[name="nome"]').val(); 
+          </code>
+        </pre>
+        <p>Nesse código, foi criada uma variável especificando o campo em que se deseja obter o valor.</p>
+        <p>
+          Agora, observe a seguinte situação: suponha que você queira criar uma validação no campo <b>nome</b> e deseja
+          que o
+          formulário seja enviado apenas se o usuário preencher pelo menos três caracteres nesse campo. Para isso,
+          cria-se
+          uma condição no JavaScript usando o comando <b>if</b>.
+        </p>
+        <pre>
+          <code>
+var nome = $('input[name="nome"]').val(); 
+if (nome.length < 3) { 
+    return false; 
+} 
+          </code>
+        </pre>
+        <p>
+          Nesse código, criou-se uma condição que determina que se a variável <b>nome</b> tiver menos que três
+          caracteres o
+          formulário não será enviado. O comando <b>length</b> conta o número de caracteres de uma <b>string</b>
+          (texto), já o comando
+          <b>return false</b> faz com que o formulário não seja enviado.
+        </p>
+        <p>
+          No entanto, para que esse código seja efetivo, é preciso disparar essa condição somente quando o usuário
+          clicar
+          para enviar o formulário. Então, complementa-se o código:
+        </p>
+        <pre>
+          <code>
+$('#enviar').click(function () { 
+      var nome = $('input[name="nome"]').val();		 
+      if (nome.length < 3) {		 
+              return false; 
+      } 
+}); 
+          </code>
+        </pre>
+        <p>
+          Esse código indica que a verificação do número de caracteres digitados pelo usuário no formulário só será
+          realizada após clicar no botão com o <b>id enviar</b>.
+        </p>
+        <p>
+          Porém, repare que o código apenas evita que o formulário seja enviado caso não cumpra a verificação lógica. Em
+          nenhum momento ele cria um aviso para o usuário entender o porquê de o envio estar sendo bloqueado. Então,
+          para
+          isso, pode-se criar uma lógica usando qualquer função de manipulação de conteúdo mostrada no anteriormente.
+        </p>
+        <p>Como exemplo, veja uma mensagem logo abaixo do campo <b>nome</b> usando a função <b>after( )</b>:</p>
+        <pre>
+          <code>
+$('#enviar').click(function () { 
+      var nome = $('input[name="nome"]').val();		 
+      if (nome.length < 3) { 
+              $('input[name="nome"]').after('&lt;p style="color:red;font-size:12px">O campo Nome precisa ter no mínimo 3 letras.&lt;/p>');		 
+              return false; 
+      }       
+}); 
+          </code>
+        </pre>
+        <p>
+          Foi complementado o código, indicando que será criada uma <i>tag</i> <b>p</b> após o <b>input</b>, com a frase
+          “o campo nome precisa
+          ter no mínimo 3 letras”. Veja o resultado final na figura:
+        </p>
+        <img src="imgs/fig11.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig11.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig11.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Criando validações com o método <b>val( )</b><br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra duas telas comparando antes e após clicar no botão de enviar do
+          formulário. Após clicar no botão, mostra o aviso inserido no código.
+        </p>
+        <p>
+          Em programação <i>front-end</i>, é preciso prever todas as ações e possibilidades de cada interface. Então,
+          apesar de o
+          código, nesse exemplo, parecer completo, ocorrerá um erro de interface, pois a mensagem inserida não
+          desaparecerá até o correto envio do formulário e ainda será multiplicada a cada novo clique.
+        </p>
+        <p>Então, para desaparecer o aviso depois de dois segundos na tela, atualiza-se o código para o seguinte:</p>
+        <pre>
+          <code>
+$('#enviar').click(function () { 
+      var nome = $('input[name="nome"]').val();		 
+      if (nome.length < 3) { 
+             $('input[name="nome"]').after('&lt;p style="color:red;font-size:12px">O campo Nome precisa ter no mínimo 3 letras.&lt;/p>');	 
+             <!-- DESTACAR -->
+             $('input[name="nome"] + p').delay(2000).hide(500);	 
+             <!-- DESTACAR -->
+             return false; 
+      } 
+}); 
+          </code>
+        </pre>
+        <p>
+          A única atualização no código está grifada em vermelho. Mas, basicamente, foram usados os seletores avançados
+          de
+          CSS para pegar a <i>tag</i> <b>p</b> que continha o aviso, e a função <b>delay( )</b> simplesmente gera um
+          atraso em milissegundos, ou
+          seja, cada mil equivale a um segundo. Então, ao colocar o valor de <b>delay(2000)</b>, significa que levará
+          dois
+          segundos para executar a próxima função. E a próxima função executada no código é a <b>hide( )</b>, que
+          basicamente
+          serve para ocultar um elemento da tela. O método <b>hide( )</b> será abordado mais adiante neste material.
+        </p>
+        <p>
+          Então, recapitulando, o código mostrado acima fará com que seja mostrado um aviso na tela caso o usuário
+          preencha o campo <b>nome</b> com menos de três caracteres, e esse aviso desaparecerá após dois segundos.
+        </p>
+        <p>
+          A situação mostrada anteriormente é apenas um exemplo de aplicabilidade do método <b>val( )</b>, mas lembre-se
+          de que
+          esse método serve para obter e utilizar o valor de qualquer campo <b>input</b> do HTML. Então, obviamente,
+          essa função
+          terá várias aplicabilidades diferentes dependendo do seu projeto.
+        </p>
+        <p>
+          Veja outra situação: suponha que no seu sistema há um formulário no qual a pessoa preenche o nome, o
+          <i>e-mail</i> e o
+          telefone. Porém, para garantir que a pessoa não tenha preenchido nada errado, você deseja criar um aviso de
+          confirmação de informações antes de enviar o formulário definitivamente.
+        </p>
+        <p>Para essa situação, será considerado o seguinte conteúdo HTML, dentro de uma <i>tag</i> <b>form</b>:</p>
+        <pre>
+          <code>
+&lt;label>Nome completo:&lt;/label> 
+&lt;input type="text" name="nome"> 
+&lt;label>E-mail:&lt;/label> 
+&lt;input type="email" name="email"> 
+&lt;label>Telefone:&lt;/label> 
+&lt;input type="tel" name="telefone"> 
+&lt;button type="button" class="bt" id="enviar">Enviar&lt;/button> 
+&lt;div class="confirma">&lt;/div> 
+&lt;button class="bt" id="confirmar">Confirmar&lt;/button> 
+          </code>
+        </pre>
+        <p>
+          Repare que, nesse código, há basicamente três campos de formulários, uma <b>div</b> vazia, pois é nela que
+          será
+          inserido o aviso de confirmação de informações via jQuery, e dois botões. O primeiro botão não serve para
+          disparar o formulário, e sim para disparar a função de confirmação de informações. Somente nesse momento
+          deverá
+          aparecer o segundo botão, que servirá para enviar efetivamente o formulário.
+        </p>
+        <p>
+          Então, parte-se para o código jQuery. Primeiro, será ocultado o botão de enviar o formulário. Para isso, é
+          possível usar a função <b>css</b>:
+        </p>
+        <pre>
+          <code>
+$('#confirmar').css('display','none');
+          </code>
+        </pre>
+        <p>Isso fará com que o botão com o <b>id</b> <b>confirmar</b> não apareça na tela.</p>
+        <p>Agora, coloca-se o valor de cada campo em variáveis, com o seguinte código:</p>
+        <pre>
+          <code>
+var nome = $('input[name="nome"]').val(); 
+var email = $('input[name="email"]').val(); 
+var telefone = $('input[name="telefone"]').val(); 
+          </code>
+        </pre>
+        <p>
+          Em seguida, será montada uma mensagem usando os nomes das variáveis. Para isso, é preciso sempre utilizar o
+          sinal de adição (+) para juntar os valores das variáveis com os textos que você desenvolveu.
+        </p>
+        <pre>
+          <code>
+$('.mensagem').html("Olá, " + nome + " por favor confirme seus dados:&lt;br> Seu e-mail é " + email + ".&lt;br> Seu telefone é " + telefone + ".&lt;br> Caso seus dados estejam corretos clique em confirmar."); 
+          </code>
+        </pre>
+        <p>Perceba que se usa a função <b>html( )</b> do jQuery e está sendo inserido o conteúdo dentro da <i>tag</i>
+          com
+          classe <b>mensagem</b>.</p>
+        <p>
+          Agora, é preciso criar uma condição para que esse código todo seja disparado somente ao clicar no botão de
+          enviar.
+        </p>
+        <pre>
+          <code>
+$('#confirmar').css('display','none');	 
+$('#enviar').click(function () {		 
+      var nome = $('input[name="nome"]').val(); 
+      var email = $('input[name="email"]').val(); 
+      var telefone = $('input[name="telefone"]').val(); 
+      $('.mensagem').html("Olá, " + nome + " por favor confirme seus dados:&lt;br> Seu e-mail é " + email + ".&lt;br> Seu telefone é " + telefone + ".&lt;br> Caso seus dados estejam corretos clique em confirmar.");		 
+}); 
+          </code>
+        </pre>
+        <p>
+          Note que o código para ocultar o botão vai fora da função de clique, pois deseja-se que o botão já inicie
+          oculto
+          na tela. Porém, agora é preciso fazer com que o botão volte a aparecer ao clique.
+        </p>
+        <pre>
+          <code>
+if (nome != "" & email != "" & telefone != "") { 
+      $('#confirmar').css('display','block');	 
+} 
+          </code>
+        </pre>
+        <p>Esse código mostrará o botão de confirmar na tela, caso os campos não estejam vazios.</p>
+        <img src="imgs/fig12.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig12.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig12.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Mensagem de confirmação de dados <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra um formulário, com uma mensagem de confirmação de dados com os
+          dados digitados no formulário.
+        </p>
+        <p>Lembre-se de que todo o código jQuery deve vir dentro da <i>tag</i> <b>script</b>. Veja o código completo:
+        </p>
+        <pre>
+          <code>
+$('#confirmar').css('display','none');	 
+$('#enviar').click(function () {		 
+        var nome = $('input[name="nome"]').val(); 
+        var email = $('input[name="email"]').val(); 
+        var telefone = $('input[name="telefone"]').val(); 
+        $('.mensagem').html("Olá, " + nome + " por favor confirme seus dados:&lt;br> Seu e-mail é " + email + ".&lt;br> Seu telefone é " + telefone + ".&lt;br> Caso seus dados estejam corretos clique em confirmar.");	 
+        if (nome != "" & email != "" & telefone != "") { 
+              $('#confirmar').css('display','block');	 
+        }	 
+}); 
+          </code>
+        </pre>
+        <p>
+          Nesse último exemplo, foi criada uma mensagem com os dados digitados pelo próprio usuário, para que ele
+          confirme
+          as informações. E o formulário só é efetivamente enviado após clicar no botão de confirmar, o qual só surge na
+          tela após o preenchimento do formulário.
+        </p>
+        <p>
+          Você deve ter percebido que usando a função <b>val( )</b> é possível fazer praticamente qualquer validação na
+          camada
+          <i>front-end</i> do seu <i>site</i> ou sistema <i>web</i>.
+        </p>
+        <p>
+          Pense agora em um exemplo mais simples. Suponha que você tem um cadastro de usuários e o correto preenchimento
+          do <i>e-mail</i> é de vital importância para o seu processo. É comum ver formulários nos quais há um campo
+          para digitar
+          um <i>e-mail</i> e, logo em seguida, um campo para confirmar esse <i>e-mail</i>. Fazer isso com jQuery
+          torna-se extremamente
+          simples.
+        </p>
+        <p>Veja o seguinte conteúdo HTML:</p>
+        <pre>
+          <code>
+&lt;label>Seu E-mail:&lt;/label> 
+&lt;input type="email" name="email"> 
 
 
+&lt;label>Confirme seu E-mail:&lt;/label> 
+&lt;input type="email" name="email-confirme"> 
+          </code>
+        </pre>
+        <p>
+          Confirmar se o usuário digitou o mesmo <i>e-mail</i> nos dois campos é uma tarefa simples ao se utilizar o
+          jQuery.
+          Primeiro, os valores dos campos são colocados em variáveis.
+        </p>
+        <pre>
+          <code>
+var email = $('input[name="email"]').val(); 
+var emailConfirme = $('input[name="email-confirme"]').val(); 
+          </code>
+        </pre>
+        <p>Então, verifica-se se os dois campos têm valores diferentes: </p>
+        <pre>
+          <code>
+if (email != emailConfirme) { 
+      alert("Os e-mails digitados são diferentes"); 
+      return false; 
+} 
+          </code>
+        </pre>
+        <p>
+          Claro que todo esse código precisa disparar somente após um evento, que pode ser o evento de clique, conforme
+          visto nos exemplos anteriores. Obviamente você pode personalizar e até mesmo complementar esse código, usando
+          os
+          exemplos anteriores, como fazer uma mensagem aparecer na tela caso o usuário digite dois <i>e-mails</i>
+          diferentes.
+        </p>
+        <p>
+
+          Você deve ter reparado que obter e utilizar o valor de qualquer <i>tag</i> <b>input</b> é fácil e útil, basta
+          utilizar o
+          método <b>val( )</b>. Tudo o que foi explicado até o momento também vale para a <i>tag</i> <b>textarea</b> do
+          HTML.
+        </p>
+        <p>
+          Porém, para obter o valor de campos <b>input</b> com os <i>types</i> <b>checkbox</b> e <b>radio</b> já se
+          torna uma tarefa não tão simples,
+          pois agora não basta apenas obter o valor desses campos, é preciso verificar se eles estão marcados ou não.
+        </p>
+        <p>
+          Mas você deve imaginar que o jQuery ajuda a facilitar esse processo. Sendo assim, veja o seguinte exemplo,
+          supondo que você tem a seguinte estrutura HTML:
+        </p>
+        <pre>
+          <code>
+&lt;h3>Linguagens que você domina:&lt;/h3> 
+&lt;label>&lt;input type="checkbox" name="css" value="css"> CSS&lt;/label> 
+&lt;label>&lt;input type="checkbox" name="html" value="html"> HTML&lt;/label> 
+&lt;label>&lt;input type="checkbox" name="php" value="php"> PHP&lt;/label> 
+          </code>
+        </pre>
+        <p>
+          Você deseja obter o valor somente dos campos que o usuário marcou. Para este exemplo, serão exibidos os
+          valores
+          na tela com a função <b>after( )</b>.
+        </p>
+        <p>Primeiro é necessário chamar cada campo e colocá-lo em uma variável:</p>
+        <pre>
+          <code>
+var css = $('input[name="css"]'); 
+var html = $('input[name="html"]'); 
+var php = $('input[name="php"]'); 
+          </code>
+        </pre>
+        <p>Repare que ainda não foi usado o método <b>val( )</b>; as variáveis apenas contêm a seleção específica de
+          cada campo.</p>
+        <p>
+          Agora será usada a função <b>is( )</b>, que serve para verificar uma propriedade. Nesse caso, verifica-se se
+          algum campo
+          tem a propriedade <b>checked</b>, que indica se o campo está marcado. Chega-se, então, à seguinte lógica:
+        </p>
+        <pre>
+          <code>
+if (css.is(":checked")) { 
+    $('form').after("&lt;h3>" + css.val() + "&lt;/h3>"); 
+} 
+          </code>
+        </pre>
+        <p>Caso o campo esteja marcado (<i>checked</i>), adiciona-se um conteúdo HTML após a <i>tag</i> <b>form</b>.
+          Agora basta repetir essa lógica para cada campo.
+        </p>
+        <pre>
+            <code>
+if (css.is(":checked")) { 
+        $('form').after("&lt;h3>" + css.val() + "&lt;/h3>"); 
+} 
+if (html.is(":checked")) { 
+        $('form').after("&lt;h3>" + html.val() + "&lt;/h3>"); 
+} 
+if (php.is(":checked")) { 
+        $('form').after("&lt;h3>" + php.val() + "&lt;/h3>"); 
+} 
+          </code>
+        </pre>
+        <p>
+          No entanto, provavelmente você precisará vincular esse código a algum evento. Serão abordados os vários tipos
+          de
+          eventos mais adiante neste material. Por enquanto, veja um exemplo com o evento <b>clique</b>:
+        </p>
+        <pre>
+          <code>
+$('#enviar').click(function () { 
+      var css = $('input[name="css"]'); 
+      var html = $('input[name="html"]'); 
+      var php = $('input[name="php"]'); 
+      if (css.is(":checked")) { 
+              $('form').after("&lt;h3>" + css.val() + "&lt;/h3>"); 
+      } 
+      if (html.is(":checked")) { 
+              $('form').after("&lt;h3>" + html.val() + "&lt;/h3>"); 
+      } 
+      if (php.is(":checked")) { 
+              $('form').after("&lt;h3>" + php.val() + "&lt;/h3>"); 
+      }		 
+}); 
+          </code>
+        </pre>
+        <p>Veja o resultado final na figura: </p>
+        <img src="imgs/fig13.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig13.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig13.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Obtendo valores de campos checados<br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra um formulário, com dois campos marcados. Ao clicar no botão de
+          enviar, ele mostra na tela o valor dos campos que estavam marcados.
+        </p>
+        <p>
+          Uma utilidade bem comum para o campo <b>checkbox</b> é criar uma mensagem personalizada, caso o usuário não
+          marque uma
+          opção obrigatória. Por exemplo, aceitar os termos que o seu formulário agrega.
+        </p>
+        <p>Veja um exemplo, com o seguinte HTML:</p>
+        <pre>
+          <code>
+&lt;label>&lt;input type="checkbox" name="aceite" value="aceite"> Estou ciente que ao enviar as informações neste formulário…&lt;/label> 
+          </code>
+        </pre>
+        <p>
+          Você deseja que o seu formulário somente seja enviado se esse campo, no caso o <b>aceite</b>, esteja marcado.
+          Se não,
+          jogará uma mensagem de alerta na tela.
+        </p>
+        <pre>
+          <code>
+if ( $('input[name="aceite"]').is(":checked")) { 
+        return true; 
+}else{ 
+        alert("Você precisa aceitar os termos do formulário..."); 
+        return false; 
+} 
+          </code>
+        </pre>
+        <p>
+          Esse código indica que ao enviar o formulário, se o campo <b>aceite</b> não estiver marcado, bloqueará o envio
+          do
+          formulário e jogará uma caixa de alerta na tela. É evidente que você deve vincular isso a um evento, como o
+          <b>clique</b>.
+        </p>
+        <img src="imgs/fig14.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig14.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig14.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Bloqueio com <b>checkbox</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra um formulário no qual, ao tentar enviá-lo sem marcar o campo de
+          checagem, mostra uma caixa de aviso na tela.
+        </p>
+        <p>
+          Todos os exemplos mostrados com o campo <b>input</b> do tipo <b>checkbox</b> também podem ser aplicados a
+          campos do tipo
+          <b>radio</b>, pois é com a propriedade <b>checked</b> que se verifica se o campo está marcado ou não.
+        </p>
+        <p>
+          Já para obter valores do campo <b>select</b> do HTML, é preciso usar uma propriedade chamada <b>selected</b>.
+          Nesse caso, será
+          inserida a propriedade dentro da mesma chamada. Veja um exemplo levando em consideração o seguinte HTML:
+        </p>
+        <pre>
+          <code>
+&lt;select name="cidade" id="cidade"> 
+      &lt;option value="Poa">Porto Alegre&lt;/option> 
+      &lt;option value="Canoas">Canoas&lt;/option> 
+      &lt;option value="Esteio">Esteio&lt;/option> 
+&lt;/select> 
+          </code>
+        </pre>
+        <p>Então, é possível obter o valor do campo <b>option</b> selecionado da seguinte forma: </p>
+        <pre>
+          <code>
+$("#cidade option:selected").each(function() { 
+      var cidade = $(this).val(); 
+      alert(cidade); 
+});  
+          </code>
+        </pre>
+        <p>
+          Nesse exemplo, pega-se o valor do campo <b>option</b> que vem dentro de um <b>select</b> com o <b>id</b>
+          <b>cidade</b>, mas ele precisa ser
+          selecionado. A função each, neste caso, apenas faz o código rodar, e para enxergar o valor dispara-se um
+          alerta
+          na tela. Evidentemente, é preciso vincular esse código a um evento – aqui, seguindo com a ideia do evento de
+          clique.
+        </p>
+        <p>Veja na figura o resultado desses códigos:</p>
+        <img src="imgs/fig15.png" class="center-block img-responsive hidden-sm hidden-xs print">
+        <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+        <a href="imgs/fig15.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+            src="imgs/fig15.png" class="center-block img-responsive"></a>
+        <p class="legenda-imagem">Obtendo o valor de um <b>select</b> <br>
+          Fonte: Senac EAD (2024)
+        </p>
+        <p class="acessivel no-print">A imagem mostra um formulário no qual, ao clicar em enviar, ele pega o valor do
+          campo select e mostra em uma caixa de alerta na tela.
+        </p>
+        <p>Repare, nessa figura, que o campo selecionado tem o valor <b>Canoas</b>, por isso esse valor é mostrado na
+          caixa de alerta.</p>
+        <p>
+          Neste tópico, foram mostradas apenas funções e exemplos para obter e manipular o valor dos diversos campos de
+          formulários HTML. A seguir, serão abordadas outras formas de disparar suas lógicas, com eventos que ocorrem
+          após
+          entrar ou sair de um campo ou até mesmo mudando o valor deste.
+        </p>
+      </div>
+      <div class="pagina">
+        <h3>Disparando eventos</h3>
+        <p>
+          Eventos no jQuery são ações ou ocorrências que acontecem no sistema do navegador, aos quais o código pode
+          responder. Eles são fundamentais para interagir com os usuários por meio de cliques, movimentos do
+          <i>mouse</i> ou
+          toque, pressionamento de teclas e muitas outras interações. O jQuery simplifica a maneira de trabalhar com
+          eventos, oferecendo uma abordagem mais fácil e <i>cross-browser</i> (compatível com diversos navegadores) para
+          anexar
+          eventos a elementos do DOM.
+        </p>
+        <p>Veja exemplos dos principais eventos disponíveis no jQuery e aprenda como funcionam.</p>
+        <p class="no-print" aria-hidden="true">Clique ou toque para visualizar o conteúdo.</p>
+        <div class="painel-eventos no-print" aria-hidden="true">
+          <button class="botao-7" data-toggle="modal" data-target="#modal-7"></button>
+          <button class="botao-8" data-toggle="modal" data-target="#modal-8"></button>
+          <button class="botao-9" data-toggle="modal" data-target="#modal-9"></button>
+          <button class="botao-10" data-toggle="modal" data-target="#modal-10"></button>
+          <button class="botao-11" data-toggle="modal" data-target="#modal-11"></button>
+          <button class="botao-12" data-toggle="modal" data-target="#modal-12"></button>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>mouseover( )</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento dispara quando se coloca o ponteiro do <i>mouse</i> em cima do elemento selecionado.
+                    Esse evento
+                    é igual à propriedade <b>:hover</b> do CSS, porém aqui é possível inserir funções lógicas e
+                    complexas,
+                    diferentemente do CSS, no qual se consegue apenas mudar o estilo.
+                  </p>
+                  <p>
+                    Como esse evento está inteiramente ligado ao ponteiro do <i>mouse</i>, ele só terá efeito em
+                    dispositivos que
+                    têm esse recurso, como computadores e <i>notebooks</i>, ou seja, não se consegue disparar com
+                    eficácia esse
+                    evento em dispositivos móveis.
+                  </p>
+                  <p>
+                    Para exemplificar a função de evento <b>mouseover( )</b>, suponha que há uma imagem que será
+                    alterada ao
+                    colocar o ponteiro do <i>mouse</i> em cima dela. Então, será considerado o seguinte conteúdo HTML:
+                  </p>
+                  <pre>
+                    <code>
+&lt;div class="figura"> 
+    &lt;img src="imagens/bravo.png" alt="Imagem de exemplo" > 
+&lt;/div> 
+                    </code>
+                  </pre>
+                  <p>
+                    Repare que esse código tem uma imagem chamada <b>bravo.png</b>. Agora, usando jQuery, essa imagem
+                    será
+                    modificada usando o método <b>mouseover( )</b>.
+                  </p>
+                  <pre>
+                    <code>
+$('.figura img').mouseover(function(){ 
+    $(this).attr('src','imagens/cima.png');	                    
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Como o que define qual imagem será mostrada é um atributo, neste caso o <b>src</b>, então basta
+                    trocar o
+                    valor de <b>src</b> usando a função <b>attr</b>, já abordada anteriormente neste material.
+                  </p>
+                  <p>Veja o resultado com as imagens:</p>
+                  <img src="imgs/fig16.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig16.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig16.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Usando a função <b>mouseover</b> <br>
+                    Fonte: Adaptado de Icon Archive (c2024)
+                  </p>
+                  <p class="acessivel no-print">A ilustração mostra duas telas, uma antes de colocar o ponteiro do mouse
+                    em cima da imagem de desenho de um rosto com a expressão de bravo, e a outra após colocar o ponteiro
+                    do mouse, mudando para uma expressão neutra.
+                  </p>
+                  <p>
+                    Conforme comentado anteriormente, a função <b>mouseover( )</b> é muito similar à propriedade
+                    <b>hover</b> do CSS,
+                    mas, usando jQuery, abrem-se mais possibilidades, pois é possível usar toda a lógica de programação
+                    do
+                    JavaScript para criar recursos muito mais complexos. No exemplo mostrado, pode-se perceber que, com
+                    essa função, não se muda apenas estilos CSS, e sim atributos inteiros.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>mouseout( ) </b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento é disparado ao retirar o ponteiro do <i>mouse</i> de cima do elemento. É o contrário do
+                    <b>mouseover( )</b>. Aqui, a ação é disparada ao sair com o ponteiro do <i>mouse</i> de cima do
+                    elemento
+                    especificado.
+                  </p>
+                  <p>
+                    Diferentemente da propriedade <b>hover</b> do CSS, que devolve um elemento ao seu estado original
+                    após tirar
+                    o ponteiro do <i>mouse</i> de cima dele, a função anterior,<b> mouseover( )</b>, não fará isso. Ou
+                    seja, no exemplo
+                    anterior, mesmo após tirar o <i>mouse</i> do elemento, ele manterá a imagem com o valor de
+                    <b>src</b> igual à
+                    <b>imagens/cima.png</b>.
+                  </p>
+                  <p>
+                    Para voltar um elemento ao seu estado original, ou até mesmo criar algo específico após a saída do
+                    <i>mouse</i>, usa-se a função <b>mouseout( )</b>. Então, seguindo a mesma lógica do exemplo
+                    anterior, se você deseja
+                    que a imagem volte ao seu estado original após a saída do <i>mouse</i>, use o seguinte código.
+                  </p>
+                  <pre>
+                    <code>
+$('.figura img').mouseout(function(){ 
+      $(this).attr('src','imagens/bravo.png'); 
+}); 
+                    </code>
+                  </pre>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b> mousedown( )</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento do jQuery é disparado enquanto se está clicando em cima de um elemento. Ou seja, para
+                    conseguir visualizar esse evento, é necessário segurar o botão de clique do <i>mouse</i> em cima do
+                    elemento
+                    ou manter o dedo pressionado no caso de dispositivos móveis.
+                  </p>
+                  <p>
+                    Para exemplificar esse evento, será considerado o mesmo HTML especificado anteriormente. Contudo,
+                    agora será adicionado o seguinte código jQuery:
+                  </p>
+                  <pre>
+                    <code>
+$('.figura img').mousedown(function(){ 
+      $(this).attr('src','imagens/sair.png');		 
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    O que ocorrerá aqui é que a imagem será trocada enquanto se estiver pressionando o botão do mouse em
+                    cima do elemento. Veja o resultado na figura:
+                  </p>
+                  <img src="imgs/" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+                      src="imgs/" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Usando a função <b>mousedown </b><br>
+                    Fonte: Adaptado de Icon Archive (c2024)
+                  </p>
+                  <p class="acessivel no-print">A ilustração mostra duas telas, uma antes de colocar o ponteiro do mouse
+                    em cima da imagem de desenho de um rosto com a expressão de bravo, e a outra após manter o botão do
+                    mouse pressionado sobre a imagem, fazendo com que ela mude para uma expressão com a língua para
+                    fora.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b> mouseup()</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento é bem específico. Ele é disparado após soltar o clique do <i>mouse</i>, ou o toque em
+                    caso de
+                    dispositivos móveis. Então, para enxergar esse evento, é preciso clicar (ou tocar) em cima do
+                    elemento, mas a função só será disparada após soltar esse clique. É muito comum confundir esse
+                    evento
+                    com a ação de clique, pois, quando se clica em algo na tela, geralmente já se solta o botão muito
+                    rapidamente. Essa velocidade faz com que não se perceba a diferença, mas o detalhe é que a função
+                    <b>mouseup( )</b> só é disparada após soltar esse clique, mesmo que essa ação leve microssegundos.
+                  </p>
+                  <p>Então, seguindo com a mesma estrutura HTML dos exemplos anteriores, veja o código jQuery a seguir.
+                  </p>
+                  <pre>
+                    <code>
+$('.figura img').mouseup(function(){ 
+      $(this).attr('src','imagens/soltar.png');	 
+}); 
+                    </code>
+                  </pre>
+                  <p>Veja o resultado na figura: </p>
+                  <img src="imgs/fig18.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig18.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig18.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Usando a função <b>mouseup</b> <br>
+                    Fonte: Adaptado de Icon Archive (c2024)
+                  </p>
+                  <p class="acessivel no-print">A ilustração mostra o ícone do HTML sendo alterado após clicar e soltar
+                    o botão do mouse de cima do elemento.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>click( )</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento é disparado ao clicar em cima de um elemento especificado. Anteriormente, você já viu
+                    diversos exemplos desse evento.
+                  </p>
+                  <p>
+                    Contudo, suponha que, ao clicar em cima da imagem dos exemplos anteriores, você deseja disparar uma
+                    caixa de alerta. Basta seguir a lógica do seguinte código:
+                  </p>
+                  <pre>
+                    <code>
+$('.figura img').click(function(){ 
+      alert("Olá, Tudo bem com você?");			 
+}); 
+                    </code>
+                  </pre>
+                  <p>Na figura, é possível ver essa caixa de alerta sendo disparada na tela: </p>
+                  <img src="imgs/fig19.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig19.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig19.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Função <b>click</b> <br>
+                    Fonte: Adaptado de Icon Archive (c2024)
+                  </p>
+                  <p class="acessivel no-print"> A ilustração mostra uma caixa de alerta escrito “Olá. Tudo bem com
+                    você?”, após clicar em cima da imagem.
+                  </p>
+                  <p>
+                    O clique ou toque é uma das principais formas de interação entre o usuário e sua interface, então é
+                    muito utilizado. Por isso, como já deve ter percebido, há vários outros exemplos de utilização dessa
+                    função nos tópicos anteriores deste material.
+                  </p>
+                  <p>
+                    Até o momento, você viu eventos que tem a ver com ações do mouse, cliques ou toques na interface.
+                    Agora, você verá alguns eventos que disparam por meio do teclado, ou seja, ao escrever algo, seja em
+                    computadores, seja em dispositivos móveis.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>change </b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse evento é disparado ao modificar o valor de um campo de formulário e pode ser utilizado com
+                    qualquer tipo de campo.
+                  </p>
+                  <p>
+                    Como exemplo de utilização do <b>change</b>, suponha que você tem um formulário com o campo
+                    <b>select</b> <b>Como nos
+                      conheceu?</b>. Ao usuário selecionar o valor <b>outros</b>, surgirá um novo campo <b>input</b>
+                    para ele digitar um
+                    valor. Porém, ao mudar novamente o campo <b>select</b> para qualquer valor que não seja
+                    <b>outros</b>, esse novo
+                    campo desaparece.
+                  </p>
+                  <p>Então, você terá a seguinte estrutura HTML dentro da <i>tag</i> <b>form</b>:</p>
+                  <pre>
+                    <code>
+&lt;select name="conheceu"> 
+          &lt;option>--Selecione--&lt;/option>    
+          &lt;option>Site&lt;/option>	   
+          &lt;option>Google&lt;/option>  
+          &lt;option>Outros&lt;/option>  
+&lt;/select> 
+&lt;input class="outros" placeholder="como nos conheceu" type="text" name="outros"> 
+                    </code>
+                  </pre>
+                  <p>
+                    O <b>select</b> é o campo que será utilizado no evento <b>change</b>. Já o <b>input</b> com a classe
+                    <b>outros</b> só deve
+                    aparecer ao selecionar a opção <b>outros</b> no <b>select</b>.
+                  </p>
+                  <p>
+                    Então, para que o campo com a classe <b>outros</b> não apareça na tela, ao abrir a página, é
+                    possível
+                    ocultá-lo diretamente no CSS ou aplicar esse estilo com jQuery. Veja um exemplo com jQuery:
+                  </p>
+                  <pre>
+                    <code>
+$('.outros').css('display','none'); 
+                    </code>
+                  </pre>
+                  <p>Agora, usando uma lógica envolvendo o evento change: </p>
+                  <pre>
+                    <code>
+$('select[name="conheceu"]').change(function(){ 
+      var valor = $('select[name="conheceu"]').val(); 
+      if (valor == "Outros") { 
+            $('.outros').show(); 
+      }else{ 
+            $('.outros').hide(); 
+      }                       
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Nesse código, pega-se o valor do <b>select</b> usando a função <b>val()</b> e verifica-se se o valor
+                    selecionado é
+                    igual ao texto “Outros”. Se for igual, então o campo com a classe <b>outros</b> é mostrado na tela,
+                    senão ele
+                    é ocultado. O evento <b>change</b> faz com que essa lógica seja executada toda vez que se modifica o
+                    valor do
+                    campo <b>select</b>.
+                  </p>
+                  <img src="imgs/fig20.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig20.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig20.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Evento <b>change</b> <br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print"> A imagem mostra duas telas com o formulário e, ao selecionar o campo
+                    com o valor “Outros”, um novo campo input é mostrado.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="acessivel print">
+          <h4><b>mouseover( )</b></h4>
+          <p>
+            Esse evento dispara quando se coloca o ponteiro do <i>mouse</i> em cima do elemento selecionado.
+            Esse evento
+            é igual à propriedade <b>:hover</b> do CSS, porém aqui é possível inserir funções lógicas e
+            complexas,
+            diferentemente do CSS, no qual se consegue apenas mudar o estilo.
+          </p>
+          <p>
+            Como esse evento está inteiramente ligado ao ponteiro do <i>mouse</i>, ele só terá efeito em
+            dispositivos que
+            têm esse recurso, como computadores e <i>notebooks</i>, ou seja, não se consegue disparar com
+            eficácia esse
+            evento em dispositivos móveis.
+          </p>
+          <p>
+            Para exemplificar a função de evento <b>mouseover( )</b>, suponha que há uma imagem que será
+            alterada ao
+            colocar o ponteiro do <i>mouse</i> em cima dela. Então, será considerado o seguinte conteúdo HTML:
+          </p>
+          <pre>
+            <code>
+&lt;div class="figura"> 
+    &lt;img src="imagens/bravo.png" alt="Imagem de exemplo" > 
+&lt;/div> 
+            </code>
+          </pre>
+          <p>
+            Repare que esse código tem uma imagem chamada <b>bravo.png</b>. Agora, usando jQuery, essa imagem
+            será
+            modificada usando o método <b>mouseover( )</b>.
+          </p>
+          <pre>
+            <code>
+$('.figura img').mouseover(function(){ 
+    $(this).attr('src','imagens/cima.png');	                    
+}); 
+            </code>
+          </pre>
+          <p>
+            Como o que define qual imagem será mostrada é um atributo, neste caso o <b>src</b>, então basta
+            trocar o
+            valor de <b>src</b> usando a função <b>attr</b>, já abordada anteriormente neste material.
+          </p>
+          <p>Veja o resultado com as imagens:</p>
+          <img src="imgs/fig16.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Usando a função <b>mouseover</b> <br>
+            Fonte: Adaptado de Icon Archive (c2024)
+          </p>
+          <p class="acessivel no-print">A ilustração mostra duas telas, uma antes de colocar o ponteiro do mouse
+            em cima da imagem de desenho de um rosto com a expressão de bravo, e a outra após colocar o ponteiro
+            do mouse, mudando para uma expressão neutra.
+          </p>
+          <p>
+            Conforme comentado anteriormente, a função <b>mouseover( )</b> é muito similar à propriedade
+            <b>hover</b> do CSS,
+            mas, usando jQuery, abrem-se mais possibilidades, pois é possível usar toda a lógica de programação
+            do
+            JavaScript para criar recursos muito mais complexos. No exemplo mostrado, pode-se perceber que, com
+            essa função, não se muda apenas estilos CSS, e sim atributos inteiros.
+          </p>
+          <h4><b>mouseout( ) </b></h4>
+          <p>
+            Esse evento é disparado ao retirar o ponteiro do <i>mouse</i> de cima do elemento. É o contrário do
+            <b>mouseover( )</b>. Aqui, a ação é disparada ao sair com o ponteiro do <i>mouse</i> de cima do elemento
+            especificado.
+          </p>
+          <p>
+            Diferentemente da propriedade <b>hover</b> do CSS, que devolve um elemento ao seu estado original após tirar
+            o ponteiro do <i>mouse</i> de cima dele, a função anterior,<b> mouseover( )</b>, não fará isso. Ou seja, no
+            exemplo
+            anterior, mesmo após tirar o <i>mouse</i> do elemento, ele manterá a imagem com o valor de <b>src</b> igual
+            à
+            <b>imagens/cima.png</b>.
+          </p>
+          <p>
+            Para voltar um elemento ao seu estado original, ou até mesmo criar algo específico após a saída do
+            <i>mouse</i>, usa-se a função <b>mouseout( )</b>. Então, seguindo a mesma lógica do exemplo anterior, se
+            você deseja
+            que a imagem volte ao seu estado original após a saída do <i>mouse</i>, use o seguinte código.
+          </p>
+          <pre>
+            <code>
+$('.figura img').mouseout(function(){ 
+      $(this).attr('src','imagens/bravo.png'); 
+}); 
+            </code>
+          </pre>
+          <h4><b> mousedown( )</b></h4>
+          <p>
+            Esse evento do jQuery é disparado enquanto se está clicando em cima de um elemento. Ou seja, para
+            conseguir visualizar esse evento, é necessário segurar o botão de clique do <i>mouse</i> em cima do
+            elemento
+            ou manter o dedo pressionado no caso de dispositivos móveis.
+          </p>
+          <p>
+            Para exemplificar esse evento, será considerado o mesmo HTML especificado anteriormente. Contudo,
+            agora será adicionado o seguinte código jQuery:
+          </p>
+          <pre>
+            <code>
+          $('.figura img').mousedown(function(){ 
+                $(this).attr('src','imagens/sair.png');		 
+          }); 
+            </code>
+          </pre>
+          <p>
+            O que ocorrerá aqui é que a imagem será trocada enquanto se estiver pressionando o botão do mouse em
+            cima do elemento. Veja o resultado na figura:
+          </p>
+          <img src="imgs/" class="center-block img-responsive print">
+          <p class="legenda-imagem">Usando a função <b>mousedown </b><br>
+            Fonte: Adaptado de Icon Archive (c2024)
+          </p>
+          <p class="acessivel no-print">A ilustração mostra duas telas, uma antes de colocar o ponteiro do mouse
+            em cima da imagem de desenho de um rosto com a expressão de bravo, e a outra após manter o botão do
+            mouse pressionado sobre a imagem, fazendo com que ela mude para uma expressão com a língua para
+            fora.
+          </p>
+          <h4><b> mouseup()</b></h4>
+          <p>
+            Esse evento é bem específico. Ele é disparado após soltar o clique do <i>mouse</i>, ou o toque em
+            caso de
+            dispositivos móveis. Então, para enxergar esse evento, é preciso clicar (ou tocar) em cima do
+            elemento, mas a função só será disparada após soltar esse clique. É muito comum confundir esse
+            evento
+            com a ação de clique, pois, quando se clica em algo na tela, geralmente já se solta o botão muito
+            rapidamente. Essa velocidade faz com que não se perceba a diferença, mas o detalhe é que a função
+            <b>mouseup( )</b> só é disparada após soltar esse clique, mesmo que essa ação leve microssegundos.
+          </p>
+          <p>Então, seguindo com a mesma estrutura HTML dos exemplos anteriores, veja o código jQuery a seguir.
+          </p>
+          <pre>
+            <code>
+$('.figura img').mouseup(function(){ 
+      $(this).attr('src','imagens/soltar.png');	 
+}); 
+            </code>
+          </pre>
+          <p>Veja o resultado na figura: </p>
+          <img src="imgs/fig18.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Usando a função <b>mouseup</b> <br>
+            Fonte: Adaptado de Icon Archive (c2024)
+          </p>
+          <p class="acessivel no-print">A ilustração mostra o ícone do HTML sendo alterado após clicar e soltar
+            o botão do mouse de cima do elemento.
+          </p>
+          <h4><b>click( )</b></h4>
+          <p>
+            Esse evento é disparado ao clicar em cima de um elemento especificado. Anteriormente, você já viu
+            diversos exemplos desse evento.
+          </p>
+          <p>
+            Contudo, suponha que, ao clicar em cima da imagem dos exemplos anteriores, você deseja disparar uma
+            caixa de alerta. Basta seguir a lógica do seguinte código:
+          </p>
+          <pre>
+            <code>
+$('.figura img').click(function(){ 
+      alert("Olá, Tudo bem com você?");			 
+}); 
+            </code>
+          </pre>
+          <p>Na figura, é possível ver essa caixa de alerta sendo disparada na tela: </p>
+          <img src="imgs/fig19.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Função <b>click</b> <br>
+            Fonte: Adaptado de Icon Archive (c2024)
+          </p>
+          <p class="acessivel no-print"> A ilustração mostra uma caixa de alerta escrito “Olá. Tudo bem com
+            você?”, após clicar em cima da imagem.
+          </p>
+          <p>
+            O clique ou toque é uma das principais formas de interação entre o usuário e sua interface, então é
+            muito utilizado. Por isso, como já deve ter percebido, há vários outros exemplos de utilização dessa
+            função nos tópicos anteriores deste material.
+          </p>
+          <p>
+            Até o momento, você viu eventos que tem a ver com ações do mouse, cliques ou toques na interface.
+            Agora, você verá alguns eventos que disparam por meio do teclado, ou seja, ao escrever algo, seja em
+            computadores, seja em dispositivos móveis.
+          </p>
+          <h4><b>change </b></h4>
+          <p>
+            Esse evento é disparado ao modificar o valor de um campo de formulário e pode ser utilizado com
+            qualquer tipo de campo.
+          </p>
+          <p>
+            Como exemplo de utilização do <b>change</b>, suponha que você tem um formulário com o campo
+            <b>select</b> <b>Como nos
+              conheceu?</b>. Ao usuário selecionar o valor <b>outros</b>, surgirá um novo campo <b>input</b>
+            para ele digitar um
+            valor. Porém, ao mudar novamente o campo <b>select</b> para qualquer valor que não seja
+            <b>outros</b>, esse novo
+            campo desaparece.
+          </p>
+          <p>Então, você terá a seguinte estrutura HTML dentro da <i>tag</i> <b>form</b>:</p>
+          <pre>
+            <code>
+&lt;select name="conheceu"> 
+          &lt;option>--Selecione--&lt;/option>    
+          &lt;option>Site&lt;/option>	   
+          &lt;option>Google&lt;/option>  
+          &lt;option>Outros&lt;/option>  
+&lt;/select> 
+&lt;input class="outros" placeholder="como nos conheceu" type="text" name="outros"> 
+            </code>
+          </pre>
+          <p>
+            O <b>select</b> é o campo que será utilizado no evento <b>change</b>. Já o <b>input</b> com a classe
+            <b>outros</b> só deve
+            aparecer ao selecionar a opção <b>outros</b> no <b>select</b>.
+          </p>
+          <p>
+            Então, para que o campo com a classe <b>outros</b> não apareça na tela, ao abrir a página, é
+            possível
+            ocultá-lo diretamente no CSS ou aplicar esse estilo com jQuery. Veja um exemplo com jQuery:
+          </p>
+          <pre>
+            <code>
+$('.outros').css('display','none'); 
+            </code>
+          </pre>
+          <p>Agora, usando uma lógica envolvendo o evento change: </p>
+          <pre>
+            <code>
+$('select[name="conheceu"]').change(function(){ 
+      var valor = $('select[name="conheceu"]').val(); 
+      if (valor == "Outros") { 
+            $('.outros').show(); 
+      }else{ 
+            $('.outros').hide(); 
+      }                       
+}); 
+            </code>
+          </pre>
+          <p>
+            Nesse código, pega-se o valor do <b>select</b> usando a função <b>val()</b> e verifica-se se o valor
+            selecionado é
+            igual ao texto “Outros”. Se for igual, então o campo com a classe <b>outros</b> é mostrado na tela,
+            senão ele
+            é ocultado. O evento <b>change</b> faz com que essa lógica seja executada toda vez que se modifica o
+            valor do
+            campo <b>select</b>.
+          </p>
+          <img src="imgs/fig20.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Evento <b>change</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print"> A imagem mostra duas telas com o formulário e, ao selecionar o campo
+            com o valor “Outros”, um novo campo input é mostrado.
+          </p>
+        </div>
+        <p>
+          As funções e os eventos abordados são essenciais para criar interfaces dinâmicas e intuitivas para os
+          usuários.
+          É evidente que se deve usar a lógica e a adaptabilidade para utilizar cada função em necessidades específicas
+          de
+          cada interface. No próximo tópico, você aprenderá os efeitos com jQuery, que proporcionarão uma interface mais
+          dinâmica e atrativa para seus usuários.
+        </p>
+      </div>
+      <div class="pagina">
+        <h3>Efeitos do jQuery </h3>
+        <p>
+          O jQuery oferece uma série de métodos poderosos para criar animações e efeitos visuais, tornando-o uma
+          ferramenta valiosa para desenvolvedores <i>web</i> que desejam adicionar interatividade e dinamismo às suas
+          páginas.
+          Esses efeitos podem melhorar a experiência do usuário ao fornecer <i>feedback</i> visual, destacar mudanças na
+          interface ou simplesmente tornar o <i>site</i> mais atraente.
+        </p>
+        <p class="no-print" aria-hidden="true">Clique ou toque para visualizar o conteúdo.</p>
+        <div class="painel-efeitos no-print" aria-hidden="true">
+          <button class="botao-13" data-toggle="modal" data-target="#modal-13"></button>
+          <button class="botao-14" data-toggle="modal" data-target="#modal-14"></button>
+          <button class="botao-15" data-toggle="modal" data-target="#modal-15"></button>
+          <button class="botao-16" data-toggle="modal" data-target="#modal-16"></button>
+          <button class="botao-17" data-toggle="modal" data-target="#modal-17"></button>
+          <button class="botao-18" data-toggle="modal" data-target="#modal-18"></button>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>hide</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse efeito oculta um elemento da tela. Sua utilização é bem simples; basta especificar o elemento a
+                    ser ocultado e informar em milissegundos o tempo que ele levará para ficar completamente oculto após
+                    disparar o efeito.
+                  </p>
+                  <p>
+                    Veja um exemplo: suponha que seu <i>site</i>, ao ser acessado, exibe uma mensagem na tela informando
+                    que
+                    utiliza <i>cookies</i> para melhorar a experiência do usuário, e você deseja criar um botão para
+                    que, ao ser
+                    clicado, a mensagem desapareça.
+                  </p>
+                  <p>Então, terá o seguinte conteúdo HTML:</p>
+                  <pre>
+                    <code>
+&lt;div class="aviso"> 
+    &lt;p>Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços. Ao utilizar nossos serviços, você está ciente dessa funcionalidade.&lt;/p> 
+    &lt;a href="#" id="fechar" class="button">Fechar&lt;/a>           
+&lt;/div>   
+                    </code>
+                  </pre>
+                  <p>Para formatar a mensagem como uma caixa de aviso e a <i>tag</i> <b>a</b> como um botão, usa-se o
+                    seguinte código CSS:</p>
+                  <pre>
+                    <code>
+.aviso{ 
+        width: 50%; 
+        color: #444; 
+        border: solid 1px #333; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        background: #f7f7f7; 
+        box-shadow: 0 0 4px #333; 
+        position: absolute; 
+        top: 10%; 
+} 
+.button{ 
+        background: #1081c8; 
+        color: #fff; 
+        padding: 5px 15px; 
+        text-decoration: none; 
+        font-size: 12px; 
+} 
+                    </code>
+                  </pre>
+                  <p>
+                    Agora, veja o código jQuery para aplicar o efeito de desaparecer ao clicar no botão de fechar do
+                    aviso.
+                  </p>
+                  <pre>
+                    <code>
+&lt;script type="text/javascript"> 
+        $('#fechar').click(function(){ 
+            $('.aviso').hide(500); 
+        });		 
+&lt;/script> 
+                    </code>
+                  </pre>
+                  <p>
+                    Então, basicamente se vincula o evento de clique ao elemento que tiver o <b>id</b> <b>fechar</b>, e
+                    este disparará o
+                    evento <b>hide()</b> ao elemento com a classe <b>aviso</b>. Dentro da função <b>hide</b> coloca-se o
+                    tempo que a animação
+                    levará para ser executada em milissegundos, ou seja, cada mil representa um segundo, então o número
+                    500 indica que a animação levará meio segundo para ser executada.
+                  </p>
+                  <p>Veja na figura o resultado do código:</p>
+                  <img src="imgs/fig21.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig21.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig21.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Função <b>hide</b><br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print">A figura mostra um aviso desaparecendo após clicar no botão de fechar.
+                  </p>
+                  <p>
+                    Repare que, na figura, ao clicar em <b>Fechar</b>, a função <b>hide</b> não faz com que o elemento
+                    desapareça da
+                    tela de forma instantânea, ele cria esse efeito em que o elemento vai diminuindo e ficando
+                    transparente até o final da animação, sumindo totalmente da tela.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>show</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Esse efeito do jQuery é muito similar ao <b>hide</b>, porém a função <b>show</b> faz com que um
+                    elemento apareça na
+                    tela, sendo possível também usar os milissegundos para controlar o tempo da animação dele. É
+                    evidente
+                    que é possível vincular isso a qualquer evento.
+                  </p>
+                  <p>
+                    Para exemplificar a função <b>show( )</b>, será considerado o conteúdo HTML mostrado na função
+                    <b>hide( )</b>. Porém,
+                    imagine que não se deseja que o aviso apareça na tela, junto ao carregamento da página, e sim que
+                    ele
+                    apareça com o efeito proporcionado pelo <b>show( )</b>, mas três segundos após a página carregar.
+                  </p>
+                  <p>
+                    Nesse caso, os conteúdos HTML e CSS permanecem os mesmos do exemplo de <b>hide( )</b>. Porém, é
+                    necessário
+                    aplicar o estilo <b>display none</b> na classe <b>aviso</b>, para que o aviso já inicie oculto na
+                    tela.
+                  </p>
+                  <pre>
+                    <code>
+.aviso{ 
+        width: 50%; 
+        color: #444; 
+        border: solid 1px #333; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        background: #f7f7f7; 
+        box-shadow: 0 0 4px #333; 
+        position: absolute; 
+        top: 10%; 
+        display:none;         <!-- destaque aqui -->
+} 
+                    </code>
+                  </pre>
+                  <p>Então, ao código CSS adiciona-se apenas o <b>display:none</b>, grifado em vermelho acima.</p>
+                  <p>Veja o seguinte código jQuery:</p>
+                  <pre>
+                    <code>
+$(document).ready(function(){ 
+    $('.aviso').delay(3000).show(800);                  
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Nesse exemplo de código, vincula-se a função <b>ready</b> ao elemento <b>document</b> para garantir
+                    que o código só
+                    será disparado após o carregamento completo da página. Então, a função <b>delay(3000)</b> faz com
+                    que haja um
+                    atraso na execução da próxima função, neste caso, a função <b>show( )</b>. O <b>delay</b> também
+                    trabalha com
+                    milissegundos, ou seja, após o carregamento da página, espera-se três segundos para a execução do
+                    efeito de <b>show</b>, que, por sua vez, levará aproximadamente um segundo para completar sua
+                    animação.
+                  </p>
+                  <p>Veja na figura o resultado do código:</p>
+                  <img src="imgs/fig22.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig22.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig22.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Função <b>show</b><br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print">A figura mostra um aviso surgindo na tela.
+                  </p>
+                  <p>
+                    O efeito de animação da função <b>show( )</b> é igual ao da função <b>hide( )</b>. Porém, obviamente
+                    que diferente de
+                    <b>hide( )</b>, que oculta um elemento, o <b>show( )</b> faz com que um elemento se torne visível na
+                    tela.
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -600,54 +2510,541 @@ $("h1").attr({
           </div>
         </div>
 
-
-        <div class="acessivel print">
-
-
-
-
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>toggle</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Essa função é similar às funções <b>hide( )</b> e <b>show( )</b>, porém o <b>toggle</b> alterna
+                    entre o efeito de ocultar e
+                    mostrar um elemento. Pode-se fazer a analogia com um botão que se usa para acender uma luz em casa.
+                    Quando a luz está apagada, ao clicar no botão, acende a lâmpada, porém, ao tocar novamente, é
+                    aplicada
+                    a funcionalidade de apagar a luz, e assim por diante.
+                  </p>
+                  <p>
+                    Para exemplificar essa função, imagine que você tem um menu na lateral do seu <i>site</i> ou sistema
+                    e deseja
+                    criar um botão que alterna entre ocultar e mostrar esse menu lateral.
+                  </p>
+                  <p> Veja um exemplo de conteúdo HTML para isso:</p>
+                  <pre>
+                    <code>
+&lt;aside class="lateral"> 
+          Conteúdo do seu menu lateral   
+&lt;/aside> 
+&lt;section class="principal">		 
+          &lt;img id="toggle-menu" src="imagens/menu.png" alt="mostrar / ocultar"> 
+          &lt;h1>Conteúdo principal do seu site&lt;/h1> 
+&lt;/section> 
+                    </code>
+                  </pre>
+                  <p>Agora, veja uma amostra de CSS para facilitar a aplicação desse efeito:</p>
+                  <pre>
+                    <code>
+.lateral{ 
+          width: 250px; 
+          background: #333; 
+          color: #f7f7f7; 
+          height: 100vh; 
+          float: left; 
+          padding: 15px; 
+} 
+.principal{ 
+           float: left; 
+           padding: 20px; 
+}  
+                    </code>
+                  </pre>
+                  <p>
+                    Usa-se a imagem que tem o <b>id toggle-menu</b> para ficar alternando em aparecer e ocultar a
+                    lateral do
+                    <i>site</i>. Para isso, essa imagem será vinculada ao evento de clique do jQuery.
+                  </p>
+                  <pre>
+                    <code>
+$("#toggle-menu").click(function(){ 
+    ('.lateral').toggle(500); 
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Veja que o código é intuitivo e enxuto. Com ele, aplica-se um efeito bem complexo utilizando a
+                    simplicidade do jQuery.
+                  </p>
+                  <p>Veja o resultado desse exemplo na figura:</p>
+                  <img src="imgs/fig23.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig23.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig23.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Função <b>toggle</b><br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print">A figura mostra um menu lateral alternando entre desaparecer e aparecer
+                    ao clicar em um botão na sua interface.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>fadeOut( )</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Essa função é muito similar à função <b>hide( )</b>, ou seja, ela retirará um elemento da tela.
+                    Porém, a
+                    principal diferença está no efeito que ela aplica. Enquanto<b> hide( )</b> aplica ao mesmo tempo o
+                    efeito de
+                    redução e opacidade no elemento, o <b>fadeOut</b> apenas aplica o efeito de opacidade, ou seja, vai
+                    tornando
+                    o elemento transparente até que ele suma da tela.
+                  </p>
+                  <p>
+                    Veja um exemplo, seguindo a estrutura HTML do exemplo da função <b>hide( )</b>, porém aqui com o
+                    código
+                    atualizado para a função <b>fadeOut( )</b>.
+                  </p>
+                  <pre>
+                    <code>
+$('#fechar').click(function(){ 
+      $('.aviso').fadeOut(500); 
+}); 
+                    </code>
+                  </pre>
+                  <p>Na figura, é possível ter uma ideia do efeito que será aplicado. </p>
+                  <img src="imgs/fig24.png" class="center-block img-responsive hidden-sm hidden-xs print">
+                  <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+                  <a href="imgs/fig24.png" target="_blank" class="no-print visible-sm visible-xs"
+                    aria-hidden="true"><img src="imgs/fig24.png" class="center-block img-responsive"></a>
+                  <p class="legenda-imagem">Efeito de <b>fadeOut</b> <br>
+                    Fonte: Senac EAD (2024)
+                  </p>
+                  <p class="acessivel no-print">A figura mostra um aviso desaparecendo após clicar no botão de fechar.
+                  </p>
+                  <p>
+                    Compare a figura referente ao efeito de <b>fadeOut</b> com a figura referente à função <b>hide</b>.
+                    O efeito de
+                    <b>fadeOut</b> vai aplicando a transparência até que o elemento fique totalmente oculto.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>fadeIn</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    Essa função tem o mesmo propósito da função <b>show( )</b>, porém a diferença também é apenas no
+                    efeito.
+                    Enquanto <b>show( )</b> cria o efeito de crescer e torná-lo visível, <b>fadeIn( )</b> apenas faz o
+                    efeito de tornar
+                    visível gradualmente o elemento selecionado.
+                  </p>
+                  <p>
+                    Para ver o <b>fadeIn( )</b> em funcionalidade, basta pegar o exemplo criado na função <b>show( )</b>
+                    e mudar para
+                    <b>fadeIn( )</b>.
+                  </p>
+                  <pre>
+                    <code>
+$(document).ready(function(){ 
+      $('.aviso').delay(3000).fadeIn(800); 
+}); 
+                    </code>
+                  </pre>
+                  <p>
+                    Ao rodar esse código no navegador, você terá a mesma funcionalidade mostrada na figura referente à
+                    função <b>show</b>, porém somente com o efeito de opacidade.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="no-print" aria-hidden="true">
+          <div class="modal fade" id="modal-18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-live="polite" aria-atomic="true" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel"><b>fadeToggle </b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    A função <b>fadeToggle( )</b> tem o mesmo objetivo da função <b>toggle( )</b> mostrada
+                    anteriormente. A única
+                    diferença aqui é que o efeito aplicado será somente o da opacidade.
+                  </p>
+                  <p>Então, para ver um exemplo, é possível apenas substituir a função mostrada em <b>toggle</b> para
+                    <b>fadeToggle</b>.
+                  </p>
+                  <pre>
+                      <code>
+$("#toggle-menu").click(function(){ 
+      $('.lateral').fadeToggle(500); 
+}); 
+                      </code>
+                    </pre>
+                  <p>A funcionalidade será a mesma mostrada na figura referente à função <b>toggle</b>.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="acessivel print">
+          <h4> <b>hide</b></h4>
+          <p>
+            Esse efeito oculta um elemento da tela. Sua utilização é bem simples; basta especificar o elemento a
+            ser ocultado e informar em milissegundos o tempo que ele levará para ficar completamente oculto após
+            disparar o efeito.
+          </p>
+          <p>
+            Veja um exemplo: suponha que seu <i>site</i>, ao ser acessado, exibe uma mensagem na tela informando
+            que
+            utiliza <i>cookies</i> para melhorar a experiência do usuário, e você deseja criar um botão para
+            que, ao ser
+            clicado, a mensagem desapareça.
+          </p>
+          <p>Então, terá o seguinte conteúdo HTML:</p>
+          <pre>
+            <code>
+&lt;div class="aviso"> 
+    &lt;p>Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços. Ao utilizar nossos serviços, você está ciente dessa funcionalidade.&lt;/p> 
+    &lt;a href="#" id="fechar" class="button">Fechar&lt;/a>           
+&lt;/div>   
+            </code>
+          </pre>
+          <p>Para formatar a mensagem como uma caixa de aviso e a <i>tag</i> <b>a</b> como um botão, usa-se o
+            seguinte código CSS:</p>
+          <pre>
+            <code>
+.aviso{ 
+        width: 50%; 
+        color: #444; 
+        border: solid 1px #333; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        background: #f7f7f7; 
+        box-shadow: 0 0 4px #333; 
+        position: absolute; 
+        top: 10%; 
+} 
+.button{ 
+        background: #1081c8; 
+        color: #fff; 
+        padding: 5px 15px; 
+        text-decoration: none; 
+        font-size: 12px; 
+} 
+            </code>
+          </pre>
+          <p>
+            Agora, veja o código jQuery para aplicar o efeito de desaparecer ao clicar no botão de fechar do
+            aviso.
+          </p>
+          <pre>
+            <code>
+&lt;script type="text/javascript"> 
+        $('#fechar').click(function(){ 
+            $('.aviso').hide(500); 
+        });		 
+          &lt;/script> 
+            </code>
+          </pre>
+          <p>
+            Então, basicamente se vincula o evento de clique ao elemento que tiver o <b>id</b> <b>fechar</b>, e
+            este disparará o
+            evento <b>hide()</b> ao elemento com a classe <b>aviso</b>. Dentro da função <b>hide</b> coloca-se o
+            tempo que a animação
+            levará para ser executada em milissegundos, ou seja, cada mil representa um segundo, então o número
+            500 indica que a animação levará meio segundo para ser executada.
+          </p>
+          <p>Veja na figura o resultado do código:</p>
+          <img src="imgs/fig21.png" class="center-block img-responsive print">
+          <p class="legenda-imagem">Função <b>hide</b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A figura mostra um aviso desaparecendo após clicar no botão de fechar.
+          </p>
+          <p>
+            Repare que, na figura, ao clicar em <b>Fechar</b>, a função <b>hide</b> não faz com que o elemento
+            desapareça da
+            tela de forma instantânea, ele cria esse efeito em que o elemento vai diminuindo e ficando
+            transparente até o final da animação, sumindo totalmente da tela.
+          </p>
+          <h4><b>show</b></h4>
+          <p>
+            Esse efeito do jQuery é muito similar ao <b>hide</b>, porém a função <b>show</b> faz com que um
+            elemento apareça na
+            tela, sendo possível também usar os milissegundos para controlar o tempo da animação dele. É
+            evidente
+            que é possível vincular isso a qualquer evento.
+          </p>
+          <p>
+            Para exemplificar a função <b>show( )</b>, será considerado o conteúdo HTML mostrado na função
+            <b>hide( )</b>. Porém,
+            imagine que não se deseja que o aviso apareça na tela, junto ao carregamento da página, e sim que
+            ele
+            apareça com o efeito proporcionado pelo <b>show( )</b>, mas três segundos após a página carregar.
+          </p>
+          <p>
+            Nesse caso, os conteúdos HTML e CSS permanecem os mesmos do exemplo de <b>hide( )</b>. Porém, é
+            necessário
+            aplicar o estilo <b>display none</b> na classe <b>aviso</b>, para que o aviso já inicie oculto na
+            tela.
+          </p>
+          <pre>
+            <code>
+.aviso{ 
+        width: 50%; 
+        color: #444; 
+        border: solid 1px #333; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        background: #f7f7f7; 
+        box-shadow: 0 0 4px #333; 
+        position: absolute; 
+        top: 10%; 
+        display:none;         <!-- destaque aqui -->
+} 
+            </code>
+          </pre>
+          <p>Então, ao código CSS adiciona-se apenas o <b>display:none</b>, grifado em vermelho acima.</p>
+          <p>Veja o seguinte código jQuery:</p>
+          <pre>
+            <code>
+$(document).ready(function(){ 
+    $('.aviso').delay(3000).show(800);                  
+}); 
+            </code>
+          </pre>
+          <p>
+            Nesse exemplo de código, vincula-se a função <b>ready</b> ao elemento <b>document</b> para garantir
+            que o código só
+            será disparado após o carregamento completo da página. Então, a função <b>delay(3000)</b> faz com
+            que haja um
+            atraso na execução da próxima função, neste caso, a função <b>show( )</b>. O <b>delay</b> também
+            trabalha com
+            milissegundos, ou seja, após o carregamento da página, espera-se três segundos para a execução do
+            efeito de <b>show</b>, que, por sua vez, levará aproximadamente um segundo para completar sua
+            animação.
+          </p>
+          <p>Veja na figura o resultado do código:</p>
+          <img src="imgs/fig22.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="legenda-imagem">Função <b>show</b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A figura mostra um aviso surgindo na tela.
+          </p>
+          <p>
+            O efeito de animação da função <b>show( )</b> é igual ao da função <b>hide( )</b>. Porém, obviamente que
+            diferente de
+            <b>hide( )</b>, que oculta um elemento, o <b>show( )</b> faz com que um elemento se torne visível na tela.
+          </p>
+          <h4><b>toggle</b></h4>
+          <p>
+            Essa função é similar às funções <b>hide( )</b> e <b>show( )</b>, porém o <b>toggle</b> alterna
+            entre o efeito de ocultar e
+            mostrar um elemento. Pode-se fazer a analogia com um botão que se usa para acender uma luz em casa.
+            Quando a luz está apagada, ao clicar no botão, acende a lâmpada, porém, ao tocar novamente, é
+            aplicada
+            a funcionalidade de apagar a luz, e assim por diante.
+          </p>
+          <p>
+            Para exemplificar essa função, imagine que você tem um menu na lateral do seu <i>site</i> ou sistema
+            e deseja
+            criar um botão que alterna entre ocultar e mostrar esse menu lateral.
+          </p>
+          <p> Veja um exemplo de conteúdo HTML para isso:</p>
+          <pre>
+            <code>
+&lt;aside class="lateral"> 
+          Conteúdo do seu menu lateral   
+&lt;/aside> 
+&lt;section class="principal">		 
+          &lt;img id="toggle-menu" src="imagens/menu.png" alt="mostrar / ocultar"> 
+          &lt;h1>Conteúdo principal do seu site&lt;/h1> 
+&lt;/section> 
+            </code>
+          </pre>
+          <p>Agora, veja uma amostra de CSS para facilitar a aplicação desse efeito:</p>
+          <pre>
+            <code>
+.lateral{ 
+          width: 250px; 
+          background: #333; 
+          color: #f7f7f7; 
+          height: 100vh; 
+          float: left; 
+          padding: 15px; 
+} 
+.principal{ 
+           float: left; 
+           padding: 20px; 
+}  
+            </code>
+          </pre>
+          <p>
+            Usa-se a imagem que tem o <b>id toggle-menu</b> para ficar alternando em aparecer e ocultar a
+            lateral do
+            <i>site</i>. Para isso, essa imagem será vinculada ao evento de clique do jQuery.
+          </p>
+          <pre>
+            <code>
+$("#toggle-menu").click(function(){ 
+    ('.lateral').toggle(500); 
+}); 
+            </code>
+          </pre>
+          <p>
+            Veja que o código é intuitivo e enxuto. Com ele, aplica-se um efeito bem complexo utilizando a
+            simplicidade do jQuery.
+          </p>
+          <p>Veja o resultado desse exemplo na figura:</p>
+          <img src="imgs/fig23.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="legenda-imagem">Função <b>toggle</b><br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A figura mostra um menu lateral alternando entre desaparecer e aparecer
+            ao clicar em um botão na sua interface.
+          </p>
+          <h4><b>fadeOut( )</b></h4>
+          <p>
+            Essa função é muito similar à função <b>hide( )</b>, ou seja, ela retirará um elemento da tela.
+            Porém, a
+            principal diferença está no efeito que ela aplica. Enquanto<b> hide( )</b> aplica ao mesmo tempo o
+            efeito de
+            redução e opacidade no elemento, o <b>fadeOut</b> apenas aplica o efeito de opacidade, ou seja, vai
+            tornando
+            o elemento transparente até que ele suma da tela.
+          </p>
+          <p>
+            Veja um exemplo, seguindo a estrutura HTML do exemplo da função <b>hide( )</b>, porém aqui com o
+            código
+            atualizado para a função <b>fadeOut( )</b>.
+          </p>
+          <pre>
+            <code>
+$('#fechar').click(function(){ 
+      $('.aviso').fadeOut(500); 
+}); 
+            </code>
+          </pre>
+          <p>Na figura, é possível ter uma ideia do efeito que será aplicado. </p>
+          <img src="imgs/fig24.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="legenda-imagem">Efeito de <b>fadeOut</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">A figura mostra um aviso desaparecendo após clicar no botão de fechar.
+          </p>
+          <p>
+            Compare a figura referente ao efeito de <b>fadeOut</b> com a figura referente à função <b>hide</b>. O efeito
+            de
+            <b>fadeOut</b> vai aplicando a transparência até que o elemento fique totalmente oculto.
+          </p>
+          <h4><b>fadeIn</b></h4>
+          <p>
+            Essa função tem o mesmo propósito da função <b>show( )</b>, porém a diferença também é apenas no
+            efeito.
+            Enquanto <b>show( )</b> cria o efeito de crescer e torná-lo visível, <b>fadeIn( )</b> apenas faz o
+            efeito de tornar
+            visível gradualmente o elemento selecionado.
+          </p>
+          <p>
+            Para ver o <b>fadeIn( )</b> em funcionalidade, basta pegar o exemplo criado na função <b>show( )</b>
+            e mudar para
+            <b>fadeIn( )</b>.
+          </p>
+          <pre>
+            <code>
+$(document).ready(function(){ 
+      $('.aviso').delay(3000).fadeIn(800); 
+}); 
+            </code>
+          </pre>
+          <p>
+            Ao rodar esse código no navegador, você terá a mesma funcionalidade mostrada na figura referente à
+            função <b>show</b>, porém somente com o efeito de opacidade.
+          </p>
+          <h4><b>fadeToggle </b></h4>
+          <p>
+            A função <b>fadeToggle( )</b> tem o mesmo objetivo da função <b>toggle( )</b> mostrada
+            anteriormente. A única
+            diferença aqui é que o efeito aplicado será somente o da opacidade.
+          </p>
+          <p>Então, para ver um exemplo, é possível apenas substituir a função mostrada em <b>toggle</b> para
+            <b>fadeToggle</b>.
+          </p>
+          <pre>
+            <code>
+$("#toggle-menu").click(function(){ 
+      $('.lateral').fadeToggle(500); 
+}); 
+            </code>
+          </pre>
+          <p>A funcionalidade será a mesma mostrada na figura referente à função <b>toggle</b>.</p>
+        </div>
       </div>
-
-
       <div class="pagina">
-
-
-
-
+        <h2>Encerramento</h2>
+        <p>
+          Você deve ter observado que o jQuery oferece uma forma fácil e acessível de adicionar animações. É importante
+          usar esses efeitos com moderação para não sobrecarregar a experiência do usuário ou afetar negativamente o
+          desempenho da página. Com o advento do CSS3, muitas animações podem ser realizadas de forma mais eficiente
+          usando apenas CSS, o que geralmente é preferido para animações simples. No entanto, para lógicas de animação
+          mais complexas ou quando se deseja suporte a navegadores mais antigos, o jQuery continua sendo uma ferramenta
+          muito útil.
+        </p>
+       <p>
+          Pode-se dizer que há alguns anos, a utilização do jQuery era praticamente obrigatória para o desenvolvimento de
+          qualquer interface moderna e responsiva, inclusive vários CMS (<i>content management system</i>) e <i>frameworks</i>,
+          incluindo o Bootstrap, tinham a dependência do jQuery. Hoje em dia, o jQuery deixou de ser uma biblioteca
+          obrigatória e tornou-se uma excelente ferramenta de desenvolvimento que você pode incluir para facilitar a
+          construção de seus projetos <i>web</i>.
+       </p>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
 
 
@@ -661,17 +3058,6 @@ $("h1").attr({
         </footer> -->
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
 
   <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
     <footer>
