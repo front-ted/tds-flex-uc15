@@ -22,116 +22,9 @@
   z-index: 2;
 }
 
-/* Fundo responsivo */
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  /* 100% da largura da tela */
-  height: 100vh;
-  /* 100% da altura da tela */
-  overflow-x: hidden !important;
-  background: #2164A6;
-  /* Azul sólido */
-  color: white;
-  z-index: 1;
-}
-
-/* Configuração para as bordas laterais */
-.side {
-  position: absolute;
-  width: 15vw;
-  /* 15% da largura da tela */
-  height: 100vh;
-  /* 100% da altura da tela */
-  top: 0;
-  overflow-x: hidden;
-}
-
-.left {
-  left: 0;
-  /* Alinhado à esquerda */
-}
-
-.right {
-  right: 0;
-  /* Alinhado à direita */
-}
-
-/* Estilo das linhas */
-.line {
-  position: absolute;
-  height: 8px;
-  /* Espessura das linhas */
-  background: rgba(255, 255, 255, 0.15);
-  /* Branco translúcido */
-  opacity: 0;
-  /* Invisível no início */
-  transform: translateX(-100%);
-  /* Começa fora da tela à esquerda */
-  animation: fadeInOutSlide 5s ease-in-out infinite;
-  /* Transparência e deslocamento inicial */
-}
-
-/* Animação das linhas */
-@keyframes fadeInOutSlide {
-  0% {
-    transform: translateX(-100%);
-    /* Fora da tela à esquerda */
-    opacity: 0;
-    /* Invisível */
-  }
-
-  50% {
-    transform: translateX(0);
-    /* Entra na tela */
-    opacity: 0.4;
-    /* Gradualmente visível */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* Permanece na tela */
-    opacity: 0;
-    /* Desaparece suavemente */
-  }
-}
-
-/* Estado pausado */
-@keyframes fadeInOutPaused {
-  0% {
-    transform: translateX(0);
-    /* Permanece na tela */
-    opacity: 0.4;
-    /* Mantém visível */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* Permanece na tela */
-    opacity: 0.4;
-    /* Mantém visível */
-  }
-}
-
-
 .grupo-imprimir {
   width: 920px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 h2 {
   margin-bottom: 40px;
@@ -186,7 +79,6 @@ h5 {
 .modal-content h4 {
   color: #000;
 }
-
 
 /* menu */
 
@@ -280,49 +172,6 @@ h5 {
   background: transparent;
 }
 
-/* .card1,
-.card2 {
-  border-radius: 0;
-  min-height: 270px;
-}
-
-.card1 {
-  background: #eff7e0;
-}
-
-.card2 {
-  background: #c9dee4;
-}
-
-.caixa-destaque-livre {
-  border-radius: 0;
-  margin: 30px 0;
-}
-
-.panel {
-  background: transparent;
-  border: none;
-}
-
-.checklist li {
-  list-style-image: url("../imgs/checklist.png");
-}
-
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
-}
-
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .icon-prev {
-  margin-left: -90px;
-}
-
-.carousel-control .glyphicon-chevron-right,
-.carousel-control .icon-next {
-  margin-right: -90px;
-} */
-
 .botoes {
   opacity: 0;
 }
@@ -386,7 +235,6 @@ h5 {
 .fundo-tecnicos {
   overflow-x: hidden !important;
 }
-
 
 /* codigos */
 pre code.hljs {
@@ -739,17 +587,6 @@ pre {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1650px) {
   body {
     overflow-x: hidden !important;
@@ -790,21 +627,6 @@ pre {
     z-index: 100;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 1440px) {
   .botao-7 {
@@ -868,11 +690,6 @@ pre {
   }
 }
 
-
-
-
-
-
 @media screen and (max-width: 1400px) {
   .botao-8 {
     background: url(../imgs/bt_mouseout.png) no-repeat;
@@ -923,7 +740,6 @@ pre {
     margin-top: 8%;
     margin-left: 41%;
   }
-
 }
 
 
@@ -993,8 +809,6 @@ pre {
     margin-top: 44%;
     margin-left: 40%;
   }
-
-
 }
 
 
@@ -1076,15 +890,6 @@ pre {
   }
 }
 
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
   .grupo-imprimir {
     display: block;
@@ -1149,10 +954,6 @@ pre {
     margin-top: 70%;
     margin-left: 60%;
   }
-
-
-
-
 }
 
 

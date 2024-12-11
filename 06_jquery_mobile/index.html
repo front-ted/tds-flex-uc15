@@ -25,6 +25,8 @@
   <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
   <link href="../template/css/print.css" type="text/css" rel="stylesheet">
   <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+  <link href="css/bg-custom.css" type="text/css" rel="stylesheet">
+
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,7 +104,6 @@
     <section class="paginas">
 
       <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
-
       <div class="pagina">
         <div class="no-print" aria-hidden="true">
           <div class="side left" id="left-side"></div>
@@ -2598,7 +2599,6 @@ $("#toggle-menu").click(function(){
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -2654,7 +2654,6 @@ $('#fechar').click(function(){
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -2697,7 +2696,6 @@ $(document).ready(function(){
             </div>
           </div>
         </div>
-
         <div class="no-print" aria-hidden="true">
           <div class="modal fade" id="modal-18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-live="polite" aria-atomic="true" aria-hidden="true">
@@ -3037,16 +3035,17 @@ $("#toggle-menu").click(function(){
           mais complexas ou quando se deseja suporte a navegadores mais antigos, o jQuery continua sendo uma ferramenta
           muito útil.
         </p>
-       <p>
-          Pode-se dizer que há alguns anos, a utilização do jQuery era praticamente obrigatória para o desenvolvimento de
-          qualquer interface moderna e responsiva, inclusive vários CMS (<i>content management system</i>) e <i>frameworks</i>,
+        <p>
+          Pode-se dizer que há alguns anos, a utilização do jQuery era praticamente obrigatória para o desenvolvimento
+          de
+          qualquer interface moderna e responsiva, inclusive vários CMS (<i>content management system</i>) e
+          <i>frameworks</i>,
           incluindo o Bootstrap, tinham a dependência do jQuery. Hoje em dia, o jQuery deixou de ser uma biblioteca
           obrigatória e tornou-se uma excelente ferramenta de desenvolvimento que você pode incluir para facilitar a
           construção de seus projetos <i>web</i>.
-       </p>
+        </p>
       </div>
     </section>
-
 
 
 
@@ -3118,6 +3117,7 @@ $("#toggle-menu").click(function(){
   <script src="../template/js/template.config.js"></script>
   <script src="../template/js/images.loader.js"></script>
   <script src="../template/js/highlight.min.js"></script>
+  <script src="js/bg-custom.js"></script>
 
   <noscript>
     <style media="screen">
@@ -3127,66 +3127,6 @@ $("#toggle-menu").click(function(){
     </style>
   </noscript>
 
-  <script>
-    // Função para criar linhas dinâmicas e desacelerar até parar em 12 segundos
-    function createLines(containerId) {
-      const container = document.getElementById(containerId);
-
-      // Número de linhas por lado
-      const lineCount = 15;
-
-      for (let i = 0; i < lineCount; i++) {
-        const line = document.createElement('div');
-        line.className = 'line';
-
-        // Define largura variável para as linhas
-        const lineWidth = Math.random() * 10 + 5 + 'vw'; // Entre 5vw e 15vw
-        line.style.width = lineWidth;
-
-        // Posição horizontal aleatória
-        line.style.left = Math.random() * 10 + 'vw'; // Deslocamento horizontal aleatório
-
-        // Posição vertical uniforme
-        line.style.top = i * (100 / lineCount) + 'vh'; // Divisão uniforme da altura
-
-        // Define um atraso escalonado para cada linha
-        line.style.animationDelay = i * 0.6 + 's'; // Atraso escalonado entre as linhas
-
-        container.appendChild(line);
-      }
-
-      // Desaceleração suave até 12 segundos
-      let elapsedTime = 0;
-      const interval = setInterval(() => {
-        elapsedTime += 1; // Incrementa o tempo decorrido em 1 segundo
-        const lines = container.querySelectorAll('.line');
-
-        lines.forEach(line => {
-          const currentDuration = parseFloat(
-            window.getComputedStyle(line).animationDuration
-          );
-
-          // Aumenta gradualmente a duração da animação para desacelerar
-          if (elapsedTime <= 12) {
-            line.style.animationDuration = (currentDuration + 0.5) + 's';
-          } else {
-            // Pausa a animação e mantém o estado final
-            line.style.animation = 'fadeInOutPaused 1s infinite';
-          }
-        });
-
-        if (elapsedTime >= 12) {
-          clearInterval(interval); // Para o ajuste após 12 segundos
-        }
-      }, 1000); // Ajusta a cada 1 segundo
-    }
-
-    // Cria linhas para as laterais
-    createLines('left-side');
-    createLines('right-side');
-
-  </script>
-
 
   <!-- inicializa highlight para cor nos codigos -->
   <script>
@@ -3195,13 +3135,6 @@ $("#toggle-menu").click(function(){
 
     });
   </script>
-
-
-
-
-
-
-
 
   <!-- Versao atual do handtalk -->
   <script>

@@ -1,0 +1,91 @@
+/* Fundo responsivo */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    /* 100% da largura da tela */
+    height: 100vh;
+    /* 100% da altura da tela */
+    overflow-x: hidden !important;
+    background: #2164A6;
+    /* Azul sólido */
+    color: white;
+    z-index: 1;
+  }
+  
+  /* Configuração para as bordas laterais */
+  .side {
+    position: absolute;
+    width: 15vw;
+    /* 15% da largura da tela */
+    height: 100vh;
+    /* 100% da altura da tela */
+    top: 0;
+    overflow-x: hidden;
+  }
+  
+  .left {
+    left: 0;
+    /* Alinhado à esquerda */
+  }
+  
+  .right {
+    right: 0;
+    /* Alinhado à direita */
+  }
+  
+  /* Estilo das linhas */
+  .line {
+    position: absolute;
+    height: 8px;
+    /* Espessura das linhas */
+    background: rgba(255, 255, 255, 0.15);
+    /* Branco translúcido */
+    opacity: 0;
+    /* Invisível no início */
+    transform: translateX(-100%);
+    /* Começa fora da tela à esquerda */
+    animation: fadeInOutSlide 5s ease-in-out infinite;
+    /* Transparência e deslocamento inicial */
+  }
+  
+  /* Animação das linhas */
+  @keyframes fadeInOutSlide {
+    0% {
+      transform: translateX(-100%);
+      /* Fora da tela à esquerda */
+      opacity: 0;
+      /* Invisível */
+    }
+  
+    50% {
+      transform: translateX(0);
+      /* Entra na tela */
+      opacity: 0.4;
+      /* Gradualmente visível */
+    }
+  
+    100% {
+      transform: translateX(0);
+      /* Permanece na tela */
+      opacity: 0;
+      /* Desaparece suavemente */
+    }
+  }
+  
+  /* Estado pausado */
+  @keyframes fadeInOutPaused {
+    0% {
+      transform: translateX(0);
+      /* Permanece na tela */
+      opacity: 0.4;
+      /* Mantém visível */
+    }
+  
+    100% {
+      transform: translateX(0);
+      /* Permanece na tela */
+      opacity: 0.4;
+      /* Mantém visível */
+    }
+  }
