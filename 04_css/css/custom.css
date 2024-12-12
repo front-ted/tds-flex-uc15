@@ -1,4 +1,5 @@
 body {
+  background: url('../imgs/bg1.png');
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
