@@ -18,7 +18,7 @@
   src: url("../fonts/RobotoCondensed-Bold.ttf");
 } */
 
-.highlight {
+.hljs-destaque {
   background-color: #ffffcc !important; /* Amarelo claro */
   color: #d9534f !important; /* Texto vermelho (opcional) */
   font-weight: bold;
