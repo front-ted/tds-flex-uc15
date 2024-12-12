@@ -777,6 +777,9 @@ mark {
 
 .bt-transcricao{
   border: unset !important;
+  width: 154px;
+  height: 154px;
+  background-color: transparent;
 }
 
 .botao-tr{

@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Content management system (CMS): ferramentas de CMS, requisitos básicos, servidor local e banco de dados,
+    utilização de CMS, configuração de usuários administrativos, customização de layout, CSS e temas, plug-ins,
+    implantação de CMS, publicação do site/blog</title>
+
+  <!-- Bootstrap -->
+  <link href="../template/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../template/css/tecnicos_senac.css" rel="stylesheet">
+  <link href="../template/css/cores.css" rel="stylesheet">
+  <link href="../template/css/modal-100.css" rel="stylesheet">
+  <link href="../template/css/devibeans.min.css" rel="stylesheet">
+  <!--Extras - novas classes para facilitar-->
+  <link rel="stylesheet" href="../template/css/extras.css">
+  <link href="../template/css/sncload.css" rel="stylesheet">
+  <link href="../template/css/magnific-popup.css" rel="stylesheet">
+  <!-- referencia ao arquivo css com estilos especificos da pagina -->
+  <link href="css/custom.css" type="text/css" rel="stylesheet">
+  <!-- css necessario para o print -->
+  <link href="../template/css/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+  <link href="../template/css/print.css" type="text/css" rel="stylesheet">
+  <link href="../template/fonts/roboto.css" type="text/css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">46914400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Paulo Ricardo Soveral Junior</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100393332CEE5C5294F9D2C3CF7CCDACBE5</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body onLoad="Javascript:document.getElementById('sncloader').style.display='none';">
+  <!-- MARCA D´ÁGUA -->
+  <img src="../template/images/logo_senac_colorido.png" id="marcadaguaLogo">
+  <!-- /MARCA D´ÁGUA -->
+
+  <div id='sncloader' class='over-loader'>
+    <div class="over-cell">
+      <div id="sncload"></div>
+    </div>
+  </div>
+  <header id="topo" class="senac no-print">
+    <div class="header-tecnicos container">
+      <h1 id="nome-curso">Desenvolvimento de Sistemas</h1>
+      <div id="logo-senac"><img src="../template/images/logo-senac.png" alt="logo do senac"></div>
+    </div>
+    <div id="sombra"></div>
+  </header>
+
+  <div id="booklet">
+    <header class="no-print container">
+      <!-- BTO IMPRIMIR -->
+      <div class="grupo-imprimir no-print">
+        <button type="button" data-pdf="true" class="bto-imprimir" name="button">
+          <span class="fa fa-print"></span> <span>Imprimir</span>
+        </button>
+      </div>
+      <!-- /BTO IMPRIMIR -->
+    </header>
+    <!-- - - - - - - - - - - - - - - - não alterar acima - - - - - - - - - - - - -->
+    <section class="paginas">
+
+      <!-- - - - - - - - cada página é independente  - - - - - - - - - - -->
+      <div class="pagina">
+        <div class="container">
+          <h2>
+            <i>Content management system</i> (CMS): ferramentas de CMS, requisitos básicos, servidor local e banco de
+            dados,
+            utilização de CMS, configuração de usuários administrativos, customização de <i>layout</i>, CSS e temas,
+            <i>plug-ins</i>,
+            implantação de CMS, publicação do <i>site</i>/<i>blog</i>
+          </h2>
+          <p>
+            Neste material, você começará entendendo o que é um <i>content management system</i> (sistema de
+            gerenciamento de
+            conteúdo), popularmente chamado pela sigla CMS. Também compreenderá o porquê de utilizar um CMS, quais as
+            vantagens e facilidades que ele traz para o desenvolvimento <i>web</i> e quais os CMSs mais populares
+            atualmente.
+            Além disso, aqui será mostrado todo o processo de instalação, configuração e personalização de um dos mais
+            populares CMSs da atualidade.
+          </p>
+          <h3><i>Content management system</i> (CMS) </h3>
+          <p>O <i>podcast</i> a seguir apresenta uma introdução ao conceito de CMS.</p>
+          <p class="no-print">Clique ou toque no botão de <i>play</i> para ouvir o áudio ou no da transcrição para ler o
+            conteúdo. </p>
+          <div class="row no-print" aria-hidden="true">
+            <audio controls="">
+              <source src="podcast/podcast.mp3" type="audio/mpeg">
+              Your browser does not support the audio tag.
+            </audio>
+            <button class="bt-transcricao" aria-hidden="true" tabindex="-1" type="button" data-toggle="modal"
+              data-target="#transcricao1"><img src="../template/images/transcricao.png" style="width: 45px;"
+                class="botao-tr">
+            </button>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="transcricao1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Transcrição</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h3>Content Management System (CMS)</h3>
+                    <p>
+                      Um CMS (Content Management System) é um sistema de gerenciamento de conteúdo que permite criar,
+                      gerenciar e modificar conteúdos em um site ou sistema sem a necessidade de conhecimento técnico
+                      especializado em programação. Basicamente, é uma ferramenta que ajuda você a construir um site sem
+                      precisar escrever todo o código do zero.
+                    </p>
+                    <p>
+                      Vale ressaltar que para um total domínio da ferramenta é necessário ter sólidos conhecimentos em
+                      HTML, CSS e JS, isso fará com que você faça praticamente qualquer interface ou lógica frontend com
+                      o
+                      CMS, e ainda aproveitando todos os recursos pré-prontos que cada CMS oferece.
+                    </p>
+                    <p>
+                      O CMS torna-se um recurso ágil tanto para desenvolvedores backend que não querem lidar ou não
+                      possuem conhecimento em desenvolvimento frontend, quanto para desenvolvedores frontend que não
+                      desejam gastar tempo ou recursos com backend. Pois, os principais CMS’s da atualidade, possuem os
+                      recursos e uma gama de ferramentas que auxiliam tanto no desenvolvimento backend quanto frontend.
+                    </p>
+                    <p>Dentre as vantagens de se usar um CMS’s destacamos:</p>
+                    <p>
+                      <b> Facilidade de uso</b>: CMS’s são projetados para serem amigáveis para usuários não técnicos.
+                      Eles vêm
+                      com uma interface gráfica onde você pode controlar os aspectos do seu site, como adicionar ou
+                      editar
+                      páginas, alterar o layout e inserir mídia.
+                    </p>
+                    <p>
+                      <b> Templates e Extensões</b>: Muitos CMS’s oferecem uma variedade de templates (ou temas) que
+                      você pode
+                      usar para personalizar a aparência do seu site. Além disso, eles geralmente têm plugins ou
+                      extensões
+                      que adicionam funcionalidades extras ao site ou sistema.
+                    </p>
+                    <p>
+                      <b>SEO</b>: Muitos CMS’s são otimizados para motores de busca, oferecendo recursos que ajudam seu
+                      site a
+                      ter um melhor ranking nas pesquisas.
+                    </p>
+                    <p>
+                      <b>Suporte à Comunidade</b>: Como a maioria dos CMS’s são de código aberto e amplamente
+                      utilizados, existe
+                      uma grande comunidade de usuários e desenvolvedores que contribuem com suporte, plugins, temas e
+                      atualizações.
+                    </p>
+                    <p>
+                      Usar um CMS pode ser uma maneira eficiente de gerenciar seu conteúdo online e manter seu site
+                      atualizado sem precisar de habilidades avançadas em desenvolvimento web. Isso quer dizer que, um
+                      dos
+                      princípios de todos os CMS’s é de facilitar a criação de conteúdo na web, então todo o CMS possui
+                      um
+                      painel administrativo, onde usuários que não possuem conhecimento em programação podem inserir com
+                      facilidade conteúdos novos.
+                    </p>
+                    <p>
+                      Mas não confunda facilidade de uso com não usar código, para criar recursos avançados em qualquer
+                      CMS, tanto no frontend quanto no backend, é preciso saber programar. Mas como ele possui sempre um
+                      painel administrativo para inserir conteúdo, é como criar um site auto gerenciável para o usuário,
+                      ou seja, você desenvolvedor irá criar todo o site ou sistema com o CMS, e irá disponibilizar o
+                      acesso a áreas para que o usuário tenha permissão de editar ou inserir novos conteúdos. E quando
+                      nos
+                      referimos a usuário, quer dizer a empresa que lhe contratou para criar o site.
+                    </p>
+                    <p>
+                      Alguns exemplos de CMSs mais conhecidos incluem WordPress, Joomla! e Drupal, esses três possuem
+                      recursos para criar praticamente qualquer site ou sistema web. Porém, existem alguns CMS’s mais
+                      específicos como o Magento e Opencart para a criação de e-commerces. E vale mencionar o Moodle que
+                      é
+                      voltado para área educacional, neste caso é mais comum chamar ele de LMS (Learning Management
+                      System).
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h3>Content Management System (CMS)</h3>
+            <p>
+              Um CMS (Content Management System) é um sistema de gerenciamento de conteúdo que permite criar,
+              gerenciar e modificar conteúdos em um site ou sistema sem a necessidade de conhecimento técnico
+              especializado em programação. Basicamente, é uma ferramenta que ajuda você a construir um site sem
+              precisar escrever todo o código do zero.
+            </p>
+            <p>
+              Vale ressaltar que para um total domínio da ferramenta é necessário ter sólidos conhecimentos em
+              HTML, CSS e JS, isso fará com que você faça praticamente qualquer interface ou lógica frontend com
+              o
+              CMS, e ainda aproveitando todos os recursos pré-prontos que cada CMS oferece.
+            </p>
+            <p>
+              O CMS torna-se um recurso ágil tanto para desenvolvedores backend que não querem lidar ou não
+              possuem conhecimento em desenvolvimento frontend, quanto para desenvolvedores frontend que não
+              desejam gastar tempo ou recursos com backend. Pois, os principais CMS’s da atualidade, possuem os
+              recursos e uma gama de ferramentas que auxiliam tanto no desenvolvimento backend quanto frontend.
+            </p>
+            <p>Dentre as vantagens de se usar um CMS’s destacamos:</p>
+            <p>
+              <b> Facilidade de uso</b>: CMS’s são projetados para serem amigáveis para usuários não técnicos.
+              Eles vêm
+              com uma interface gráfica onde você pode controlar os aspectos do seu site, como adicionar ou
+              editar
+              páginas, alterar o layout e inserir mídia.
+            </p>
+            <p>
+              <b> Templates e Extensões</b>: Muitos CMS’s oferecem uma variedade de templates (ou temas) que
+              você pode
+              usar para personalizar a aparência do seu site. Além disso, eles geralmente têm plugins ou
+              extensões
+              que adicionam funcionalidades extras ao site ou sistema.
+            </p>
+            <p>
+              <b>SEO</b>: Muitos CMS’s são otimizados para motores de busca, oferecendo recursos que ajudam seu
+              site a
+              ter um melhor ranking nas pesquisas.
+            </p>
+            <p>
+              <b>Suporte à Comunidade</b>: Como a maioria dos CMS’s são de código aberto e amplamente
+              utilizados, existe
+              uma grande comunidade de usuários e desenvolvedores que contribuem com suporte, plugins, temas e
+              atualizações.
+            </p>
+            <p>
+              Usar um CMS pode ser uma maneira eficiente de gerenciar seu conteúdo online e manter seu site
+              atualizado sem precisar de habilidades avançadas em desenvolvimento web. Isso quer dizer que, um
+              dos
+              princípios de todos os CMS’s é de facilitar a criação de conteúdo na web, então todo o CMS possui
+              um
+              painel administrativo, onde usuários que não possuem conhecimento em programação podem inserir com
+              facilidade conteúdos novos.
+            </p>
+            <p>
+              Mas não confunda facilidade de uso com não usar código, para criar recursos avançados em qualquer
+              CMS, tanto no frontend quanto no backend, é preciso saber programar. Mas como ele possui sempre um
+              painel administrativo para inserir conteúdo, é como criar um site auto gerenciável para o usuário,
+              ou seja, você desenvolvedor irá criar todo o site ou sistema com o CMS, e irá disponibilizar o
+              acesso a áreas para que o usuário tenha permissão de editar ou inserir novos conteúdos. E quando
+              nos
+              referimos a usuário, quer dizer a empresa que lhe contratou para criar o site.
+            </p>
+            <p>
+              Alguns exemplos de CMSs mais conhecidos incluem WordPress, Joomla! e Drupal, esses três possuem
+              recursos para criar praticamente qualquer site ou sistema web. Porém, existem alguns CMS’s mais
+              específicos como o Magento e Opencart para a criação de e-commerces. E vale mencionar o Moodle que
+              é
+              voltado para área educacional, neste caso é mais comum chamar ele de LMS (Learning Management
+              System).
+            </p>
+          </div>
+          <h3> Requisitos básicos</h3>
+          <p>
+            Todo CMS contém estrutura <i>back-end</i> e <i>front-end</i> e, como ele é voltado para a <i>web</i>, a
+            maioria utiliza a linguagem
+            PHP (<i>hypertext preprocessor</i>, ou “pré-processador de hipertexto”). Então, neste caso, para que se
+            consiga
+            instalar e utilizar um CMS, é preciso ter configurados um <b>servidor web</b> Apache, a biblioteca do PHP e
+            um <b>banco
+              de dados</b> MySQL.
+          </p>
+          <p>
+            Qualquer empresa de hospedagem de sites já tem por padrão esses requisitos e muitas trazem até mesmo um
+            painel
+            de autoinstalação dos CMSs mais populares.
+          </p>
+          <p> Este material ensinará você a simular um servidor local usando um software chamado XAMPP.</p>
+          <h3> Servidor local e banco de dados – XAMPP</h3>
+          <p>
+            O XAMPP é um <i>software</i> gratuito que fornece um ambiente de desenvolvimento local de forma prática e
+            com fácil
+            instalação. A sigla XAMPP representa:
+          </p>
+          <p><b>X</b> – <i>Cross-platform</i> (multiplataforma, funcionando em Windows, Linux e Mac) </p>
+          <p>A – Apache (servidor <i>web</i>) </p>
+          <p>M – MySQL (ou MariaDB, sistema de gerenciamento de banco de dados) </p>
+          <p>P – PHP (linguagem de programação para desenvolvimento <i>web</i>) </p>
+          <p>P – Perl (linguagem de programação) </p>
+          <p>
+            O XAMPP permite aos desenvolvedores criarem e testarem <i>sites</i> ou sistemas <i>web</i> localmente em seu
+            próprio
+            computador, sem a necessidade de um servidor <i>web on-line</i>. Ele cria um ambiente de testes controlado,
+            no qual
+            você pode experimentar diferentes configurações e <i>plugins</i> (ou <i>plug-ins</i>) antes de implementar
+            em um servidor
+            <i>on-line</i>.
+          </p>
+          <p>
+            Ele facilita a configuração e integração de serviços essenciais para o desenvolvimento <i>web</i>, como o
+            servidor
+            Apache, banco de dados MySQL/MariaDB e interpretadores de PHP.
+          </p>
+          <p>
+            O XAMPP é amplamente utilizado por estudantes e iniciantes para aprender e praticar o desenvolvimento
+            <i>web</i>
+            devido à sua simplicidade e conveniência. Ele permite criar protótipos de aplicações <i>web</i> rapidamente,
+            sem a
+            necessidade de configuração complexa de servidores.
+          </p>
+          <p>
+            Conforme mencionado anteriormente, o XAMPP traz um pacote de recursos essenciais ao desenvolvimento
+            <i>web</i>.
+            Confira:
+          </p>
+          <div class="no-print" aria-hidden="true">
+            <p>Clique ou toque para visualizar o conteúdo.</p>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                  data-toggle="tab">Apache</a>
+              </li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                  data-toggle="tab">MySQL/MariaDB </a>
+              </li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">PHP </a>
+              </li>
+              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                  data-toggle="tab">phpMyAdmin</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <p>Um dos servidores <i>web</i> mais populares, que serve como base para hospedar <i>sites</i> ou
+                  sistemas <i>web</i>.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <p>Sistemas de gerenciamento de banco de dados relacionais usados para armazenar e gerenciar dados. </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                <p>Linguagem de programação amplamente usada para o desenvolvimento de aplicações <i>web</i> dinâmicas.
+                </p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="settings">
+                <p>Uma ferramenta para gerenciamento de bancos de dados MySQL/MariaDB. </p>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4>Apache</h4>
+            <p>Um dos servidores <i>web</i> mais populares, que serve como base para hospedar <i>sites</i> ou sistemas
+              <i>web</i>.
+            </p>
+            <h4>MySQL/MariaDB</h4>
+            <p>Sistemas de gerenciamento de banco de dados relacionais usados para armazenar e gerenciar dados.</p>
+            <h4>PHP</h4>
+            <p>Linguagem de programação amplamente usada para o desenvolvimento de aplicações <i>web</i> dinâmicas.</p>
+            <h4>phpMyAdmin</h4>
+            <p>Uma ferramenta para gerenciamento de bancos de dados MySQL/MariaDB.</p>
+          </div>
+          <p>
+            Para instalar o XAMPP é bem simples. No <i>site</i> oficial, baixe-o e o instale em seu computador
+            normalmente, como
+            qualquer outro <i>software</i>:
+          </p>
+          <img src="imgs/fig1.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig1.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig1.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem"><i>Site</i> oficial do XAMPP<br>
+            Fonte: Apache Friends (c2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela do site oficial do XAMPP, na qual há opções para download para
+            Windows, Linux e Mac OS.
+          </p>
+          <p>Agora, basta fazer <i>download</i> para o seu sistema operacional e seguir os passos da instalação.</p>
+
+          <p>
+            Após a instalação do XAMPP, você deve ter reparado que ele cria um diretório na raiz do HD de seu computador
+            e, ao acessar esse diretório, haverá diversas pastas e arquivos.
+          </p>
+          <p>
+            É preciso ativar os componentes do XAMPP sempre que precisar utilizá-los. Para isso, acesse a pasta raiz do
+            XAMPP e encontre o arquivo <b>xampp-control.exe</b>. Ao clicar nele, abrirá uma janela em seu sistema
+            operacional
+            mostrando os componentes a serem ativados. Veja a figura:
+          </p>
+          <img src="imgs/fig2.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig2.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig2.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Componentes do XAMPP <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Painel com a lista de componentes do XAMPP e, ao lado de cada serviço, um botão
+            para ativá-lo.
+          </p>
+          <p>
+            Ao abrir o painel, conforme a figura, clique em <b>start</b> nos componentes Apache e MySQL. Se os dois
+            ficarem na
+            cor verde, quer dizer que eles estão rodando em segundo plano em seu computador. Após isso, feche o painel
+            do
+            XAMPP.
+          </p>
+          <p>
+            Após esse processo, seu ambiente está pronto para criar qualquer sistema <i>web</i> com PHP e até mesmo
+            instalar um
+            CMS. É preciso repetir todo o processo sempre que reiniciar seu computador ou sempre que, por algum motivo,
+            o
+            servidor parar de rodar.
+          </p>
+          <p>
+            Você deve ter percebido que o XAMPP é uma ferramenta poderosa para os desenvolvedores <i>web</i>, que
+            permite criar,
+            testar e implementar projetos de maneira eficiente e controlada. Isso porque ele oferece um ambiente robusto
+            e
+            flexível, indispensável para a instalação local de qualquer CMS ou sistema baseado em PHP.
+          </p>
+          <p>
+            Nas próximas seções, você aprenderá a instalar e configurar um dos CMSs mais populares do mundo, chamado
+            Joomla!. Aprenderá também a desenvolver com ele.
+          </p>
+          <h4>Implantação de CMS – Joomla! </h4>
+          <p>
+            O Joomla! é um dos mais populares sistemas de gerenciamento de conteúdo (CMSs) de código aberto, usado para
+            criar, gerenciar e publicar conteúdo na<i> web</i>. Ele é construído sobre uma estrutura (<i>framework</i>)
+            que permite o
+            desenvolvimento de <i>sites</i> e aplicações <i>web</i> robustos e extensíveis.
+          </p>
+          <img src="imgs/logo_jomla.png" class="center-block img-responsive print">
+          <p>
+            É usado para criar, organizar, gerenciar e publicar conteúdo para empresas de todos os portes, governos,
+            organizações sem fins lucrativos e grandes organizações em todo o mundo. O Joomla! é apoiado por um grande
+            ecossistema e atualmente contém:
+          </p>
+          <ul>
+            <li>Quase 2 milhões de <i>sites</i> ativos</li>
+            <li>Mais de 9% de todos os <i>sites</i> de negócios conhecidos </li>
+            <li>Mais de 6% do mercado de CMS em todo o mundo </li>
+            <li>Mais de 3% de toda a <i>web</i> </li>
+          </ul>
+          <p>
+            Como já mencionado, o Joomla! tem uma base de código sólida e uma grande comunidade global. Com ele, é
+            possível construir <i>sites</i> ou desenvolver aplicativos e desenvolver <i>templates</i> ou extensões ou
+            algo completamente
+            novo baseado em seu <i>framework</i>, o que o torna uma ferramenta extremamente extensível e versátil,
+            fazendo com
+            que as possibilidades de desenvolvimento sejam quase infinitas.
+          </p>
+          <div class="caixa-destaque icone anotar">
+            <p>
+              Apesar de o WordPress ter se tornado muito popular no Brasil nos últimos anos, essa popularidade vem
+              principalmente por ele ser uma ferramenta mais intuitiva para usuários que não têm nenhum conhecimento em
+              desenvolvimento <i>web</i>, porém dos CMSs mais utilizados, o Joomla! é o que tem mais recursos em seu
+              núcleo-padrão, ou seja, ele já vem com muitos recursos nativos, não precisando instalar extensões externas
+              para muitas funcionalidades.
+            </p>
+          </div>
+          <p>
+            A interface do Joomla! é intuitiva e ele é um dos únicos CMSs que permite de forma nativa criar, editar e
+            mudar o template não só da parte da frente do <i>site</i>, mas da interface administrativa também. Isso quer
+            dizer
+            que, com ele, você pode criar um <i>template</i> totalmente novo e alinhado às suas necessidades para a
+            parte
+            administrativa do seu <i>site</i> ou sistema.
+          </p>
+          <p>
+            No decorrer deste conteúdo, você aprenderá a instalar, configurar e entender os principais recursos do
+            Joomla!.
+          </p>
+          <h4>Instalando o CMS Joomla!</h4>
+          <p>
+            Este conteúdo demonstrará a instalação do Joomla!, mas os passos para a instalação são muito semelhantes
+            para
+            outros CMSs também.
+          </p>
+          <p>
+            Nesse processo, será exemplificada a instalação localmente utilizando o XAMPP, mas, como já mencionado, para
+            instalar em qualquer empresa de hospedagem, o passo a passo será praticamente o mesmo.
+          </p>
+          <p>
+            Primeiramente, é necessário fazer <i>download</i> do CMS e, para isso, é preciso acessar o <i>site</i>
+            oficial do Joomla! e
+            clicar em <b>Download</b>:
+          </p>
+          <img src="imgs/fig3.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig3.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig3.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem"><i>Download</i> Joomla! <br>
+            Fonte: Joomla! (c2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela do site oficial do Joomla!, em que há um link para download.
+          </p>
+          <p>
+            Ao clicar em <b>download</b> na página inicial do <i>site</i>, você será direcionado para outra página, na
+            qual deve clicar
+            no botão <b>Download Joomla!</b>, o que fará baixar a versão estável mais atual do CMS.
+          </p>
+          <p>
+            Você perceberá que o arquivo baixado está no formato “.zip”, então será necessário extrair esse arquivo.
+            Porém, se você está usando o XAMPP, é preciso extraí-lo em uma pasta específica.
+          </p>
+          <p>
+            Primeiro, garanta que o XAMPP está instalado e rodando os componentes Apache e MySQL. Para isso, acesse o
+            diretório XAMPP e abra o arquivo <b>xampp-control.exe</b>; veja se os dois componentes citados estão
+            ligados. Após
+            isso, feche a janela do XAMPP e o seu servidor Apache ficará rodando em segundo plano no seu computador.
+          </p>
+          <p>
+            Agora, ainda dentro do diretório XAMPP, acesse a pasta chamada <b>htdocs</b>. Dentro desta pasta haverá
+            alguns
+            arquivos iniciais da interface do XAMPP. Se você abrir o seu navegador e digitar <b>http://localhost/</b>, a
+            página
+            inicial do XAMPP abrirá, então esse caminho no URL é a base, ou seja, a raiz do seu servidor local. Veja a
+            figura:
+          </p>
+          <img src="imgs/fig4.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig4.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig4.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Localhost XAMPP <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela com a interface inicial do front-end de um servidor local,
+            aberto em qualquer navegador.
+          </p>
+          <p>
+            Para instalar qualquer CMS baseado em PHP, será necessário ter criado um banco de dados e um usuário com
+            permissão de acesso a esse banco. Quando você está realizando essa instalação em um servidor on-line, a
+            própria empresa de hospedagem fornece um painel para criar esse banco e usuário.
+          </p>
+          <p>
+            Já no XAMPP, o processo é todo no phpMyAdmin, que nada mais é do que um sistema operacional com uma
+            interface
+            simples para gerenciar seus bancos de dados. Para acessar o phpMyAdmin, digite no URL do seu navegador o
+            endereço <b>http://localhost/phpmyadmin/</b>, abrindo assim seu painel.
+          </p>
+          <img src="imgs/fig5.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig5.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig5.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Painel phpMyAdmin<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela com a interface inicial do sistema gerenciador de banco de
+            dados.
+          </p>
+          <p>
+            O primeiro passo é criar um banco de dados. Na lateral esquerda do phpMyAdmin, clique no botão <b>Novo</b>
+            e, na tela
+            que se abrirá, insira um nome para o seu banco. Esse nome não pode conter espaços vazios nem caracteres
+            especiais.
+          </p>
+          <p>Neste exemplo, o banco será nomeado como <b>novo_joomla</b>. Clique em <b>Criar</b>, conforme a figura:</p>
+          <img src="imgs/fig6.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig6.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig6.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Criando um banco de dados<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela com a interface inicial do sistema gerenciador de banco de
+            dados, na tela na qual se coloca o nome de um novo banco.
+          </p>
+          <p>
+            Após criar o banco de dados, será necessário criar um usuário que terá acesso a esse banco. Por razões de
+            segurança, o Joomla! somente permite usuários com senhas que contenham mais de 11 caracteres, então, ao
+            criar
+            a senha do usuário do banco, é preciso <b>criar uma senha com 12 caracteres ou mais</b>, senão, ocorrerá
+            <b>erro na hora
+              de instalar</b> o Joomla!.
+          </p>
+          <p>
+            Para criar um usuário no phpMyAdmin, volte à página inicial do painel (clicando no botão com ícone de uma
+            casa) e acesse o menu no topo chamado <b>Contas de usuário</b> e clique em <b>Adicionar conta de
+              usuário</b>.
+          </p>
+          <img src="imgs/fig7.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig7.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig7.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Criando um usuário para o banco de dados<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela com a interface inicial do sistema gerenciador de banco de
+            dados, na tela em que se cria um novo usuário.
+          </p>
+          <p>
+            Na tela seguinte, crie um nome de usuário e senha. Lembre-se de que a <b>senha precisa ter doze
+              caracteres</b> ou
+            mais e, no final da página, é preciso marcar todos os privilégios de acesso a esse usuário. Confira na
+            figura:
+          </p>
+          <img src="imgs/fig8.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig8.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig8.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Permissões de usuário<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela com todas as opções de permissões marcadas para o usuário a ser
+            criado.
+          </p>
+          <p>Feito isso, clique no botão <b>executar</b>, localizado no final da tela.</p>
+          <p>
+            Agora, confira a instalação do Joomla!. Dentro da pasta <b>htdocs</b> do XAMPP, crie uma nova pasta, que
+            servirá como
+            diretório principal do seu projeto Joomla. Para esse exemplo, a pasta criada será a <b>joomla</b>.
+          </p>
+          <p>
+            Então, extraia o arquivo que você baixou do <i>site</i> Joomla! para o diretório <b>xampp > htdocs >
+              joomla</b>. Após a
+            extração, ficarão todos os arquivos e diretórios do CMS. Se você usar um <i>software</i> estilo WinRAR,
+            basta mover o
+            arquivo na pasta mencionada, clicar com o botão direito do <i>mouse</i> sobre o arquivo e clicar em
+            <b>Extrair aqui</b>.
+          </p>
+          <img src="imgs/fig9.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig9.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig9.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Diretórios Joomla<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando todos os arquivos da estrutura do Joomla!.
+          </p>
+          <p>Repare que, após a extração, o arquivo ZIP original não é excluído, então você pode deletá-lo manualmente.
+          </p>
+          <p>
+            Agora será acessado o URL desse diretório, que fica em <b>http://localhost/</b> mais o nome do diretório.
+            Neste caso,
+            o diretório foi criado dentro de <b>htdocs</b> com o nome <b>joomla</b>, e nele foi extraído o CMS, então o
+            caminho final no
+            navegador fica <b>http://localhost/joomla</b>. Quando esse URL for acessado, a tela de instalação do Joomla!
+            abrirá.
+          </p>
+          <img src="imgs/fig10.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig10.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig10.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Instalação do Joomla!<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando a tela para o início da instalação do Joomla!.
+          </p>
+          <p>
+            Agora, basta seguir o passo a passo da instalação guiada, o próprio Joomla! vai informando os elementos a
+            serem preenchidos. Na próxima etapa, será necessário criar um usuário que terá acesso à administração total
+            do
+            Joomla!. Não confunda esse usuário com o usuário do banco, são elementos totalmente diferentes.
+          </p>
+          <p>
+            Na terceira etapa da instalação, serão solicitadas as informações do banco de dados, que são aquelas criadas
+            no phpMyAdmin. Veja a figura:
+          </p>
+          <img src="imgs/fig11.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig11.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig11.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Instalação do Joomla! – Etapa BD<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura da tela para inserir as informações do banco de dados na instalação do
+            Joomla!.
+          </p>
+          <div class="caixa-destaque icone importante">
+            <p>
+              Após alguns minutos estará concluída a instalação do seu CMS. Porém, é importante deletar a pasta de
+              instalação do Joomla! após concluir seu processo de instalação. Em muitos casos, isso ocorre
+              automaticamente, mas, quando se está trabalhando localmente, é comum ele não conseguir excluir tal
+              diretório.
+            </p>
+          </div>
+          <p>Para excluir de forma manual, basta acessar a pasta raiz do seu projeto e deletar a pasta
+            <b>installation</b>.
+          </p>
+          <img src="imgs/fig12.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig12.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig12.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Deletar diretório de instalação<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando os diretórios do seu projeto no Joomla! com a pasta
+            “installation” selecionada.
+          </p>
+          <p>
+            Agora seu CMS está instalado e pronto para ser utilizado. Repare que, ao acessar o endereço raiz do seu
+            projeto (<b>http://localhost/joomla/</b>), será mostrada a interface inicial do seu <i>site</i>.
+          </p>
+        </div>
+      </div>
+      <div class="pagina">
+        <div class="container">
+          <h3>Utilização de CMS</h3>
+          <p>
+            O Joomla!, assim como a maioria dos CMSs, é dividido em duas partes: a frente do <i>site</i>, que é a
+            interface
+            visualizada pelo usuário final, e a parte administrativa do <i>site</i>, que só o desenvolvedor e usuários
+            com
+            permissão podem acessar.
+          </p>
+          <p>
+            Para acessar a parte administrativa do seu CMS Joomla, acrescente o caminho <b>administrator</b> ao final do
+            seu URL.
+            No exemplo <b>http://localhost/joomla/administrator/</b>, uma tela abrirá solicitando o <i>login</i> e a
+            senha do usuário
+            criado no momento da instalação do CMS. Ao inserir seu <i>login</i> e sua senha, você terá acesso à
+            administração do
+            seu <i>site</i>.
+          </p>
+          <img src="imgs/fig13.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig13.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig13.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Painel administrativo <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura da tela inicial do painel administrativo do CMS Joomla.
+          </p>
+          <p>
+            À primeira vista, pode ser que o painel do Joomla! não pareça tão intuitivo, mas rapidamente você perceberá
+            como é fácil navegar em sua interface.
+          </p>
+          <p>
+            O primeiro passo será, dentro do painel administrativo, instalar a linguagem em português, o que facilitará
+            o
+            entendimento dos comandos do seu painel. Para isso, clique no menu lateral chamado <b>System</b>, na tela
+            que se
+            abrirá e, no bloco <b>Manage</b>, clique em <b>Languages</b>.
+          </p>
+          <img src="imgs/fig14.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig14.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig14.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Idioma Joomla <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando um bloco com a opção de Languages.
+          </p>
+          <p>
+            A tela que se abrirá mostrará os idiomas já instalados no seu painel e, logo acima da tela, haverá um botão
+            escrito <b>Install languages</b>. Clicar neste botão abrirá uma tela com todos os idiomas disponíveis para o
+            seu
+            painel Joomla; pesquise por português para filtrar os idiomas, então clique no botão <b>Install</b> ao lado
+            do
+            idioma.
+          </p>
+          <img src="imgs/fig15.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig15.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig15.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Instalando um novo idioma<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando a opção de instalação do idioma “portuguese, Brazil”.
+          </p>
+          <p>
+            Depois de concluída a instalação, é preciso alterar o idioma tanto do seu painel administrativo quanto do
+            <i>site</i>. Para isso, nessa mesma tela, clique em <b>Manage > Languages</b>.
+          </p>
+          <p>
+            Na tela que se abrirá, marque como padrão o idioma português – deve ficar com o ícone de uma estrela ao lado
+            dele. Na parte de cima dessa tela há uma <b>caixa de seleção com duas opções</b>: <b>Site</b> e
+            <b>Administrador</b>, então é
+            preciso fazer esse processo tanto para o filtro <b>Site</b> quanto para <b>Administrador</b>. Fazendo isso,
+            seu <i>site</i> já deve
+            ficar em português.
+          </p>
+          <p>
+            Perceba que tanto a frente do <i>site</i> quanto o painel administrativo <b>são totalmente responsivos</b> e
+            seus <i>templates</i>
+            são baseados no <i>framework</i> Bootstrap.
+          </p>
+          <img src="imgs/fig16.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig16.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig16.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Painel administrativo em português<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando o painel administrativo do Joomla! com os textos em
+            português.
+          </p>
+          <p>
+            O próximo passo é conhecer as configurações globais do Joomla!. Nelas, certamente haverá algumas opções
+            importantes na definição do seu projeto. Para acessar essa área, dentro do painel administrativo, clique no
+            menu lateral <b>Sistema</b> e depois acesse a opção <b>Configurações Globais</b>.
+          </p>
+          <p>
+            Ao acessar as configurações globais, você verá uma tela cheia de opções e abas. Neste momento serão
+            consideradas as opções mais importantes. Na aba <b>Site</b>, em <b>Site Name</b>, ficará o nome do seu
+            projeto/<i>site</i> e, mais
+            abaixo, tem a opção de <b>Site Meta Description</b>. Essas opções são importantes para o SEO do seu
+            <i>site</i>, pois, ao
+            preenchê-las, elas ocupam as informações das <i>tags</i> <b>TITLE</b> e <b>META description</b> do seu
+            <i>site</i>, isso sempre que você
+            não definir essas informações diretamente em cada menu ou página.
+          </p>
+          <p>
+            Ainda na mesma aba, mais abaixo haverá opções diretamente ligadas ao SEO, e, na opção <b>Site Name in Page
+              Titles</b>, você define se o nome do seu site deve aparecer no <b>TITLE</b> de todas as páginas, antes ou
+            depois do texto
+            <b>TITLE</b> exclusivo de cada página. Porém, a opção mais importante que tem a ver com SEO é a <b>Use URL
+              Rewriting</b>,
+            porque é essa opção que fará funcionar os URLs amigáveis no Joomla!. Ao marcar essa opção, você perceberá
+            que
+            o próprio sistema pedirá para você renomear o arquivo que vem no Joomla! chamado <b>htaccess.txt</b> para
+            <b>.htaccess</b>.
+          </p>
+          <p>Então, você deve manualmente encontrar esse arquivo na pasta raiz da instalação do Joomla! e renomeá-lo.
+          </p>
+          <img src="imgs/fig17.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig17.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig17.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Renomeando <b>htaccess</b> <br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando os arquivos e diretórios do Joomla! com o arquivo
+            htaccess.txt renomeado para .htaccess. .
+          </p>
+          <p>Após esse processo, não se esqueça de clicar no botão <b>Salvar</b> no painel do Joomla!.</p>
+          <h3>Configuração de usuários administrativos </h3>
+          <div class="row no-print" aria-hidden="true">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+              <p>
+                Com o Joomla!, é possível criar, editar e gerenciar novos usuários com acesso ao painel administrativo
+                do
+                <i>site</i>. Também é possível gerenciar as permissões desses usuários, restringindo suas ações, como,
+                por
+                exemplo, não dando permissão para deletar artigos, restringindo acesso a determinados módulos ou menus
+                do
+                painel administrativo, e até mesmo gerenciar usuários que têm acesso ao <i>login</i> na frente do
+                <i>site</i> Joomla!,
+                mas que não têm acesso ao painel administrativo dele.
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+              <img src="imgs/destaque_usuarios.png" class="center-block img-responsive">
+            </div>
+          </div>
+          <div class="acessivel print">
+            <p>
+              Com o Joomla!, é possível criar, editar e gerenciar novos usuários com acesso ao painel administrativo do
+              <i>site</i>. Também é possível gerenciar as permissões desses usuários, restringindo suas ações, como, por
+              exemplo, não dando permissão para deletar artigos, restringindo acesso a determinados módulos ou menus do
+              painel administrativo, e até mesmo gerenciar usuários que têm acesso ao <i>login</i> na frente do
+              <i>site</i> Joomla!,
+              mas que não têm acesso ao painel administrativo dele.
+            </p>
+          </div>
+          <p>
+            Para acessar o gerenciador de usuários, acesse o menu lateral <b>Usuários</b> e depois clique em
+            <b>Gerenciar</b>. Na tela
+            que se abrirá ficará a lista de usuários cadastrados no CMS e provavelmente só terá o seu usuário na lista.
+            Você pode, então, clicar no nome e mudar as informações como <b>nome de usuário</b> e <b>senha</b>.
+          </p>
+          <p>
+            Para criar um novo usuário, clique em <b>Novo</b>, botão localizado na parte superior da tela. Então será
+            necessário
+            inserir algumas opções obrigatórias, como “nome”, que se refere ao nome verdadeiro do usuário; já o campo
+            <b>Nome
+              de usuário</b> é o nome que será usado como <i>login</i> para acessar o <i>site</i>; também será
+            necessário determinar um <i>e-mail</i>
+            e uma senha.
+          </p>
+          <p>
+            Nessa mesma tela, é na aba <b>Grupos de usuários</b> que você define à qual grupo esse usuário pertencerá,
+            determinando assim os acessos e as permissões que esse usuário terá em seu sistema.
+          </p>
+          <img src="imgs/fig18.png" class="center-block img-responsive hidden-sm hidden-xs print">
+          <p class="no-print visible-sm visible-xs" aria-hidden="true">Toque na imagem para ampliá-la.</p>
+          <a href="imgs/fig18.png" target="_blank" class="no-print visible-sm visible-xs" aria-hidden="true"><img
+              src="imgs/fig18.png" class="center-block img-responsive"></a>
+          <p class="legenda-imagem">Grupos de usuários<br>
+            Fonte: Senac EAD (2024)
+          </p>
+          <p class="acessivel no-print">Captura de tela mostrando os grupos de usuários do Joomla!.
+          </p>
+          <p>
+            No Joomla!, os grupos de usuários são fundamentais para definir quem pode fazer o que no <i>site</i>. Cada
+            grupo de
+            usuários tem um conjunto de permissões que controlam o acesso a diferentes funcionalidades e áreas do
+            <i>site</i>.
+          </p>
+          <p class="no-print" aria-hidden="true">Clique ou toque para visualizar o conteúdo. </p>
+          <div class="painel-usuarios no-print" aria-hidden="true">
+            <div class="botoes-usuarios">
+              <div class="botao-container text-center">
+                <button class="botao-1" data-toggle="modal" data-target="#modal-1"></button>
+                <span class="botao-titulo">Público</span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-2" data-toggle="modal" data-target="#modal-2"></button>
+                <span class="botao-titulo">Convidado</span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-3" data-toggle="modal" data-target="#modal-3"></button>
+                <span class="botao-titulo">Registrado</span>
+              </div>
+            </div>
+            <div class="botoes-usuarios-2">
+              <div class="botao-container text-center">
+                <button class="botao-4" data-toggle="modal" data-target="#modal-4"></button>
+                <span class="botao-titulo">Autor</span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-5" data-toggle="modal" data-target="#modal-5"></button>
+                <span class="botao-titulo">Editor </span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-6" data-toggle="modal" data-target="#modal-6"></button>
+                <span class="botao-titulo">Publicador</span>
+              </div>
+            </div>
+            <div class="botoes-usuarios-3">
+              <div class="botao-container text-center">
+                <button class="botao-4" data-toggle="modal" data-target="#modal-7"></button>
+                <span class="botao-titulo">Gerente</span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-5" data-toggle="modal" data-target="#modal-8"></button>
+                <span class="botao-titulo">Administrador </span>
+              </div>
+              <div class="botao-container text-center">
+                <button class="botao-6" data-toggle="modal" data-target="#modal-9"></button>
+                <span class="botao-titulo">Superusuários</span>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Público (<b>Public</b>)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Este é o grupo-padrão para todos os visitantes do <i>site</i> que não estão logados, eles podem
+                      ver apenas
+                      o conteúdo público do <i>site</i>, sem acesso a conteúdo ou funcionalidades restritas.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Convidado (<b>Guest</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Este grupo é para usuários que não estão logados, similar ao grupo <b>Public</b>. Ele pode ser
+                      usado para
+                      exibir conteúdo específico para visitantes não registrados, o quais podem ver conteúdo marcado
+                      especificamente para <b>Guest</b>. Este grupo é útil para personalizar a experiência de visitantes
+                      não
+                      logados.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Registrado (<b>Registered</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      É para usuários logados que têm uma conta no <i>site</i> e podem, assim, acessar conteúdo restrito
+                      ao
+                      grupo <b>Registered</b>. Esses usuários não têm permissões administrativas nem acesso ao painel
+                      administrativo do <i>site</i>.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Autor (<b>Author</b>)</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Grupo para usuários que podem criar e enviar novos conteúdos. Esses usuários podem criar novos
+                      artigos e enviá-los para revisão, mas não podem publicar artigos.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Editor (<b>Editor</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Grupo para usuários que podem editar qualquer conteúdo. Eles podem criar, editar e alterar o
+                      conteúdo de qualquer artigo, inclusive os enviados por outros autores, mas não podem publicar
+                      artigos.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Publicador (<b>Publisher</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Usuários que podem publicar e gerenciar conteúdos. Eles podem criar, editar e publicar qualquer
+                      conteúdo e também podem alterar o <i>status</i> de publicação dos artigos.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Gerente (<b>Manager</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Usuários com permissões administrativas limitadas. Podem acessar a área administrativa do
+                      <i>site</i>,
+                      gerenciar conteúdos, categorias e menus, mas não têm acesso a configurações do sistema ou gestão
+                      de usuários.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Administrador (<b>Administrator</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Usuários com permissões administrativas avançadas. Podem acessar a maioria das áreas
+                      administrativas, gerenciar usuários, instalar extensões e <i>templates</i> e alterar configurações
+                      globais do <i>site</i>, mas não têm acesso ao gerenciamento total do <i>site</i>, algumas
+                      configurações críticas
+                      são restritas.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="no-print" aria-hidden="true">
+            <div class="modal fade" id="modal-9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-live="polite" aria-atomic="true" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Superusuários (<b>Super users</b>) </h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      O grupo mais poderoso, que tem permissões totais. Esses usuários têm acesso completo a todas as
+                      funcionalidades administrativas do Joomla!. Podem gerenciar todos os aspectos do <i>site</i>,
+                      incluindo
+                      configurações do sistema, usuários, extensões, conteúdos e <i>templates</i>. Este grupo é
+                      geralmente
+                      reservado para os desenvolvedores do <i>site</i>.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="acessivel print">
+            <h4> Público (<b>Public</b>)</h4>
+            <p>
+              Este é o grupo-padrão para todos os visitantes do <i>site</i> que não estão logados, eles podem
+              ver apenas
+              o conteúdo público do <i>site</i>, sem acesso a conteúdo ou funcionalidades restritas.
+            </p>
+            <h4>Convidado (<b>Guest</b>)</h4>
+            <p>
+              Este grupo é para usuários que não estão logados, similar ao grupo <b>Public</b>. Ele pode ser
+              usado para
+              exibir conteúdo específico para visitantes não registrados, o quais podem ver conteúdo marcado
+              especificamente para <b>Guest</b>. Este grupo é útil para personalizar a experiência de visitantes
+              não
+              logados.
+            </p>
+            <h4> Registrado (<b>Registered</b>)</h4>
+            <p>
+              É para usuários logados que têm uma conta no <i>site</i> e podem, assim, acessar conteúdo restrito
+              ao
+              grupo <b>Registered</b>. Esses usuários não têm permissões administrativas nem acesso ao painel
+              administrativo do <i>site</i>.
+            </p>
+            <h4>Autor (<b>Author</b>)</h4>
+            <p>
+              Grupo para usuários que podem criar e enviar novos conteúdos. Esses usuários podem criar novos
+              artigos e enviá-los para revisão, mas não podem publicar artigos.
+            </p>
+            <h4>Editor (<b>Editor</b>)</h4>
+            <p>
+              Grupo para usuários que podem editar qualquer conteúdo. Eles podem criar, editar e alterar o
+              conteúdo de qualquer artigo, inclusive os enviados por outros autores, mas não podem publicar
+              artigos.
+            </p>
+            <h4>Publicador (<b>Publisher</b>)</h4>
+            <p>
+              Usuários que podem publicar e gerenciar conteúdos. Eles podem criar, editar e publicar qualquer
+              conteúdo e também podem alterar o <i>status</i> de publicação dos artigos.
+            </p>
+            <h4>Gerente (<b>Manager</b>)</h4>
+            <p>
+              Usuários com permissões administrativas limitadas. Podem acessar a área administrativa do
+              <i>site</i>,
+              gerenciar conteúdos, categorias e menus, mas não têm acesso a configurações do sistema ou gestão
+              de usuários.
+            </p>
+            <h4>Administrador (<b>Administrator</b>)</h4>
+            <p>
+              Usuários com permissões administrativas avançadas. Podem acessar a maioria das áreas
+              administrativas, gerenciar usuários, instalar extensões e <i>templates</i> e alterar configurações
+              globais do <i>site</i>, mas não têm acesso ao gerenciamento total do <i>site</i>, algumas
+              configurações críticas
+              são restritas.
+            </p>
+            <h4>Superusuários (<b>Super users</b>)</h4>
+            <p>
+              O grupo mais poderoso, que tem permissões totais. Esses usuários têm acesso completo a todas as
+              funcionalidades administrativas do Joomla!. Podem gerenciar todos os aspectos do <i>site</i>, incluindo
+              configurações do sistema, usuários, extensões, conteúdos e <i>templates</i>. Este grupo é geralmente
+              reservado para os desenvolvedores do <i>site</i>.
+            </p>
+          </div>
+          <p> Após determinar o grupo de usuário do novo usuário, basta clicar em <b>Salvar e Fechar</b>.</p>
+          <p>
+            Os grupos de usuários do Joomla! permitem uma gestão detalhada e eficiente de permissões e acessos no site,
+            garantindo que cada usuário tenha apenas as permissões necessárias para suas funções. Isso facilita a
+            administração de sites complexos e ajuda a manter a segurança e a organização do conteúdo e das
+            funcionalidades.
+          </p>
+          <h4>Artigos (páginas) e categorias</h4>
+          <p>
+            No menu lateral do Joomla! você encontrará a opção <b>Conteúdo</b> e entre as opções terá <b>Artigos</b>, <b>Categorias</b>,
+            <b>Artigos em destaque</b> e<b> Módulos</b>. Os artigos são a unidade básica de conteúdo no Joomla! e são utilizados para
+            criar e organizar o conteúdo principal de um <i>site</i>, como textos, imagens, vídeos e outros tipos de mídia.
+          </p>
+
+          É possível entender os artigos como páginas do seu site, ou seja, é o conteúdo HTML principal de cada página,
+          Já os módulos são os elementos HTML que podem estar inseridos em diversas ou determinadas páginas.
+
+          Para adicionar um novo artigo, acesse o menu Artigo e clique em Novo, o que fará abrir a tela de
+          criação/edição de artigo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <div class="pagina">
+        <div class="container">
+
+
+
+        </div>
+      </div>
+    </section>
+    <!-- - - - - - - - - - - - - - - - não alterar abaixo- - - - - - - - - - - - -->
+    <footer class="text-center no-print">
+
+      <ul class="pagination">
+
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!--  Em caso de footer personalizado utilizar esse elemento e adicionar a classe customizada
+    <footer>
+    </footer>
+	-->
+  <!-- carrega todas as imagens dos icones nesta div
+ caso queira adicionar mais imagens de novos icones do css,
+ ou qualquer imagem que deva ser contabilizada durante a fase
+ de loading, referenciar aqui.
+ -->
+  <div class="ico-div-loader">
+    <img src="../template/images/atencao.png">
+    <img src="../template/images/bg-content.jpg">
+    <img src="../template/images/bg-topo.jpg">
+    <img src="../template/images/black-zoom-in-256.png">
+    <img src="../template/images/concluindo.png">
+    <img src="../template/images/curtir.png">
+    <img src="../template/images/desafio.png">
+    <img src="../template/images/dica.png">
+    <img src="../template/images/doc.png">
+    <img src="../template/images/fundamental.png">
+    <img src="../template/images/icon-03.png">
+    <img src="../template/images/importante.png">
+    <img src="../template/images/lightbulb.png">
+    <img src="../template/images/link.png">
+    <img src="../template/images/link_pdf_hover.png">
+    <img src="../template/images/link_pdf_normal.png">
+    <img src="../template/images/logo-senac.png">
+    <img src="../template/images/mark-icon.png">
+    <img src="../template/images/mark-icon02.png">
+    <img src="../template/images/midia.png">
+    <img src="../template/images/monitor.png">
+    <img src="../template/images/nao_curtir.png">
+    <img src="../template/images/pergunta.png">
+    <img src="../template/images/pesquisa.png">
+    <img src="../template/images/play.png">
+    <img src="../template/images/radio_flat.png">
+    <img src="../template/images/refletir.png">
+    <img src="../template/images/saiba_mais.png">
+    <img src="../template/images/senac_loader.png">
+    <img src="../template/images/tanamidia.png">
+    <img src="../template/images/transcricao.png">
+    <img src="../template/images/transcricao_small.png">
+    <img src="../template/images/tv.png">
+    <img src="../template/images/tv_bottom.png">
+    <img src="../template/images/zoom.png">
+    <img src="../template/images/zoom_ie.cur">
+    <img src="../template/images/zoom_ie.png">
+    <!-- adicionar as imagens customizadas aqui abaixo -->
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../template/js/jquery.min.js"></script>
+  <script src="../template/js/bootstrap.min.js"></script>
+  <script src="../template/js/jquery.magnific-popup.min.js"></script>
+  <script src="../template/js/print.js"></script>
+  <script src="../template/js/template.config.js"></script>
+  <script src="../template/js/images.loader.js"></script>
+  <script src="../template/js/highlight.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/bg.js"></script>
+  <noscript>
+    <style media="screen">
+      .over-loader {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+    //inicializa zoom na imagem
+    $('.zoom-imagem').magnificPopup({
+      type: 'image',
+      mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+      zoom: {
+        enabled: true, // By default it's false, so don't forget to enable it
+
+        duration: 300, // duration of the effect, in milliseconds
+        easing: 'ease-in-out', // CSS transition easing function
+
+        // The "opener" function should return the element from which popup will be zoomed in
+        // and to which popup will be scaled down
+        // By defailt it looks for an image tag:
+        opener: function (openerElement) {
+          // openerElement is the element on which popup was initialized, in this case its <a> tag
+          // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        }
+      },
+      image: {
+        markup: '<div class="mfp-figure">' +
+          '<div class="mfp-close"></div>' +
+          '<div class="mfp-img"></div>' + // Floated left
+          '<div class="mfp-bottom-bar">' + '<figcaption>' + '<div class="mfp-title" style="text-align:center"></div>' +
+          '<div class="mfp-counter"></div>' + '</figcaption>' +
+          '</div>' +
+          '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        tError: '<a href="%url%">A imagem</a> não pode ser carregada.' // Error message
+      }
+    });
+
+    //inicializa popover
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    //inicializa tooltip
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+
+    /*------- Script de animação do botão -------*/
+    var root = document.documentElement;
+    root.className += ' js';
+
+    function boxTop(idBox) {
+      var boxOffset = $(idBox).offset().top;
+      return boxOffset;
+    }
+
+    $(document).ready(function () {
+      var $target = $('.animeStart'),
+        $target2 = $('.animeStop'),
+        targetBox = $('.box'),
+        animationClass = 'anime-init',
+        windowHeight = $(window).height(),
+        offset = windowHeight - (windowHeight / 4);
+
+      function animeScroll() {
+        var documentTop = $(document).scrollTop();
+        $target.each(function () {
+          if (documentTop > boxTop(this) - offset) {
+            targetBox.addClass(animationClass);
+          } else {
+            targetBox.removeClass(animationClass);
+          }
+          if (documentTop > boxTop($target2) - offset) {
+            targetBox.removeClass(animationClass);
+          }
+        });
+      }
+      animeScroll();
+
+      $(document).scroll(function () {
+        animeScroll();
+      });
+    });
+
+
+  </script>
+
+  <script>
+    var scriptElem = document.createElement("script");
+    scriptElem.src = "https://plugin.handtalk.me/web/latest/handtalk.min.js",
+      scriptElem.charset = "UTF-8",
+      scriptElem.onload = function () {
+        window.ht = new HT({
+          token: "bf5b7efb148a829a126a0e0c9fd533bf",
+          align: "top",
+          videoEnabled: true,
+          ytEmbedReplace: true,
+          mobileConfig: {
+            align: "right",
+            actionsAlign: "top",
+            customButtonStyle: {
+              borderRadius: "6px",
+              size: "38px",
+              horizontalMargin: "13px",
+              bottomMargin: "140px",
+              rightMargin: "40px"
+            }
+          }
+        });
+        $('.ht-skip').attr("aria-hidden", "true")
+      },
+      document.body.appendChild(scriptElem);
+  </script>
+</body>
+
+</html>
