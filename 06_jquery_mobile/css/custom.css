@@ -18,6 +18,14 @@
   src: url("../fonts/RobotoCondensed-Bold.ttf");
 } */
 
+.highlight {
+  background-color: #ffffcc !important; /* Amarelo claro */
+  color: #d9534f !important; /* Texto vermelho (opcional) */
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
 .paginas {
   z-index: 2;
 }
