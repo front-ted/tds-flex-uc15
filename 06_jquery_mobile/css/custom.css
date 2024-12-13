@@ -30,7 +30,7 @@
 
 .codigo-destaque {
   font-size: 12px;
-  background: url('../imgs/bg-code.png') top no-repeat;
+  background: url('../imgs/bg-code.png') no-repeat;
   width: 870px;
   height: 400px;
   z-index: 2;
