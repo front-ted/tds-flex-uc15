@@ -413,3 +413,46 @@ figcaption {
 .figura1desktop {
   margin-top: 100px;
 }
+
+/* codigo colorido impressao */
+
+.codigo-destaque {
+  font-size: 12px;
+  background: url('../imgs/bg-code.png') top no-repeat;
+  width: 870px;
+  height: 400px;
+  z-index: 2;
+  position: relative !important;
+}
+
+.codigo-destaque.codigo-2 {
+  width: 870px;
+  height: 260px;
+}
+
+.codigo-destaque.codigo-3 {
+  width: 565px;
+  height: 260px;
+}
+
+.modal-content .codigo-destaque.codigo-3 p {
+  color: #c9c9c9;
+}
+
+.codigo-destaque code {
+  background-color: transparent;
+}
+
+.codigo-destaque p {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  margin: unset;
+  line-height: 1.3em;
+  color: #c9c9c9;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.colorCode8 {
+  color: rgb(179, 0, 0);
+}

@@ -365,31 +365,53 @@ $( document ).ready(function() {
           processo minucioso de aprendizagem, é preciso complementar o código seguindo a mesma lógica.
         </p>
         <p>Então, completando o código:</p>
-        <pre>
-          <code class="language-javascript">
-&lt;script type="text/javascript"> 
-            $(document).ready(function() { 
-              
-                  $(".claro").click(function(){ 
-                        $(".titulo").css("color","#ddd").text('Exemplo de template Dark'), 
-                        $("body").css('background','#454545'), 
-                        $(".dark").show(),		 
-                        $(this).hide(); 
-              }); 
+        <div class="codigo-destaque" aria-hidden="true">
+          <code>
+            <br><br><br>
+<p><span class="colorCode5">&lt;</span><span class="colorCode3">script</span> <span class="colorCode6">type</span><span class="colorCode5">=</span><span class="colorCode1">"text/javascript"</span><span class="colorCode5">></span></p>
+           <p class="margem-1"> $(<span class="colorCode4">document</span>).<span class="colorCode7">ready</span>(<span class="colorCode4">function</span>() {</p>
+              <br>
+                  <p class="margem-2">$(<span class="colorCode1">".claro"</span>).<span class="colorCode7">click</span>(<span class="colorCode4">function</span class="colorCode4">(){</p>
+                        <p class="margem-4">$(<span class="colorCode1">".titulo"</span>).<span class="colorCode7">css</span>(<span class="colorCode1">"color"</span>,<span class="colorCode1">"#ddd"</span>).<span class="colorCode7">text</span>(<span class="colorCode1">'Exemplo de template Dark'</span>),</p>
+                        <p class="margem-4">$(<span class="colorCode1">"body"</span>).<span class="colorCode7">css</span>(<span class="colorCode1">'background'</span>,<span class="colorCode1">'#454545'</span>),</p>
+                        <p class="margem-4">$(<span class="colorCode1">".dark"</span>).<span class="colorCode7">show</span>(),</p>
+                        <p class="margem-4">$(<span class="colorCode4">this</span>).<span class="colorCode7">hide</span>();</p> 
+              <p class="margem-2">});</p>
               <!-- /* ##INICIO-DESTAQUE## */ -->
-                      <span class="hljs-destaque">
-                        $(".dark").click(function(){ 
-                              $(".titulo").removeAttr("style").text('Exemplo de template claro'), 
-                              $("body").removeAttr("style"), 
-                              $(".claro").show(), 
-                              $(this).hide(); 
-                        });  
-                      </span>
+                        <p class="margem-2"><span class="colorCode8">$(".dark").click(function(){ </span></p>
+                              <p class="margem-4"><span class="colorCode8">$(".titulo").removeAttr("style").text('Exemplo de template claro'),</span></p>
+                              <p class="margem-4"><span class="colorCode8">$("body").removeAttr("style"),</span></p> 
+                              <p class="margem-4"><span class="colorCode8">$(".claro").show(),</span></p>
+                              <p class="margem-4"><span class="colorCode8">$(this).hide();</span></p>
+                       <p class="margem-2"><span class="colorCode8"> });</span></p>
                       <!-- /* ##FIM-DESTAQUE## */ -->
-          }); 
-&lt;/script> 
+          <p class="margem-1">});</p>
+<p><span class="colorCode5">&lt;/</span><span class="colorCode3">script</span><span class="colorCode5">></span></p> 
           </code>
-        </pre>
+        </div>
+        <div class="acessivel no-print">
+          <pre>
+            <code>
+&lt;script type="text/javascript"> 
+            $(document).ready(function () {
+
+                $(".claro").click(function () {
+                        $(".titulo").css("color", "#ddd").text('Exemplo de template Dark'),
+                        $("body").css('background', '#454545'),
+                        $(".dark").show(),
+                        $(this).hide();
+                });
+                $(".dark").click(function () {
+                        $(".titulo").removeAttr("style").text('Exemplo de template claro'),
+                        $("body").removeAttr("style"),
+                        $(".claro").show(),
+                        $(this).hide();
+                  });
+            });
+&lt;/script> 
+            </code>
+          </pre>
+        </div>
         <p>
           A modificação no código está grifada em vermelho. Essa atualização no código agora indica que, ao clicar no
           elemento com a classe <b>dark</b>, retirará os estilos <b>css</b> aplicados ao elemento <b>.título</b>, mudará
@@ -1239,20 +1261,36 @@ $('#enviar').click(function () {
           desaparecerá até o correto envio do formulário e ainda será multiplicada a cada novo clique.
         </p>
         <p>Então, para desaparecer o aviso depois de dois segundos na tela, atualiza-se o código para o seguinte:</p>
-        <pre>
+        <div class="codigo-destaque codigo-2" aria-hidden="true">
           <code>
+            <br><br><br>
+<p>$('<span class="colorCode1">#enviar</span>').<span class="colorCode7">click</span>(<span class="colorCode4">function</span> () { </p>
+      <p class="margem-1"><span class="colorCode4">var</span> nome = $(<span class="colorCode1">'input[name="nome"]'</span>).<span class="colorCode7">val</span>();</p>		 
+      <p class="margem-1"><span class="colorCode4">if</span> (nome.length < <span class="colorCode5">3</span>) { </p>
+             <p class="margem-2">$(<span class="colorCode1">'input[name="nome"]'</span>).<span class="colorCode7">after</span>(<span class="colorCode1">'&lt;p style="color:red;font-size:12px">O campo Nome precisa ter no mínimo 3 letras.&lt;/p>'</span>);	</p> 
+             <br><!-- DESTACAR -->
+             <p class="margem-2"><span class="colorCode8">$('input[name="nome"] + p').delay(>2000).hide(500);</span>	</p> 
+             <br><!-- DESTACAR -->
+            <p class="margem-2"> <span class="colorCode4">return</span> <span class="colorCode5">false</span>; </p>
+      <p class="margem-1">} </p>
+<p>});</p> 
+          </code>
+        </div>
+        <div class="acessivel no-print">
+          <pre>
+            <code>
 $('#enviar').click(function () { 
       var nome = $('input[name="nome"]').val();		 
       if (nome.length < 3) { 
-             $('input[name="nome"]').after('&lt;p style="color:red;font-size:12px">O campo Nome precisa ter no mínimo 3 letras.&lt;/p>');	 
-             <!-- DESTACAR -->
-             $('input[name="nome"] + p').delay(2000).hide(500);	 
-             <!-- DESTACAR -->
-             return false; 
+               $('input[name="nome"]').after('<p style="color:red;font-size:12px">O campo Nome precisa ter no mínimo 3 letras.</p>');	 
+               $('input[name="nome"] + p').delay(2000).hide(500);	 
+               return false; 
       } 
+                
 }); 
-          </code>
-        </pre>
+            </code>
+          </pre>
+        </div>
         <p>
           A única atualização no código está grifada em vermelho. Mas, basicamente, foram usados os seletores avançados
           de
@@ -2452,22 +2490,37 @@ $('select[name="conheceu"]').change(function(){
                     aplicar o estilo <b>display none</b> na classe <b>aviso</b>, para que o aviso já inicie oculto na
                     tela.
                   </p>
-                  <pre>
+                  <div class="codigo-destaque codigo-3">
                     <code>
-.aviso{ 
-        width: 50%; 
-        color: #444; 
-        border: solid 1px #333; 
-        border-radius: 10px; 
-        padding: 10px 20px; 
-        background: #f7f7f7; 
-        box-shadow: 0 0 4px #333; 
-        position: absolute; 
-        top: 10%; 
-        display:none;    <!-- destaque aqui -->
-} 
+                      <br><br>
+<p><span class="colorCode4">.aviso</span>{ </p>
+        <p class="margem-2"><span class="colorCode3">width</span>: 50%; </p>
+        <p class="margem-2"><span class="colorCode3">color</span>: #444; </p>
+        <p class="margem-2"><span class="colorCode3">border</span>: solid 1px #333; </p>
+        <p class="margem-2"><span class="colorCode3">border-radius</span>: 10px; </p>
+        <p class="margem-2"><span class="colorCode3">padding</span>: 10px 20px; </p>
+        <p class="margem-2"><span class="colorCode3">background</span>: #f7f7f7; </p>
+        <p class="margem-2"><span class="colorCode3">box-shadow</span>: 0 0 4px #333; </p>
+        <p class="margem-2"><span class="colorCode3">position</span>: absolute; </p>
+        <p class="margem-2"><span class="colorCode3">top</span>: 10%; </p>
+        <p class="margem-2"><span class="colorCode8">display:none;</span></p>    <!-- destaque aqui -->
+<p>}</p> 
                     </code>
-                  </pre>
+                  </div>
+                  <div class="acessivel no-print">
+                    .aviso{
+                    width: 50%;
+                    color: #444;
+                    border: solid 1px #333;
+                    border-radius: 10px;
+                    padding: 10px 20px;
+                    background: #f7f7f7;
+                    box-shadow: 0 0 4px #333;
+                    position: absolute;
+                    top: 10%;
+                    display:none;
+                    }
+                  </div>
                   <p>Então, ao código CSS adiciona-se apenas o <b>display:none</b>, grifado em vermelho acima.</p>
                   <p>Veja o seguinte código jQuery:</p>
                   <pre>
@@ -2835,7 +2888,25 @@ $("#toggle-menu").click(function(){
             aplicar o estilo <b>display none</b> na classe <b>aviso</b>, para que o aviso já inicie oculto na
             tela.
           </p>
-          <pre>
+          <div class="codigo-destaque codigo-3 print" aria-hidden="true">
+            <code>
+              <br><br>
+<p><span class="colorCode4">.aviso</span>{ </p>
+<p class="margem-2"><span class="colorCode3">width</span>: 50%; </p>
+<p class="margem-2"><span class="colorCode3">color</span>: #444; </p>
+<p class="margem-2"><span class="colorCode3">border</span>: solid 1px #333; </p>
+<p class="margem-2"><span class="colorCode3">border-radius</span>: 10px; </p>
+<p class="margem-2"><span class="colorCode3">padding</span>: 10px 20px; </p>
+<p class="margem-2"><span class="colorCode3">background</span>: #f7f7f7; </p>
+<p class="margem-2"><span class="colorCode3">box-shadow</span>: 0 0 4px #333; </p>
+<p class="margem-2"><span class="colorCode3">position</span>: absolute; </p>
+<p class="margem-2"><span class="colorCode3">top</span>: 10%; </p>
+<p class="margem-2"><span class="colorCode8">display:none;</span></p>    <!-- destaque aqui -->
+<p>}</p> 
+            </code>
+          </div>
+          <div class="no-print">
+            <pre>
             <code>
 .aviso{ 
         width: 50%; 
@@ -2851,6 +2922,7 @@ $("#toggle-menu").click(function(){
 } 
             </code>
           </pre>
+          </div>
           <p>Então, ao código CSS adiciona-se apenas o <b>display:none</b>, grifado em vermelho acima.</p>
           <p>Veja o seguinte código jQuery:</p>
           <pre>

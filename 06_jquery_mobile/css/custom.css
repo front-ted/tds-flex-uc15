@@ -19,11 +19,100 @@
 } */
 
 .hljs-destaque {
-  background-color: #ffffcc !important; /* Amarelo claro */
-  color: #d9534f !important; /* Texto vermelho (opcional) */
+  background-color: #000 !important;
+  /* Amarelo claro */
+  color: #d9534f !important;
+  /* Texto vermelho (opcional) */
   font-weight: bold;
   border-radius: 3px;
   padding: 2px 4px;
+}
+
+.codigo-destaque {
+  font-size: 12px;
+  background: url('../imgs/bg-code.png') top no-repeat;
+  width: 870px;
+  height: 400px;
+  z-index: 2;
+  position: relative !important;
+}
+
+.codigo-destaque.codigo-2 {
+  width: 870px;
+  height: 260px;
+}
+
+.codigo-destaque.codigo-3 {
+  width: 565px;
+  height: 260px;
+}
+
+.modal-content .codigo-destaque.codigo-3 p {
+  color: #c9c9c9;
+}
+
+.codigo-destaque code {
+  background-color: transparent;
+}
+
+.codigo-destaque p {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  margin: unset;
+  line-height: 1.3em;
+  color: #c9c9c9;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.margem-1 {
+  padding-left: 5.5% !important;
+}
+
+.margem-2 {
+  padding-left: 8%;
+}
+
+.margem-3 {
+  padding-left: 10%;
+}
+
+
+.margem-4 {
+  padding-left: 12%;
+}
+
+.colorCode4 {
+  color: #429ee9;
+}
+
+.colorCode5 {
+  color: red;
+}
+
+.colorCode8 {
+  color: rgb(179, 0, 0);
+}
+
+.colorCode6 {
+  color: rgb(183, 150, 243);
+}
+
+.colorCode7 {
+  color: orange;
+}
+
+
+.colorCode1 {
+  color: #1f8802;
+}
+
+.colorCode2 {
+  color: #f500ed;
+}
+
+.colorCode3 {
+  color: #dbb100;
 }
 
 .paginas {
@@ -896,6 +985,15 @@ pre {
     margin-top: 38%;
     margin-left: 66%;
   }
+
+  .codigo-destaque {
+    font-size: 12px;
+    background: url(../imgs/bg-code.png) top no-repeat;
+    width: 729px;
+    height: 400px;
+    z-index: 2;
+    position: relative !important;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -1008,6 +1106,24 @@ pre {
     transform: scale(1.5)
   }
 
+  .codigo-destaque p {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 13px;
+    margin: unset;
+    line-height: 1.3em;
+    color: #c9c9c9;
+    word-break: break-all !important;
+    word-wrap: break-word !important;
+  }
+
+  .codigo-destaque {
+    width: auto;
+  }
+
+  .codigo-destaque.codigo-3 {
+    width: 366px;
+    height: 260px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1040,6 +1156,8 @@ pre {
     margin-left: -66%;
     margin-top: -44%;
   }
+
+
 }
 
 @media screen and (max-width: 375px) {
