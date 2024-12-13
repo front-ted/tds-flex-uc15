@@ -117,14 +117,6 @@ figcaption {
 
 /* codigo colorido impressao */
 
-.codigo-destaque {
-  font-size: 12px;
-  background: url('../imgs/bg-code.png') top no-repeat;
-  width: 870px;
-  height: 400px;
-  z-index: 2;
-  position: relative !important;
-}
 
 .codigo-destaque.codigo-2 {
   width: 870px;
